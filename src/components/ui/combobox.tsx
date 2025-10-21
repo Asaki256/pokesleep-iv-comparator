@@ -67,7 +67,7 @@ export function Combobox({ value, onChange }: Props) {
           <ChevronsUpDown className="opacity-50" />
         </Button>
       </PopoverTrigger>
-      <PopoverContent className="w-[350px] p-0">
+      <PopoverContent className="w-[400px] p-0">
         <Command>
           <CommandInput
             placeholder="ポケモン名を検索"
