@@ -14,7 +14,23 @@ function Search() {
   return (
     <>
       <div className="m-4">
-        <div className="flex flex-col	justify-center">
+        <div>
+          <div className="flex justify-start flex-wrap">
+            <div>
+              <Combobox
+                value={pokemon}
+                onChange={setPokemon}
+              />
+            </div>
+            <div className="flex gap-4 mx-4">
+              <div className="bg-amber-100 w-[64px]">
+                とくい
+              </div>
+              <div className="bg-cyan-100 w-[64px]">
+                きのみ
+              </div>
+            </div>
+          </div>
           <div className="flex justify-start mt-4 gap-2">
             <SubSkillSelect
               value={subSkill1}
