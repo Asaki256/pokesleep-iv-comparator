@@ -13,15 +13,19 @@ function Search() {
     <>
       <div className="m-4">
         <div className="flex flex-col	justify-center">
-          <div className="flex justify-around">
-            <Combobox
-              value={pokemon}
-              onChange={setPokemon}
-            />
-            <div className="bg-amber-100">とくい</div>
-            <div className="bg-cyan-100">きのみ</div>
+          <div className="flex justify-between">
+            <div>
+              <Combobox
+                value={pokemon}
+                onChange={setPokemon}
+              />
+            </div>
+            <div className="flex flex-1 justify-around">
+              <div className="bg-amber-100">とくい</div>
+              <div className="bg-cyan-100">きのみ</div>
+            </div>
           </div>
-          <div className="flex justify-around mt-4">
+          <div className="flex justify-start mt-4 gap-2">
             <SubSkillSelect
               value={subSkill1}
               onChange={setSubSkill1}
