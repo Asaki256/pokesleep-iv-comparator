@@ -21,23 +21,23 @@ import {
 
 const frameworks = [
   {
-    value: "ピカチュウ",
+    value: "pikachu",
     label: "ピカチュウ",
   },
   {
-    value: "ライチュウ",
+    value: "raichu",
     label: "ライチュウ",
   },
   {
-    value: "ププリン",
+    value: "pupurin",
     label: "ププリン",
   },
   {
-    value: "キャタピー",
+    value: "kyatapi-",
     label: "キャタピー",
   },
   {
-    value: "バンギラス",
+    value: "bangirasu",
     label: "バンギラス",
   },
 ];
@@ -79,12 +79,16 @@ export function Combobox({ value, onChange }: Props) {
               {frameworks.map((framework) => (
                 <CommandItem
                   key={framework.value}
-                  value={framework.value}
+                  value={framework.label}
                   onSelect={(currentValue) => {
+                    const selectedFramework =
+                      frameworks.find(
+                        (f) => f.label === currentValue
+                      );
                     onChange(
-                      currentValue === value
+                      selectedFramework?.value === value
                         ? ""
-                        : currentValue
+                        : selectedFramework?.value || ""
                     );
                     setOpen(false);
                   }}
