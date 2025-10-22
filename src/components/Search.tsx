@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Combobox } from "@/components/ui/combobox";
+import { Label } from "@/components/ui/label";
 import SubSkillSelect from "./SubSkillSelect";
 import NatureSelect from "./NatureSelect";
 
@@ -22,13 +23,9 @@ function Search() {
                 onChange={setPokemon}
               />
             </div>
-            <div className="flex gap-4 mx-4">
-              <div className="bg-amber-100 w-[64px]">
-                とくい
-              </div>
-              <div className="bg-cyan-100 w-[64px]">
-                きのみ
-              </div>
+            <div className="flex gap-4 mx-4 items-center">
+              <div className=" w-[64px]">とくい:</div>
+              <div className="w-[64px]">きのみ:</div>
             </div>
           </div>
           <div className="flex justify-start mt-4 gap-2">
