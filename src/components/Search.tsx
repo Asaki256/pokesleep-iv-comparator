@@ -24,8 +24,8 @@ function Search() {
               />
             </div>
             <div className="flex gap-4 mx-4 items-center">
-              <div className=" w-[64px]">とくい:</div>
-              <div className="w-[64px]">きのみ:</div>
+              <div className=" text-xs">とくい:</div>
+              <div className="text-xs">きのみ:</div>
             </div>
           </div>
           <div className="flex justify-start mt-4 gap-2">
