@@ -24,8 +24,8 @@ function Search() {
               />
             </div>
             <div className="flex gap-4 mx-4 items-center">
-              <div className=" w-[64px]">とくい:</div>
-              <div className="w-[64px]">きのみ:</div>
+              <div className=" text-xs">とくい:</div>
+              <div className="text-xs">きのみ:</div>
             </div>
           </div>
           <div className="flex justify-start mt-4 gap-2">
@@ -51,6 +51,9 @@ function Search() {
               onChange={setNature}
               placeholder="性格"
             />
+          </div>
+          <div className="text-xs	mt-4">
+            ※同レベルでの比較を行うため、Lv.60固定で計算します。
           </div>
         </div>
         <div className="flex justify-center my-4">
