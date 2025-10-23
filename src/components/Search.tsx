@@ -52,6 +52,9 @@ function Search() {
               placeholder="性格"
             />
           </div>
+          <div className="text-xs	mt-4">
+            ※同レベルでの比較を行うため、Lv.60固定で計算します。
+          </div>
         </div>
         <div className="flex justify-center my-4">
           <Button className="w-full max-w-xs md:w-48">
