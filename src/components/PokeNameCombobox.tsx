@@ -18,29 +18,12 @@ import {
   PopoverContent,
   PopoverTrigger,
 } from "@/components/ui/popover";
+import { pokemonData } from "@/data/pokemonData";
 
-const frameworks = [
-  {
-    value: "pikachu",
-    label: "ピカチュウ",
-  },
-  {
-    value: "raichu",
-    label: "ライチュウ",
-  },
-  {
-    value: "pupurin",
-    label: "ププリン",
-  },
-  {
-    value: "kyatapi-",
-    label: "キャタピー",
-  },
-  {
-    value: "bangirasu",
-    label: "バンギラス",
-  },
-];
+const pokemonList = pokemonData.map((pokemon) => ({
+  value: pokemon.name,
+  label: pokemon.displayName,
+}));
 
 interface Props {
   value: string;
@@ -60,7 +43,7 @@ export function Combobox({ value, onChange }: Props) {
           className="w-[400px] justify-between"
         >
           {value
-            ? frameworks.find(
+            ? pokemonList.find(
                 (framework) => framework.value === value
               )?.label
             : "ポケモン名を選択"}
@@ -76,13 +59,13 @@ export function Combobox({ value, onChange }: Props) {
           <CommandList>
             <CommandEmpty>No framework found.</CommandEmpty>
             <CommandGroup>
-              {frameworks.map((framework) => (
+              {pokemonList.map((framework) => (
                 <CommandItem
                   key={framework.value}
                   value={framework.label}
                   onSelect={(currentValue) => {
                     const selectedFramework =
-                      frameworks.find(
+                      pokemonList.find(
                         (f) => f.label === currentValue
                       );
                     onChange(

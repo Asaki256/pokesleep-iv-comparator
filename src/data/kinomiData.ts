@@ -1,6 +1,6 @@
 import { Kinomi } from "@/types/kinomi";
 
-export const kinomiList: Kinomi[] = [
+export const kinomiData: Kinomi[] = [
   {
     name: "キーのみ",
     type: "ki",

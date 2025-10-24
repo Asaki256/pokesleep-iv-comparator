@@ -4,7 +4,7 @@ import { Pokemon } from "@/types/pokemon";
  * ポケモンリストデータ
  * 各ポケモンの基準値データ
  */
-export const pokemonList: Pokemon[] = [
+export const pokemonData: Pokemon[] = [
   {
     displayName: "フシギダネ",
     name: "fushigidane",

@@ -1,7 +1,11 @@
 /**
  * ポケモンのとくいタイプ
  */
-export type TokuiType = "きのみ" | "食材" | "スキル";
+export type TokuiType =
+  | "きのみ"
+  | "食材"
+  | "スキル"
+  | "オール";
 
 /**
  * ポケモンデータの型定義
@@ -13,6 +17,8 @@ export interface Pokemon {
   name: string;
   /** とくい（きのみ、食材、スキル） */
   type: TokuiType;
+  /** メインスキル */
+  mainSkill: string;
   /** 基準おてつだい時間（秒） */
   supportTime: number;
   /** 基準食材確率 */
