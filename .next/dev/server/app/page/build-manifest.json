@@ -1,0 +1,22 @@
+{
+  "devFiles": [],
+  "ampDevFiles": [],
+  "polyfillFiles": [
+    "static/chunks/173f1_next_dist_build_polyfills_polyfill-nomodule.js"
+  ],
+  "lowPriorityFiles": [],
+  "rootMainFiles": [
+    "static/chunks/[turbopack]_browser_dev_hmr-client_hmr-client_ts_fdcf9431._.js",
+    "static/chunks/173f1_next_dist_compiled_react-dom_c342c1b3._.js",
+    "static/chunks/173f1_next_dist_compiled_react-server-dom-turbopack_783e2104._.js",
+    "static/chunks/173f1_next_dist_compiled_next-devtools_index_570f2bf7.js",
+    "static/chunks/173f1_next_dist_compiled_0df7cf0f._.js",
+    "static/chunks/173f1_next_dist_client_87244964._.js",
+    "static/chunks/173f1_next_dist_2d4969de._.js",
+    "static/chunks/173f1_@swc_helpers_cjs_2bd6dff4._.js",
+    "static/chunks/Develop_pokesleep-iv-comparator_a0ff3932._.js",
+    "static/chunks/turbopack-Develop_pokesleep-iv-comparator_17098394._.js"
+  ],
+  "pages": {},
+  "ampFirstPages": []
+}
