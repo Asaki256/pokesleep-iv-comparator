@@ -57,7 +57,9 @@ export function Combobox({ value, onChange }: Props) {
             className="h-9"
           />
           <CommandList>
-            <CommandEmpty>No framework found.</CommandEmpty>
+            <CommandEmpty>
+              一致するポケモンがありません。
+            </CommandEmpty>
             <CommandGroup>
               {pokemonList.map((framework) => (
                 <CommandItem
