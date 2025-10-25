@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import { Combobox } from "@/components/ui/combobox";
+import { Combobox } from "@/components/PokeNameCombobox";
 import { Label } from "@/components/ui/label";
 import SubSkillSelect from "./SubSkillSelect";
 import NatureSelect from "./NatureSelect";
