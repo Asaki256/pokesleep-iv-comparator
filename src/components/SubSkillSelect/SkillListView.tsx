@@ -1,5 +1,8 @@
 import { SubSkill } from "@/types/subSkill";
-import { SelectedSubSkill, Variant } from "@/types/selectedSubSkill";
+import {
+  SelectedSubSkill,
+  Variant,
+} from "@/types/selectedSubSkill";
 import { subSkillData } from "@/data/subSkillData";
 import {
   hasVariants,
@@ -96,7 +99,7 @@ export const SkillListView = ({
         `}
       >
         <div
-          className={`text-xs font-medium break-words ${
+          className={`text-xs font-medium text-wrap ${
             isSelected ? "text-white" : "text-gray-800"
           }`}
         >
@@ -128,7 +131,7 @@ export const SkillListView = ({
           text-center relative
         "
       >
-        <div className="text-xs font-medium break-words mb-1.5 text-gray-800">
+        <div className="text-xs font-medium text-wrap mb-1.5 text-gray-800">
           {config.label}
         </div>
         {/* バリアントタグ */}
@@ -140,10 +143,11 @@ export const SkillListView = ({
             );
             const variantStyles =
               getRarityStyles(variantRarity);
-            const isVariantSelected = isSpecificVariantSelected(
-              skillGroup,
-              variant
-            );
+            const isVariantSelected =
+              isSpecificVariantSelected(
+                skillGroup,
+                variant
+              );
             return (
               <span
                 key={variant}
