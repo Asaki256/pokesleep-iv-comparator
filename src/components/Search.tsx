@@ -3,15 +3,13 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Combobox } from "@/components/PokeNameCombobox";
-import { Label } from "@/components/ui/label";
 import SubSkillSelect from "./SubSkillSelect";
 import NatureSelect from "./NatureSelect";
+import { SelectedSubSkill } from "@/types/selectedSubSkill";
 
 function Search() {
   const [pokemon, setPokemon] = useState("");
-  const [subSkill1, setSubSkill1] = useState("");
-  const [subSkill2, setSubSkill2] = useState("");
-  const [subSkill3, setSubSkill3] = useState("");
+  const [selectedSubSkills, setSelectedSubSkills] = useState<SelectedSubSkill[]>([]);
   const [nature, setNature] = useState("");
 
   return (
@@ -30,22 +28,8 @@ function Search() {
               <div className="text-xs">きのみ:</div>
             </div>
           </div>
-          <div className="flex justify-start mt-4 gap-2">
-            <SubSkillSelect
-              value={subSkill1}
-              onChange={setSubSkill1}
-              placeholder="サブスキル1"
-            />
-            <SubSkillSelect
-              value={subSkill2}
-              onChange={setSubSkill2}
-              placeholder="サブスキル2"
-            />
-            <SubSkillSelect
-              value={subSkill3}
-              onChange={setSubSkill3}
-              placeholder="サブスキル3"
-            />
+          <div className="mt-4">
+            <SubSkillSelect onChange={setSelectedSubSkills} />
           </div>
           <div className="mt-4">
             <NatureSelect
@@ -64,9 +48,14 @@ function Search() {
           </Button>
         </div>
         <p>ポケモン: {pokemon}</p>
-        <p>サブスキル1: {subSkill1}</p>
-        <p>サブスキル2: {subSkill2}</p>
-        <p>サブスキル3: {subSkill3}</p>
+        <p>選択したサブスキル:</p>
+        <ul>
+          {selectedSubSkills.map((skill) => (
+            <li key={skill.id}>
+              Lv.{skill.level} - {skill.name}
+            </li>
+          ))}
+        </ul>
       </div>
     </>
   );

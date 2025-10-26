@@ -1,0 +1,3 @@
+module.exports=[13739,(a,b,c)=>{let{createClientModuleProxy:d}=a.r(43039);a.n(d("[project]/Develop/pokesleep-iv-comparator/node_modules/next/dist/client/components/builtin/global-error.js <module evaluation>"))},97925,(a,b,c)=>{let{createClientModuleProxy:d}=a.r(43039);a.n(d("[project]/Develop/pokesleep-iv-comparator/node_modules/next/dist/client/components/builtin/global-error.js"))},93975,a=>{"use strict";a.i(13739);var b=a.i(97925);a.n(b)}];
+
+//# sourceMappingURL=173f1_next_dist_client_components_builtin_global-error_08cf942f.js.map
