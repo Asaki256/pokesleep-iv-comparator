@@ -1,7 +1,13 @@
 {
   "permissions": {
     "allow": [
-      "Read(///**)"
+      "Read(///**)",
+      "Read(//Users/masaki/Library/Mobile Documents/com~apple~CloudDocs/Obsidian/ポケスリアプリ/A_仕様/**)",
+      "Bash(npm run build:*)",
+      "Bash(npx eslint:*)",
+      "Bash(npm run dev)",
+      "mcp__ide__getDiagnostics",
+      "Read(//Users/masaki/Downloads/**)"
     ],
     "deny": [],
     "ask": []
