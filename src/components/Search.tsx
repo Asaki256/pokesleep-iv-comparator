@@ -4,14 +4,15 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Combobox } from "@/components/PokeNameCombobox";
 import SubSkillSelect from "./SubSkillSelect";
-import NatureSelect from "./NatureSelect";
+import NatureSelector from "./nature/NatureSelector";
 import { SelectedSubSkill } from "@/types/selectedSubSkill";
+import { SelectedNature } from "@/types/nature";
 
 function Search() {
   const [pokemon, setPokemon] = useState("");
   const [selectedSubSkills, setSelectedSubSkills] =
     useState<SelectedSubSkill[]>([]);
-  const [nature, setNature] = useState("");
+  const [nature, setNature] = useState<SelectedNature | null>(null);
 
   return (
     <>
@@ -35,10 +36,9 @@ function Search() {
             />
           </div>
           <div className="mt-4">
-            <NatureSelect
+            <NatureSelector
               value={nature}
               onChange={setNature}
-              placeholder="性格"
             />
           </div>
           <div className="text-xs mt-4 text-center">
@@ -52,6 +52,7 @@ function Search() {
         </div>
         <div className="text-center">
           <p>ポケモン: {pokemon}</p>
+          <p>性格: {nature ? `${nature.name}${nature.up ? ` (▲${nature.up} ▼${nature.down})` : ' (補正なし)'}` : '未選択'}</p>
           <p>選択したサブスキル:</p>
           <ul className="list-none">
             {selectedSubSkills.map((skill) => (
