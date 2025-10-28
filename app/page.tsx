@@ -1,3 +1,5 @@
+"use client";
+
 import Header from "@/components/Header";
 import Description from "@/components/Description";
 import Rank from "@/components/Rank";

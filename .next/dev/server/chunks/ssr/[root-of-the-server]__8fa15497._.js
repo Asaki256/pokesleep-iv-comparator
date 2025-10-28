@@ -2735,18 +2735,18 @@ const getRarityStyles = (rarity)=>{
     const styles = {
         gold: {
             gradient: "bg-gradient-to-br from-yellow-100 to-amber-100",
-            border: "border-yellow-300",
+            border: "border-yellow-200",
             badge: "bg-yellow-500",
-            hover: "hover:from-yellow-200 hover:to-amber-200 hover:border-yellow-400",
-            chip: "bg-yellow-100 text-yellow-700",
+            hover: "hover:from-yellow-100 hover:to-amber-100 hover:border-yellow-300",
+            chip: "bg-amber-100 text-yellow-700",
             text: "text-yellow-700"
         },
         blue: {
             gradient: "bg-gradient-to-br from-cyan-100 to-blue-100",
-            border: "border-cyan-300",
+            border: "border-cyan-200",
             badge: "bg-cyan-500",
-            hover: "hover:from-cyan-200 hover:to-blue-200 hover:border-cyan-400",
-            chip: "bg-cyan-100 text-cyan-700",
+            hover: "hover:from-cyan-100 hover:to-blue-100 hover:border-cyan-300",
+            chip: "bg-blue-100 text-cyan-700",
             text: "text-cyan-700"
         },
         gray: {
@@ -3769,39 +3769,25 @@ const SubSkillSelect = ({ onChange } = {})=>{
                 lineNumber: 238,
                 columnNumber: 9
             }, ("TURBOPACK compile-time value", void 0)),
-            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+            selectedSkills.length < 5 && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
                 onClick: openAddMode,
-                disabled: selectedSkills.length >= 5,
-                className: `
-          w-full py-1.5 px-3 rounded-lg border-2 border-dashed
-          flex items-center justify-center gap-1.5
-          text-sm font-medium transition-all
-          ${selectedSkills.length >= 5 ? "border-gray-300 text-gray-400 bg-gray-50 cursor-not-allowed" : "border-secondary text-secondary bg-blue-50 hover:bg-blue-100 hover:border-slate-400 active:scale-95"}
-        `,
-                children: selectedSkills.length < 5 ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Fragment"], {
-                    children: [
-                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$plus$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Plus$3e$__["Plus"], {
-                            className: "w-4 h-4"
-                        }, void 0, false, {
-                            fileName: "[project]/Develop/pokesleep-iv-comparator/src/components/SubSkillSelect.tsx",
-                            lineNumber: 267,
-                            columnNumber: 13
-                        }, ("TURBOPACK compile-time value", void 0)),
-                        "スキルを追加 (Lv.",
-                        (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$src$2f$utils$2f$subSkillUtils$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["getAutoLevel"])(selectedSkills.length),
-                        ")"
-                    ]
-                }, void 0, true) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                    children: "スキルをタップして変更"
-                }, void 0, false, {
-                    fileName: "[project]/Develop/pokesleep-iv-comparator/src/components/SubSkillSelect.tsx",
-                    lineNumber: 272,
-                    columnNumber: 11
-                }, ("TURBOPACK compile-time value", void 0))
-            }, void 0, false, {
+                className: " w-full py-1.5 px-3 rounded-lg border-2 border-dashed flex items-center justify-center gap-1.5 text-sm font-medium transition-all border-secondary text-secondary bg-blue-50/30 hover:bg-blue-50 hover:border-slate-400 active:scale-95 ",
+                children: [
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$plus$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Plus$3e$__["Plus"], {
+                        className: "w-4 h-4"
+                    }, void 0, false, {
+                        fileName: "[project]/Develop/pokesleep-iv-comparator/src/components/SubSkillSelect.tsx",
+                        lineNumber: 261,
+                        columnNumber: 11
+                    }, ("TURBOPACK compile-time value", void 0)),
+                    "スキルを追加 (Lv.",
+                    (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$src$2f$utils$2f$subSkillUtils$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["getAutoLevel"])(selectedSkills.length),
+                    ")"
+                ]
+            }, void 0, true, {
                 fileName: "[project]/Develop/pokesleep-iv-comparator/src/components/SubSkillSelect.tsx",
-                lineNumber: 251,
-                columnNumber: 7
+                lineNumber: 252,
+                columnNumber: 9
             }, ("TURBOPACK compile-time value", void 0)),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$src$2f$components$2f$SubSkillSelect$2f$SkillPickerModal$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["SkillPickerModal"], {
                 isOpen: isModalOpen,
@@ -3817,7 +3803,7 @@ const SubSkillSelect = ({ onChange } = {})=>{
                 onRemoveSkill: removeSkillById
             }, void 0, false, {
                 fileName: "[project]/Develop/pokesleep-iv-comparator/src/components/SubSkillSelect.tsx",
-                lineNumber: 277,
+                lineNumber: 268,
                 columnNumber: 7
             }, ("TURBOPACK compile-time value", void 0))
         ]

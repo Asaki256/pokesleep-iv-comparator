@@ -1,23 +1,98 @@
-(globalThis.TURBOPACK || (globalThis.TURBOPACK = [])).push([typeof document === "object" ? document.currentScript : undefined,
-"[project]/Develop/pokesleep-iv-comparator/src/lib/utils.ts [app-client] (ecmascript)", ((__turbopack_context__) => {
+module.exports = [
+"[externals]/next/dist/compiled/next-server/app-page-turbo.runtime.dev.js [external] (next/dist/compiled/next-server/app-page-turbo.runtime.dev.js, cjs)", ((__turbopack_context__, module, exports) => {
+
+const mod = __turbopack_context__.x("next/dist/compiled/next-server/app-page-turbo.runtime.dev.js", () => require("next/dist/compiled/next-server/app-page-turbo.runtime.dev.js"));
+
+module.exports = mod;
+}),
+"[project]/Develop/pokesleep-iv-comparator/src/components/Header.tsx [app-ssr] (ecmascript)", ((__turbopack_context__) => {
+"use strict";
+
+__turbopack_context__.s([
+    "default",
+    ()=>__TURBOPACK__default__export__
+]);
+var __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Develop/pokesleep-iv-comparator/node_modules/next/dist/server/route-modules/app-page/vendored/ssr/react-jsx-dev-runtime.js [app-ssr] (ecmascript)");
+;
+function Header() {
+    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Fragment"], {
+        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+            className: "bg-primary h-16 w-full flex items-center",
+            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                className: "text-2xl text-white pl-4",
+                children: "ポケスリ個体値比較"
+            }, void 0, false, {
+                fileName: "[project]/Develop/pokesleep-iv-comparator/src/components/Header.tsx",
+                lineNumber: 5,
+                columnNumber: 9
+            }, this)
+        }, void 0, false, {
+            fileName: "[project]/Develop/pokesleep-iv-comparator/src/components/Header.tsx",
+            lineNumber: 4,
+            columnNumber: 7
+        }, this)
+    }, void 0, false);
+}
+const __TURBOPACK__default__export__ = Header;
+}),
+"[project]/Develop/pokesleep-iv-comparator/src/components/Description.tsx [app-ssr] (ecmascript)", ((__turbopack_context__) => {
+"use strict";
+
+__turbopack_context__.s([
+    "default",
+    ()=>__TURBOPACK__default__export__
+]);
+var __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Develop/pokesleep-iv-comparator/node_modules/next/dist/server/route-modules/app-page/vendored/ssr/react-jsx-dev-runtime.js [app-ssr] (ecmascript)");
+;
+function Description() {
+    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Fragment"], {}, void 0, false);
+}
+const __TURBOPACK__default__export__ = Description;
+}),
+"[project]/Develop/pokesleep-iv-comparator/src/components/Rank.tsx [app-ssr] (ecmascript)", ((__turbopack_context__) => {
+"use strict";
+
+__turbopack_context__.s([
+    "default",
+    ()=>__TURBOPACK__default__export__
+]);
+var __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Develop/pokesleep-iv-comparator/node_modules/next/dist/server/route-modules/app-page/vendored/ssr/react-jsx-dev-runtime.js [app-ssr] (ecmascript)");
+;
+function Rank() {
+    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Fragment"], {}, void 0, false);
+}
+const __TURBOPACK__default__export__ = Rank;
+}),
+"[project]/Develop/pokesleep-iv-comparator/src/components/Result.tsx [app-ssr] (ecmascript)", ((__turbopack_context__) => {
+"use strict";
+
+__turbopack_context__.s([
+    "default",
+    ()=>__TURBOPACK__default__export__
+]);
+var __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Develop/pokesleep-iv-comparator/node_modules/next/dist/server/route-modules/app-page/vendored/ssr/react-jsx-dev-runtime.js [app-ssr] (ecmascript)");
+;
+function Result() {
+    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Fragment"], {}, void 0, false);
+}
+const __TURBOPACK__default__export__ = Result;
+}),
+"[project]/Develop/pokesleep-iv-comparator/src/lib/utils.ts [app-ssr] (ecmascript)", ((__turbopack_context__) => {
 "use strict";
 
 __turbopack_context__.s([
     "cn",
     ()=>cn
 ]);
-var __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$clsx$2f$dist$2f$clsx$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Develop/pokesleep-iv-comparator/node_modules/clsx/dist/clsx.mjs [app-client] (ecmascript)");
-var __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$tailwind$2d$merge$2f$dist$2f$bundle$2d$mjs$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Develop/pokesleep-iv-comparator/node_modules/tailwind-merge/dist/bundle-mjs.mjs [app-client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$clsx$2f$dist$2f$clsx$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Develop/pokesleep-iv-comparator/node_modules/clsx/dist/clsx.mjs [app-ssr] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$tailwind$2d$merge$2f$dist$2f$bundle$2d$mjs$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Develop/pokesleep-iv-comparator/node_modules/tailwind-merge/dist/bundle-mjs.mjs [app-ssr] (ecmascript)");
 ;
 ;
 function cn(...inputs) {
-    return (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$tailwind$2d$merge$2f$dist$2f$bundle$2d$mjs$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["twMerge"])((0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$clsx$2f$dist$2f$clsx$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["clsx"])(inputs));
-}
-if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelpers !== null) {
-    __turbopack_context__.k.registerExports(__turbopack_context__.m, globalThis.$RefreshHelpers$);
+    return (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$tailwind$2d$merge$2f$dist$2f$bundle$2d$mjs$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["twMerge"])((0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$clsx$2f$dist$2f$clsx$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["clsx"])(inputs));
 }
 }),
-"[project]/Develop/pokesleep-iv-comparator/src/components/ui/button.tsx [app-client] (ecmascript)", ((__turbopack_context__) => {
+"[project]/Develop/pokesleep-iv-comparator/src/components/ui/button.tsx [app-ssr] (ecmascript)", ((__turbopack_context__) => {
 "use strict";
 
 __turbopack_context__.s([
@@ -26,15 +101,15 @@ __turbopack_context__.s([
     "buttonVariants",
     ()=>buttonVariants
 ]);
-var __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Develop/pokesleep-iv-comparator/node_modules/next/dist/compiled/react/jsx-dev-runtime.js [app-client] (ecmascript)");
-var __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f40$radix$2d$ui$2f$react$2d$slot$2f$dist$2f$index$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Develop/pokesleep-iv-comparator/node_modules/@radix-ui/react-slot/dist/index.mjs [app-client] (ecmascript)");
-var __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$class$2d$variance$2d$authority$2f$dist$2f$index$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Develop/pokesleep-iv-comparator/node_modules/class-variance-authority/dist/index.mjs [app-client] (ecmascript)");
-var __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$src$2f$lib$2f$utils$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Develop/pokesleep-iv-comparator/src/lib/utils.ts [app-client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Develop/pokesleep-iv-comparator/node_modules/next/dist/server/route-modules/app-page/vendored/ssr/react-jsx-dev-runtime.js [app-ssr] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f40$radix$2d$ui$2f$react$2d$slot$2f$dist$2f$index$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Develop/pokesleep-iv-comparator/node_modules/@radix-ui/react-slot/dist/index.mjs [app-ssr] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$class$2d$variance$2d$authority$2f$dist$2f$index$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Develop/pokesleep-iv-comparator/node_modules/class-variance-authority/dist/index.mjs [app-ssr] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$src$2f$lib$2f$utils$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Develop/pokesleep-iv-comparator/src/lib/utils.ts [app-ssr] (ecmascript)");
 ;
 ;
 ;
 ;
-const buttonVariants = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$class$2d$variance$2d$authority$2f$dist$2f$index$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["cva"])("inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 shrink-0 [&_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive", {
+const buttonVariants = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$class$2d$variance$2d$authority$2f$dist$2f$index$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["cva"])("inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 shrink-0 [&_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive", {
     variants: {
         variant: {
             default: "bg-primary text-primary-foreground hover:bg-primary/90",
@@ -59,10 +134,10 @@ const buttonVariants = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Devel
     }
 });
 function Button({ className, variant, size, asChild = false, ...props }) {
-    const Comp = asChild ? __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f40$radix$2d$ui$2f$react$2d$slot$2f$dist$2f$index$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Slot"] : "button";
-    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(Comp, {
+    const Comp = asChild ? __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f40$radix$2d$ui$2f$react$2d$slot$2f$dist$2f$index$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Slot"] : "button";
+    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(Comp, {
         "data-slot": "button",
-        className: (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$src$2f$lib$2f$utils$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["cn"])(buttonVariants({
+        className: (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$src$2f$lib$2f$utils$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["cn"])(buttonVariants({
             variant,
             size,
             className
@@ -74,15 +149,9 @@ function Button({ className, variant, size, asChild = false, ...props }) {
         columnNumber: 5
     }, this);
 }
-_c = Button;
 ;
-var _c;
-__turbopack_context__.k.register(_c, "Button");
-if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelpers !== null) {
-    __turbopack_context__.k.registerExports(__turbopack_context__.m, globalThis.$RefreshHelpers$);
-}
 }),
-"[project]/Develop/pokesleep-iv-comparator/src/components/ui/dialog.tsx [app-client] (ecmascript)", ((__turbopack_context__) => {
+"[project]/Develop/pokesleep-iv-comparator/src/components/ui/dialog.tsx [app-ssr] (ecmascript)", ((__turbopack_context__) => {
 "use strict";
 
 __turbopack_context__.s([
@@ -107,16 +176,16 @@ __turbopack_context__.s([
     "DialogTrigger",
     ()=>DialogTrigger
 ]);
-var __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Develop/pokesleep-iv-comparator/node_modules/next/dist/compiled/react/jsx-dev-runtime.js [app-client] (ecmascript)");
-var __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f40$radix$2d$ui$2f$react$2d$dialog$2f$dist$2f$index$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Develop/pokesleep-iv-comparator/node_modules/@radix-ui/react-dialog/dist/index.mjs [app-client] (ecmascript)");
-var __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$x$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__XIcon$3e$__ = __turbopack_context__.i("[project]/Develop/pokesleep-iv-comparator/node_modules/lucide-react/dist/esm/icons/x.js [app-client] (ecmascript) <export default as XIcon>");
-var __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$src$2f$lib$2f$utils$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Develop/pokesleep-iv-comparator/src/lib/utils.ts [app-client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Develop/pokesleep-iv-comparator/node_modules/next/dist/server/route-modules/app-page/vendored/ssr/react-jsx-dev-runtime.js [app-ssr] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f40$radix$2d$ui$2f$react$2d$dialog$2f$dist$2f$index$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Develop/pokesleep-iv-comparator/node_modules/@radix-ui/react-dialog/dist/index.mjs [app-ssr] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$x$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__XIcon$3e$__ = __turbopack_context__.i("[project]/Develop/pokesleep-iv-comparator/node_modules/lucide-react/dist/esm/icons/x.js [app-ssr] (ecmascript) <export default as XIcon>");
+var __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$src$2f$lib$2f$utils$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Develop/pokesleep-iv-comparator/src/lib/utils.ts [app-ssr] (ecmascript)");
 ;
 ;
 ;
 ;
 function Dialog({ ...props }) {
-    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f40$radix$2d$ui$2f$react$2d$dialog$2f$dist$2f$index$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Root"], {
+    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f40$radix$2d$ui$2f$react$2d$dialog$2f$dist$2f$index$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Root"], {
         "data-slot": "dialog",
         ...props
     }, void 0, false, {
@@ -125,9 +194,8 @@ function Dialog({ ...props }) {
         columnNumber: 10
     }, this);
 }
-_c = Dialog;
 function DialogTrigger({ ...props }) {
-    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f40$radix$2d$ui$2f$react$2d$dialog$2f$dist$2f$index$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Trigger"], {
+    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f40$radix$2d$ui$2f$react$2d$dialog$2f$dist$2f$index$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Trigger"], {
         "data-slot": "dialog-trigger",
         ...props
     }, void 0, false, {
@@ -136,9 +204,8 @@ function DialogTrigger({ ...props }) {
         columnNumber: 10
     }, this);
 }
-_c1 = DialogTrigger;
 function DialogPortal({ ...props }) {
-    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f40$radix$2d$ui$2f$react$2d$dialog$2f$dist$2f$index$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Portal"], {
+    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f40$radix$2d$ui$2f$react$2d$dialog$2f$dist$2f$index$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Portal"], {
         "data-slot": "dialog-portal",
         ...props
     }, void 0, false, {
@@ -147,9 +214,8 @@ function DialogPortal({ ...props }) {
         columnNumber: 10
     }, this);
 }
-_c2 = DialogPortal;
 function DialogClose({ ...props }) {
-    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f40$radix$2d$ui$2f$react$2d$dialog$2f$dist$2f$index$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Close"], {
+    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f40$radix$2d$ui$2f$react$2d$dialog$2f$dist$2f$index$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Close"], {
         "data-slot": "dialog-close",
         ...props
     }, void 0, false, {
@@ -158,11 +224,10 @@ function DialogClose({ ...props }) {
         columnNumber: 10
     }, this);
 }
-_c3 = DialogClose;
 function DialogOverlay({ className, ...props }) {
-    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f40$radix$2d$ui$2f$react$2d$dialog$2f$dist$2f$index$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Overlay"], {
+    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f40$radix$2d$ui$2f$react$2d$dialog$2f$dist$2f$index$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Overlay"], {
         "data-slot": "dialog-overlay",
-        className: (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$src$2f$lib$2f$utils$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["cn"])("data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 fixed inset-0 z-50 bg-black/50", className),
+        className: (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$src$2f$lib$2f$utils$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["cn"])("data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 fixed inset-0 z-50 bg-black/50", className),
         ...props
     }, void 0, false, {
         fileName: "[project]/Develop/pokesleep-iv-comparator/src/components/ui/dialog.tsx",
@@ -170,32 +235,31 @@ function DialogOverlay({ className, ...props }) {
         columnNumber: 5
     }, this);
 }
-_c4 = DialogOverlay;
 function DialogContent({ className, children, showCloseButton = true, ...props }) {
-    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(DialogPortal, {
+    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(DialogPortal, {
         "data-slot": "dialog-portal",
         children: [
-            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(DialogOverlay, {}, void 0, false, {
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(DialogOverlay, {}, void 0, false, {
                 fileName: "[project]/Develop/pokesleep-iv-comparator/src/components/ui/dialog.tsx",
                 lineNumber: 57,
                 columnNumber: 7
             }, this),
-            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f40$radix$2d$ui$2f$react$2d$dialog$2f$dist$2f$index$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Content"], {
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f40$radix$2d$ui$2f$react$2d$dialog$2f$dist$2f$index$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Content"], {
                 "data-slot": "dialog-content",
-                className: (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$src$2f$lib$2f$utils$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["cn"])("bg-background data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 fixed top-[50%] left-[50%] z-50 grid w-full max-w-[calc(100%-2rem)] translate-x-[-50%] translate-y-[-50%] gap-4 rounded-lg border p-6 shadow-lg duration-200 sm:max-w-lg", className),
+                className: (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$src$2f$lib$2f$utils$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["cn"])("bg-background data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 fixed top-[50%] left-[50%] z-50 grid w-full max-w-[calc(100%-2rem)] translate-x-[-50%] translate-y-[-50%] gap-4 rounded-lg border p-6 shadow-lg duration-200 sm:max-w-lg", className),
                 ...props,
                 children: [
                     children,
-                    showCloseButton && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f40$radix$2d$ui$2f$react$2d$dialog$2f$dist$2f$index$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Close"], {
+                    showCloseButton && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f40$radix$2d$ui$2f$react$2d$dialog$2f$dist$2f$index$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Close"], {
                         "data-slot": "dialog-close",
                         className: "ring-offset-background focus:ring-ring data-[state=open]:bg-accent data-[state=open]:text-muted-foreground absolute top-4 right-4 rounded-xs opacity-70 transition-opacity hover:opacity-100 focus:ring-2 focus:ring-offset-2 focus:outline-hidden disabled:pointer-events-none [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4",
                         children: [
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$x$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__XIcon$3e$__["XIcon"], {}, void 0, false, {
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$x$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__XIcon$3e$__["XIcon"], {}, void 0, false, {
                                 fileName: "[project]/Develop/pokesleep-iv-comparator/src/components/ui/dialog.tsx",
                                 lineNumber: 72,
                                 columnNumber: 13
                             }, this),
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                 className: "sr-only",
                                 children: "Close"
                             }, void 0, false, {
@@ -222,11 +286,10 @@ function DialogContent({ className, children, showCloseButton = true, ...props }
         columnNumber: 5
     }, this);
 }
-_c5 = DialogContent;
 function DialogHeader({ className, ...props }) {
-    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
         "data-slot": "dialog-header",
-        className: (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$src$2f$lib$2f$utils$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["cn"])("flex flex-col gap-2 text-center sm:text-left", className),
+        className: (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$src$2f$lib$2f$utils$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["cn"])("flex flex-col gap-2 text-center sm:text-left", className),
         ...props
     }, void 0, false, {
         fileName: "[project]/Develop/pokesleep-iv-comparator/src/components/ui/dialog.tsx",
@@ -234,11 +297,10 @@ function DialogHeader({ className, ...props }) {
         columnNumber: 5
     }, this);
 }
-_c6 = DialogHeader;
 function DialogFooter({ className, ...props }) {
-    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
         "data-slot": "dialog-footer",
-        className: (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$src$2f$lib$2f$utils$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["cn"])("flex flex-col-reverse gap-2 sm:flex-row sm:justify-end", className),
+        className: (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$src$2f$lib$2f$utils$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["cn"])("flex flex-col-reverse gap-2 sm:flex-row sm:justify-end", className),
         ...props
     }, void 0, false, {
         fileName: "[project]/Develop/pokesleep-iv-comparator/src/components/ui/dialog.tsx",
@@ -246,11 +308,10 @@ function DialogFooter({ className, ...props }) {
         columnNumber: 5
     }, this);
 }
-_c7 = DialogFooter;
 function DialogTitle({ className, ...props }) {
-    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f40$radix$2d$ui$2f$react$2d$dialog$2f$dist$2f$index$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Title"], {
+    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f40$radix$2d$ui$2f$react$2d$dialog$2f$dist$2f$index$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Title"], {
         "data-slot": "dialog-title",
-        className: (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$src$2f$lib$2f$utils$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["cn"])("text-lg leading-none font-semibold", className),
+        className: (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$src$2f$lib$2f$utils$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["cn"])("text-lg leading-none font-semibold", className),
         ...props
     }, void 0, false, {
         fileName: "[project]/Develop/pokesleep-iv-comparator/src/components/ui/dialog.tsx",
@@ -258,11 +319,10 @@ function DialogTitle({ className, ...props }) {
         columnNumber: 5
     }, this);
 }
-_c8 = DialogTitle;
 function DialogDescription({ className, ...props }) {
-    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f40$radix$2d$ui$2f$react$2d$dialog$2f$dist$2f$index$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Description"], {
+    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f40$radix$2d$ui$2f$react$2d$dialog$2f$dist$2f$index$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Description"], {
         "data-slot": "dialog-description",
-        className: (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$src$2f$lib$2f$utils$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["cn"])("text-muted-foreground text-sm", className),
+        className: (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$src$2f$lib$2f$utils$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["cn"])("text-muted-foreground text-sm", className),
         ...props
     }, void 0, false, {
         fileName: "[project]/Develop/pokesleep-iv-comparator/src/components/ui/dialog.tsx",
@@ -270,24 +330,9 @@ function DialogDescription({ className, ...props }) {
         columnNumber: 5
     }, this);
 }
-_c9 = DialogDescription;
 ;
-var _c, _c1, _c2, _c3, _c4, _c5, _c6, _c7, _c8, _c9;
-__turbopack_context__.k.register(_c, "Dialog");
-__turbopack_context__.k.register(_c1, "DialogTrigger");
-__turbopack_context__.k.register(_c2, "DialogPortal");
-__turbopack_context__.k.register(_c3, "DialogClose");
-__turbopack_context__.k.register(_c4, "DialogOverlay");
-__turbopack_context__.k.register(_c5, "DialogContent");
-__turbopack_context__.k.register(_c6, "DialogHeader");
-__turbopack_context__.k.register(_c7, "DialogFooter");
-__turbopack_context__.k.register(_c8, "DialogTitle");
-__turbopack_context__.k.register(_c9, "DialogDescription");
-if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelpers !== null) {
-    __turbopack_context__.k.registerExports(__turbopack_context__.m, globalThis.$RefreshHelpers$);
-}
 }),
-"[project]/Develop/pokesleep-iv-comparator/src/components/ui/command.tsx [app-client] (ecmascript)", ((__turbopack_context__) => {
+"[project]/Develop/pokesleep-iv-comparator/src/components/ui/command.tsx [app-ssr] (ecmascript)", ((__turbopack_context__) => {
 "use strict";
 
 __turbopack_context__.s([
@@ -310,11 +355,11 @@ __turbopack_context__.s([
     "CommandShortcut",
     ()=>CommandShortcut
 ]);
-var __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Develop/pokesleep-iv-comparator/node_modules/next/dist/compiled/react/jsx-dev-runtime.js [app-client] (ecmascript)");
-var __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$cmdk$2f$dist$2f$index$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Develop/pokesleep-iv-comparator/node_modules/cmdk/dist/index.mjs [app-client] (ecmascript)");
-var __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$search$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__SearchIcon$3e$__ = __turbopack_context__.i("[project]/Develop/pokesleep-iv-comparator/node_modules/lucide-react/dist/esm/icons/search.js [app-client] (ecmascript) <export default as SearchIcon>");
-var __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$src$2f$lib$2f$utils$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Develop/pokesleep-iv-comparator/src/lib/utils.ts [app-client] (ecmascript)");
-var __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$src$2f$components$2f$ui$2f$dialog$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Develop/pokesleep-iv-comparator/src/components/ui/dialog.tsx [app-client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Develop/pokesleep-iv-comparator/node_modules/next/dist/server/route-modules/app-page/vendored/ssr/react-jsx-dev-runtime.js [app-ssr] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$cmdk$2f$dist$2f$index$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Develop/pokesleep-iv-comparator/node_modules/cmdk/dist/index.mjs [app-ssr] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$search$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__SearchIcon$3e$__ = __turbopack_context__.i("[project]/Develop/pokesleep-iv-comparator/node_modules/lucide-react/dist/esm/icons/search.js [app-ssr] (ecmascript) <export default as SearchIcon>");
+var __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$src$2f$lib$2f$utils$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Develop/pokesleep-iv-comparator/src/lib/utils.ts [app-ssr] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$src$2f$components$2f$ui$2f$dialog$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Develop/pokesleep-iv-comparator/src/components/ui/dialog.tsx [app-ssr] (ecmascript)");
 "use client";
 ;
 ;
@@ -322,9 +367,9 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2
 ;
 ;
 function Command({ className, ...props }) {
-    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$cmdk$2f$dist$2f$index$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Command"], {
+    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$cmdk$2f$dist$2f$index$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Command"], {
         "data-slot": "command",
-        className: (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$src$2f$lib$2f$utils$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["cn"])("bg-popover text-popover-foreground flex h-full w-full flex-col overflow-hidden rounded-md", className),
+        className: (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$src$2f$lib$2f$utils$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["cn"])("bg-popover text-popover-foreground flex h-full w-full flex-col overflow-hidden rounded-md", className),
         ...props
     }, void 0, false, {
         fileName: "[project]/Develop/pokesleep-iv-comparator/src/components/ui/command.tsx",
@@ -332,22 +377,21 @@ function Command({ className, ...props }) {
         columnNumber: 5
     }, this);
 }
-_c = Command;
 function CommandDialog({ title = "Command Palette", description = "Search for a command to run...", children, className, showCloseButton = true, ...props }) {
-    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$src$2f$components$2f$ui$2f$dialog$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Dialog"], {
+    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$src$2f$components$2f$ui$2f$dialog$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Dialog"], {
         ...props,
         children: [
-            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$src$2f$components$2f$ui$2f$dialog$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["DialogHeader"], {
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$src$2f$components$2f$ui$2f$dialog$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["DialogHeader"], {
                 className: "sr-only",
                 children: [
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$src$2f$components$2f$ui$2f$dialog$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["DialogTitle"], {
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$src$2f$components$2f$ui$2f$dialog$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["DialogTitle"], {
                         children: title
                     }, void 0, false, {
                         fileName: "[project]/Develop/pokesleep-iv-comparator/src/components/ui/command.tsx",
                         lineNumber: 48,
                         columnNumber: 9
                     }, this),
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$src$2f$components$2f$ui$2f$dialog$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["DialogDescription"], {
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$src$2f$components$2f$ui$2f$dialog$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["DialogDescription"], {
                         children: description
                     }, void 0, false, {
                         fileName: "[project]/Develop/pokesleep-iv-comparator/src/components/ui/command.tsx",
@@ -360,10 +404,10 @@ function CommandDialog({ title = "Command Palette", description = "Search for a 
                 lineNumber: 47,
                 columnNumber: 7
             }, this),
-            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$src$2f$components$2f$ui$2f$dialog$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["DialogContent"], {
-                className: (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$src$2f$lib$2f$utils$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["cn"])("overflow-hidden p-0", className),
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$src$2f$components$2f$ui$2f$dialog$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["DialogContent"], {
+                className: (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$src$2f$lib$2f$utils$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["cn"])("overflow-hidden p-0", className),
                 showCloseButton: showCloseButton,
-                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(Command, {
+                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(Command, {
                     className: "[&_[cmdk-group-heading]]:text-muted-foreground **:data-[slot=command-input-wrapper]:h-12 [&_[cmdk-group-heading]]:px-2 [&_[cmdk-group-heading]]:font-medium [&_[cmdk-group]]:px-2 [&_[cmdk-group]:not([hidden])_~[cmdk-group]]:pt-0 [&_[cmdk-input-wrapper]_svg]:h-5 [&_[cmdk-input-wrapper]_svg]:w-5 [&_[cmdk-input]]:h-12 [&_[cmdk-item]]:px-2 [&_[cmdk-item]]:py-3 [&_[cmdk-item]_svg]:h-5 [&_[cmdk-item]_svg]:w-5",
                     children: children
                 }, void 0, false, {
@@ -383,22 +427,21 @@ function CommandDialog({ title = "Command Palette", description = "Search for a 
         columnNumber: 5
     }, this);
 }
-_c1 = CommandDialog;
 function CommandInput({ className, ...props }) {
-    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
         "data-slot": "command-input-wrapper",
         className: "flex h-9 items-center gap-2 border-b px-3",
         children: [
-            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$search$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__SearchIcon$3e$__["SearchIcon"], {
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$search$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__SearchIcon$3e$__["SearchIcon"], {
                 className: "size-4 shrink-0 opacity-50"
             }, void 0, false, {
                 fileName: "[project]/Develop/pokesleep-iv-comparator/src/components/ui/command.tsx",
                 lineNumber: 72,
                 columnNumber: 7
             }, this),
-            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$cmdk$2f$dist$2f$index$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Command"].Input, {
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$cmdk$2f$dist$2f$index$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Command"].Input, {
                 "data-slot": "command-input",
-                className: (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$src$2f$lib$2f$utils$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["cn"])("placeholder:text-muted-foreground flex h-10 w-full rounded-md bg-transparent py-3 text-sm outline-hidden disabled:cursor-not-allowed disabled:opacity-50", className),
+                className: (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$src$2f$lib$2f$utils$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["cn"])("placeholder:text-muted-foreground flex h-10 w-full rounded-md bg-transparent py-3 text-sm outline-hidden disabled:cursor-not-allowed disabled:opacity-50", className),
                 ...props
             }, void 0, false, {
                 fileName: "[project]/Develop/pokesleep-iv-comparator/src/components/ui/command.tsx",
@@ -412,11 +455,10 @@ function CommandInput({ className, ...props }) {
         columnNumber: 5
     }, this);
 }
-_c2 = CommandInput;
 function CommandList({ className, ...props }) {
-    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$cmdk$2f$dist$2f$index$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Command"].List, {
+    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$cmdk$2f$dist$2f$index$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Command"].List, {
         "data-slot": "command-list",
-        className: (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$src$2f$lib$2f$utils$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["cn"])("max-h-[300px] scroll-py-1 overflow-x-hidden overflow-y-auto", className),
+        className: (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$src$2f$lib$2f$utils$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["cn"])("max-h-[300px] scroll-py-1 overflow-x-hidden overflow-y-auto", className),
         ...props
     }, void 0, false, {
         fileName: "[project]/Develop/pokesleep-iv-comparator/src/components/ui/command.tsx",
@@ -424,9 +466,8 @@ function CommandList({ className, ...props }) {
         columnNumber: 5
     }, this);
 }
-_c3 = CommandList;
 function CommandEmpty({ ...props }) {
-    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$cmdk$2f$dist$2f$index$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Command"].Empty, {
+    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$cmdk$2f$dist$2f$index$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Command"].Empty, {
         "data-slot": "command-empty",
         className: "py-6 text-center text-sm",
         ...props
@@ -436,11 +477,10 @@ function CommandEmpty({ ...props }) {
         columnNumber: 5
     }, this);
 }
-_c4 = CommandEmpty;
 function CommandGroup({ className, ...props }) {
-    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$cmdk$2f$dist$2f$index$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Command"].Group, {
+    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$cmdk$2f$dist$2f$index$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Command"].Group, {
         "data-slot": "command-group",
-        className: (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$src$2f$lib$2f$utils$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["cn"])("text-foreground [&_[cmdk-group-heading]]:text-muted-foreground overflow-hidden p-1 [&_[cmdk-group-heading]]:px-2 [&_[cmdk-group-heading]]:py-1.5 [&_[cmdk-group-heading]]:text-xs [&_[cmdk-group-heading]]:font-medium", className),
+        className: (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$src$2f$lib$2f$utils$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["cn"])("text-foreground [&_[cmdk-group-heading]]:text-muted-foreground overflow-hidden p-1 [&_[cmdk-group-heading]]:px-2 [&_[cmdk-group-heading]]:py-1.5 [&_[cmdk-group-heading]]:text-xs [&_[cmdk-group-heading]]:font-medium", className),
         ...props
     }, void 0, false, {
         fileName: "[project]/Develop/pokesleep-iv-comparator/src/components/ui/command.tsx",
@@ -448,11 +488,10 @@ function CommandGroup({ className, ...props }) {
         columnNumber: 5
     }, this);
 }
-_c5 = CommandGroup;
 function CommandSeparator({ className, ...props }) {
-    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$cmdk$2f$dist$2f$index$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Command"].Separator, {
+    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$cmdk$2f$dist$2f$index$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Command"].Separator, {
         "data-slot": "command-separator",
-        className: (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$src$2f$lib$2f$utils$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["cn"])("bg-border -mx-1 h-px", className),
+        className: (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$src$2f$lib$2f$utils$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["cn"])("bg-border -mx-1 h-px", className),
         ...props
     }, void 0, false, {
         fileName: "[project]/Develop/pokesleep-iv-comparator/src/components/ui/command.tsx",
@@ -460,11 +499,10 @@ function CommandSeparator({ className, ...props }) {
         columnNumber: 5
     }, this);
 }
-_c6 = CommandSeparator;
 function CommandItem({ className, ...props }) {
-    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$cmdk$2f$dist$2f$index$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Command"].Item, {
+    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$cmdk$2f$dist$2f$index$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Command"].Item, {
         "data-slot": "command-item",
-        className: (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$src$2f$lib$2f$utils$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["cn"])("data-[selected=true]:bg-accent data-[selected=true]:text-accent-foreground [&_svg:not([class*='text-'])]:text-muted-foreground relative flex cursor-default items-center gap-2 rounded-sm px-2 py-1.5 text-sm outline-hidden select-none data-[disabled=true]:pointer-events-none data-[disabled=true]:opacity-50 [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4", className),
+        className: (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$src$2f$lib$2f$utils$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["cn"])("data-[selected=true]:bg-accent data-[selected=true]:text-accent-foreground [&_svg:not([class*='text-'])]:text-muted-foreground relative flex cursor-default items-center gap-2 rounded-sm px-2 py-1.5 text-sm outline-hidden select-none data-[disabled=true]:pointer-events-none data-[disabled=true]:opacity-50 [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4", className),
         ...props
     }, void 0, false, {
         fileName: "[project]/Develop/pokesleep-iv-comparator/src/components/ui/command.tsx",
@@ -472,11 +510,10 @@ function CommandItem({ className, ...props }) {
         columnNumber: 5
     }, this);
 }
-_c7 = CommandItem;
 function CommandShortcut({ className, ...props }) {
-    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
         "data-slot": "command-shortcut",
-        className: (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$src$2f$lib$2f$utils$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["cn"])("text-muted-foreground ml-auto text-xs tracking-widest", className),
+        className: (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$src$2f$lib$2f$utils$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["cn"])("text-muted-foreground ml-auto text-xs tracking-widest", className),
         ...props
     }, void 0, false, {
         fileName: "[project]/Develop/pokesleep-iv-comparator/src/components/ui/command.tsx",
@@ -484,23 +521,9 @@ function CommandShortcut({ className, ...props }) {
         columnNumber: 5
     }, this);
 }
-_c8 = CommandShortcut;
 ;
-var _c, _c1, _c2, _c3, _c4, _c5, _c6, _c7, _c8;
-__turbopack_context__.k.register(_c, "Command");
-__turbopack_context__.k.register(_c1, "CommandDialog");
-__turbopack_context__.k.register(_c2, "CommandInput");
-__turbopack_context__.k.register(_c3, "CommandList");
-__turbopack_context__.k.register(_c4, "CommandEmpty");
-__turbopack_context__.k.register(_c5, "CommandGroup");
-__turbopack_context__.k.register(_c6, "CommandSeparator");
-__turbopack_context__.k.register(_c7, "CommandItem");
-__turbopack_context__.k.register(_c8, "CommandShortcut");
-if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelpers !== null) {
-    __turbopack_context__.k.registerExports(__turbopack_context__.m, globalThis.$RefreshHelpers$);
-}
 }),
-"[project]/Develop/pokesleep-iv-comparator/src/components/ui/popover.tsx [app-client] (ecmascript)", ((__turbopack_context__) => {
+"[project]/Develop/pokesleep-iv-comparator/src/components/ui/popover.tsx [app-ssr] (ecmascript)", ((__turbopack_context__) => {
 "use strict";
 
 __turbopack_context__.s([
@@ -513,14 +536,14 @@ __turbopack_context__.s([
     "PopoverTrigger",
     ()=>PopoverTrigger
 ]);
-var __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Develop/pokesleep-iv-comparator/node_modules/next/dist/compiled/react/jsx-dev-runtime.js [app-client] (ecmascript)");
-var __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f40$radix$2d$ui$2f$react$2d$popover$2f$dist$2f$index$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Develop/pokesleep-iv-comparator/node_modules/@radix-ui/react-popover/dist/index.mjs [app-client] (ecmascript)");
-var __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$src$2f$lib$2f$utils$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Develop/pokesleep-iv-comparator/src/lib/utils.ts [app-client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Develop/pokesleep-iv-comparator/node_modules/next/dist/server/route-modules/app-page/vendored/ssr/react-jsx-dev-runtime.js [app-ssr] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f40$radix$2d$ui$2f$react$2d$popover$2f$dist$2f$index$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Develop/pokesleep-iv-comparator/node_modules/@radix-ui/react-popover/dist/index.mjs [app-ssr] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$src$2f$lib$2f$utils$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Develop/pokesleep-iv-comparator/src/lib/utils.ts [app-ssr] (ecmascript)");
 ;
 ;
 ;
 function Popover({ ...props }) {
-    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f40$radix$2d$ui$2f$react$2d$popover$2f$dist$2f$index$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Root"], {
+    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f40$radix$2d$ui$2f$react$2d$popover$2f$dist$2f$index$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Root"], {
         "data-slot": "popover",
         ...props
     }, void 0, false, {
@@ -529,9 +552,8 @@ function Popover({ ...props }) {
         columnNumber: 10
     }, this);
 }
-_c = Popover;
 function PopoverTrigger({ ...props }) {
-    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f40$radix$2d$ui$2f$react$2d$popover$2f$dist$2f$index$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Trigger"], {
+    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f40$radix$2d$ui$2f$react$2d$popover$2f$dist$2f$index$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Trigger"], {
         "data-slot": "popover-trigger",
         ...props
     }, void 0, false, {
@@ -540,14 +562,13 @@ function PopoverTrigger({ ...props }) {
         columnNumber: 10
     }, this);
 }
-_c1 = PopoverTrigger;
 function PopoverContent({ className, align = "center", sideOffset = 4, ...props }) {
-    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f40$radix$2d$ui$2f$react$2d$popover$2f$dist$2f$index$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Portal"], {
-        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f40$radix$2d$ui$2f$react$2d$popover$2f$dist$2f$index$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Content"], {
+    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f40$radix$2d$ui$2f$react$2d$popover$2f$dist$2f$index$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Portal"], {
+        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f40$radix$2d$ui$2f$react$2d$popover$2f$dist$2f$index$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Content"], {
             "data-slot": "popover-content",
             align: align,
             sideOffset: sideOffset,
-            className: (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$src$2f$lib$2f$utils$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["cn"])("bg-popover text-popover-foreground data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2 z-50 w-72 origin-(--radix-popover-content-transform-origin) rounded-md border p-4 shadow-md outline-hidden", className),
+            className: (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$src$2f$lib$2f$utils$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["cn"])("bg-popover text-popover-foreground data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2 z-50 w-72 origin-(--radix-popover-content-transform-origin) rounded-md border p-4 shadow-md outline-hidden", className),
             ...props
         }, void 0, false, {
             fileName: "[project]/Develop/pokesleep-iv-comparator/src/components/ui/popover.tsx",
@@ -560,9 +581,8 @@ function PopoverContent({ className, align = "center", sideOffset = 4, ...props 
         columnNumber: 5
     }, this);
 }
-_c2 = PopoverContent;
 function PopoverAnchor({ ...props }) {
-    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f40$radix$2d$ui$2f$react$2d$popover$2f$dist$2f$index$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Anchor"], {
+    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f40$radix$2d$ui$2f$react$2d$popover$2f$dist$2f$index$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Anchor"], {
         "data-slot": "popover-anchor",
         ...props
     }, void 0, false, {
@@ -571,18 +591,9 @@ function PopoverAnchor({ ...props }) {
         columnNumber: 10
     }, this);
 }
-_c3 = PopoverAnchor;
 ;
-var _c, _c1, _c2, _c3;
-__turbopack_context__.k.register(_c, "Popover");
-__turbopack_context__.k.register(_c1, "PopoverTrigger");
-__turbopack_context__.k.register(_c2, "PopoverContent");
-__turbopack_context__.k.register(_c3, "PopoverAnchor");
-if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelpers !== null) {
-    __turbopack_context__.k.registerExports(__turbopack_context__.m, globalThis.$RefreshHelpers$);
-}
 }),
-"[project]/Develop/pokesleep-iv-comparator/src/data/pokemonData.ts [app-client] (ecmascript)", ((__turbopack_context__) => {
+"[project]/Develop/pokesleep-iv-comparator/src/data/pokemonData.ts [app-ssr] (ecmascript)", ((__turbopack_context__) => {
 "use strict";
 
 __turbopack_context__.s([
@@ -2561,28 +2572,23 @@ const pokemonData = [
         kinomiType: "kago"
     }
 ];
-if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelpers !== null) {
-    __turbopack_context__.k.registerExports(__turbopack_context__.m, globalThis.$RefreshHelpers$);
-}
 }),
-"[project]/Develop/pokesleep-iv-comparator/src/components/PokeNameCombobox.tsx [app-client] (ecmascript)", ((__turbopack_context__) => {
+"[project]/Develop/pokesleep-iv-comparator/src/components/PokeNameCombobox.tsx [app-ssr] (ecmascript)", ((__turbopack_context__) => {
 "use strict";
 
 __turbopack_context__.s([
     "Combobox",
     ()=>Combobox
 ]);
-var __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Develop/pokesleep-iv-comparator/node_modules/next/dist/compiled/react/jsx-dev-runtime.js [app-client] (ecmascript)");
-var __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Develop/pokesleep-iv-comparator/node_modules/next/dist/compiled/react/index.js [app-client] (ecmascript)");
-var __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$check$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Check$3e$__ = __turbopack_context__.i("[project]/Develop/pokesleep-iv-comparator/node_modules/lucide-react/dist/esm/icons/check.js [app-client] (ecmascript) <export default as Check>");
-var __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$chevrons$2d$up$2d$down$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__ChevronsUpDown$3e$__ = __turbopack_context__.i("[project]/Develop/pokesleep-iv-comparator/node_modules/lucide-react/dist/esm/icons/chevrons-up-down.js [app-client] (ecmascript) <export default as ChevronsUpDown>");
-var __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$src$2f$lib$2f$utils$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Develop/pokesleep-iv-comparator/src/lib/utils.ts [app-client] (ecmascript)");
-var __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$src$2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Develop/pokesleep-iv-comparator/src/components/ui/button.tsx [app-client] (ecmascript)");
-var __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$src$2f$components$2f$ui$2f$command$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Develop/pokesleep-iv-comparator/src/components/ui/command.tsx [app-client] (ecmascript)");
-var __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$src$2f$components$2f$ui$2f$popover$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Develop/pokesleep-iv-comparator/src/components/ui/popover.tsx [app-client] (ecmascript)");
-var __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$src$2f$data$2f$pokemonData$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Develop/pokesleep-iv-comparator/src/data/pokemonData.ts [app-client] (ecmascript)");
-;
-var _s = __turbopack_context__.k.signature();
+var __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Develop/pokesleep-iv-comparator/node_modules/next/dist/server/route-modules/app-page/vendored/ssr/react-jsx-dev-runtime.js [app-ssr] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Develop/pokesleep-iv-comparator/node_modules/next/dist/server/route-modules/app-page/vendored/ssr/react.js [app-ssr] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$check$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Check$3e$__ = __turbopack_context__.i("[project]/Develop/pokesleep-iv-comparator/node_modules/lucide-react/dist/esm/icons/check.js [app-ssr] (ecmascript) <export default as Check>");
+var __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$chevrons$2d$up$2d$down$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__ChevronsUpDown$3e$__ = __turbopack_context__.i("[project]/Develop/pokesleep-iv-comparator/node_modules/lucide-react/dist/esm/icons/chevrons-up-down.js [app-ssr] (ecmascript) <export default as ChevronsUpDown>");
+var __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$src$2f$lib$2f$utils$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Develop/pokesleep-iv-comparator/src/lib/utils.ts [app-ssr] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$src$2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Develop/pokesleep-iv-comparator/src/components/ui/button.tsx [app-ssr] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$src$2f$components$2f$ui$2f$command$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Develop/pokesleep-iv-comparator/src/components/ui/command.tsx [app-ssr] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$src$2f$components$2f$ui$2f$popover$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Develop/pokesleep-iv-comparator/src/components/ui/popover.tsx [app-ssr] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$src$2f$data$2f$pokemonData$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Develop/pokesleep-iv-comparator/src/data/pokemonData.ts [app-ssr] (ecmascript)");
 "use client";
 ;
 ;
@@ -2591,27 +2597,27 @@ var _s = __turbopack_context__.k.signature();
 ;
 ;
 ;
-const pokemonList = __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$src$2f$data$2f$pokemonData$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["pokemonData"].map((pokemon)=>({
+;
+const pokemonList = __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$src$2f$data$2f$pokemonData$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["pokemonData"].map((pokemon)=>({
         value: pokemon.name,
         label: pokemon.displayName
     }));
 function Combobox({ value, onChange }) {
-    _s();
-    const [open, setOpen] = __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"](false);
-    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$src$2f$components$2f$ui$2f$popover$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Popover"], {
+    const [open, setOpen] = __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"](false);
+    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$src$2f$components$2f$ui$2f$popover$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Popover"], {
         open: open,
         onOpenChange: setOpen,
         children: [
-            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$src$2f$components$2f$ui$2f$popover$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["PopoverTrigger"], {
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$src$2f$components$2f$ui$2f$popover$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["PopoverTrigger"], {
                 asChild: true,
-                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$src$2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Button"], {
+                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$src$2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Button"], {
                     variant: "outline",
                     role: "combobox",
                     "aria-expanded": open,
                     className: "w-[400px] justify-between",
                     children: [
                         value ? pokemonList.find((framework)=>framework.value === value)?.label : "ポケモン名を選択",
-                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$chevrons$2d$up$2d$down$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__ChevronsUpDown$3e$__["ChevronsUpDown"], {
+                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$chevrons$2d$up$2d$down$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__ChevronsUpDown$3e$__["ChevronsUpDown"], {
                             className: "opacity-50"
                         }, void 0, false, {
                             fileName: "[project]/Develop/pokesleep-iv-comparator/src/components/PokeNameCombobox.tsx",
@@ -2629,11 +2635,11 @@ function Combobox({ value, onChange }) {
                 lineNumber: 38,
                 columnNumber: 7
             }, this),
-            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$src$2f$components$2f$ui$2f$popover$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["PopoverContent"], {
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$src$2f$components$2f$ui$2f$popover$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["PopoverContent"], {
                 className: "w-[400px] p-0",
-                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$src$2f$components$2f$ui$2f$command$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Command"], {
+                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$src$2f$components$2f$ui$2f$command$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Command"], {
                     children: [
-                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$src$2f$components$2f$ui$2f$command$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["CommandInput"], {
+                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$src$2f$components$2f$ui$2f$command$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["CommandInput"], {
                             placeholder: "ポケモン名を検索",
                             className: "h-9"
                         }, void 0, false, {
@@ -2641,17 +2647,17 @@ function Combobox({ value, onChange }) {
                             lineNumber: 55,
                             columnNumber: 11
                         }, this),
-                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$src$2f$components$2f$ui$2f$command$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["CommandList"], {
+                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$src$2f$components$2f$ui$2f$command$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["CommandList"], {
                             children: [
-                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$src$2f$components$2f$ui$2f$command$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["CommandEmpty"], {
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$src$2f$components$2f$ui$2f$command$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["CommandEmpty"], {
                                     children: "一致するポケモンがありません。"
                                 }, void 0, false, {
                                     fileName: "[project]/Develop/pokesleep-iv-comparator/src/components/PokeNameCombobox.tsx",
                                     lineNumber: 60,
                                     columnNumber: 13
                                 }, this),
-                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$src$2f$components$2f$ui$2f$command$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["CommandGroup"], {
-                                    children: pokemonList.map((framework)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$src$2f$components$2f$ui$2f$command$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["CommandItem"], {
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$src$2f$components$2f$ui$2f$command$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["CommandGroup"], {
+                                    children: pokemonList.map((framework)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$src$2f$components$2f$ui$2f$command$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["CommandItem"], {
                                             value: framework.label,
                                             onSelect: (currentValue)=>{
                                                 const selectedFramework = pokemonList.find((f)=>f.label === currentValue);
@@ -2660,8 +2666,8 @@ function Combobox({ value, onChange }) {
                                             },
                                             children: [
                                                 framework.label,
-                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$check$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Check$3e$__["Check"], {
-                                                    className: (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$src$2f$lib$2f$utils$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["cn"])("ml-auto", value === framework.value ? "opacity-100" : "opacity-0")
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$check$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Check$3e$__["Check"], {
+                                                    className: (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$src$2f$lib$2f$utils$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["cn"])("ml-auto", value === framework.value ? "opacity-100" : "opacity-0")
                                                 }, void 0, false, {
                                                     fileName: "[project]/Develop/pokesleep-iv-comparator/src/components/PokeNameCombobox.tsx",
                                                     lineNumber: 82,
@@ -2702,15 +2708,8 @@ function Combobox({ value, onChange }) {
         columnNumber: 5
     }, this);
 }
-_s(Combobox, "xG1TONbKtDWtdOTrXaTAsNhPg/Q=");
-_c = Combobox;
-var _c;
-__turbopack_context__.k.register(_c, "Combobox");
-if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelpers !== null) {
-    __turbopack_context__.k.registerExports(__turbopack_context__.m, globalThis.$RefreshHelpers$);
-}
 }),
-"[project]/Develop/pokesleep-iv-comparator/src/utils/subSkillUtils.ts [app-client] (ecmascript)", ((__turbopack_context__) => {
+"[project]/Develop/pokesleep-iv-comparator/src/utils/subSkillUtils.ts [app-ssr] (ecmascript)", ((__turbopack_context__) => {
 "use strict";
 
 __turbopack_context__.s([
@@ -2819,7 +2818,7 @@ const getRarityStyles = (rarity)=>{
             border: "border-cyan-200",
             badge: "bg-cyan-500",
             hover: "hover:from-cyan-100 hover:to-blue-100 hover:border-cyan-300",
-            chip: "bg-blue-100 text-cyan-700",
+            chip: "bg-cyan-100 text-cyan-700",
             text: "text-cyan-700"
         },
         gray: {
@@ -2833,33 +2832,30 @@ const getRarityStyles = (rarity)=>{
     };
     return styles[rarity];
 };
-if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelpers !== null) {
-    __turbopack_context__.k.registerExports(__turbopack_context__.m, globalThis.$RefreshHelpers$);
-}
 }),
-"[project]/Develop/pokesleep-iv-comparator/src/components/SubSkillSelect/SkillCard.tsx [app-client] (ecmascript)", ((__turbopack_context__) => {
+"[project]/Develop/pokesleep-iv-comparator/src/components/SubSkillSelect/SkillCard.tsx [app-ssr] (ecmascript)", ((__turbopack_context__) => {
 "use strict";
 
 __turbopack_context__.s([
     "SkillCard",
     ()=>SkillCard
 ]);
-var __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Develop/pokesleep-iv-comparator/node_modules/next/dist/compiled/react/jsx-dev-runtime.js [app-client] (ecmascript)");
-var __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$src$2f$utils$2f$subSkillUtils$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Develop/pokesleep-iv-comparator/src/utils/subSkillUtils.ts [app-client] (ecmascript)");
-var __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$x$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__X$3e$__ = __turbopack_context__.i("[project]/Develop/pokesleep-iv-comparator/node_modules/lucide-react/dist/esm/icons/x.js [app-client] (ecmascript) <export default as X>");
+var __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Develop/pokesleep-iv-comparator/node_modules/next/dist/server/route-modules/app-page/vendored/ssr/react-jsx-dev-runtime.js [app-ssr] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$src$2f$utils$2f$subSkillUtils$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Develop/pokesleep-iv-comparator/src/utils/subSkillUtils.ts [app-ssr] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$x$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__X$3e$__ = __turbopack_context__.i("[project]/Develop/pokesleep-iv-comparator/node_modules/lucide-react/dist/esm/icons/x.js [app-ssr] (ecmascript) <export default as X>");
 ;
 ;
 ;
 const SkillCard = ({ skill, onEdit, onRemove })=>{
-    const styles = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$src$2f$utils$2f$subSkillUtils$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["getRarityStyles"])(skill.rarity);
-    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+    const styles = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$src$2f$utils$2f$subSkillUtils$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["getRarityStyles"])(skill.rarity);
+    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
         className: `
         relative rounded-lg border-2
         ${styles.gradient} ${styles.border}
         transition-all
         overflow-hidden
       `,
-        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
             onClick: onEdit,
             className: `
           flex items-center gap-1.5 px-2 py-1
@@ -2868,7 +2864,7 @@ const SkillCard = ({ skill, onEdit, onRemove })=>{
           transition-all active:scale-[0.98]
         `,
             children: [
-                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                     className: " text-secondary text-xs rounded-full w-8 h-5 flex items-center justify-center shrink-0 ",
                     children: [
                         "Lv.",
@@ -2879,9 +2875,9 @@ const SkillCard = ({ skill, onEdit, onRemove })=>{
                     lineNumber: 38,
                     columnNumber: 9
                 }, ("TURBOPACK compile-time value", void 0)),
-                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                     className: "text-xs font-medium text-gray-800 flex-1 min-w-0",
-                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                         className: "truncate",
                         children: skill.name
                     }, void 0, false, {
@@ -2894,11 +2890,11 @@ const SkillCard = ({ skill, onEdit, onRemove })=>{
                     lineNumber: 50,
                     columnNumber: 9
                 }, ("TURBOPACK compile-time value", void 0)),
-                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
                     onClick: onRemove,
                     className: " text-red-500 hover:text-red-600 rounded-full w-5 h-5 flex items-center justify-center transition-colors active:scale-90 shrink-0 cursor-pointer ",
                     "aria-label": "削除",
-                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$x$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__X$3e$__["X"], {
+                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$x$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__X$3e$__["X"], {
                         className: "w-3 h-3"
                     }, void 0, false, {
                         fileName: "[project]/Develop/pokesleep-iv-comparator/src/components/SubSkillSelect/SkillCard.tsx",
@@ -2922,14 +2918,8 @@ const SkillCard = ({ skill, onEdit, onRemove })=>{
         columnNumber: 5
     }, ("TURBOPACK compile-time value", void 0));
 };
-_c = SkillCard;
-var _c;
-__turbopack_context__.k.register(_c, "SkillCard");
-if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelpers !== null) {
-    __turbopack_context__.k.registerExports(__turbopack_context__.m, globalThis.$RefreshHelpers$);
-}
 }),
-"[project]/Develop/pokesleep-iv-comparator/src/data/subSkillData.ts [app-client] (ecmascript)", ((__turbopack_context__) => {
+"[project]/Develop/pokesleep-iv-comparator/src/data/subSkillData.ts [app-ssr] (ecmascript)", ((__turbopack_context__) => {
 "use strict";
 
 __turbopack_context__.s([
@@ -3040,20 +3030,17 @@ const subSkillData = [
         skillGroup: "inventoryCapacity"
     }
 ];
-if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelpers !== null) {
-    __turbopack_context__.k.registerExports(__turbopack_context__.m, globalThis.$RefreshHelpers$);
-}
 }),
-"[project]/Develop/pokesleep-iv-comparator/src/components/SubSkillSelect/SkillListView.tsx [app-client] (ecmascript)", ((__turbopack_context__) => {
+"[project]/Develop/pokesleep-iv-comparator/src/components/SubSkillSelect/SkillListView.tsx [app-ssr] (ecmascript)", ((__turbopack_context__) => {
 "use strict";
 
 __turbopack_context__.s([
     "SkillListView",
     ()=>SkillListView
 ]);
-var __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Develop/pokesleep-iv-comparator/node_modules/next/dist/compiled/react/jsx-dev-runtime.js [app-client] (ecmascript)");
-var __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$src$2f$data$2f$subSkillData$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Develop/pokesleep-iv-comparator/src/data/subSkillData.ts [app-client] (ecmascript)");
-var __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$src$2f$utils$2f$subSkillUtils$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Develop/pokesleep-iv-comparator/src/utils/subSkillUtils.ts [app-client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Develop/pokesleep-iv-comparator/node_modules/next/dist/server/route-modules/app-page/vendored/ssr/react-jsx-dev-runtime.js [app-ssr] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$src$2f$data$2f$subSkillData$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Develop/pokesleep-iv-comparator/src/data/subSkillData.ts [app-ssr] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$src$2f$utils$2f$subSkillUtils$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Develop/pokesleep-iv-comparator/src/utils/subSkillUtils.ts [app-ssr] (ecmascript)");
 ;
 ;
 ;
@@ -3074,8 +3061,8 @@ const SkillListView = ({ onSkillSelect, selectedSkills, onRemoveSkill })=>{
         return selectedSkills.some((s)=>s.baseId === baseId);
     };
     // スキルグループ毎にグループ化
-    const groupedSkills = __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$src$2f$data$2f$subSkillData$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["subSkillData"].reduce((acc, skill)=>{
-        if (skill.skillGroup && (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$src$2f$utils$2f$subSkillUtils$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["hasVariants"])(skill)) {
+    const groupedSkills = __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$src$2f$data$2f$subSkillData$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["subSkillData"].reduce((acc, skill)=>{
+        if (skill.skillGroup && (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$src$2f$utils$2f$subSkillUtils$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["hasVariants"])(skill)) {
             if (!acc.withVariants[skill.skillGroup]) {
                 acc.withVariants[skill.skillGroup] = [];
             }
@@ -3092,8 +3079,8 @@ const SkillListView = ({ onSkillSelect, selectedSkills, onRemoveSkill })=>{
     const renderSkillCard = (skill)=>{
         const selectedId = isSkillSelected(skill);
         const isSelected = selectedId !== null;
-        const styles = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$src$2f$utils$2f$subSkillUtils$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["getRarityStyles"])(skill.rarity);
-        return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+        const styles = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$src$2f$utils$2f$subSkillUtils$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["getRarityStyles"])(skill.rarity);
+        return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
             onClick: ()=>{
                 if (isSelected) {
                     onRemoveSkill(selectedId);
@@ -3107,7 +3094,7 @@ const SkillListView = ({ onSkillSelect, selectedSkills, onRemoveSkill })=>{
           transition-all active:scale-95
           text-center
         `,
-            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                 className: `text-xs font-medium text-wrap ${isSelected ? "text-white" : "text-gray-800"}`,
                 children: skill.displayName
             }, void 0, false, {
@@ -3123,15 +3110,15 @@ const SkillListView = ({ onSkillSelect, selectedSkills, onRemoveSkill })=>{
     };
     // バリアントありスキルの表示用カード（グループごと）
     const renderVariantSkillCard = (skillGroup, skills)=>{
-        const config = __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$src$2f$utils$2f$subSkillUtils$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["VARIANT_CONFIG"][skillGroup];
-        const variants = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$src$2f$utils$2f$subSkillUtils$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["getAvailableVariants"])(skillGroup);
-        return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+        const config = __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$src$2f$utils$2f$subSkillUtils$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["VARIANT_CONFIG"][skillGroup];
+        const variants = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$src$2f$utils$2f$subSkillUtils$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["getAvailableVariants"])(skillGroup);
+        return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
             onClick: ()=>{
                 onSkillSelect(skills[0]); // グループの代表スキルを渡す
             },
             className: " p-2 rounded-lg border-2 bg-white border-gray-300 hover:bg-gray-50 hover:border-gray-400 transition-all active:scale-95 text-center relative ",
             children: [
-                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                     className: "text-xs font-medium text-wrap mb-1.5 text-gray-800",
                     children: config.label
                 }, void 0, false, {
@@ -3139,13 +3126,13 @@ const SkillListView = ({ onSkillSelect, selectedSkills, onRemoveSkill })=>{
                     lineNumber: 134,
                     columnNumber: 9
                 }, ("TURBOPACK compile-time value", void 0)),
-                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                     className: "flex gap-1 justify-center flex-wrap",
                     children: variants.map((variant)=>{
-                        const variantRarity = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$src$2f$utils$2f$subSkillUtils$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["getRarityByVariant"])(skillGroup, variant);
-                        const variantStyles = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$src$2f$utils$2f$subSkillUtils$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["getRarityStyles"])(variantRarity);
+                        const variantRarity = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$src$2f$utils$2f$subSkillUtils$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["getRarityByVariant"])(skillGroup, variant);
+                        const variantStyles = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$src$2f$utils$2f$subSkillUtils$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["getRarityStyles"])(variantRarity);
                         const isVariantSelected = isSpecificVariantSelected(skillGroup, variant);
-                        return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                        return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                             className: `
                   ${isVariantSelected ? "bg-gray-600 text-white border-gray-500" : variantStyles.chip}
                   px-1.5 py-0.5 rounded text-[9px] font-semibold
@@ -3169,10 +3156,10 @@ const SkillListView = ({ onSkillSelect, selectedSkills, onRemoveSkill })=>{
             columnNumber: 7
         }, ("TURBOPACK compile-time value", void 0));
     };
-    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
         className: "space-y-2",
         children: [
-            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
                 className: "text-base font-bold text-gray-800",
                 children: "スキルを選択"
             }, void 0, false, {
@@ -3180,7 +3167,7 @@ const SkillListView = ({ onSkillSelect, selectedSkills, onRemoveSkill })=>{
                 lineNumber: 174,
                 columnNumber: 7
             }, ("TURBOPACK compile-time value", void 0)),
-            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                 className: "grid grid-cols-3 gap-2",
                 children: [
                     groupedSkills.withoutVariants.map((skill)=>renderSkillCard(skill)),
@@ -3198,43 +3185,37 @@ const SkillListView = ({ onSkillSelect, selectedSkills, onRemoveSkill })=>{
         columnNumber: 5
     }, ("TURBOPACK compile-time value", void 0));
 };
-_c = SkillListView;
-var _c;
-__turbopack_context__.k.register(_c, "SkillListView");
-if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelpers !== null) {
-    __turbopack_context__.k.registerExports(__turbopack_context__.m, globalThis.$RefreshHelpers$);
-}
 }),
-"[project]/Develop/pokesleep-iv-comparator/src/components/SubSkillSelect/VariantSelector.tsx [app-client] (ecmascript)", ((__turbopack_context__) => {
+"[project]/Develop/pokesleep-iv-comparator/src/components/SubSkillSelect/VariantSelector.tsx [app-ssr] (ecmascript)", ((__turbopack_context__) => {
 "use strict";
 
 __turbopack_context__.s([
     "VariantSelector",
     ()=>VariantSelector
 ]);
-var __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Develop/pokesleep-iv-comparator/node_modules/next/dist/compiled/react/jsx-dev-runtime.js [app-client] (ecmascript)");
-var __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$src$2f$utils$2f$subSkillUtils$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Develop/pokesleep-iv-comparator/src/utils/subSkillUtils.ts [app-client] (ecmascript)");
-var __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$chevron$2d$left$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__ChevronLeft$3e$__ = __turbopack_context__.i("[project]/Develop/pokesleep-iv-comparator/node_modules/lucide-react/dist/esm/icons/chevron-left.js [app-client] (ecmascript) <export default as ChevronLeft>");
+var __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Develop/pokesleep-iv-comparator/node_modules/next/dist/server/route-modules/app-page/vendored/ssr/react-jsx-dev-runtime.js [app-ssr] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$src$2f$utils$2f$subSkillUtils$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Develop/pokesleep-iv-comparator/src/utils/subSkillUtils.ts [app-ssr] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$chevron$2d$left$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__ChevronLeft$3e$__ = __turbopack_context__.i("[project]/Develop/pokesleep-iv-comparator/node_modules/lucide-react/dist/esm/icons/chevron-left.js [app-ssr] (ecmascript) <export default as ChevronLeft>");
 ;
 ;
 ;
 const VariantSelector = ({ skill, level, isEditing, onVariantSelect, onBack, selectedSkills, onRemoveSkill })=>{
-    const variants = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$src$2f$utils$2f$subSkillUtils$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["getAvailableVariants"])(skill.skillGroup);
-    const config = __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$src$2f$utils$2f$subSkillUtils$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["VARIANT_CONFIG"][skill.skillGroup];
+    const variants = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$src$2f$utils$2f$subSkillUtils$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["getAvailableVariants"])(skill.skillGroup);
+    const config = __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$src$2f$utils$2f$subSkillUtils$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["VARIANT_CONFIG"][skill.skillGroup];
     // 特定のバリアントが選択済みかチェック
     const isVariantSelected = (variant)=>{
         const baseId = `${skill.skillGroup}${variant}`;
         const selected = selectedSkills.find((s)=>s.baseId === baseId);
         return selected ? selected.id : null;
     };
-    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
         className: "space-y-2.5",
         children: [
-            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
                 onClick: onBack,
                 className: " flex items-center gap-1 text-xs text-gray-600 hover:text-gray-800 transition-colors ",
                 children: [
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$chevron$2d$left$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__ChevronLeft$3e$__["ChevronLeft"], {
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$chevron$2d$left$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__ChevronLeft$3e$__["ChevronLeft"], {
                         className: "w-3.5 h-3.5"
                     }, void 0, false, {
                         fileName: "[project]/Develop/pokesleep-iv-comparator/src/components/SubSkillSelect/VariantSelector.tsx",
@@ -3248,9 +3229,9 @@ const VariantSelector = ({ skill, level, isEditing, onVariantSelect, onBack, sel
                 lineNumber: 50,
                 columnNumber: 7
             }, ("TURBOPACK compile-time value", void 0)),
-            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                 children: [
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
                         className: "text-base font-bold text-gray-800 mb-0.5",
                         children: "グレードを選択してください"
                     }, void 0, false, {
@@ -3258,7 +3239,7 @@ const VariantSelector = ({ skill, level, isEditing, onVariantSelect, onBack, sel
                         lineNumber: 63,
                         columnNumber: 9
                     }, ("TURBOPACK compile-time value", void 0)),
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                         className: "text-xs text-gray-600",
                         children: [
                             config.label,
@@ -3275,9 +3256,9 @@ const VariantSelector = ({ skill, level, isEditing, onVariantSelect, onBack, sel
                 lineNumber: 62,
                 columnNumber: 7
             }, ("TURBOPACK compile-time value", void 0)),
-            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                 className: "bg-blue-50 border border-blue-200 rounded-lg p-2",
-                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                     className: "text-xs text-blue-800 text-center",
                     children: [
                         "Lv.",
@@ -3296,14 +3277,14 @@ const VariantSelector = ({ skill, level, isEditing, onVariantSelect, onBack, sel
                 lineNumber: 72,
                 columnNumber: 7
             }, ("TURBOPACK compile-time value", void 0)),
-            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                 className: `grid gap-2 ${variants.length === 3 ? "grid-cols-3" : "grid-cols-2"}`,
                 children: variants.map((variant)=>{
-                    const variantRarity = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$src$2f$utils$2f$subSkillUtils$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["getRarityByVariant"])(skill.skillGroup, variant);
-                    const styles = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$src$2f$utils$2f$subSkillUtils$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["getRarityStyles"])(variantRarity);
+                    const variantRarity = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$src$2f$utils$2f$subSkillUtils$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["getRarityByVariant"])(skill.skillGroup, variant);
+                    const styles = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$src$2f$utils$2f$subSkillUtils$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["getRarityStyles"])(variantRarity);
                     const selectedId = isVariantSelected(variant);
                     const isSelected = selectedId !== null;
-                    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
                         onClick: ()=>{
                             if (isSelected) {
                                 onRemoveSkill(selectedId);
@@ -3316,10 +3297,10 @@ const VariantSelector = ({ skill, level, isEditing, onVariantSelect, onBack, sel
                 ${isSelected ? "bg-gray-600 border-gray-600 hover:bg-gray-600" : `${styles.gradient} ${styles.border} ${styles.hover}`}
                 transition-all active:scale-95
               `,
-                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                             className: "text-center",
                             children: [
-                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                     className: `text-xl font-bold mb-0.5 ${isSelected ? "text-white" : "text-gray-800"}`,
                                     children: variant
                                 }, void 0, false, {
@@ -3327,7 +3308,7 @@ const VariantSelector = ({ skill, level, isEditing, onVariantSelect, onBack, sel
                                     lineNumber: 117,
                                     columnNumber: 17
                                 }, ("TURBOPACK compile-time value", void 0)),
-                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                     className: `text-[10px] ${isSelected ? "text-gray-200" : "text-gray-600"}`,
                                     children: variant === "L" ? "Large" : variant === "M" ? "Medium" : "Small"
                                 }, void 0, false, {
@@ -3359,57 +3340,45 @@ const VariantSelector = ({ skill, level, isEditing, onVariantSelect, onBack, sel
         columnNumber: 5
     }, ("TURBOPACK compile-time value", void 0));
 };
-_c = VariantSelector;
-var _c;
-__turbopack_context__.k.register(_c, "VariantSelector");
-if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelpers !== null) {
-    __turbopack_context__.k.registerExports(__turbopack_context__.m, globalThis.$RefreshHelpers$);
-}
 }),
-"[project]/Develop/pokesleep-iv-comparator/src/components/SubSkillSelect/SkillPickerModal.tsx [app-client] (ecmascript)", ((__turbopack_context__) => {
+"[project]/Develop/pokesleep-iv-comparator/src/components/SubSkillSelect/SkillPickerModal.tsx [app-ssr] (ecmascript)", ((__turbopack_context__) => {
 "use strict";
 
 __turbopack_context__.s([
     "SkillPickerModal",
     ()=>SkillPickerModal
 ]);
-var __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Develop/pokesleep-iv-comparator/node_modules/next/dist/compiled/react/jsx-dev-runtime.js [app-client] (ecmascript)");
-var __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$src$2f$components$2f$SubSkillSelect$2f$SkillListView$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Develop/pokesleep-iv-comparator/src/components/SubSkillSelect/SkillListView.tsx [app-client] (ecmascript)");
-var __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$src$2f$components$2f$SubSkillSelect$2f$VariantSelector$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Develop/pokesleep-iv-comparator/src/components/SubSkillSelect/VariantSelector.tsx [app-client] (ecmascript)");
-var __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$x$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__X$3e$__ = __turbopack_context__.i("[project]/Develop/pokesleep-iv-comparator/node_modules/lucide-react/dist/esm/icons/x.js [app-client] (ecmascript) <export default as X>");
-var __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$src$2f$utils$2f$subSkillUtils$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Develop/pokesleep-iv-comparator/src/utils/subSkillUtils.ts [app-client] (ecmascript)");
-var __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Develop/pokesleep-iv-comparator/node_modules/next/dist/compiled/react/index.js [app-client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Develop/pokesleep-iv-comparator/node_modules/next/dist/server/route-modules/app-page/vendored/ssr/react-jsx-dev-runtime.js [app-ssr] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$src$2f$components$2f$SubSkillSelect$2f$SkillListView$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Develop/pokesleep-iv-comparator/src/components/SubSkillSelect/SkillListView.tsx [app-ssr] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$src$2f$components$2f$SubSkillSelect$2f$VariantSelector$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Develop/pokesleep-iv-comparator/src/components/SubSkillSelect/VariantSelector.tsx [app-ssr] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$x$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__X$3e$__ = __turbopack_context__.i("[project]/Develop/pokesleep-iv-comparator/node_modules/lucide-react/dist/esm/icons/x.js [app-ssr] (ecmascript) <export default as X>");
+var __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$src$2f$utils$2f$subSkillUtils$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Develop/pokesleep-iv-comparator/src/utils/subSkillUtils.ts [app-ssr] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Develop/pokesleep-iv-comparator/node_modules/next/dist/server/route-modules/app-page/vendored/ssr/react.js [app-ssr] (ecmascript)");
 ;
-var _s = __turbopack_context__.k.signature();
 ;
 ;
 ;
 ;
 ;
 const SkillPickerModal = ({ isOpen, onClose, selectedSkills, editingSkill, nextLevel, onSkillSelect, onVariantSelect, currentView, variantSkill, onBackToList, onRemoveSkill })=>{
-    _s();
     // モーダルが開いたときにbodyのスクロールを無効化
-    (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useEffect"])({
-        "SkillPickerModal.useEffect": ()=>{
-            if (isOpen) {
-                document.body.style.overflow = "hidden";
-            } else {
-                document.body.style.overflow = "unset";
-            }
-            return ({
-                "SkillPickerModal.useEffect": ()=>{
-                    document.body.style.overflow = "unset";
-                }
-            })["SkillPickerModal.useEffect"];
+    (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useEffect"])(()=>{
+        if (isOpen) {
+            document.body.style.overflow = "hidden";
+        } else {
+            document.body.style.overflow = "unset";
         }
-    }["SkillPickerModal.useEffect"], [
+        return ()=>{
+            document.body.style.overflow = "unset";
+        };
+    }, [
         isOpen
     ]);
     if (!isOpen) return null;
     const isEditing = editingSkill !== null;
-    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Fragment"], {
+    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Fragment"], {
         children: [
-            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                 className: "fixed inset-0 bg-black/50 z-40 animate-in fade-in duration-300",
                 onClick: onClose
             }, void 0, false, {
@@ -3417,14 +3386,14 @@ const SkillPickerModal = ({ isOpen, onClose, selectedSkills, editingSkill, nextL
                 lineNumber: 60,
                 columnNumber: 7
             }, ("TURBOPACK compile-time value", void 0)),
-            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                 className: "fixed inset-x-0 bottom-0 z-50 animate-in slide-in-from-bottom duration-300",
-                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                    className: " bg-white rounded-t-3xl max-h-[80vh] overflow-y-auto shadow-2xl ",
+                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                    className: " bg-background rounded-t-3xl max-h-[80vh] overflow-y-auto shadow-2xl ",
                     children: [
-                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                             className: "flex justify-center pt-2 pb-1",
-                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                 className: "w-12 h-1 bg-gray-300 rounded-full"
                             }, void 0, false, {
                                 fileName: "[project]/Develop/pokesleep-iv-comparator/src/components/SubSkillSelect/SkillPickerModal.tsx",
@@ -3436,13 +3405,13 @@ const SkillPickerModal = ({ isOpen, onClose, selectedSkills, editingSkill, nextL
                             lineNumber: 75,
                             columnNumber: 11
                         }, ("TURBOPACK compile-time value", void 0)),
-                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                             className: "px-4 pb-2 border-b border-gray-200",
                             children: [
-                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                     className: "flex items-center justify-between",
                                     children: [
-                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
                                             className: "text-lg font-bold text-gray-800",
                                             children: isEditing ? "スキルを変更" : "スキルを選択"
                                         }, void 0, false, {
@@ -3450,11 +3419,11 @@ const SkillPickerModal = ({ isOpen, onClose, selectedSkills, editingSkill, nextL
                                             lineNumber: 82,
                                             columnNumber: 15
                                         }, ("TURBOPACK compile-time value", void 0)),
-                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
                                             onClick: onClose,
                                             className: " p-1.5 rounded-full hover:bg-gray-100 transition-colors ",
                                             "aria-label": "閉じる",
-                                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$x$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__X$3e$__["X"], {
+                                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$x$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__X$3e$__["X"], {
                                                 className: "w-4 h-4 text-gray-600"
                                             }, void 0, false, {
                                                 fileName: "[project]/Develop/pokesleep-iv-comparator/src/components/SubSkillSelect/SkillPickerModal.tsx",
@@ -3472,15 +3441,15 @@ const SkillPickerModal = ({ isOpen, onClose, selectedSkills, editingSkill, nextL
                                     lineNumber: 81,
                                     columnNumber: 13
                                 }, ("TURBOPACK compile-time value", void 0)),
-                                isEditing && editingSkill && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                isEditing && editingSkill && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                     className: "mt-1.5",
-                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                         className: `
                     inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full
                     bg-slate-100 border border-slate-300
                   `,
                                         children: [
-                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                                 className: "text-xs text-secondary",
                                                 children: "編集中"
                                             }, void 0, false, {
@@ -3488,7 +3457,7 @@ const SkillPickerModal = ({ isOpen, onClose, selectedSkills, editingSkill, nextL
                                                 lineNumber: 109,
                                                 columnNumber: 19
                                             }, ("TURBOPACK compile-time value", void 0)),
-                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                                 className: "text-xs font-semibold text-secondary",
                                                 children: editingSkill.name
                                             }, void 0, false, {
@@ -3507,14 +3476,14 @@ const SkillPickerModal = ({ isOpen, onClose, selectedSkills, editingSkill, nextL
                                     lineNumber: 102,
                                     columnNumber: 15
                                 }, ("TURBOPACK compile-time value", void 0)),
-                                !isEditing && currentView === "list" && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                !isEditing && currentView === "list" && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                     className: "mt-2 space-y-1.5",
                                     children: [
-                                        selectedSkills.length > 0 && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                        selectedSkills.length > 0 && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                             className: "flex flex-wrap gap-1.5",
                                             children: selectedSkills.map((skill, index)=>{
-                                                const styles = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$src$2f$utils$2f$subSkillUtils$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["getRarityStyles"])(skill.rarity);
-                                                return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                const styles = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$src$2f$utils$2f$subSkillUtils$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["getRarityStyles"])(skill.rarity);
+                                                return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                     className: `
                             ${styles.chip}
                             pl-2 pr-1 py-0.5 rounded-full
@@ -3523,7 +3492,7 @@ const SkillPickerModal = ({ isOpen, onClose, selectedSkills, editingSkill, nextL
                             min-w-[140px]
                           `,
                                                     children: [
-                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                                             className: "flex-1 whitespace-nowrap overflow-hidden text-ellipsis",
                                                             children: [
                                                                 "Lv.",
@@ -3536,14 +3505,14 @@ const SkillPickerModal = ({ isOpen, onClose, selectedSkills, editingSkill, nextL
                                                             lineNumber: 140,
                                                             columnNumber: 27
                                                         }, ("TURBOPACK compile-time value", void 0)),
-                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
                                                             onClick: (e)=>{
                                                                 e.stopPropagation();
                                                                 onRemoveSkill(skill.id);
                                                             },
                                                             className: " text-red-500 hover:text-red-700 transition-colors shrink-0 p-0.5 ",
                                                             "aria-label": `${skill.name}を削除`,
-                                                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$x$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__X$3e$__["X"], {
+                                                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$x$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__X$3e$__["X"], {
                                                                 className: "w-3 h-3"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/Develop/pokesleep-iv-comparator/src/components/SubSkillSelect/SkillPickerModal.tsx",
@@ -3567,10 +3536,10 @@ const SkillPickerModal = ({ isOpen, onClose, selectedSkills, editingSkill, nextL
                                             lineNumber: 124,
                                             columnNumber: 19
                                         }, ("TURBOPACK compile-time value", void 0)),
-                                        selectedSkills.length < 5 && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                        selectedSkills.length < 5 && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                             className: "space-y-0.5",
                                             children: [
-                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                                     className: "text-xs text-gray-600",
                                                     children: "続けて選択できます"
                                                 }, void 0, false, {
@@ -3578,7 +3547,7 @@ const SkillPickerModal = ({ isOpen, onClose, selectedSkills, editingSkill, nextL
                                                     lineNumber: 167,
                                                     columnNumber: 21
                                                 }, ("TURBOPACK compile-time value", void 0)),
-                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                                     className: "text-xs font-medium text-blue-600",
                                                     children: [
                                                         "次のスキル: Lv.",
@@ -3608,10 +3577,10 @@ const SkillPickerModal = ({ isOpen, onClose, selectedSkills, editingSkill, nextL
                             lineNumber: 80,
                             columnNumber: 11
                         }, ("TURBOPACK compile-time value", void 0)),
-                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                             className: "px-4 py-3",
                             children: [
-                                currentView === "list" && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$src$2f$components$2f$SubSkillSelect$2f$SkillListView$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["SkillListView"], {
+                                currentView === "list" && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$src$2f$components$2f$SubSkillSelect$2f$SkillListView$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["SkillListView"], {
                                     onSkillSelect: onSkillSelect,
                                     selectedSkills: selectedSkills,
                                     onRemoveSkill: onRemoveSkill
@@ -3620,7 +3589,7 @@ const SkillPickerModal = ({ isOpen, onClose, selectedSkills, editingSkill, nextL
                                     lineNumber: 182,
                                     columnNumber: 15
                                 }, ("TURBOPACK compile-time value", void 0)),
-                                currentView === "variant" && variantSkill && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$src$2f$components$2f$SubSkillSelect$2f$VariantSelector$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["VariantSelector"], {
+                                currentView === "variant" && variantSkill && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$src$2f$components$2f$SubSkillSelect$2f$VariantSelector$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["VariantSelector"], {
                                     skill: variantSkill,
                                     level: nextLevel,
                                     isEditing: isEditing,
@@ -3653,42 +3622,33 @@ const SkillPickerModal = ({ isOpen, onClose, selectedSkills, editingSkill, nextL
         ]
     }, void 0, true);
 };
-_s(SkillPickerModal, "OD7bBpZva5O2jO+Puf00hKivP7c=");
-_c = SkillPickerModal;
-var _c;
-__turbopack_context__.k.register(_c, "SkillPickerModal");
-if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelpers !== null) {
-    __turbopack_context__.k.registerExports(__turbopack_context__.m, globalThis.$RefreshHelpers$);
-}
 }),
-"[project]/Develop/pokesleep-iv-comparator/src/components/SubSkillSelect.tsx [app-client] (ecmascript)", ((__turbopack_context__) => {
+"[project]/Develop/pokesleep-iv-comparator/src/components/SubSkillSelect.tsx [app-ssr] (ecmascript)", ((__turbopack_context__) => {
 "use strict";
 
 __turbopack_context__.s([
     "default",
     ()=>__TURBOPACK__default__export__
 ]);
-var __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Develop/pokesleep-iv-comparator/node_modules/next/dist/compiled/react/jsx-dev-runtime.js [app-client] (ecmascript)");
-var __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Develop/pokesleep-iv-comparator/node_modules/next/dist/compiled/react/index.js [app-client] (ecmascript)");
-var __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$src$2f$components$2f$SubSkillSelect$2f$SkillCard$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Develop/pokesleep-iv-comparator/src/components/SubSkillSelect/SkillCard.tsx [app-client] (ecmascript)");
-var __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$src$2f$components$2f$SubSkillSelect$2f$SkillPickerModal$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Develop/pokesleep-iv-comparator/src/components/SubSkillSelect/SkillPickerModal.tsx [app-client] (ecmascript)");
-var __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$src$2f$utils$2f$subSkillUtils$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Develop/pokesleep-iv-comparator/src/utils/subSkillUtils.ts [app-client] (ecmascript)");
-var __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$plus$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Plus$3e$__ = __turbopack_context__.i("[project]/Develop/pokesleep-iv-comparator/node_modules/lucide-react/dist/esm/icons/plus.js [app-client] (ecmascript) <export default as Plus>");
-;
-var _s = __turbopack_context__.k.signature();
+var __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Develop/pokesleep-iv-comparator/node_modules/next/dist/server/route-modules/app-page/vendored/ssr/react-jsx-dev-runtime.js [app-ssr] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Develop/pokesleep-iv-comparator/node_modules/next/dist/server/route-modules/app-page/vendored/ssr/react.js [app-ssr] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$src$2f$components$2f$SubSkillSelect$2f$SkillCard$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Develop/pokesleep-iv-comparator/src/components/SubSkillSelect/SkillCard.tsx [app-ssr] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$src$2f$components$2f$SubSkillSelect$2f$SkillPickerModal$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Develop/pokesleep-iv-comparator/src/components/SubSkillSelect/SkillPickerModal.tsx [app-ssr] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$src$2f$utils$2f$subSkillUtils$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Develop/pokesleep-iv-comparator/src/utils/subSkillUtils.ts [app-ssr] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$plus$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Plus$3e$__ = __turbopack_context__.i("[project]/Develop/pokesleep-iv-comparator/node_modules/lucide-react/dist/esm/icons/plus.js [app-ssr] (ecmascript) <export default as Plus>");
 "use client";
 ;
 ;
 ;
 ;
 ;
+;
 const SubSkillSelect = ({ onChange } = {})=>{
-    _s();
-    const [selectedSkills, setSelectedSkills] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])([]);
-    const [isModalOpen, setIsModalOpen] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(false);
-    const [editingIndex, setEditingIndex] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(null);
-    const [currentView, setCurrentView] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])("list");
-    const [variantSkill, setVariantSkill] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(null);
+    const [selectedSkills, setSelectedSkills] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])([]);
+    const [isModalOpen, setIsModalOpen] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(false);
+    const [editingIndex, setEditingIndex] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(null);
+    const [currentView, setCurrentView] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])("list");
+    const [variantSkill, setVariantSkill] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(null);
     // スキル追加モードでモーダルを開く
     const openAddMode = ()=>{
         setEditingIndex(null);
@@ -3710,7 +3670,7 @@ const SubSkillSelect = ({ onChange } = {})=>{
     };
     // スキル選択時の処理
     const handleSkillSelect = (skill)=>{
-        if ((0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$src$2f$utils$2f$subSkillUtils$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["hasVariants"])(skill)) {
+        if ((0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$src$2f$utils$2f$subSkillUtils$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["hasVariants"])(skill)) {
             // バリアントがある場合はバリアント選択画面へ
             setVariantSkill(skill);
             setCurrentView("variant");
@@ -3736,11 +3696,11 @@ const SubSkillSelect = ({ onChange } = {})=>{
                 ...selectedSkills
             ];
             const currentSkill = updatedSkills[editingIndex];
-            const rarity = variant ? (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$src$2f$utils$2f$subSkillUtils$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["getRarityByVariant"])(skill.skillGroup, variant) : skill.rarity;
+            const rarity = variant ? (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$src$2f$utils$2f$subSkillUtils$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["getRarityByVariant"])(skill.skillGroup, variant) : skill.rarity;
             updatedSkills[editingIndex] = {
                 id: currentSkill.id,
                 baseId,
-                name: (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$src$2f$utils$2f$subSkillUtils$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["getSkillNameWithVariant"])(skill.displayName, variant),
+                name: (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$src$2f$utils$2f$subSkillUtils$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["getSkillNameWithVariant"])(skill.displayName, variant),
                 variant,
                 level: currentSkill.level,
                 rarity
@@ -3758,10 +3718,10 @@ const SubSkillSelect = ({ onChange } = {})=>{
             const newSkill = {
                 id: `${baseId}-${Date.now()}`,
                 baseId,
-                name: (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$src$2f$utils$2f$subSkillUtils$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["getSkillNameWithVariant"])(skill.displayName, variant),
+                name: (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$src$2f$utils$2f$subSkillUtils$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["getSkillNameWithVariant"])(skill.displayName, variant),
                 variant,
-                level: (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$src$2f$utils$2f$subSkillUtils$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["getAutoLevel"])(selectedSkills.length),
-                rarity: variant ? (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$src$2f$utils$2f$subSkillUtils$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["getRarityByVariant"])(skill.skillGroup, variant) : skill.rarity
+                level: (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$src$2f$utils$2f$subSkillUtils$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["getAutoLevel"])(selectedSkills.length),
+                rarity: variant ? (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$src$2f$utils$2f$subSkillUtils$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["getRarityByVariant"])(skill.skillGroup, variant) : skill.rarity
             };
             const updatedSkills = [
                 ...selectedSkills,
@@ -3791,7 +3751,7 @@ const SubSkillSelect = ({ onChange } = {})=>{
         const isDeletingEditingSkill = editingIndex !== null && deletingIndex === editingIndex;
         const updatedSkills = selectedSkills.filter((skill)=>skill.id !== skillId).map((skill, index)=>({
                 ...skill,
-                level: (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$src$2f$utils$2f$subSkillUtils$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["getAutoLevel"])(index)
+                level: (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$src$2f$utils$2f$subSkillUtils$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["getAutoLevel"])(index)
             }));
         setSelectedSkills(updatedSkills);
         onChange?.(updatedSkills);
@@ -3815,17 +3775,17 @@ const SubSkillSelect = ({ onChange } = {})=>{
         setVariantSkill(null);
     };
     // 次のレベルを取得
-    const nextLevel = editingIndex !== null && selectedSkills[editingIndex] ? selectedSkills[editingIndex].level : (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$src$2f$utils$2f$subSkillUtils$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["getAutoLevel"])(selectedSkills.length);
-    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+    const nextLevel = editingIndex !== null && selectedSkills[editingIndex] ? selectedSkills[editingIndex].level : (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$src$2f$utils$2f$subSkillUtils$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["getAutoLevel"])(selectedSkills.length);
+    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
         className: "w-full max-w-md mx-auto",
         children: [
-            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                 className: "flex items-center justify-between mb-2",
                 children: [
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                         className: "flex items-center gap-2",
                         children: [
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
                                 className: "text-base",
                                 children: "サブスキル"
                             }, void 0, false, {
@@ -3833,7 +3793,7 @@ const SubSkillSelect = ({ onChange } = {})=>{
                                 lineNumber: 217,
                                 columnNumber: 11
                             }, ("TURBOPACK compile-time value", void 0)),
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                 className: "bg-secondary text-white text-xs px-1.5 py-0.5 rounded-full",
                                 children: [
                                     selectedSkills.length,
@@ -3850,7 +3810,7 @@ const SubSkillSelect = ({ onChange } = {})=>{
                         lineNumber: 216,
                         columnNumber: 9
                     }, ("TURBOPACK compile-time value", void 0)),
-                    selectedSkills.length > 0 && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                    selectedSkills.length > 0 && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
                         onClick: clearAll,
                         className: " text-xs font-medium text-red-600 hover:text-red-700 transition-colors ",
                         children: "クリア"
@@ -3865,9 +3825,9 @@ const SubSkillSelect = ({ onChange } = {})=>{
                 lineNumber: 215,
                 columnNumber: 7
             }, ("TURBOPACK compile-time value", void 0)),
-            selectedSkills.length > 0 && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+            selectedSkills.length > 0 && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                 className: "grid grid-cols-2 gap-2 mb-2",
-                children: selectedSkills.map((skill, index)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$src$2f$components$2f$SubSkillSelect$2f$SkillCard$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["SkillCard"], {
+                children: selectedSkills.map((skill, index)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$src$2f$components$2f$SubSkillSelect$2f$SkillCard$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["SkillCard"], {
                         skill: skill,
                         onEdit: ()=>openEditMode(index),
                         onRemove: (e)=>removeSkill(skill.id, e)
@@ -3881,11 +3841,11 @@ const SubSkillSelect = ({ onChange } = {})=>{
                 lineNumber: 238,
                 columnNumber: 9
             }, ("TURBOPACK compile-time value", void 0)),
-            selectedSkills.length < 5 && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+            selectedSkills.length < 5 && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
                 onClick: openAddMode,
                 className: " w-full py-1.5 px-3 rounded-lg border-2 border-dashed flex items-center justify-center gap-1.5 text-sm font-medium transition-all border-secondary text-secondary bg-blue-50/30 hover:bg-blue-50 hover:border-slate-400 active:scale-95 ",
                 children: [
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$plus$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Plus$3e$__["Plus"], {
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$plus$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Plus$3e$__["Plus"], {
                         className: "w-4 h-4"
                     }, void 0, false, {
                         fileName: "[project]/Develop/pokesleep-iv-comparator/src/components/SubSkillSelect.tsx",
@@ -3893,7 +3853,7 @@ const SubSkillSelect = ({ onChange } = {})=>{
                         columnNumber: 11
                     }, ("TURBOPACK compile-time value", void 0)),
                     "スキルを追加 (Lv.",
-                    (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$src$2f$utils$2f$subSkillUtils$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["getAutoLevel"])(selectedSkills.length),
+                    (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$src$2f$utils$2f$subSkillUtils$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["getAutoLevel"])(selectedSkills.length),
                     ")"
                 ]
             }, void 0, true, {
@@ -3901,7 +3861,7 @@ const SubSkillSelect = ({ onChange } = {})=>{
                 lineNumber: 252,
                 columnNumber: 9
             }, ("TURBOPACK compile-time value", void 0)),
-            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$src$2f$components$2f$SubSkillSelect$2f$SkillPickerModal$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["SkillPickerModal"], {
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$src$2f$components$2f$SubSkillSelect$2f$SkillPickerModal$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["SkillPickerModal"], {
                 isOpen: isModalOpen,
                 onClose: closeModal,
                 selectedSkills: selectedSkills,
@@ -3925,16 +3885,9 @@ const SubSkillSelect = ({ onChange } = {})=>{
         columnNumber: 5
     }, ("TURBOPACK compile-time value", void 0));
 };
-_s(SubSkillSelect, "RiY9hYGq9fCSLVDRqm3DkfRkUEk=");
-_c = SubSkillSelect;
 const __TURBOPACK__default__export__ = SubSkillSelect;
-var _c;
-__turbopack_context__.k.register(_c, "SubSkillSelect");
-if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelpers !== null) {
-    __turbopack_context__.k.registerExports(__turbopack_context__.m, globalThis.$RefreshHelpers$);
-}
 }),
-"[project]/Develop/pokesleep-iv-comparator/src/data/natureData.ts [app-client] (ecmascript)", ((__turbopack_context__) => {
+"[project]/Develop/pokesleep-iv-comparator/src/data/natureData.ts [app-ssr] (ecmascript)", ((__turbopack_context__) => {
 "use strict";
 
 __turbopack_context__.s([
@@ -4328,70 +4281,57 @@ const NATURE_EFFECTS = {
         skillMultiplier: 1.0
     }
 };
-if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelpers !== null) {
-    __turbopack_context__.k.registerExports(__turbopack_context__.m, globalThis.$RefreshHelpers$);
-}
 }),
-"[project]/Develop/pokesleep-iv-comparator/src/hooks/useNatureSelector.ts [app-client] (ecmascript)", ((__turbopack_context__) => {
+"[project]/Develop/pokesleep-iv-comparator/src/hooks/useNatureSelector.ts [app-ssr] (ecmascript)", ((__turbopack_context__) => {
 "use strict";
 
 __turbopack_context__.s([
     "useNatureSelector",
     ()=>useNatureSelector
 ]);
-var __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Develop/pokesleep-iv-comparator/node_modules/next/dist/compiled/react/index.js [app-client] (ecmascript)");
-var _s = __turbopack_context__.k.signature();
+var __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Develop/pokesleep-iv-comparator/node_modules/next/dist/server/route-modules/app-page/vendored/ssr/react.js [app-ssr] (ecmascript)");
 'use client';
 ;
 function useNatureSelector({ value, onChange } = {}) {
-    _s();
     // 内部状態（非制御時のみ使用）
-    const [internalNature, setInternalNature] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(null);
-    const [showPicker, setShowPicker] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(false);
+    const [internalNature, setInternalNature] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(null);
+    const [showPicker, setShowPicker] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(false);
     // 制御 or 非制御の判定
     const isControlled = value !== undefined;
     const selectedNature = isControlled ? value : internalNature;
     /**
    * ボトムシートを開く
-   */ const openPicker = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useCallback"])({
-        "useNatureSelector.useCallback[openPicker]": ()=>{
-            setShowPicker(true);
-        }
-    }["useNatureSelector.useCallback[openPicker]"], []);
+   */ const openPicker = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useCallback"])(()=>{
+        setShowPicker(true);
+    }, []);
     /**
    * ボトムシートを閉じる
-   */ const closePicker = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useCallback"])({
-        "useNatureSelector.useCallback[closePicker]": ()=>{
-            setShowPicker(false);
-        }
-    }["useNatureSelector.useCallback[closePicker]"], []);
+   */ const closePicker = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useCallback"])(()=>{
+        setShowPicker(false);
+    }, []);
     /**
    * 性格を選択
-   */ const selectNature = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useCallback"])({
-        "useNatureSelector.useCallback[selectNature]": (nature)=>{
-            if (isControlled) {
-                onChange?.(nature);
-            } else {
-                setInternalNature(nature);
-            }
-            closePicker();
+   */ const selectNature = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useCallback"])((nature)=>{
+        if (isControlled) {
+            onChange?.(nature);
+        } else {
+            setInternalNature(nature);
         }
-    }["useNatureSelector.useCallback[selectNature]"], [
+        closePicker();
+    }, [
         isControlled,
         onChange,
         closePicker
     ]);
     /**
    * 性格をクリア
-   */ const clearNature = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useCallback"])({
-        "useNatureSelector.useCallback[clearNature]": ()=>{
-            if (isControlled) {
-                onChange?.(null);
-            } else {
-                setInternalNature(null);
-            }
+   */ const clearNature = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useCallback"])(()=>{
+        if (isControlled) {
+            onChange?.(null);
+        } else {
+            setInternalNature(null);
         }
-    }["useNatureSelector.useCallback[clearNature]"], [
+    }, [
         isControlled,
         onChange
     ]);
@@ -4404,22 +4344,18 @@ function useNatureSelector({ value, onChange } = {}) {
         clearNature
     };
 }
-_s(useNatureSelector, "olGkPeWjPMqPkcP3o0rk3fsppQc=");
-if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelpers !== null) {
-    __turbopack_context__.k.registerExports(__turbopack_context__.m, globalThis.$RefreshHelpers$);
-}
 }),
-"[project]/Develop/pokesleep-iv-comparator/src/components/nature/NatureButton.tsx [app-client] (ecmascript)", ((__turbopack_context__) => {
+"[project]/Develop/pokesleep-iv-comparator/src/components/nature/NatureButton.tsx [app-ssr] (ecmascript)", ((__turbopack_context__) => {
 "use strict";
 
 __turbopack_context__.s([
     "default",
     ()=>NatureButton
 ]);
-var __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Develop/pokesleep-iv-comparator/node_modules/next/dist/compiled/react/jsx-dev-runtime.js [app-client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Develop/pokesleep-iv-comparator/node_modules/next/dist/server/route-modules/app-page/vendored/ssr/react-jsx-dev-runtime.js [app-ssr] (ecmascript)");
 ;
 function NatureButton({ nature, isSelected, config, onSelect }) {
-    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
         onClick: onSelect,
         className: `
         p-1.5 rounded-lg border-2 transition-all flex items-center gap-1.5
@@ -4428,7 +4364,7 @@ function NatureButton({ nature, isSelected, config, onSelect }) {
         "aria-label": nature.name,
         "aria-pressed": isSelected,
         children: [
-            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                 className: "font-medium text-sm text-gray-800 flex-1 text-left",
                 children: nature.name
             }, void 0, false, {
@@ -4436,10 +4372,10 @@ function NatureButton({ nature, isSelected, config, onSelect }) {
                 lineNumber: 32,
                 columnNumber: 7
             }, this),
-            nature.up ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+            nature.up ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                 className: "flex flex-col gap-0 text-[9px] leading-tight",
                 children: [
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                         className: "text-red-600 font-medium",
                         children: [
                             "▲",
@@ -4450,7 +4386,7 @@ function NatureButton({ nature, isSelected, config, onSelect }) {
                         lineNumber: 37,
                         columnNumber: 11
                     }, this),
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                         className: "text-blue-600 font-medium",
                         children: [
                             "▼",
@@ -4466,7 +4402,7 @@ function NatureButton({ nature, isSelected, config, onSelect }) {
                 fileName: "[project]/Develop/pokesleep-iv-comparator/src/components/nature/NatureButton.tsx",
                 lineNumber: 36,
                 columnNumber: 9
-            }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+            }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                 className: "text-[9px] text-gray-500 whitespace-nowrap",
                 children: "補正なし"
             }, void 0, false, {
@@ -4481,34 +4417,28 @@ function NatureButton({ nature, isSelected, config, onSelect }) {
         columnNumber: 5
     }, this);
 }
-_c = NatureButton;
-var _c;
-__turbopack_context__.k.register(_c, "NatureButton");
-if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelpers !== null) {
-    __turbopack_context__.k.registerExports(__turbopack_context__.m, globalThis.$RefreshHelpers$);
-}
 }),
-"[project]/Develop/pokesleep-iv-comparator/src/components/nature/NatureGroup.tsx [app-client] (ecmascript)", ((__turbopack_context__) => {
+"[project]/Develop/pokesleep-iv-comparator/src/components/nature/NatureGroup.tsx [app-ssr] (ecmascript)", ((__turbopack_context__) => {
 "use strict";
 
 __turbopack_context__.s([
     "default",
     ()=>NatureGroup
 ]);
-var __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Develop/pokesleep-iv-comparator/node_modules/next/dist/compiled/react/jsx-dev-runtime.js [app-client] (ecmascript)");
-var __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$src$2f$data$2f$natureData$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Develop/pokesleep-iv-comparator/src/data/natureData.ts [app-client] (ecmascript)");
-var __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$src$2f$components$2f$nature$2f$NatureButton$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Develop/pokesleep-iv-comparator/src/components/nature/NatureButton.tsx [app-client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Develop/pokesleep-iv-comparator/node_modules/next/dist/server/route-modules/app-page/vendored/ssr/react-jsx-dev-runtime.js [app-ssr] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$src$2f$data$2f$natureData$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Develop/pokesleep-iv-comparator/src/data/natureData.ts [app-ssr] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$src$2f$components$2f$nature$2f$NatureButton$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Develop/pokesleep-iv-comparator/src/components/nature/NatureButton.tsx [app-ssr] (ecmascript)");
 ;
 ;
 ;
 function NatureGroup({ group, selectedNature, onSelect }) {
-    const config = __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$src$2f$data$2f$natureData$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["COLOR_CONFIG"][group.color];
-    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+    const config = __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$src$2f$data$2f$natureData$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["COLOR_CONFIG"][group.color];
+    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
         className: "rounded-xl p-1",
         children: [
-            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                 className: "flex items-center gap-1 mb-1",
-                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
+                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
                     className: `font-bold text-sm ${config.text}`,
                     children: [
                         group.name,
@@ -4524,9 +4454,9 @@ function NatureGroup({ group, selectedNature, onSelect }) {
                 lineNumber: 24,
                 columnNumber: 7
             }, this),
-            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                 className: "grid grid-cols-2 md:grid-cols-4 gap-1.5",
-                children: group.natures.map((nature)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$src$2f$components$2f$nature$2f$NatureButton$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
+                children: group.natures.map((nature)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$src$2f$components$2f$nature$2f$NatureButton$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
                         nature: nature,
                         groupColor: group.color,
                         isSelected: selectedNature?.name === nature.name,
@@ -4552,105 +4482,79 @@ function NatureGroup({ group, selectedNature, onSelect }) {
         columnNumber: 5
     }, this);
 }
-_c = NatureGroup;
-var _c;
-__turbopack_context__.k.register(_c, "NatureGroup");
-if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelpers !== null) {
-    __turbopack_context__.k.registerExports(__turbopack_context__.m, globalThis.$RefreshHelpers$);
-}
 }),
-"[project]/Develop/pokesleep-iv-comparator/src/components/nature/NatureBottomSheet.tsx [app-client] (ecmascript)", ((__turbopack_context__) => {
+"[project]/Develop/pokesleep-iv-comparator/src/components/nature/NatureBottomSheet.tsx [app-ssr] (ecmascript)", ((__turbopack_context__) => {
 "use strict";
 
 __turbopack_context__.s([
     "default",
     ()=>NatureBottomSheet
 ]);
-var __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Develop/pokesleep-iv-comparator/node_modules/next/dist/compiled/react/jsx-dev-runtime.js [app-client] (ecmascript)");
-var __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Develop/pokesleep-iv-comparator/node_modules/next/dist/compiled/react/index.js [app-client] (ecmascript)");
-var __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$src$2f$data$2f$natureData$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Develop/pokesleep-iv-comparator/src/data/natureData.ts [app-client] (ecmascript)");
-var __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$src$2f$components$2f$nature$2f$NatureGroup$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Develop/pokesleep-iv-comparator/src/components/nature/NatureGroup.tsx [app-client] (ecmascript)");
-var __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$x$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__X$3e$__ = __turbopack_context__.i("[project]/Develop/pokesleep-iv-comparator/node_modules/lucide-react/dist/esm/icons/x.js [app-client] (ecmascript) <export default as X>");
-var __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$search$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Search$3e$__ = __turbopack_context__.i("[project]/Develop/pokesleep-iv-comparator/node_modules/lucide-react/dist/esm/icons/search.js [app-client] (ecmascript) <export default as Search>");
-;
-var _s = __turbopack_context__.k.signature();
+var __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Develop/pokesleep-iv-comparator/node_modules/next/dist/server/route-modules/app-page/vendored/ssr/react-jsx-dev-runtime.js [app-ssr] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Develop/pokesleep-iv-comparator/node_modules/next/dist/server/route-modules/app-page/vendored/ssr/react.js [app-ssr] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$src$2f$data$2f$natureData$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Develop/pokesleep-iv-comparator/src/data/natureData.ts [app-ssr] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$src$2f$components$2f$nature$2f$NatureGroup$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Develop/pokesleep-iv-comparator/src/components/nature/NatureGroup.tsx [app-ssr] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$x$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__X$3e$__ = __turbopack_context__.i("[project]/Develop/pokesleep-iv-comparator/node_modules/lucide-react/dist/esm/icons/x.js [app-ssr] (ecmascript) <export default as X>");
+var __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$search$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Search$3e$__ = __turbopack_context__.i("[project]/Develop/pokesleep-iv-comparator/node_modules/lucide-react/dist/esm/icons/search.js [app-ssr] (ecmascript) <export default as Search>");
 'use client';
 ;
 ;
 ;
 ;
+;
 function NatureBottomSheet({ isOpen, selectedNature, onSelect, onClose }) {
-    _s();
     // 入力中の検索クエリ（ユーザーが入力している値）
-    const [inputValue, setInputValue] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])('');
+    const [inputValue, setInputValue] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])('');
     // 実際に検索に使用するクエリ（デバウンス後の値）
-    const [debouncedQuery, setDebouncedQuery] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])('');
+    const [debouncedQuery, setDebouncedQuery] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])('');
     // モーダルが開いたときにbodyのスクロールを無効化
-    (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useEffect"])({
-        "NatureBottomSheet.useEffect": ()=>{
-            if (isOpen) {
-                document.body.style.overflow = 'hidden';
-                setInputValue(''); // モーダルを開く際に入力値をリセット
-                setDebouncedQuery(''); // 検索クエリもリセット
-            } else {
-                document.body.style.overflow = 'unset';
-            }
-            return ({
-                "NatureBottomSheet.useEffect": ()=>{
-                    document.body.style.overflow = 'unset';
-                }
-            })["NatureBottomSheet.useEffect"];
+    (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useEffect"])(()=>{
+        if (isOpen) {
+            document.body.style.overflow = 'hidden';
+            setInputValue(''); // モーダルを開く際に入力値をリセット
+            setDebouncedQuery(''); // 検索クエリもリセット
+        } else {
+            document.body.style.overflow = 'unset';
         }
-    }["NatureBottomSheet.useEffect"], [
+        return ()=>{
+            document.body.style.overflow = 'unset';
+        };
+    }, [
         isOpen
     ]);
     // デバウンス処理：入力が止まってから300ms後に検索クエリを更新
-    (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useEffect"])({
-        "NatureBottomSheet.useEffect": ()=>{
-            const timer = setTimeout({
-                "NatureBottomSheet.useEffect.timer": ()=>{
-                    setDebouncedQuery(inputValue);
-                }
-            }["NatureBottomSheet.useEffect.timer"], 300);
-            return ({
-                "NatureBottomSheet.useEffect": ()=>{
-                    clearTimeout(timer);
-                }
-            })["NatureBottomSheet.useEffect"];
-        }
-    }["NatureBottomSheet.useEffect"], [
+    (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useEffect"])(()=>{
+        const timer = setTimeout(()=>{
+            setDebouncedQuery(inputValue);
+        }, 300);
+        return ()=>{
+            clearTimeout(timer);
+        };
+    }, [
         inputValue
     ]);
     // 検索クエリに基づいて性格グループをフィルタリング
-    const filteredGroups = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useMemo"])({
-        "NatureBottomSheet.useMemo[filteredGroups]": ()=>{
-            if (!debouncedQuery.trim()) {
-                return __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$src$2f$data$2f$natureData$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["NATURE_GROUPS"];
-            }
-            const query = debouncedQuery.toLowerCase().trim();
-            return __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$src$2f$data$2f$natureData$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["NATURE_GROUPS"].map({
-                "NatureBottomSheet.useMemo[filteredGroups]": (group)=>{
-                    const filteredNatures = group.natures.filter({
-                        "NatureBottomSheet.useMemo[filteredGroups].filteredNatures": (nature)=>nature.name.toLowerCase().includes(query)
-                    }["NatureBottomSheet.useMemo[filteredGroups].filteredNatures"]);
-                    return {
-                        ...group,
-                        natures: filteredNatures
-                    };
-                }
-            }["NatureBottomSheet.useMemo[filteredGroups]"]).filter({
-                "NatureBottomSheet.useMemo[filteredGroups]": (group)=>group.natures.length > 0
-            }["NatureBottomSheet.useMemo[filteredGroups]"]); // 性格が0個のグループは表示しない
+    const filteredGroups = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useMemo"])(()=>{
+        if (!debouncedQuery.trim()) {
+            return __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$src$2f$data$2f$natureData$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["NATURE_GROUPS"];
         }
-    }["NatureBottomSheet.useMemo[filteredGroups]"], [
+        const query = debouncedQuery.toLowerCase().trim();
+        return __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$src$2f$data$2f$natureData$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["NATURE_GROUPS"].map((group)=>{
+            const filteredNatures = group.natures.filter((nature)=>nature.name.toLowerCase().includes(query));
+            return {
+                ...group,
+                natures: filteredNatures
+            };
+        }).filter((group)=>group.natures.length > 0); // 性格が0個のグループは表示しない
+    }, [
         debouncedQuery
     ]);
     // 検索結果が空かどうか
     const hasNoResults = filteredGroups.length === 0 && debouncedQuery.trim() !== '';
     if (!isOpen) return null;
-    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Fragment"], {
+    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Fragment"], {
         children: [
-            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                 className: "fixed inset-0 bg-black/50 z-40 animate-in fade-in duration-300",
                 onClick: onClose
             }, void 0, false, {
@@ -4658,14 +4562,14 @@ function NatureBottomSheet({ isOpen, selectedNature, onSelect, onClose }) {
                 lineNumber: 80,
                 columnNumber: 7
             }, this),
-            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                 className: "fixed inset-x-0 bottom-0 z-50 animate-in slide-in-from-bottom duration-300",
-                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                     className: "bg-white rounded-t-3xl max-h-[80vh] overflow-y-auto shadow-2xl",
                     children: [
-                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                             className: "flex justify-center pt-2 pb-1",
-                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                 className: "w-12 h-1 bg-gray-300 rounded-full"
                             }, void 0, false, {
                                 fileName: "[project]/Develop/pokesleep-iv-comparator/src/components/nature/NatureBottomSheet.tsx",
@@ -4677,13 +4581,13 @@ function NatureBottomSheet({ isOpen, selectedNature, onSelect, onClose }) {
                             lineNumber: 89,
                             columnNumber: 11
                         }, this),
-                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                             className: "px-4 pb-2 border-b border-gray-200",
                             children: [
-                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                     className: "flex items-center justify-between",
                                     children: [
-                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
                                             className: "text-lg font-bold text-gray-800",
                                             children: "性格を選択"
                                         }, void 0, false, {
@@ -4691,11 +4595,11 @@ function NatureBottomSheet({ isOpen, selectedNature, onSelect, onClose }) {
                                             lineNumber: 96,
                                             columnNumber: 15
                                         }, this),
-                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
                                             onClick: onClose,
                                             className: "p-1.5 rounded-full hover:bg-gray-100 transition-colors",
                                             "aria-label": "閉じる",
-                                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$x$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__X$3e$__["X"], {
+                                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$x$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__X$3e$__["X"], {
                                                 className: "w-4 h-4 text-gray-600"
                                             }, void 0, false, {
                                                 fileName: "[project]/Develop/pokesleep-iv-comparator/src/components/nature/NatureBottomSheet.tsx",
@@ -4713,12 +4617,12 @@ function NatureBottomSheet({ isOpen, selectedNature, onSelect, onClose }) {
                                     lineNumber: 95,
                                     columnNumber: 13
                                 }, this),
-                                selectedNature && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                selectedNature && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                     className: "mt-1.5",
-                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                         className: "inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-slate-100 border border-slate-300",
                                         children: [
-                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                                 className: "text-xs text-secondary",
                                                 children: "選択中"
                                             }, void 0, false, {
@@ -4726,7 +4630,7 @@ function NatureBottomSheet({ isOpen, selectedNature, onSelect, onClose }) {
                                                 lineNumber: 110,
                                                 columnNumber: 19
                                             }, this),
-                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                                 className: "text-xs font-semibold text-secondary",
                                                 children: selectedNature.name
                                             }, void 0, false, {
@@ -4734,7 +4638,7 @@ function NatureBottomSheet({ isOpen, selectedNature, onSelect, onClose }) {
                                                 lineNumber: 111,
                                                 columnNumber: 19
                                             }, this),
-                                            selectedNature.up && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                            selectedNature.up && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                                 className: "text-[10px] text-gray-600",
                                                 children: [
                                                     "(▲",
@@ -4759,19 +4663,19 @@ function NatureBottomSheet({ isOpen, selectedNature, onSelect, onClose }) {
                                     lineNumber: 108,
                                     columnNumber: 15
                                 }, this),
-                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                     className: "mt-2 relative",
-                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                         className: "relative",
                                         children: [
-                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$search$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Search$3e$__["Search"], {
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$search$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Search$3e$__["Search"], {
                                                 className: "absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400"
                                             }, void 0, false, {
                                                 fileName: "[project]/Develop/pokesleep-iv-comparator/src/components/nature/NatureBottomSheet.tsx",
                                                 lineNumber: 126,
                                                 columnNumber: 17
                                             }, this),
-                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
                                                 type: "text",
                                                 value: inputValue,
                                                 onChange: (e)=>setInputValue(e.target.value),
@@ -4782,11 +4686,11 @@ function NatureBottomSheet({ isOpen, selectedNature, onSelect, onClose }) {
                                                 lineNumber: 127,
                                                 columnNumber: 17
                                             }, this),
-                                            inputValue && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                                            inputValue && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
                                                 onClick: ()=>setInputValue(''),
                                                 className: "absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-gray-600 transition-colors",
                                                 "aria-label": "検索をクリア",
-                                                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$x$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__X$3e$__["X"], {
+                                                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$x$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__X$3e$__["X"], {
                                                     className: "w-4 h-4"
                                                 }, void 0, false, {
                                                     fileName: "[project]/Develop/pokesleep-iv-comparator/src/components/nature/NatureBottomSheet.tsx",
@@ -4815,19 +4719,19 @@ function NatureBottomSheet({ isOpen, selectedNature, onSelect, onClose }) {
                             lineNumber: 94,
                             columnNumber: 11
                         }, this),
-                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                             className: "px-4 py-3",
-                            children: hasNoResults ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                            children: hasNoResults ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                 className: "flex flex-col items-center justify-center py-8 text-center",
                                 children: [
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$search$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Search$3e$__["Search"], {
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$search$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Search$3e$__["Search"], {
                                         className: "w-12 h-12 text-gray-300 mb-3"
                                     }, void 0, false, {
                                         fileName: "[project]/Develop/pokesleep-iv-comparator/src/components/nature/NatureBottomSheet.tsx",
                                         lineNumber: 151,
                                         columnNumber: 17
                                     }, this),
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                         className: "text-sm text-gray-500 font-medium",
                                         children: [
                                             "「",
@@ -4839,7 +4743,7 @@ function NatureBottomSheet({ isOpen, selectedNature, onSelect, onClose }) {
                                         lineNumber: 152,
                                         columnNumber: 17
                                     }, this),
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                         className: "text-xs text-gray-400 mt-1",
                                         children: "別のキーワードで検索してください"
                                     }, void 0, false, {
@@ -4852,9 +4756,9 @@ function NatureBottomSheet({ isOpen, selectedNature, onSelect, onClose }) {
                                 fileName: "[project]/Develop/pokesleep-iv-comparator/src/components/nature/NatureBottomSheet.tsx",
                                 lineNumber: 150,
                                 columnNumber: 15
-                            }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                            }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                 className: "space-y-3 pb-3",
-                                children: filteredGroups.map((group)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$src$2f$components$2f$nature$2f$NatureGroup$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
+                                children: filteredGroups.map((group)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$src$2f$components$2f$nature$2f$NatureGroup$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
                                         group: group,
                                         selectedNature: selectedNature,
                                         onSelect: onSelect
@@ -4887,46 +4791,37 @@ function NatureBottomSheet({ isOpen, selectedNature, onSelect, onClose }) {
         ]
     }, void 0, true);
 }
-_s(NatureBottomSheet, "dUH/N3RKWfpec5EoaSm+jj68cks=");
-_c = NatureBottomSheet;
-var _c;
-__turbopack_context__.k.register(_c, "NatureBottomSheet");
-if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelpers !== null) {
-    __turbopack_context__.k.registerExports(__turbopack_context__.m, globalThis.$RefreshHelpers$);
-}
 }),
-"[project]/Develop/pokesleep-iv-comparator/src/components/nature/NatureSelector.tsx [app-client] (ecmascript)", ((__turbopack_context__) => {
+"[project]/Develop/pokesleep-iv-comparator/src/components/nature/NatureSelector.tsx [app-ssr] (ecmascript)", ((__turbopack_context__) => {
 "use strict";
 
 __turbopack_context__.s([
     "default",
     ()=>NatureSelector
 ]);
-var __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Develop/pokesleep-iv-comparator/node_modules/next/dist/compiled/react/jsx-dev-runtime.js [app-client] (ecmascript)");
-var __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$src$2f$data$2f$natureData$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Develop/pokesleep-iv-comparator/src/data/natureData.ts [app-client] (ecmascript)");
-var __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$src$2f$hooks$2f$useNatureSelector$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Develop/pokesleep-iv-comparator/src/hooks/useNatureSelector.ts [app-client] (ecmascript)");
-var __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$src$2f$components$2f$nature$2f$NatureBottomSheet$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Develop/pokesleep-iv-comparator/src/components/nature/NatureBottomSheet.tsx [app-client] (ecmascript)");
-var __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$plus$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Plus$3e$__ = __turbopack_context__.i("[project]/Develop/pokesleep-iv-comparator/node_modules/lucide-react/dist/esm/icons/plus.js [app-client] (ecmascript) <export default as Plus>");
-var __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$x$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__X$3e$__ = __turbopack_context__.i("[project]/Develop/pokesleep-iv-comparator/node_modules/lucide-react/dist/esm/icons/x.js [app-client] (ecmascript) <export default as X>");
-;
-var _s = __turbopack_context__.k.signature();
+var __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Develop/pokesleep-iv-comparator/node_modules/next/dist/server/route-modules/app-page/vendored/ssr/react-jsx-dev-runtime.js [app-ssr] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$src$2f$data$2f$natureData$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Develop/pokesleep-iv-comparator/src/data/natureData.ts [app-ssr] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$src$2f$hooks$2f$useNatureSelector$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Develop/pokesleep-iv-comparator/src/hooks/useNatureSelector.ts [app-ssr] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$src$2f$components$2f$nature$2f$NatureBottomSheet$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Develop/pokesleep-iv-comparator/src/components/nature/NatureBottomSheet.tsx [app-ssr] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$plus$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Plus$3e$__ = __turbopack_context__.i("[project]/Develop/pokesleep-iv-comparator/node_modules/lucide-react/dist/esm/icons/plus.js [app-ssr] (ecmascript) <export default as Plus>");
+var __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$x$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__X$3e$__ = __turbopack_context__.i("[project]/Develop/pokesleep-iv-comparator/node_modules/lucide-react/dist/esm/icons/x.js [app-ssr] (ecmascript) <export default as X>");
 "use client";
 ;
 ;
 ;
 ;
+;
 function NatureSelector({ value, onChange, className = "" }) {
-    _s();
-    const { selectedNature, showPicker, openPicker, closePicker, selectNature, clearNature } = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$src$2f$hooks$2f$useNatureSelector$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useNatureSelector"])({
+    const { selectedNature, showPicker, openPicker, closePicker, selectNature, clearNature } = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$src$2f$hooks$2f$useNatureSelector$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useNatureSelector"])({
         value,
         onChange
     });
-    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
         className: `w-full max-w-md mx-auto ${className}`,
         children: [
-            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                 className: "flex items-center justify-between mb-2",
-                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
+                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
                     className: "text-base",
                     children: "性格"
                 }, void 0, false, {
@@ -4939,15 +4834,15 @@ function NatureSelector({ value, onChange, className = "" }) {
                 lineNumber: 47,
                 columnNumber: 7
             }, this),
-            selectedNature ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+            selectedNature ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                 onClick: openPicker,
                 className: `
-            rounded-lg py-1.5 px-3 border-2 ${__TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$src$2f$data$2f$natureData$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["COLOR_CONFIG"][selectedNature.color].border}
+            rounded-lg py-1.5 px-3 border-2 ${__TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$src$2f$data$2f$natureData$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["COLOR_CONFIG"][selectedNature.color].border}
             cursor-pointer hover:shadow-md transition-all
             flex items-center justify-between
           `,
                 children: [
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                         className: "text-sm text-gray-800",
                         children: selectedNature.name
                     }, void 0, false, {
@@ -4955,13 +4850,13 @@ function NatureSelector({ value, onChange, className = "" }) {
                         lineNumber: 63,
                         columnNumber: 11
                     }, this),
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                         className: "flex items-center gap-2",
                         children: [
-                            selectedNature.up ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                            selectedNature.up ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                 className: "flex flex-col gap-0 text-[10px] leading-tight",
                                 children: [
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                         className: "text-red-600 font-medium",
                                         children: [
                                             "▲",
@@ -4972,7 +4867,7 @@ function NatureSelector({ value, onChange, className = "" }) {
                                         lineNumber: 69,
                                         columnNumber: 17
                                     }, this),
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                         className: "text-blue-600 font-medium",
                                         children: [
                                             "▼",
@@ -4988,7 +4883,7 @@ function NatureSelector({ value, onChange, className = "" }) {
                                 fileName: "[project]/Develop/pokesleep-iv-comparator/src/components/nature/NatureSelector.tsx",
                                 lineNumber: 68,
                                 columnNumber: 15
-                            }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                            }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                 className: "text-[10px] text-gray-500",
                                 children: "補正なし"
                             }, void 0, false, {
@@ -4996,14 +4891,14 @@ function NatureSelector({ value, onChange, className = "" }) {
                                 lineNumber: 77,
                                 columnNumber: 15
                             }, this),
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
                                 onClick: (e)=>{
                                     e.stopPropagation();
                                     clearNature();
                                 },
                                 className: "text-red-500 hover:text-red-700 transition-colors p-0.5 ml-1",
                                 "aria-label": "性格をクリア",
-                                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$x$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__X$3e$__["X"], {
+                                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$x$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__X$3e$__["X"], {
                                     className: "w-4 h-4"
                                 }, void 0, false, {
                                     fileName: "[project]/Develop/pokesleep-iv-comparator/src/components/nature/NatureSelector.tsx",
@@ -5026,11 +4921,11 @@ function NatureSelector({ value, onChange, className = "" }) {
                 fileName: "[project]/Develop/pokesleep-iv-comparator/src/components/nature/NatureSelector.tsx",
                 lineNumber: 53,
                 columnNumber: 9
-            }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+            }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
                 onClick: openPicker,
                 className: " w-full py-1.5 px-3 rounded-lg border-2 border-dashed flex items-center justify-center gap-1.5 text-sm font-medium transition-all border-secondary text-secondary bg-blue-50 hover:bg-blue-100 hover:border-slate-400 active:scale-95 ",
                 children: [
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$plus$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Plus$3e$__["Plus"], {
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$plus$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Plus$3e$__["Plus"], {
                         className: "w-4 h-4"
                     }, void 0, false, {
                         fileName: "[project]/Develop/pokesleep-iv-comparator/src/components/nature/NatureSelector.tsx",
@@ -5044,7 +4939,7 @@ function NatureSelector({ value, onChange, className = "" }) {
                 lineNumber: 94,
                 columnNumber: 9
             }, this),
-            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$src$2f$components$2f$nature$2f$NatureBottomSheet$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$src$2f$components$2f$nature$2f$NatureBottomSheet$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
                 isOpen: showPicker,
                 selectedNature: selectedNature,
                 onSelect: selectNature,
@@ -5061,55 +4956,42 @@ function NatureSelector({ value, onChange, className = "" }) {
         columnNumber: 5
     }, this);
 }
-_s(NatureSelector, "9CaMQTLpicLVlu/XA0P3gj1YUQc=", false, function() {
-    return [
-        __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$src$2f$hooks$2f$useNatureSelector$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useNatureSelector"]
-    ];
-});
-_c = NatureSelector;
-var _c;
-__turbopack_context__.k.register(_c, "NatureSelector");
-if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelpers !== null) {
-    __turbopack_context__.k.registerExports(__turbopack_context__.m, globalThis.$RefreshHelpers$);
-}
 }),
-"[project]/Develop/pokesleep-iv-comparator/src/components/Search.tsx [app-client] (ecmascript)", ((__turbopack_context__) => {
+"[project]/Develop/pokesleep-iv-comparator/src/components/Search.tsx [app-ssr] (ecmascript)", ((__turbopack_context__) => {
 "use strict";
 
 __turbopack_context__.s([
     "default",
     ()=>__TURBOPACK__default__export__
 ]);
-var __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Develop/pokesleep-iv-comparator/node_modules/next/dist/compiled/react/jsx-dev-runtime.js [app-client] (ecmascript)");
-var __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Develop/pokesleep-iv-comparator/node_modules/next/dist/compiled/react/index.js [app-client] (ecmascript)");
-var __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$src$2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Develop/pokesleep-iv-comparator/src/components/ui/button.tsx [app-client] (ecmascript)");
-var __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$src$2f$components$2f$PokeNameCombobox$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Develop/pokesleep-iv-comparator/src/components/PokeNameCombobox.tsx [app-client] (ecmascript)");
-var __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$src$2f$components$2f$SubSkillSelect$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Develop/pokesleep-iv-comparator/src/components/SubSkillSelect.tsx [app-client] (ecmascript)");
-var __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$src$2f$components$2f$nature$2f$NatureSelector$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Develop/pokesleep-iv-comparator/src/components/nature/NatureSelector.tsx [app-client] (ecmascript)");
-;
-var _s = __turbopack_context__.k.signature();
+var __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Develop/pokesleep-iv-comparator/node_modules/next/dist/server/route-modules/app-page/vendored/ssr/react-jsx-dev-runtime.js [app-ssr] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Develop/pokesleep-iv-comparator/node_modules/next/dist/server/route-modules/app-page/vendored/ssr/react.js [app-ssr] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$src$2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Develop/pokesleep-iv-comparator/src/components/ui/button.tsx [app-ssr] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$src$2f$components$2f$PokeNameCombobox$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Develop/pokesleep-iv-comparator/src/components/PokeNameCombobox.tsx [app-ssr] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$src$2f$components$2f$SubSkillSelect$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Develop/pokesleep-iv-comparator/src/components/SubSkillSelect.tsx [app-ssr] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$src$2f$components$2f$nature$2f$NatureSelector$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Develop/pokesleep-iv-comparator/src/components/nature/NatureSelector.tsx [app-ssr] (ecmascript)");
 "use client";
 ;
 ;
 ;
 ;
 ;
+;
 function Search() {
-    _s();
-    const [pokemon, setPokemon] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])("");
-    const [selectedSubSkills, setSelectedSubSkills] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])([]);
-    const [nature, setNature] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(null);
-    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Fragment"], {
-        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+    const [pokemon, setPokemon] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])("");
+    const [selectedSubSkills, setSelectedSubSkills] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])([]);
+    const [nature, setNature] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(null);
+    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Fragment"], {
+        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
             className: "m-4 max-w-md mx-auto",
             children: [
-                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                     children: [
-                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                             className: "flex justify-center flex-wrap gap-4",
                             children: [
-                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$src$2f$components$2f$PokeNameCombobox$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Combobox"], {
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$src$2f$components$2f$PokeNameCombobox$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Combobox"], {
                                         value: pokemon,
                                         onChange: setPokemon
                                     }, void 0, false, {
@@ -5122,10 +5004,10 @@ function Search() {
                                     lineNumber: 22,
                                     columnNumber: 13
                                 }, this),
-                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                     className: "flex gap-4 items-center",
                                     children: [
-                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                             className: "text-xs",
                                             children: "とくい:"
                                         }, void 0, false, {
@@ -5133,7 +5015,7 @@ function Search() {
                                             lineNumber: 29,
                                             columnNumber: 15
                                         }, this),
-                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                             className: "text-xs",
                                             children: "きのみ:"
                                         }, void 0, false, {
@@ -5153,9 +5035,9 @@ function Search() {
                             lineNumber: 21,
                             columnNumber: 11
                         }, this),
-                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                             className: "mt-4",
-                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$src$2f$components$2f$SubSkillSelect$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
+                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$src$2f$components$2f$SubSkillSelect$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
                                 onChange: setSelectedSubSkills
                             }, void 0, false, {
                                 fileName: "[project]/Develop/pokesleep-iv-comparator/src/components/Search.tsx",
@@ -5167,9 +5049,9 @@ function Search() {
                             lineNumber: 33,
                             columnNumber: 11
                         }, this),
-                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                             className: "mt-4",
-                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$src$2f$components$2f$nature$2f$NatureSelector$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
+                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$src$2f$components$2f$nature$2f$NatureSelector$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
                                 value: nature,
                                 onChange: setNature
                             }, void 0, false, {
@@ -5182,7 +5064,7 @@ function Search() {
                             lineNumber: 38,
                             columnNumber: 11
                         }, this),
-                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                             className: "text-xs mt-4 text-center",
                             children: "※同レベルでの比較を行うため、Lv.60固定で計算します。"
                         }, void 0, false, {
@@ -5196,9 +5078,9 @@ function Search() {
                     lineNumber: 20,
                     columnNumber: 9
                 }, this),
-                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                     className: "flex justify-center my-4",
-                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$src$2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Button"], {
+                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$src$2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Button"], {
                         className: "w-full max-w-xs md:w-48",
                         children: "決定"
                     }, void 0, false, {
@@ -5211,10 +5093,10 @@ function Search() {
                     lineNumber: 48,
                     columnNumber: 9
                 }, this),
-                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                     className: "text-center",
                     children: [
-                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                             children: [
                                 "ポケモン: ",
                                 pokemon
@@ -5224,7 +5106,7 @@ function Search() {
                             lineNumber: 54,
                             columnNumber: 11
                         }, this),
-                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                             children: [
                                 "性格: ",
                                 nature ? `${nature.name}${nature.up ? ` (▲${nature.up} ▼${nature.down})` : ' (補正なし)'}` : '未選択'
@@ -5234,16 +5116,16 @@ function Search() {
                             lineNumber: 55,
                             columnNumber: 11
                         }, this),
-                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                             children: "選択したサブスキル:"
                         }, void 0, false, {
                             fileName: "[project]/Develop/pokesleep-iv-comparator/src/components/Search.tsx",
                             lineNumber: 56,
                             columnNumber: 11
                         }, this),
-                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
+                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
                             className: "list-none",
-                            children: selectedSubSkills.map((skill)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
+                            children: selectedSubSkills.map((skill)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
                                     children: [
                                         "Lv.",
                                         skill.level,
@@ -5274,15 +5156,60 @@ function Search() {
         }, this)
     }, void 0, false);
 }
-_s(Search, "LE1aAq1ed/NJMH8jg5IbMMg7I1o=");
-_c = Search;
 const __TURBOPACK__default__export__ = Search;
-var _c;
-__turbopack_context__.k.register(_c, "Search");
-if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelpers !== null) {
-    __turbopack_context__.k.registerExports(__turbopack_context__.m, globalThis.$RefreshHelpers$);
+}),
+"[project]/Develop/pokesleep-iv-comparator/app/page.tsx [app-ssr] (ecmascript)", ((__turbopack_context__) => {
+"use strict";
+
+__turbopack_context__.s([
+    "default",
+    ()=>Home
+]);
+var __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Develop/pokesleep-iv-comparator/node_modules/next/dist/server/route-modules/app-page/vendored/ssr/react-jsx-dev-runtime.js [app-ssr] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$src$2f$components$2f$Header$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Develop/pokesleep-iv-comparator/src/components/Header.tsx [app-ssr] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$src$2f$components$2f$Description$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Develop/pokesleep-iv-comparator/src/components/Description.tsx [app-ssr] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$src$2f$components$2f$Rank$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Develop/pokesleep-iv-comparator/src/components/Rank.tsx [app-ssr] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$src$2f$components$2f$Result$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Develop/pokesleep-iv-comparator/src/components/Result.tsx [app-ssr] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$src$2f$components$2f$Search$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Develop/pokesleep-iv-comparator/src/components/Search.tsx [app-ssr] (ecmascript)");
+"use client";
+;
+;
+;
+;
+;
+;
+function Home() {
+    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Fragment"], {
+        children: [
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$src$2f$components$2f$Header$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
+                fileName: "[project]/Develop/pokesleep-iv-comparator/app/page.tsx",
+                lineNumber: 12,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$src$2f$components$2f$Description$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
+                fileName: "[project]/Develop/pokesleep-iv-comparator/app/page.tsx",
+                lineNumber: 13,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$src$2f$components$2f$Rank$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
+                fileName: "[project]/Develop/pokesleep-iv-comparator/app/page.tsx",
+                lineNumber: 14,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$src$2f$components$2f$Result$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
+                fileName: "[project]/Develop/pokesleep-iv-comparator/app/page.tsx",
+                lineNumber: 15,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$src$2f$components$2f$Search$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
+                fileName: "[project]/Develop/pokesleep-iv-comparator/app/page.tsx",
+                lineNumber: 16,
+                columnNumber: 7
+            }, this)
+        ]
+    }, void 0, true);
 }
 }),
-]);
+];
 
-//# sourceMappingURL=Develop_pokesleep-iv-comparator_src_afa625b9._.js.map
+//# sourceMappingURL=%5Broot-of-the-server%5D__3f4b65d1._.js.map
