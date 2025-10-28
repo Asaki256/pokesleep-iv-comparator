@@ -30,11 +30,16 @@ export const VARIANT_CONFIG: Record<
 
 // スキルがバリアントを持つかどうか
 export const hasVariants = (skill: SubSkill): boolean => {
-  return skill.skillGroup !== "" && skill.skillGroup in VARIANT_CONFIG;
+  return (
+    skill.skillGroup !== "" &&
+    skill.skillGroup in VARIANT_CONFIG
+  );
 };
 
 // スキルグループの利用可能なバリアント取得
-export const getAvailableVariants = (skillGroup: string): Variant[] => {
+export const getAvailableVariants = (
+  skillGroup: string
+): Variant[] => {
   return VARIANT_CONFIG[skillGroup]?.variants || [];
 };
 
@@ -63,7 +68,11 @@ export const getRarityByVariant = (
 ): Rarity => {
   // skillGroupとvariantの組み合わせでレアリティを決定
   if (skillGroup === "inventoryCapacity") {
-    return variant === "L" ? "blue" : variant === "M" ? "blue" : "gray";
+    return variant === "L"
+      ? "blue"
+      : variant === "M"
+      ? "blue"
+      : "gray";
   }
   if (
     skillGroup === "skillTrigger" ||
@@ -82,27 +91,32 @@ export const getRarityByVariant = (
 export const getRarityStyles = (rarity: Rarity) => {
   const styles = {
     gold: {
-      gradient: "bg-gradient-to-br from-yellow-100 to-amber-100",
-      border: "border-yellow-300",
+      gradient:
+        "bg-gradient-to-br from-yellow-100 to-amber-100",
+      border: "border-yellow-200",
       badge: "bg-yellow-500",
       hover:
-        "hover:from-yellow-200 hover:to-amber-200 hover:border-yellow-400",
-      chip: "bg-yellow-100 text-yellow-700",
+        "hover:from-yellow-100 hover:to-amber-100 hover:border-yellow-300",
+      chip: "bg-amber-100 text-yellow-700",
       text: "text-yellow-700",
     },
     blue: {
-      gradient: "bg-gradient-to-br from-cyan-100 to-blue-100",
-      border: "border-cyan-300",
+      gradient:
+        "bg-gradient-to-br from-cyan-100 to-blue-100",
+      border: "border-cyan-200",
       badge: "bg-cyan-500",
-      hover: "hover:from-cyan-200 hover:to-blue-200 hover:border-cyan-400",
+      hover:
+        "hover:from-cyan-100 hover:to-blue-100 hover:border-cyan-300",
       chip: "bg-cyan-100 text-cyan-700",
       text: "text-cyan-700",
     },
     gray: {
-      gradient: "bg-gradient-to-br from-gray-100 to-slate-100",
+      gradient:
+        "bg-gradient-to-br from-gray-100 to-slate-100",
       border: "border-gray-300",
       badge: "bg-gray-500",
-      hover: "hover:from-gray-200 hover:to-slate-200 hover:border-gray-400",
+      hover:
+        "hover:from-gray-200 hover:to-slate-200 hover:border-gray-400",
       chip: "bg-gray-100 text-gray-700",
       text: "text-gray-700",
     },

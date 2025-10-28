@@ -66,7 +66,7 @@ export const SkillPickerModal = ({
       <div className="fixed inset-x-0 bottom-0 z-50 animate-in slide-in-from-bottom duration-300">
         <div
           className="
-            bg-white rounded-t-3xl
+            bg-background rounded-t-3xl
             max-h-[80vh] overflow-y-auto
             shadow-2xl
           "

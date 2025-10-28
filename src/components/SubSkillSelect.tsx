@@ -247,31 +247,22 @@ const SubSkillSelect = ({
         </div>
       )}
 
-      {/* スキル追加ボタン */}
-      <button
-        onClick={openAddMode}
-        disabled={selectedSkills.length >= 5}
-        className={`
-          w-full py-1.5 px-3 rounded-lg border-2 border-dashed
-          flex items-center justify-center gap-1.5
-          text-sm font-medium transition-all
-          ${
-            selectedSkills.length >= 5
-              ? "border-gray-300 text-gray-400 bg-gray-50 cursor-not-allowed"
-              : "border-secondary text-secondary bg-blue-50 hover:bg-blue-100 hover:border-slate-400 active:scale-95"
-          }
-        `}
-      >
-        {selectedSkills.length < 5 ? (
-          <>
-            <Plus className="w-4 h-4" />
-            スキルを追加 (Lv.
-            {getAutoLevel(selectedSkills.length)})
-          </>
-        ) : (
-          <span>スキルをタップして変更</span>
-        )}
-      </button>
+      {/* スキル追加ボタン - スキルが5つ未満の場合のみ表示 */}
+      {selectedSkills.length < 5 && (
+        <button
+          onClick={openAddMode}
+          className="
+            w-full py-1.5 px-3 rounded-lg border-2 border-dashed
+            flex items-center justify-center gap-1.5
+            text-sm font-medium transition-all
+            border-secondary text-secondary bg-blue-50/30 hover:bg-blue-50 hover:border-slate-400 active:scale-95
+          "
+        >
+          <Plus className="w-4 h-4" />
+          スキルを追加 (Lv.
+          {getAutoLevel(selectedSkills.length)})
+        </button>
+      )}
 
       {/* スキルピッカーモーダル */}
       <SkillPickerModal
