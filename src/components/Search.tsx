@@ -7,12 +7,45 @@ import SubSkillSelect from "./SubSkillSelect";
 import NatureSelector from "./nature/NatureSelector";
 import { SelectedSubSkill } from "@/types/selectedSubSkill";
 import { SelectedNature } from "@/types/nature";
+import { pokemonData } from "@/data/pokemonData";
+import { kinomiData } from "@/data/kinomiData";
 
 function Search() {
   const [pokemon, setPokemon] = useState("");
   const [selectedSubSkills, setSelectedSubSkills] =
     useState<SelectedSubSkill[]>([]);
-  const [nature, setNature] = useState<SelectedNature | null>(null);
+  const [nature, setNature] =
+    useState<SelectedNature | null>(null);
+
+  // 選択されたポケモンのデータを取得
+  const selectedPokemon = pokemonData.find(
+    (p) => p.name === pokemon
+  );
+
+  // きのみの日本語名を取得
+  const kinomiName = selectedPokemon
+    ? kinomiData.find(
+        (k) => k.type === selectedPokemon.kinomiType
+      )?.name
+    : undefined;
+
+  // とくいのタイプに応じた背景色を取得
+  const getTokuiStyle = (type: string | undefined) => {
+    if (!type) return "";
+
+    switch (type) {
+      case "きのみ":
+        return "bg-green-500 text-white";
+      case "スキル":
+        return "bg-blue-500 text-white";
+      case "食材":
+        return "bg-orange-400 text-white";
+      case "オール":
+        return "bg-pink-400 text-white";
+      default:
+        return "";
+    }
+  };
 
   return (
     <>
@@ -26,8 +59,21 @@ function Search() {
               />
             </div>
             <div className="flex gap-4 items-center">
-              <div className="text-xs">とくい:</div>
-              <div className="text-xs">きのみ:</div>
+              <div className="flex items-center gap-2">
+                <span className="text-xs">とくい:</span>
+                {selectedPokemon?.type && (
+                  <span
+                    className={`text-xs px-3 py-1 rounded-full font-bold ${getTokuiStyle(
+                      selectedPokemon.type
+                    )}`}
+                  >
+                    {selectedPokemon.type}
+                  </span>
+                )}
+              </div>
+              <div className="text-xs">
+                きのみ: {kinomiName || ""}
+              </div>
             </div>
           </div>
           <div className="mt-4">
@@ -52,7 +98,16 @@ function Search() {
         </div>
         <div className="text-center">
           <p>ポケモン: {pokemon}</p>
-          <p>性格: {nature ? `${nature.name}${nature.up ? ` (▲${nature.up} ▼${nature.down})` : ' (補正なし)'}` : '未選択'}</p>
+          <p>
+            性格:{" "}
+            {nature
+              ? `${nature.name}${
+                  nature.up
+                    ? ` (▲${nature.up} ▼${nature.down})`
+                    : " (補正なし)"
+                }`
+              : "未選択"}
+          </p>
           <p>選択したサブスキル:</p>
           <ul className="list-none">
             {selectedSubSkills.map((skill) => (
