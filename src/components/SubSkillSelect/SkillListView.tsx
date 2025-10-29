@@ -96,7 +96,7 @@ export const SkillListView = ({
           p-2 rounded-lg border-2
           ${
             isSelected
-              ? "bg-gray-500"
+              ? "bg-gray-500 hover:opacity-80"
               : `${styles.gradient} ${styles.border} ${styles.hover}`
           }
           transition-all active:scale-95
