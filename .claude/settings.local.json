@@ -7,7 +7,8 @@
       "Bash(npx eslint:*)",
       "Bash(npm run dev)",
       "mcp__ide__getDiagnostics",
-      "Read(//Users/masaki/Downloads/**)"
+      "Read(//Users/masaki/Downloads/**)",
+      "Bash(curl:*)"
     ],
     "deny": [],
     "ask": []
