@@ -14,12 +14,17 @@ import {
 
 interface SkillListViewProps {
   onSkillSelect: (skill: SubSkill) => void;
+  onVariantSelect: (
+    skill: SubSkill,
+    variant: Variant
+  ) => void;
   selectedSkills: SelectedSubSkill[];
   onRemoveSkill: (skillId: string) => void;
 }
 
 export const SkillListView = ({
   onSkillSelect,
+  onVariantSelect,
   selectedSkills,
   onRemoveSkill,
 }: SkillListViewProps) => {
@@ -91,11 +96,11 @@ export const SkillListView = ({
           p-2 rounded-lg border-2
           ${
             isSelected
-              ? "bg-gray-600 hover:bg-gray-600"
+              ? "bg-gray-500"
               : `${styles.gradient} ${styles.border} ${styles.hover}`
           }
           transition-all active:scale-95
-          text-center
+          text-center cursor-pointer
         `}
       >
         <div
@@ -118,24 +123,19 @@ export const SkillListView = ({
     const variants = getAvailableVariants(skillGroup);
 
     return (
-      <button
+      <div
         key={skillGroup}
-        onClick={() => {
-          onSkillSelect(skills[0]); // グループの代表スキルを渡す
-        }}
         className="
-          p-2 rounded-lg border-2
+          p-1.5 rounded-lg border-2
           bg-white border-gray-300
-          hover:bg-gray-50 hover:border-gray-400
-          transition-all active:scale-95
-          text-center relative
+          text-center
         "
       >
-        <div className="text-xs font-medium text-wrap mb-1.5 text-gray-800">
+        <div className="text-xs font-medium break-words mb-1 text-gray-800">
           {config.label}
         </div>
-        {/* バリアントタグ */}
-        <div className="flex gap-1 justify-center flex-wrap">
+        {/* バリアントタグ（クリック可能） */}
+        <div className="flex gap-1 justify-center">
           {variants.map((variant) => {
             const variantRarity = getRarityByVariant(
               skillGroup,
@@ -148,24 +148,44 @@ export const SkillListView = ({
                 skillGroup,
                 variant
               );
+            const selectedId = isVariantSelected
+              ? selectedSkills.find(
+                  (s) =>
+                    s.baseId === `${skillGroup}${variant}`
+                )?.id
+              : null;
+
             return (
-              <span
+              <button
                 key={variant}
+                onClick={(e) => {
+                  e.stopPropagation();
+                  if (isVariantSelected && selectedId) {
+                    onRemoveSkill(selectedId);
+                  } else {
+                    onVariantSelect(skills[0], variant);
+                  }
+                }}
                 className={`
+                  flex-1
                   ${
                     isVariantSelected
-                      ? "bg-gray-600 text-white border-gray-500"
+                      ? "bg-gray-500 text-white"
                       : variantStyles.chip
                   }
-                  px-1.5 py-0.5 rounded text-[9px] font-semibold
+                  px-2 py-1.5 rounded-md text-sm font-bold
+                  transition-all active:scale-95
+                  cursor-pointer
+                  hover:opacity-80 hover:shadow-md
+                  border-2
                 `}
               >
                 {variant}
-              </span>
+              </button>
             );
           })}
         </div>
-      </button>
+      </div>
     );
   };
 

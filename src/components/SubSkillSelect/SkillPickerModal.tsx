@@ -4,12 +4,9 @@ import {
   Variant,
 } from "@/types/selectedSubSkill";
 import { SkillListView } from "./SkillListView";
-import { VariantSelector } from "./VariantSelector";
 import { X } from "lucide-react";
 import { getRarityStyles } from "@/utils/subSkillUtils";
 import { useEffect } from "react";
-
-type ModalView = "list" | "variant";
 
 interface SkillPickerModalProps {
   isOpen: boolean;
@@ -18,10 +15,7 @@ interface SkillPickerModalProps {
   editingSkill: SelectedSubSkill | null;
   nextLevel: number;
   onSkillSelect: (skill: SubSkill) => void;
-  onVariantSelect: (variant: Variant) => void;
-  currentView: ModalView;
-  variantSkill: SubSkill | null;
-  onBackToList: () => void;
+  onVariantSelect: (skill: SubSkill, variant: Variant) => void;
   onRemoveSkill: (skillId: string) => void;
 }
 
@@ -33,9 +27,6 @@ export const SkillPickerModal = ({
   nextLevel,
   onSkillSelect,
   onVariantSelect,
-  currentView,
-  variantSkill,
-  onBackToList,
   onRemoveSkill,
 }: SkillPickerModalProps) => {
   // モーダルが開いたときにbodyのスクロールを無効化
@@ -117,7 +108,7 @@ export const SkillPickerModal = ({
             )}
 
             {/* 追加モード時の選択中スキルと次のレベル表示 */}
-            {!isEditing && currentView === "list" && (
+            {!isEditing && (
               <div className="mt-2 space-y-1.5">
                 {/* 選択中スキル（チップ形式） */}
                 {selectedSkills.length > 0 && (
@@ -178,25 +169,12 @@ export const SkillPickerModal = ({
 
           {/* コンテンツ */}
           <div className="px-4 py-3">
-            {currentView === "list" && (
-              <SkillListView
-                onSkillSelect={onSkillSelect}
-                selectedSkills={selectedSkills}
-                onRemoveSkill={onRemoveSkill}
-              />
-            )}
-
-            {currentView === "variant" && variantSkill && (
-              <VariantSelector
-                skill={variantSkill}
-                level={nextLevel}
-                isEditing={isEditing}
-                onVariantSelect={onVariantSelect}
-                onBack={onBackToList}
-                selectedSkills={selectedSkills}
-                onRemoveSkill={onRemoveSkill}
-              />
-            )}
+            <SkillListView
+              onSkillSelect={onSkillSelect}
+              onVariantSelect={onVariantSelect}
+              selectedSkills={selectedSkills}
+              onRemoveSkill={onRemoveSkill}
+            />
           </div>
         </div>
       </div>

@@ -1419,6 +1419,10 @@
     background-color: var(--color-gray-300);
   }
 
+  .bg-gray-400 {
+    background-color: var(--color-gray-400);
+  }
+
   .bg-gray-500 {
     background-color: var(--color-gray-500);
   }
@@ -1977,6 +1981,10 @@
     text-wrap: wrap;
   }
 
+  .break-words {
+    overflow-wrap: break-word;
+  }
+
   .text-ellipsis {
     text-overflow: ellipsis;
   }
@@ -2236,6 +2244,12 @@
   }
 
   @media (hover: hover) {
+    .hover\:border-amber-400:hover {
+      border-color: var(--color-amber-400);
+    }
+  }
+
+  @media (hover: hover) {
     .hover\:border-cyan-300:hover {
       border-color: var(--color-cyan-300);
     }
@@ -2322,6 +2336,12 @@
   @media (hover: hover) {
     .hover\:bg-gray-100:hover {
       background-color: var(--color-gray-100);
+    }
+  }
+
+  @media (hover: hover) {
+    .hover\:bg-gray-500:hover {
+      background-color: var(--color-gray-500);
     }
   }
 
@@ -2494,6 +2514,12 @@
   @media (hover: hover) {
     .hover\:underline:hover {
       text-decoration-line: underline;
+    }
+  }
+
+  @media (hover: hover) {
+    .hover\:opacity-80:hover {
+      opacity: .8;
     }
   }
 

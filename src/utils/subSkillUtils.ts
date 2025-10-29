@@ -93,21 +93,21 @@ export const getRarityStyles = (rarity: Rarity) => {
     gold: {
       gradient:
         "bg-gradient-to-br from-yellow-100 to-amber-100",
-      border: "border-yellow-200",
+      border: "border-amber-300",
       badge: "bg-yellow-500",
       hover:
-        "hover:from-yellow-100 hover:to-amber-100 hover:border-yellow-300",
-      chip: "bg-amber-100 text-yellow-700",
+        "hover:from-yellow-100 hover:to-amber-100 hover:border-amber-400",
+      chip: "bg-amber-100 text-amber-700 border-amber-300",
       text: "text-yellow-700",
     },
     blue: {
       gradient:
         "bg-gradient-to-br from-cyan-100 to-blue-100",
-      border: "border-cyan-200",
+      border: "border-cyan-300",
       badge: "bg-cyan-500",
       hover:
-        "hover:from-cyan-100 hover:to-blue-100 hover:border-cyan-300",
-      chip: "bg-cyan-100 text-cyan-700",
+        "hover:from-cyan-100 hover:to-blue-100 hover:border-cyan-400",
+      chip: "bg-cyan-100 text-cyan-700 border-cyan-300",
       text: "text-cyan-700",
     },
     gray: {
@@ -117,7 +117,7 @@ export const getRarityStyles = (rarity: Rarity) => {
       badge: "bg-gray-500",
       hover:
         "hover:from-gray-200 hover:to-slate-200 hover:border-gray-400",
-      chip: "bg-gray-100 text-gray-700",
+      chip: "bg-gray-100 text-gray-700 border-gray-300",
       text: "text-gray-700",
     },
   };

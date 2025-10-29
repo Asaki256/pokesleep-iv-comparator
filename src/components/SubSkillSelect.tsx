@@ -9,14 +9,11 @@ import {
 import { SkillCard } from "./SubSkillSelect/SkillCard";
 import { SkillPickerModal } from "./SubSkillSelect/SkillPickerModal";
 import {
-  hasVariants,
   getAutoLevel,
   getSkillNameWithVariant,
   getRarityByVariant,
 } from "@/utils/subSkillUtils";
 import { Plus } from "lucide-react";
-
-type ModalView = "list" | "variant";
 
 interface SubSkillSelectProps {
   onChange?: (skills: SelectedSubSkill[]) => void;
@@ -32,22 +29,16 @@ const SubSkillSelect = ({
   const [editingSkillId, setEditingSkillId] = useState<
     string | null
   >(null);
-  const [currentView, setCurrentView] =
-    useState<ModalView>("list");
-  const [variantSkill, setVariantSkill] =
-    useState<SubSkill | null>(null);
 
   // スキル追加モードでモーダルを開く
   const openAddMode = () => {
     setEditingSkillId(null);
-    setCurrentView("list");
     setIsModalOpen(true);
   };
 
   // スキル編集モードでモーダルを開く
   const openEditMode = (index: number) => {
     setEditingSkillId(selectedSkills[index].id);
-    setCurrentView("list");
     setIsModalOpen(true);
   };
 
@@ -55,27 +46,17 @@ const SubSkillSelect = ({
   const closeModal = () => {
     setIsModalOpen(false);
     setEditingSkillId(null);
-    setCurrentView("list");
-    setVariantSkill(null);
   };
 
-  // スキル選択時の処理
+  // スキル選択時の処理（バリアントなしスキル用）
   const handleSkillSelect = (skill: SubSkill) => {
-    if (hasVariants(skill)) {
-      // バリアントがある場合はバリアント選択画面へ
-      setVariantSkill(skill);
-      setCurrentView("variant");
-    } else {
-      // バリアントがない場合は即座に追加
-      addOrReplaceSkill(skill, null);
-    }
+    // バリアントがない場合は即座に追加
+    addOrReplaceSkill(skill, null);
   };
 
   // バリアント選択時の処理
-  const handleVariantSelect = (variant: Variant) => {
-    if (variantSkill) {
-      addOrReplaceSkill(variantSkill, variant);
-    }
+  const handleVariantSelect = (skill: SubSkill, variant: Variant) => {
+    addOrReplaceSkill(skill, variant);
   };
 
   // スキルを追加または置き換え
@@ -155,10 +136,6 @@ const SubSkillSelect = ({
       // 5つ到達したら自動でモーダルを閉じる
       if (updatedSkills.length === 5) {
         closeModal();
-      } else {
-        // スキル一覧に戻る（連続選択可能）
-        setCurrentView("list");
-        setVariantSkill(null);
       }
     }
   };
@@ -201,12 +178,6 @@ const SubSkillSelect = ({
     if (isModalOpen && editingSkillId !== null) {
       closeModal();
     }
-  };
-
-  // バリアント選択からスキル一覧に戻る
-  const backToList = () => {
-    setCurrentView("list");
-    setVariantSkill(null);
   };
 
   // 編集中のスキルを取得
@@ -283,9 +254,6 @@ const SubSkillSelect = ({
         nextLevel={nextLevel}
         onSkillSelect={handleSkillSelect}
         onVariantSelect={handleVariantSelect}
-        currentView={currentView}
-        variantSkill={variantSkill}
-        onBackToList={backToList}
         onRemoveSkill={removeSkillById}
       />
     </div>
