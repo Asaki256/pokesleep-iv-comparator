@@ -51,30 +51,35 @@ function Search() {
     <>
       <div className="m-4 max-w-md mx-auto">
         <div>
-          <div className="flex justify-center flex-wrap gap-4">
-            <div>
-              <Combobox
-                value={pokemon}
-                onChange={setPokemon}
-              />
+          {/* ポケモン選択 */}
+          <div className="w-full max-w-md mx-auto">
+            <div className="flex items-center justify-between mb-2">
+              <h2 className="text-base">ポケモン</h2>
             </div>
-            <div className="flex gap-4 items-center">
-              <div className="flex items-center gap-2">
-                <span className="text-xs">とくい:</span>
-                {selectedPokemon?.type && (
-                  <span
-                    className={`text-xs px-3 py-1 rounded-full font-bold ${getTokuiStyle(
-                      selectedPokemon.type
-                    )}`}
-                  >
-                    {selectedPokemon.type}
-                  </span>
-                )}
+            <Combobox
+              value={pokemon}
+              onChange={setPokemon}
+            />
+            {/* とくいときのみ表示 */}
+            {selectedPokemon && (
+              <div className="flex gap-4 items-center mt-2 justify-center">
+                <div className="flex items-center gap-2">
+                  <span className="text-xs">とくい:</span>
+                  {selectedPokemon?.type && (
+                    <span
+                      className={`text-xs px-3 py-1 rounded-full font-bold ${getTokuiStyle(
+                        selectedPokemon.type
+                      )}`}
+                    >
+                      {selectedPokemon.type}
+                    </span>
+                  )}
+                </div>
+                <div className="text-xs">
+                  きのみ: {kinomiName || ""}
+                </div>
               </div>
-              <div className="text-xs">
-                きのみ: {kinomiName || ""}
-              </div>
-            </div>
+            )}
           </div>
           <div className="mt-4">
             <SubSkillSelect

@@ -40,7 +40,7 @@ export function Combobox({ value, onChange }: Props) {
           variant="outline"
           role="combobox"
           aria-expanded={open}
-          className="w-[400px] justify-between"
+          className="w-full justify-between"
         >
           {value
             ? pokemonList.find(
@@ -50,7 +50,7 @@ export function Combobox({ value, onChange }: Props) {
           <ChevronsUpDown className="opacity-50" />
         </Button>
       </PopoverTrigger>
-      <PopoverContent className="w-[400px] p-0">
+      <PopoverContent className="w-full p-0">
         <Command>
           <CommandInput
             placeholder="ポケモン名を検索"
