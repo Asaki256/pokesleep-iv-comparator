@@ -29,8 +29,8 @@ const SubSkillSelect = ({
     SelectedSubSkill[]
   >([]);
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [editingIndex, setEditingIndex] = useState<
-    number | null
+  const [editingSkillId, setEditingSkillId] = useState<
+    string | null
   >(null);
   const [currentView, setCurrentView] =
     useState<ModalView>("list");
@@ -39,14 +39,14 @@ const SubSkillSelect = ({
 
   // スキル追加モードでモーダルを開く
   const openAddMode = () => {
-    setEditingIndex(null);
+    setEditingSkillId(null);
     setCurrentView("list");
     setIsModalOpen(true);
   };
 
   // スキル編集モードでモーダルを開く
   const openEditMode = (index: number) => {
-    setEditingIndex(index);
+    setEditingSkillId(selectedSkills[index].id);
     setCurrentView("list");
     setIsModalOpen(true);
   };
@@ -54,7 +54,7 @@ const SubSkillSelect = ({
   // モーダルを閉じる
   const closeModal = () => {
     setIsModalOpen(false);
-    setEditingIndex(null);
+    setEditingSkillId(null);
     setCurrentView("list");
     setVariantSkill(null);
   };
@@ -83,7 +83,7 @@ const SubSkillSelect = ({
     skill: SubSkill,
     variant: Variant | null
   ) => {
-    const isEditing = editingIndex !== null;
+    const isEditing = editingSkillId !== null;
 
     // baseIdを生成（バリアントありの場合は skillGroup + variant）
     const baseId =
@@ -93,6 +93,16 @@ const SubSkillSelect = ({
 
     if (isEditing) {
       // 編集モード: 既存のスキルを置き換え
+      const editingIndex = selectedSkills.findIndex(
+        (s) => s.id === editingSkillId
+      );
+
+      // 編集対象が見つからない場合（削除された場合など）
+      if (editingIndex === -1) {
+        closeModal();
+        return;
+      }
+
       const updatedSkills = [...selectedSkills];
       const currentSkill = updatedSkills[editingIndex];
       const rarity = variant
@@ -165,12 +175,8 @@ const SubSkillSelect = ({
   // スキル削除（イベントなしバージョン）
   const removeSkillById = (skillId: string) => {
     // 削除するスキルが編集中のものかチェック
-    const deletingIndex = selectedSkills.findIndex(
-      (skill) => skill.id === skillId
-    );
     const isDeletingEditingSkill =
-      editingIndex !== null &&
-      deletingIndex === editingIndex;
+      editingSkillId !== null && skillId === editingSkillId;
 
     const updatedSkills = selectedSkills
       .filter((skill) => skill.id !== skillId)
@@ -192,7 +198,7 @@ const SubSkillSelect = ({
     setSelectedSkills([]);
     onChange?.([]);
     // 編集モードの場合はモーダルを閉じる
-    if (isModalOpen && editingIndex !== null) {
+    if (isModalOpen && editingSkillId !== null) {
       closeModal();
     }
   };
@@ -203,11 +209,15 @@ const SubSkillSelect = ({
     setVariantSkill(null);
   };
 
+  // 編集中のスキルを取得
+  const editingSkill = editingSkillId
+    ? selectedSkills.find((s) => s.id === editingSkillId) || null
+    : null;
+
   // 次のレベルを取得
-  const nextLevel =
-    editingIndex !== null && selectedSkills[editingIndex]
-      ? selectedSkills[editingIndex].level
-      : getAutoLevel(selectedSkills.length);
+  const nextLevel = editingSkill
+    ? editingSkill.level
+    : getAutoLevel(selectedSkills.length);
 
   return (
     <div className="w-full max-w-md mx-auto">
@@ -269,11 +279,7 @@ const SubSkillSelect = ({
         isOpen={isModalOpen}
         onClose={closeModal}
         selectedSkills={selectedSkills}
-        editingSkill={
-          editingIndex !== null
-            ? selectedSkills[editingIndex]
-            : null
-        }
+        editingSkill={editingSkill}
         nextLevel={nextLevel}
         onSkillSelect={handleSkillSelect}
         onVariantSelect={handleVariantSelect}

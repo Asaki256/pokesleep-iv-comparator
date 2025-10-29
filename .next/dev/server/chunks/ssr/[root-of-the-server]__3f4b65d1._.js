@@ -3646,25 +3646,25 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2
 const SubSkillSelect = ({ onChange } = {})=>{
     const [selectedSkills, setSelectedSkills] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])([]);
     const [isModalOpen, setIsModalOpen] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(false);
-    const [editingIndex, setEditingIndex] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(null);
+    const [editingSkillId, setEditingSkillId] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(null);
     const [currentView, setCurrentView] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])("list");
     const [variantSkill, setVariantSkill] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(null);
     // スキル追加モードでモーダルを開く
     const openAddMode = ()=>{
-        setEditingIndex(null);
+        setEditingSkillId(null);
         setCurrentView("list");
         setIsModalOpen(true);
     };
     // スキル編集モードでモーダルを開く
     const openEditMode = (index)=>{
-        setEditingIndex(index);
+        setEditingSkillId(selectedSkills[index].id);
         setCurrentView("list");
         setIsModalOpen(true);
     };
     // モーダルを閉じる
     const closeModal = ()=>{
         setIsModalOpen(false);
-        setEditingIndex(null);
+        setEditingSkillId(null);
         setCurrentView("list");
         setVariantSkill(null);
     };
@@ -3687,11 +3687,17 @@ const SubSkillSelect = ({ onChange } = {})=>{
     };
     // スキルを追加または置き換え
     const addOrReplaceSkill = (skill, variant)=>{
-        const isEditing = editingIndex !== null;
+        const isEditing = editingSkillId !== null;
         // baseIdを生成（バリアントありの場合は skillGroup + variant）
         const baseId = variant && skill.skillGroup ? `${skill.skillGroup}${variant}` : skill.name;
         if (isEditing) {
             // 編集モード: 既存のスキルを置き換え
+            const editingIndex = selectedSkills.findIndex((s)=>s.id === editingSkillId);
+            // 編集対象が見つからない場合（削除された場合など）
+            if (editingIndex === -1) {
+                closeModal();
+                return;
+            }
             const updatedSkills = [
                 ...selectedSkills
             ];
@@ -3747,8 +3753,7 @@ const SubSkillSelect = ({ onChange } = {})=>{
     // スキル削除（イベントなしバージョン）
     const removeSkillById = (skillId)=>{
         // 削除するスキルが編集中のものかチェック
-        const deletingIndex = selectedSkills.findIndex((skill)=>skill.id === skillId);
-        const isDeletingEditingSkill = editingIndex !== null && deletingIndex === editingIndex;
+        const isDeletingEditingSkill = editingSkillId !== null && skillId === editingSkillId;
         const updatedSkills = selectedSkills.filter((skill)=>skill.id !== skillId).map((skill, index)=>({
                 ...skill,
                 level: (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$src$2f$utils$2f$subSkillUtils$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["getAutoLevel"])(index)
@@ -3765,7 +3770,7 @@ const SubSkillSelect = ({ onChange } = {})=>{
         setSelectedSkills([]);
         onChange?.([]);
         // 編集モードの場合はモーダルを閉じる
-        if (isModalOpen && editingIndex !== null) {
+        if (isModalOpen && editingSkillId !== null) {
             closeModal();
         }
     };
@@ -3774,8 +3779,10 @@ const SubSkillSelect = ({ onChange } = {})=>{
         setCurrentView("list");
         setVariantSkill(null);
     };
+    // 編集中のスキルを取得
+    const editingSkill = editingSkillId ? selectedSkills.find((s)=>s.id === editingSkillId) || null : null;
     // 次のレベルを取得
-    const nextLevel = editingIndex !== null && selectedSkills[editingIndex] ? selectedSkills[editingIndex].level : (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$src$2f$utils$2f$subSkillUtils$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["getAutoLevel"])(selectedSkills.length);
+    const nextLevel = editingSkill ? editingSkill.level : (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$src$2f$utils$2f$subSkillUtils$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["getAutoLevel"])(selectedSkills.length);
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
         className: "w-full max-w-md mx-auto",
         children: [
@@ -3790,7 +3797,7 @@ const SubSkillSelect = ({ onChange } = {})=>{
                                 children: "サブスキル"
                             }, void 0, false, {
                                 fileName: "[project]/Develop/pokesleep-iv-comparator/src/components/SubSkillSelect.tsx",
-                                lineNumber: 217,
+                                lineNumber: 227,
                                 columnNumber: 11
                             }, ("TURBOPACK compile-time value", void 0)),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -3801,13 +3808,13 @@ const SubSkillSelect = ({ onChange } = {})=>{
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/Develop/pokesleep-iv-comparator/src/components/SubSkillSelect.tsx",
-                                lineNumber: 218,
+                                lineNumber: 228,
                                 columnNumber: 11
                             }, ("TURBOPACK compile-time value", void 0))
                         ]
                     }, void 0, true, {
                         fileName: "[project]/Develop/pokesleep-iv-comparator/src/components/SubSkillSelect.tsx",
-                        lineNumber: 216,
+                        lineNumber: 226,
                         columnNumber: 9
                     }, ("TURBOPACK compile-time value", void 0)),
                     selectedSkills.length > 0 && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -3816,13 +3823,13 @@ const SubSkillSelect = ({ onChange } = {})=>{
                         children: "クリア"
                     }, void 0, false, {
                         fileName: "[project]/Develop/pokesleep-iv-comparator/src/components/SubSkillSelect.tsx",
-                        lineNumber: 224,
+                        lineNumber: 234,
                         columnNumber: 11
                     }, ("TURBOPACK compile-time value", void 0))
                 ]
             }, void 0, true, {
                 fileName: "[project]/Develop/pokesleep-iv-comparator/src/components/SubSkillSelect.tsx",
-                lineNumber: 215,
+                lineNumber: 225,
                 columnNumber: 7
             }, ("TURBOPACK compile-time value", void 0)),
             selectedSkills.length > 0 && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3833,12 +3840,12 @@ const SubSkillSelect = ({ onChange } = {})=>{
                         onRemove: (e)=>removeSkill(skill.id, e)
                     }, skill.id, false, {
                         fileName: "[project]/Develop/pokesleep-iv-comparator/src/components/SubSkillSelect.tsx",
-                        lineNumber: 240,
+                        lineNumber: 250,
                         columnNumber: 13
                     }, ("TURBOPACK compile-time value", void 0)))
             }, void 0, false, {
                 fileName: "[project]/Develop/pokesleep-iv-comparator/src/components/SubSkillSelect.tsx",
-                lineNumber: 238,
+                lineNumber: 248,
                 columnNumber: 9
             }, ("TURBOPACK compile-time value", void 0)),
             selectedSkills.length < 5 && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -3849,7 +3856,7 @@ const SubSkillSelect = ({ onChange } = {})=>{
                         className: "w-4 h-4"
                     }, void 0, false, {
                         fileName: "[project]/Develop/pokesleep-iv-comparator/src/components/SubSkillSelect.tsx",
-                        lineNumber: 261,
+                        lineNumber: 271,
                         columnNumber: 11
                     }, ("TURBOPACK compile-time value", void 0)),
                     "スキルを追加 (Lv.",
@@ -3858,14 +3865,14 @@ const SubSkillSelect = ({ onChange } = {})=>{
                 ]
             }, void 0, true, {
                 fileName: "[project]/Develop/pokesleep-iv-comparator/src/components/SubSkillSelect.tsx",
-                lineNumber: 252,
+                lineNumber: 262,
                 columnNumber: 9
             }, ("TURBOPACK compile-time value", void 0)),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$src$2f$components$2f$SubSkillSelect$2f$SkillPickerModal$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["SkillPickerModal"], {
                 isOpen: isModalOpen,
                 onClose: closeModal,
                 selectedSkills: selectedSkills,
-                editingSkill: editingIndex !== null ? selectedSkills[editingIndex] : null,
+                editingSkill: editingSkill,
                 nextLevel: nextLevel,
                 onSkillSelect: handleSkillSelect,
                 onVariantSelect: handleVariantSelect,
@@ -3875,13 +3882,13 @@ const SubSkillSelect = ({ onChange } = {})=>{
                 onRemoveSkill: removeSkillById
             }, void 0, false, {
                 fileName: "[project]/Develop/pokesleep-iv-comparator/src/components/SubSkillSelect.tsx",
-                lineNumber: 268,
+                lineNumber: 278,
                 columnNumber: 7
             }, ("TURBOPACK compile-time value", void 0))
         ]
     }, void 0, true, {
         fileName: "[project]/Develop/pokesleep-iv-comparator/src/components/SubSkillSelect.tsx",
-        lineNumber: 213,
+        lineNumber: 223,
         columnNumber: 5
     }, ("TURBOPACK compile-time value", void 0));
 };
