@@ -133,8 +133,8 @@ const SubSkillSelect = ({
       setSelectedSkills(updatedSkills);
       onChange?.(updatedSkills);
 
-      // 5つ到達したら自動でモーダルを閉じる
-      if (updatedSkills.length === 5) {
+      // 3つ到達したら自動でモーダルを閉じる
+      if (updatedSkills.length === 3) {
         closeModal();
       }
     }
@@ -197,7 +197,7 @@ const SubSkillSelect = ({
         <div className="flex items-center gap-2">
           <h2 className="text-base">サブスキル</h2>
           <span className="bg-secondary text-white text-xs px-1.5 py-0.5 rounded-full">
-            {selectedSkills.length}/5
+            {selectedSkills.length}/3
           </span>
         </div>
 
@@ -228,8 +228,8 @@ const SubSkillSelect = ({
         </div>
       )}
 
-      {/* スキル追加ボタン - スキルが5つ未満の場合のみ表示 */}
-      {selectedSkills.length < 5 && (
+      {/* スキル追加ボタン - スキルが3つ未満の場合のみ表示 */}
+      {selectedSkills.length < 3 && (
         <button
           onClick={openAddMode}
           className="

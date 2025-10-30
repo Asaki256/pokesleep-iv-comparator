@@ -153,7 +153,7 @@ export const SkillPickerModal = ({
                 )}
 
                 {/* メッセージ */}
-                {selectedSkills.length < 5 && (
+                {selectedSkills.length < 3 && (
                   <div className="space-y-0.5">
                     <p className="text-xs text-gray-600">
                       続けて選択できます

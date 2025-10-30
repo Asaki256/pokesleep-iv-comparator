@@ -43,11 +43,11 @@ export const getAvailableVariants = (
   return VARIANT_CONFIG[skillGroup]?.variants || [];
 };
 
-// レベルの自動割り当て（1つ目: 10, 2つ目: 25, 3つ目: 50, 4つ目: 75, 5つ目: 100）
-export const AUTO_LEVELS = [10, 25, 50, 75, 100];
+// レベルの自動割り当て（1つ目: 10, 2つ目: 25, 3つ目: 50）
+export const AUTO_LEVELS = [10, 25, 50];
 
 export const getAutoLevel = (index: number): number => {
-  return AUTO_LEVELS[index] || 100;
+  return AUTO_LEVELS[index] || 50;
 };
 
 // バリアント付きスキル名の生成

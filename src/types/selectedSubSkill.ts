@@ -7,6 +7,6 @@ export interface SelectedSubSkill {
   baseId: string; // データのID（name）
   name: string; // 表示名
   variant: Variant | null;
-  level: number; // 10, 25, 50, 75, 100
+  level: number; // 10, 25, 50
   rarity: Rarity;
 }
