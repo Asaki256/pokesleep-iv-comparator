@@ -2777,12 +2777,10 @@ const getAvailableVariants = (skillGroup)=>{
 const AUTO_LEVELS = [
     10,
     25,
-    50,
-    75,
-    100
+    50
 ];
 const getAutoLevel = (index)=>{
-    return AUTO_LEVELS[index] || 100;
+    return AUTO_LEVELS[index] || 50;
 };
 const getSkillNameWithVariant = (displayName, variant)=>{
     if (!variant) return displayName;
@@ -3390,7 +3388,7 @@ const SkillPickerModal = ({ isOpen, onClose, selectedSkills, editingSkill, nextL
                                             lineNumber: 115,
                                             columnNumber: 19
                                         }, ("TURBOPACK compile-time value", void 0)),
-                                        selectedSkills.length < 5 && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                        selectedSkills.length < 3 && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                             className: "space-y-0.5",
                                             children: [
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -3561,8 +3559,8 @@ const SubSkillSelect = ({ onChange } = {})=>{
             ];
             setSelectedSkills(updatedSkills);
             onChange?.(updatedSkills);
-            // 5つ到達したら自動でモーダルを閉じる
-            if (updatedSkills.length === 5) {
+            // 3つ到達したら自動でモーダルを閉じる
+            if (updatedSkills.length === 3) {
                 closeModal();
             }
         }
@@ -3621,7 +3619,7 @@ const SubSkillSelect = ({ onChange } = {})=>{
                                 className: "bg-secondary text-white text-xs px-1.5 py-0.5 rounded-full",
                                 children: [
                                     selectedSkills.length,
-                                    "/5"
+                                    "/3"
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/Develop/pokesleep-iv-comparator/src/components/SubSkillSelect.tsx",
@@ -3665,7 +3663,7 @@ const SubSkillSelect = ({ onChange } = {})=>{
                 lineNumber: 219,
                 columnNumber: 9
             }, ("TURBOPACK compile-time value", void 0)),
-            selectedSkills.length < 5 && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+            selectedSkills.length < 3 && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
                 onClick: openAddMode,
                 className: " w-full py-1.5 px-3 rounded-lg border-2 border-dashed flex items-center justify-center gap-1.5 text-sm font-medium transition-all border-secondary text-secondary bg-blue-50/30 hover:bg-blue-50 hover:border-slate-400 active:scale-95 ",
                 children: [
