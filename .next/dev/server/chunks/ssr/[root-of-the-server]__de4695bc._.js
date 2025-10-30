@@ -4957,40 +4957,28 @@ function Search() {
                                     columnNumber: 13
                                 }, this),
                                 selectedPokemon && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                    className: "flex gap-4 items-center mt-2 justify-center",
+                                    className: "flex flex-wrap gap-2 mt-2 items-center justify-center",
                                     children: [
-                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                            className: "flex items-center gap-2",
-                                            children: [
-                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                    className: "text-xs",
-                                                    children: "とくい:"
-                                                }, void 0, false, {
-                                                    fileName: "[project]/Develop/pokesleep-iv-comparator/src/components/Search.tsx",
-                                                    lineNumber: 67,
-                                                    columnNumber: 19
-                                                }, this),
-                                                selectedPokemon?.type && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                    className: `text-xs px-3 py-1 rounded-full font-bold ${getTokuiStyle(selectedPokemon.type)}`,
-                                                    children: selectedPokemon.type
-                                                }, void 0, false, {
-                                                    fileName: "[project]/Develop/pokesleep-iv-comparator/src/components/Search.tsx",
-                                                    lineNumber: 69,
-                                                    columnNumber: 21
-                                                }, this)
-                                            ]
-                                        }, void 0, true, {
+                                        selectedPokemon?.type && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                            className: `text-xs px-3 py-1 rounded-full font-bold ${getTokuiStyle(selectedPokemon.type)}`,
+                                            children: selectedPokemon.type
+                                        }, void 0, false, {
                                             fileName: "[project]/Develop/pokesleep-iv-comparator/src/components/Search.tsx",
-                                            lineNumber: 66,
-                                            columnNumber: 17
+                                            lineNumber: 67,
+                                            columnNumber: 19
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                             className: "text-xs",
-                                            children: [
-                                                "きのみ: ",
-                                                kinomiName || ""
-                                            ]
-                                        }, void 0, true, {
+                                            children: kinomiName || ""
+                                        }, void 0, false, {
+                                            fileName: "[project]/Develop/pokesleep-iv-comparator/src/components/Search.tsx",
+                                            lineNumber: 75,
+                                            columnNumber: 17
+                                        }, this),
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                            className: "text-xs px-3 py-1 bg-purple-100 text-purple-800 rounded-md font-medium",
+                                            children: selectedPokemon.mainSkill
+                                        }, void 0, false, {
                                             fileName: "[project]/Develop/pokesleep-iv-comparator/src/components/Search.tsx",
                                             lineNumber: 78,
                                             columnNumber: 17

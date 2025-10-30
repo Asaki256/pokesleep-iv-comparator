@@ -62,21 +62,21 @@ function Search() {
             />
             {/* とくいときのみ表示 */}
             {selectedPokemon && (
-              <div className="flex gap-4 items-center mt-2 justify-center">
-                <div className="flex items-center gap-2">
-                  <span className="text-xs">とくい:</span>
-                  {selectedPokemon?.type && (
-                    <span
-                      className={`text-xs px-3 py-1 rounded-full font-bold ${getTokuiStyle(
-                        selectedPokemon.type
-                      )}`}
-                    >
-                      {selectedPokemon.type}
-                    </span>
-                  )}
-                </div>
+              <div className="flex flex-wrap gap-2 mt-2 items-center justify-center">
+                {selectedPokemon?.type && (
+                  <span
+                    className={`text-xs px-3 py-1 rounded-full font-bold ${getTokuiStyle(
+                      selectedPokemon.type
+                    )}`}
+                  >
+                    {selectedPokemon.type}
+                  </span>
+                )}
                 <div className="text-xs">
-                  きのみ: {kinomiName || ""}
+                  {kinomiName || ""}
+                </div>
+                <div className="text-xs px-3 py-1 bg-purple-100 text-purple-800 rounded-md font-medium">
+                  {selectedPokemon.mainSkill}
                 </div>
               </div>
             )}
