@@ -1,9 +1,10 @@
 import { Pokemon } from "@/types/pokemon";
 import { kinomiData } from "@/data/kinomiData";
 import { SelectedSubSkill } from "@/types/selectedSubSkill";
+import { NATURE_GROUPS } from "@/data/natureData";
 
 /**
- * 性格補正値の定義（仕様書に基づく）
+ * 性格補正値の型定義
  */
 interface NatureMultipliers {
   speed: number;
@@ -12,66 +13,26 @@ interface NatureMultipliers {
 }
 
 /**
- * 性格名から補正値のマッピング
- */
-const NATURE_MULTIPLIERS: Record<
-  string,
-  NatureMultipliers
-> = {
-  // おてつだいスピード↑（スピード時間が短縮: 0.9）
-  さみしがり: { speed: 0.9, ingredient: 1.0, skill: 1.0 },
-  いじっぱり: { speed: 0.9, ingredient: 0.8, skill: 1.0 },
-  やんちゃ: { speed: 0.9, ingredient: 1.0, skill: 0.8 },
-  ゆうかん: { speed: 0.9, ingredient: 1.0, skill: 1.0 },
-
-  // おてつだいスピード↓（スピード時間が延長: 1.075）
-  ずぶとい: { speed: 1.075, ingredient: 1.0, skill: 1.0 },
-  おだやか: { speed: 1.075, ingredient: 1.0, skill: 1.2 },
-  ひかえめ: { speed: 1.075, ingredient: 1.2, skill: 1.0 },
-  おくびょう: { speed: 1.075, ingredient: 1.0, skill: 1.0 },
-
-  // 食材確率↑
-  おっとり: { speed: 1.0, ingredient: 1.2, skill: 1.0 },
-  うっかりや: { speed: 1.0, ingredient: 1.2, skill: 0.8 },
-  れいせい: { speed: 1.0, ingredient: 1.2, skill: 1.0 },
-
-  // 食材確率↓
-  わんぱく: { speed: 1.0, ingredient: 0.8, skill: 1.0 },
-  ようき: { speed: 1.0, ingredient: 0.8, skill: 1.0 },
-
-  // スキル確率↑
-  おとなしい: { speed: 1.0, ingredient: 1.0, skill: 1.2 },
-  しんちょう: { speed: 1.0, ingredient: 0.8, skill: 1.2 },
-  なまいき: { speed: 1.0, ingredient: 1.0, skill: 1.2 },
-
-  // スキル確率↓
-  のうてんき: { speed: 1.0, ingredient: 1.0, skill: 0.8 },
-  むじゃき: { speed: 1.0, ingredient: 1.0, skill: 0.8 },
-
-  // EXP補正（スピード・食材・スキルには影響なし）
-  せっかち: { speed: 1.0, ingredient: 1.0, skill: 1.0 },
-  のんき: { speed: 1.0, ingredient: 1.0, skill: 1.0 },
-
-  // 補正なし
-  てれや: { speed: 1.0, ingredient: 1.0, skill: 1.0 },
-  がんばりや: { speed: 1.0, ingredient: 1.0, skill: 1.0 },
-  すなお: { speed: 1.0, ingredient: 1.0, skill: 1.0 },
-  きまぐれ: { speed: 1.0, ingredient: 1.0, skill: 1.0 },
-  まじめ: { speed: 1.0, ingredient: 1.0, skill: 1.0 },
-};
-
-/**
  * 性格名から補正値を取得
+ * natureData.tsのNATURE_GROUPSから性格を検索
  */
 export const getNatureMultipliers = (
   natureName: string
 ): NatureMultipliers => {
-  const multipliers = NATURE_MULTIPLIERS[natureName];
-  if (!multipliers) {
-    // デフォルトは補正なし
-    return { speed: 1.0, ingredient: 1.0, skill: 1.0 };
+  // NATURE_GROUPSから性格を検索
+  for (const group of NATURE_GROUPS) {
+    const nature = group.natures.find((n) => n.name === natureName);
+    if (nature) {
+      return {
+        speed: nature.speedMultiplier,
+        ingredient: nature.ingredientMultiplier,
+        skill: nature.skillMultiplier,
+      };
+    }
   }
-  return multipliers;
+
+  // 見つからない場合はデフォルト（補正なし）
+  return { speed: 1.0, ingredient: 1.0, skill: 1.0 };
 };
 
 /**
@@ -128,7 +89,7 @@ export interface CalculationResult {
  * 定数
  */
 const SECONDS_PER_DAY = 132888; // 1日のお手伝い時間(秒)
-const SUBSKILL_REDUCTION_CAP = 0.35; // サブスキルによる軽減幅の上限
+const SUB_SKILL_REDUCTION_CAP = 0.35; // サブスキルによる軽減幅の上限
 const SLEEP_RIBBON_MULTIPLIER = 1.0; // おやすみリボン補正(固定)
 
 /**
@@ -155,7 +116,7 @@ const calculateSubSkillReduction = (
     0.14 * helpingSpeedMCount +
     0.07 * helpingSpeedSCount +
     0.05 * helpingBonusCount;
-  return Math.min(reduction, SUBSKILL_REDUCTION_CAP);
+  return Math.min(reduction, SUB_SKILL_REDUCTION_CAP);
 };
 
 /**
