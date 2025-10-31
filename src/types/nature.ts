@@ -30,6 +30,12 @@ export interface Nature {
   up: string | null;
   /** 下降ステータス（nullの場合は補正なし） */
   down: string | null;
+  /** おてつだい時間への補正（0.9=速くなる, 1.075=遅くなる, 1.0=補正なし） */
+  speedMultiplier: number;
+  /** 食材確率への補正（1.2=上昇, 0.8=下降, 1.0=補正なし） */
+  ingredientMultiplier: number;
+  /** スキル確率への補正（1.2=上昇, 0.8=下降, 1.0=補正なし） */
+  skillMultiplier: number;
 }
 
 /**
@@ -74,16 +80,3 @@ export interface ColorConfig {
   icon: string;
 }
 
-/**
- * 性格補正の効果値（計算用）
- */
-export interface NatureEffect {
-  /** 性格名 */
-  name: string;
-  /** おてつだいスピード補正（1.0が基準） */
-  speedMultiplier: number;
-  /** 食材確率補正（1.0が基準） */
-  ingredientMultiplier: number;
-  /** スキル確率補正（1.0が基準） */
-  skillMultiplier: number;
-}
