@@ -4897,6 +4897,379 @@ if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelper
     __turbopack_context__.k.registerExports(__turbopack_context__.m, globalThis.$RefreshHelpers$);
 }
 }),
+"[project]/Develop/pokesleep-iv-comparator/src/components/CalculatedPokemonInfo.tsx [app-client] (ecmascript)", ((__turbopack_context__) => {
+"use strict";
+
+__turbopack_context__.s([
+    "default",
+    ()=>__TURBOPACK__default__export__
+]);
+var __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Develop/pokesleep-iv-comparator/node_modules/next/dist/compiled/react/jsx-dev-runtime.js [app-client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$src$2f$utils$2f$subSkillUtils$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Develop/pokesleep-iv-comparator/src/utils/subSkillUtils.ts [app-client] (ecmascript)");
+"use client";
+;
+;
+// 日付フォーマット関数
+const formatDate = (date)=>{
+    const now = new Date();
+    const today = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+    const targetDate = new Date(date.getFullYear(), date.getMonth(), date.getDate());
+    if (today.getTime() === targetDate.getTime()) {
+        return "今日";
+    }
+    return date.toLocaleDateString("ja-JP", {
+        month: "numeric",
+        day: "numeric"
+    });
+};
+const getTokuiStyle = (type)=>{
+    switch(type){
+        case "きのみ":
+            return "bg-green-500 text-white";
+        case "スキル":
+            return "bg-blue-500 text-white";
+        case "食材":
+            return "bg-orange-400 text-white";
+        case "オール":
+            return "bg-pink-400 text-white";
+        default:
+            return "bg-gray-400 text-white";
+    }
+};
+const CalculatedPokemonInfo = ({ pokemonName, pokemonType, nature, subSkills, calculationResult })=>{
+    // サブスキルを最大3つまで表示用に整形
+    const displaySubSkills = [
+        ...subSkills.slice(0, 3)
+    ];
+    while(displaySubSkills.length < 3){
+        displaySubSkills.push(null);
+    }
+    // 現在の日時を取得
+    const currentDate = new Date();
+    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+        className: "bg-linear-to-br from-sky-50 to-cyan-50 rounded-lg shadow-md border-2 border-cyan-200 overflow-hidden",
+        children: [
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                className: "p-2 md:p-3",
+                children: [
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        className: "flex items-center gap-2 md:gap-3 mb-1.5",
+                        children: [
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                className: "text-xl md:text-2xl",
+                                children: "🎮"
+                            }, void 0, false, {
+                                fileName: "[project]/Develop/pokesleep-iv-comparator/src/components/CalculatedPokemonInfo.tsx",
+                                lineNumber: 80,
+                                columnNumber: 11
+                            }, ("TURBOPACK compile-time value", void 0)),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h4", {
+                                className: "font-bold text-sm md:text-base text-gray-900",
+                                children: pokemonName
+                            }, void 0, false, {
+                                fileName: "[project]/Develop/pokesleep-iv-comparator/src/components/CalculatedPokemonInfo.tsx",
+                                lineNumber: 81,
+                                columnNumber: 11
+                            }, ("TURBOPACK compile-time value", void 0)),
+                            pokemonType && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                className: `text-[9px] md:text-[10px] px-3 py-1 rounded-full font-bold ${getTokuiStyle(pokemonType)}`,
+                                children: pokemonType
+                            }, void 0, false, {
+                                fileName: "[project]/Develop/pokesleep-iv-comparator/src/components/CalculatedPokemonInfo.tsx",
+                                lineNumber: 85,
+                                columnNumber: 13
+                            }, ("TURBOPACK compile-time value", void 0)),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                className: "flex-1"
+                            }, void 0, false, {
+                                fileName: "[project]/Develop/pokesleep-iv-comparator/src/components/CalculatedPokemonInfo.tsx",
+                                lineNumber: 93,
+                                columnNumber: 11
+                            }, ("TURBOPACK compile-time value", void 0)),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                className: "text-[9px] md:text-[10px] text-gray-600 font-medium",
+                                children: formatDate(currentDate)
+                            }, void 0, false, {
+                                fileName: "[project]/Develop/pokesleep-iv-comparator/src/components/CalculatedPokemonInfo.tsx",
+                                lineNumber: 94,
+                                columnNumber: 11
+                            }, ("TURBOPACK compile-time value", void 0))
+                        ]
+                    }, void 0, true, {
+                        fileName: "[project]/Develop/pokesleep-iv-comparator/src/components/CalculatedPokemonInfo.tsx",
+                        lineNumber: 79,
+                        columnNumber: 9
+                    }, ("TURBOPACK compile-time value", void 0)),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        className: "ml-8 md:ml-10 space-y-0.5",
+                        children: [
+                            nature && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                className: "text-[10px] md:text-xs text-gray-700",
+                                children: [
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                        className: "font-semibold",
+                                        children: "性格:"
+                                    }, void 0, false, {
+                                        fileName: "[project]/Develop/pokesleep-iv-comparator/src/components/CalculatedPokemonInfo.tsx",
+                                        lineNumber: 103,
+                                        columnNumber: 15
+                                    }, ("TURBOPACK compile-time value", void 0)),
+                                    " ",
+                                    nature
+                                ]
+                            }, void 0, true, {
+                                fileName: "[project]/Develop/pokesleep-iv-comparator/src/components/CalculatedPokemonInfo.tsx",
+                                lineNumber: 102,
+                                columnNumber: 13
+                            }, ("TURBOPACK compile-time value", void 0)),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                className: "text-[10px] md:text-xs text-gray-700",
+                                children: [
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                        className: "font-semibold",
+                                        children: "サブスキル:"
+                                    }, void 0, false, {
+                                        fileName: "[project]/Develop/pokesleep-iv-comparator/src/components/CalculatedPokemonInfo.tsx",
+                                        lineNumber: 108,
+                                        columnNumber: 13
+                                    }, ("TURBOPACK compile-time value", void 0)),
+                                    " ",
+                                    displaySubSkills.map((skill, index)=>{
+                                        if (!skill) {
+                                            return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                className: "inline-block px-1.5 py-0.5 rounded mx-0.5 bg-gray-50 text-gray-400 border border-gray-200",
+                                                children: "未選択"
+                                            }, index, false, {
+                                                fileName: "[project]/Develop/pokesleep-iv-comparator/src/components/CalculatedPokemonInfo.tsx",
+                                                lineNumber: 114,
+                                                columnNumber: 19
+                                            }, ("TURBOPACK compile-time value", void 0));
+                                        }
+                                        const styles = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$src$2f$utils$2f$subSkillUtils$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["getRarityStyles"])(skill.rarity);
+                                        return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                            className: `inline-block px-1.5 py-0.5 rounded mx-0.5 border ${styles.chip}`,
+                                            children: skill.name
+                                        }, index, false, {
+                                            fileName: "[project]/Develop/pokesleep-iv-comparator/src/components/CalculatedPokemonInfo.tsx",
+                                            lineNumber: 124,
+                                            columnNumber: 17
+                                        }, ("TURBOPACK compile-time value", void 0));
+                                    })
+                                ]
+                            }, void 0, true, {
+                                fileName: "[project]/Develop/pokesleep-iv-comparator/src/components/CalculatedPokemonInfo.tsx",
+                                lineNumber: 107,
+                                columnNumber: 11
+                            }, ("TURBOPACK compile-time value", void 0))
+                        ]
+                    }, void 0, true, {
+                        fileName: "[project]/Develop/pokesleep-iv-comparator/src/components/CalculatedPokemonInfo.tsx",
+                        lineNumber: 100,
+                        columnNumber: 9
+                    }, ("TURBOPACK compile-time value", void 0))
+                ]
+            }, void 0, true, {
+                fileName: "[project]/Develop/pokesleep-iv-comparator/src/components/CalculatedPokemonInfo.tsx",
+                lineNumber: 77,
+                columnNumber: 7
+            }, ("TURBOPACK compile-time value", void 0)),
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                className: "p-2 md:p-3 bg-white bg-opacity-50",
+                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                    className: "bg-white rounded border border-cyan-200 overflow-x-auto",
+                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("table", {
+                        className: "w-full text-[10px] md:text-xs",
+                        children: [
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("thead", {
+                                className: "bg-cyan-50",
+                                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("tr", {
+                                    children: [
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("th", {
+                                            className: "px-1.5 md:px-2 py-1 text-left font-semibold text-gray-700 whitespace-nowrap",
+                                            children: "お手伝い時間"
+                                        }, void 0, false, {
+                                            fileName: "[project]/Develop/pokesleep-iv-comparator/src/components/CalculatedPokemonInfo.tsx",
+                                            lineNumber: 142,
+                                            columnNumber: 17
+                                        }, ("TURBOPACK compile-time value", void 0)),
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("th", {
+                                            className: "px-1.5 md:px-2 py-1 text-left font-semibold text-gray-700 whitespace-nowrap",
+                                            children: "食材確率"
+                                        }, void 0, false, {
+                                            fileName: "[project]/Develop/pokesleep-iv-comparator/src/components/CalculatedPokemonInfo.tsx",
+                                            lineNumber: 145,
+                                            columnNumber: 17
+                                        }, ("TURBOPACK compile-time value", void 0)),
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("th", {
+                                            className: "px-1.5 md:px-2 py-1 text-left font-semibold text-gray-700 whitespace-nowrap",
+                                            children: "食材/日"
+                                        }, void 0, false, {
+                                            fileName: "[project]/Develop/pokesleep-iv-comparator/src/components/CalculatedPokemonInfo.tsx",
+                                            lineNumber: 148,
+                                            columnNumber: 17
+                                        }, ("TURBOPACK compile-time value", void 0)),
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("th", {
+                                            className: "px-1.5 md:px-2 py-1 text-left font-semibold text-gray-700 whitespace-nowrap",
+                                            children: "スキル確率"
+                                        }, void 0, false, {
+                                            fileName: "[project]/Develop/pokesleep-iv-comparator/src/components/CalculatedPokemonInfo.tsx",
+                                            lineNumber: 151,
+                                            columnNumber: 17
+                                        }, ("TURBOPACK compile-time value", void 0)),
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("th", {
+                                            className: "px-1.5 md:px-2 py-1 text-left font-semibold text-gray-700 whitespace-nowrap",
+                                            children: "スキル/日"
+                                        }, void 0, false, {
+                                            fileName: "[project]/Develop/pokesleep-iv-comparator/src/components/CalculatedPokemonInfo.tsx",
+                                            lineNumber: 154,
+                                            columnNumber: 17
+                                        }, ("TURBOPACK compile-time value", void 0)),
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("th", {
+                                            className: "px-1.5 md:px-2 py-1 text-left font-semibold text-gray-700 whitespace-nowrap",
+                                            children: "きのみ/日"
+                                        }, void 0, false, {
+                                            fileName: "[project]/Develop/pokesleep-iv-comparator/src/components/CalculatedPokemonInfo.tsx",
+                                            lineNumber: 157,
+                                            columnNumber: 17
+                                        }, ("TURBOPACK compile-time value", void 0)),
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("th", {
+                                            className: "px-1.5 md:px-2 py-1 text-left font-semibold text-gray-700 whitespace-nowrap",
+                                            children: "きのみE/日"
+                                        }, void 0, false, {
+                                            fileName: "[project]/Develop/pokesleep-iv-comparator/src/components/CalculatedPokemonInfo.tsx",
+                                            lineNumber: 160,
+                                            columnNumber: 17
+                                        }, ("TURBOPACK compile-time value", void 0))
+                                    ]
+                                }, void 0, true, {
+                                    fileName: "[project]/Develop/pokesleep-iv-comparator/src/components/CalculatedPokemonInfo.tsx",
+                                    lineNumber: 141,
+                                    columnNumber: 15
+                                }, ("TURBOPACK compile-time value", void 0))
+                            }, void 0, false, {
+                                fileName: "[project]/Develop/pokesleep-iv-comparator/src/components/CalculatedPokemonInfo.tsx",
+                                lineNumber: 140,
+                                columnNumber: 13
+                            }, ("TURBOPACK compile-time value", void 0)),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("tbody", {
+                                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("tr", {
+                                    children: [
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("td", {
+                                            className: "px-1.5 md:px-2 py-1.5 font-bold text-gray-800 whitespace-nowrap",
+                                            children: [
+                                                calculationResult.calculatedSupportTime.toLocaleString(),
+                                                "秒"
+                                            ]
+                                        }, void 0, true, {
+                                            fileName: "[project]/Develop/pokesleep-iv-comparator/src/components/CalculatedPokemonInfo.tsx",
+                                            lineNumber: 167,
+                                            columnNumber: 17
+                                        }, ("TURBOPACK compile-time value", void 0)),
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("td", {
+                                            className: "px-1.5 md:px-2 py-1.5 font-bold text-gray-800 whitespace-nowrap",
+                                            children: [
+                                                (calculationResult.calculatedFoodDropRate * 100).toFixed(1),
+                                                "%"
+                                            ]
+                                        }, void 0, true, {
+                                            fileName: "[project]/Develop/pokesleep-iv-comparator/src/components/CalculatedPokemonInfo.tsx",
+                                            lineNumber: 171,
+                                            columnNumber: 17
+                                        }, ("TURBOPACK compile-time value", void 0)),
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("td", {
+                                            className: "px-1.5 md:px-2 py-1.5 font-bold text-orange-600 whitespace-nowrap",
+                                            children: [
+                                                calculationResult.foodHelpsPerDay.toFixed(1),
+                                                "回"
+                                            ]
+                                        }, void 0, true, {
+                                            fileName: "[project]/Develop/pokesleep-iv-comparator/src/components/CalculatedPokemonInfo.tsx",
+                                            lineNumber: 178,
+                                            columnNumber: 17
+                                        }, ("TURBOPACK compile-time value", void 0)),
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("td", {
+                                            className: "px-1.5 md:px-2 py-1.5 font-bold text-gray-800 whitespace-nowrap",
+                                            children: [
+                                                (calculationResult.calculatedSkillRate * 100).toFixed(1),
+                                                "%"
+                                            ]
+                                        }, void 0, true, {
+                                            fileName: "[project]/Develop/pokesleep-iv-comparator/src/components/CalculatedPokemonInfo.tsx",
+                                            lineNumber: 184,
+                                            columnNumber: 17
+                                        }, ("TURBOPACK compile-time value", void 0)),
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("td", {
+                                            className: "px-1.5 md:px-2 py-1.5 font-bold text-purple-600 whitespace-nowrap",
+                                            children: [
+                                                calculationResult.skillTriggersPerDay.toFixed(1),
+                                                "回"
+                                            ]
+                                        }, void 0, true, {
+                                            fileName: "[project]/Develop/pokesleep-iv-comparator/src/components/CalculatedPokemonInfo.tsx",
+                                            lineNumber: 191,
+                                            columnNumber: 17
+                                        }, ("TURBOPACK compile-time value", void 0)),
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("td", {
+                                            className: "px-1.5 md:px-2 py-1.5 font-bold text-green-600 whitespace-nowrap",
+                                            children: [
+                                                calculationResult.berryHelpsPerDay.toFixed(1),
+                                                "回"
+                                            ]
+                                        }, void 0, true, {
+                                            fileName: "[project]/Develop/pokesleep-iv-comparator/src/components/CalculatedPokemonInfo.tsx",
+                                            lineNumber: 197,
+                                            columnNumber: 17
+                                        }, ("TURBOPACK compile-time value", void 0)),
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("td", {
+                                            className: "px-1.5 md:px-2 py-1.5 font-bold text-blue-600 whitespace-nowrap",
+                                            children: calculationResult.berryEnergyPerDay.toLocaleString()
+                                        }, void 0, false, {
+                                            fileName: "[project]/Develop/pokesleep-iv-comparator/src/components/CalculatedPokemonInfo.tsx",
+                                            lineNumber: 203,
+                                            columnNumber: 17
+                                        }, ("TURBOPACK compile-time value", void 0))
+                                    ]
+                                }, void 0, true, {
+                                    fileName: "[project]/Develop/pokesleep-iv-comparator/src/components/CalculatedPokemonInfo.tsx",
+                                    lineNumber: 166,
+                                    columnNumber: 15
+                                }, ("TURBOPACK compile-time value", void 0))
+                            }, void 0, false, {
+                                fileName: "[project]/Develop/pokesleep-iv-comparator/src/components/CalculatedPokemonInfo.tsx",
+                                lineNumber: 165,
+                                columnNumber: 13
+                            }, ("TURBOPACK compile-time value", void 0))
+                        ]
+                    }, void 0, true, {
+                        fileName: "[project]/Develop/pokesleep-iv-comparator/src/components/CalculatedPokemonInfo.tsx",
+                        lineNumber: 139,
+                        columnNumber: 11
+                    }, ("TURBOPACK compile-time value", void 0))
+                }, void 0, false, {
+                    fileName: "[project]/Develop/pokesleep-iv-comparator/src/components/CalculatedPokemonInfo.tsx",
+                    lineNumber: 138,
+                    columnNumber: 9
+                }, ("TURBOPACK compile-time value", void 0))
+            }, void 0, false, {
+                fileName: "[project]/Develop/pokesleep-iv-comparator/src/components/CalculatedPokemonInfo.tsx",
+                lineNumber: 137,
+                columnNumber: 7
+            }, ("TURBOPACK compile-time value", void 0))
+        ]
+    }, void 0, true, {
+        fileName: "[project]/Develop/pokesleep-iv-comparator/src/components/CalculatedPokemonInfo.tsx",
+        lineNumber: 75,
+        columnNumber: 5
+    }, ("TURBOPACK compile-time value", void 0));
+};
+_c = CalculatedPokemonInfo;
+const __TURBOPACK__default__export__ = CalculatedPokemonInfo;
+var _c;
+__turbopack_context__.k.register(_c, "CalculatedPokemonInfo");
+if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelpers !== null) {
+    __turbopack_context__.k.registerExports(__turbopack_context__.m, globalThis.$RefreshHelpers$);
+}
+}),
 "[project]/Develop/pokesleep-iv-comparator/src/data/kinomiData.ts [app-client] (ecmascript)", ((__turbopack_context__) => {
 "use strict";
 
@@ -5000,6 +5373,225 @@ if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelper
     __turbopack_context__.k.registerExports(__turbopack_context__.m, globalThis.$RefreshHelpers$);
 }
 }),
+"[project]/Develop/pokesleep-iv-comparator/src/utils/pokemonCalculator.ts [app-client] (ecmascript)", ((__turbopack_context__) => {
+"use strict";
+
+__turbopack_context__.s([
+    "calculateBerryEnergyPerDay",
+    ()=>calculateBerryEnergyPerDay,
+    "calculateBerryEnergyPerHelp",
+    ()=>calculateBerryEnergyPerHelp,
+    "calculateBerryHelpsPerDay",
+    ()=>calculateBerryHelpsPerDay,
+    "calculateFoodDropRate",
+    ()=>calculateFoodDropRate,
+    "calculateFoodHelpsPerDay",
+    ()=>calculateFoodHelpsPerDay,
+    "calculateHelpsPerDay",
+    ()=>calculateHelpsPerDay,
+    "calculatePokemonStats",
+    ()=>calculatePokemonStats,
+    "calculatePokemonStatsSimple",
+    ()=>calculatePokemonStatsSimple,
+    "calculateSkillRate",
+    ()=>calculateSkillRate,
+    "calculateSkillTriggersPerDay",
+    ()=>calculateSkillTriggersPerDay,
+    "calculateSupportTime",
+    ()=>calculateSupportTime,
+    "countSubSkills",
+    ()=>countSubSkills,
+    "getNatureMultipliers",
+    ()=>getNatureMultipliers
+]);
+var __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$src$2f$data$2f$kinomiData$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Develop/pokesleep-iv-comparator/src/data/kinomiData.ts [app-client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$src$2f$data$2f$natureData$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Develop/pokesleep-iv-comparator/src/data/natureData.ts [app-client] (ecmascript)");
+;
+;
+const getNatureMultipliers = (natureName)=>{
+    // NATURE_GROUPSから性格を検索
+    for (const group of __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$src$2f$data$2f$natureData$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["NATURE_GROUPS"]){
+        const nature = group.natures.find((n)=>n.name === natureName);
+        if (nature) {
+            return {
+                speed: nature.speedMultiplier,
+                ingredient: nature.ingredientMultiplier,
+                skill: nature.skillMultiplier
+            };
+        }
+    }
+    // 見つからない場合はデフォルト（補正なし）
+    return {
+        speed: 1.0,
+        ingredient: 1.0,
+        skill: 1.0
+    };
+};
+/**
+ * 定数
+ */ const SECONDS_PER_DAY = 132888; // 1日のお手伝い時間(秒)
+const SUB_SKILL_REDUCTION_CAP = 0.35; // サブスキルによる軽減幅の上限
+const SLEEP_RIBBON_MULTIPLIER = 1.0; // おやすみリボン補正(固定)
+/**
+ * レベルによる補正を計算
+ * 1 - (Lv - 1) * 0.002
+ */ const calculateLevelMultiplier = (level)=>{
+    return 1 - (level - 1) * 0.002;
+};
+/**
+ * サブスキルによる軽減幅を計算
+ * = 0.14 * (おてつだいスピードMの個数) + 0.07 * (おてつだいスピードSの個数) + 0.05 * (おてつだいボーナスの個数)
+ * 上限: 0.35
+ */ const calculateSubSkillReduction = (helpingSpeedMCount, helpingSpeedSCount, helpingBonusCount)=>{
+    const reduction = 0.14 * helpingSpeedMCount + 0.07 * helpingSpeedSCount + 0.05 * helpingBonusCount;
+    return Math.min(reduction, SUB_SKILL_REDUCTION_CAP);
+};
+/**
+ * サブスキル補正(倍率)を計算
+ * = 1 - サブスキルによる軽減幅
+ */ const calculateSubSkillMultiplier = (helpingSpeedMCount, helpingSpeedSCount, helpingBonusCount)=>{
+    const reduction = calculateSubSkillReduction(helpingSpeedMCount, helpingSpeedSCount, helpingBonusCount);
+    return 1 - reduction;
+};
+const calculateSupportTime = (params)=>{
+    const { pokemon, level = 60, speedNatureMultiplier = 1.0, helpingSpeedMCount = 0, helpingSpeedSCount = 0, helpingBonusCount = 0 } = params;
+    const levelMultiplier = calculateLevelMultiplier(level);
+    const subSkillMultiplier = calculateSubSkillMultiplier(helpingSpeedMCount, helpingSpeedSCount, helpingBonusCount);
+    const calculatedTime = pokemon.supportTime * levelMultiplier * speedNatureMultiplier * subSkillMultiplier * SLEEP_RIBBON_MULTIPLIER;
+    return Math.floor(calculatedTime);
+};
+const calculateHelpsPerDay = (calculatedSupportTime)=>{
+    return SECONDS_PER_DAY / calculatedSupportTime;
+};
+const calculateFoodDropRate = (params)=>{
+    const { pokemon, ingredientNatureMultiplier = 1.0, ingredientFinderMCount = 0, ingredientFinderSCount = 0 } = params;
+    const subSkillBonus = 1 + ingredientFinderMCount * 0.36 + ingredientFinderSCount * 0.18;
+    return pokemon.foodDropRate * subSkillBonus * ingredientNatureMultiplier;
+};
+const calculateFoodHelpsPerDay = (helpsPerDay, calculatedFoodDropRate)=>{
+    return Math.floor(helpsPerDay * calculatedFoodDropRate);
+};
+const calculateSkillRate = (params)=>{
+    const { pokemon, skillNatureMultiplier = 1.0, skillTriggerMCount = 0, skillTriggerSCount = 0 } = params;
+    const subSkillBonus = 1 + skillTriggerMCount * 0.36 + skillTriggerSCount * 0.18;
+    return pokemon.skillRate * subSkillBonus * skillNatureMultiplier;
+};
+const calculateSkillTriggersPerDay = (helpsPerDay, calculatedSkillRate)=>{
+    return Math.floor(helpsPerDay * calculatedSkillRate);
+};
+const calculateBerryHelpsPerDay = (helpsPerDay, calculatedFoodDropRate)=>{
+    return Math.floor(helpsPerDay * (1 - calculatedFoodDropRate));
+};
+const calculateBerryEnergyPerHelp = (pokemon, level = 60)=>{
+    const kinomiInfo = __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$src$2f$data$2f$kinomiData$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["kinomiData"].find((k)=>k.type === pokemon.kinomiType);
+    if (!kinomiInfo) {
+        throw new Error(`きのみタイプ "${pokemon.kinomiType}" が見つかりません`);
+    }
+    const baseEnergy = kinomiInfo.energy;
+    const linearGrowth = baseEnergy + (level - 1);
+    const exponentialGrowth = baseEnergy * Math.pow(1.025, level - 1);
+    return Math.max(linearGrowth, exponentialGrowth);
+};
+const calculateBerryEnergyPerDay = (berryHelpsPerDay, berryEnergyPerHelp)=>{
+    return Math.floor(berryHelpsPerDay * berryEnergyPerHelp);
+};
+const calculatePokemonStats = (params)=>{
+    const level = params.level ?? 60;
+    // おてつだい時間
+    const calculatedSupportTime = calculateSupportTime(params);
+    // おてつだい回数/日
+    const helpsPerDay = calculateHelpsPerDay(calculatedSupportTime);
+    // 食材確率
+    const calculatedFoodDropRate = calculateFoodDropRate(params);
+    // 食材回数/日
+    const foodHelpsPerDay = calculateFoodHelpsPerDay(helpsPerDay, calculatedFoodDropRate);
+    // スキル確率
+    const calculatedSkillRate = calculateSkillRate(params);
+    // スキル回数/日
+    const skillTriggersPerDay = calculateSkillTriggersPerDay(helpsPerDay, calculatedSkillRate);
+    // きのみ回数/日
+    const berryHelpsPerDay = calculateBerryHelpsPerDay(helpsPerDay, calculatedFoodDropRate);
+    // きのみエナジー/回
+    const berryEnergyPerHelp = calculateBerryEnergyPerHelp(params.pokemon, level);
+    // きのみエナジー/日
+    const berryEnergyPerDay = calculateBerryEnergyPerDay(berryHelpsPerDay, berryEnergyPerHelp);
+    return {
+        calculatedSupportTime,
+        calculatedFoodDropRate,
+        foodHelpsPerDay,
+        calculatedSkillRate,
+        skillTriggersPerDay,
+        berryHelpsPerDay,
+        berryEnergyPerDay
+    };
+};
+const countSubSkills = (subSkills)=>{
+    const counts = {
+        helpingSpeedM: 0,
+        helpingSpeedS: 0,
+        helpingBonus: 0,
+        ingredientFinderM: 0,
+        ingredientFinderS: 0,
+        skillTriggerM: 0,
+        skillTriggerS: 0
+    };
+    for (const subSkill of subSkills){
+        switch(subSkill.baseId){
+            case "helping_speed_m":
+                counts.helpingSpeedM++;
+                break;
+            case "helping_speed_s":
+                counts.helpingSpeedS++;
+                break;
+            case "helping_bonus":
+                counts.helpingBonus++;
+                break;
+            case "ingredient_finder_m":
+                counts.ingredientFinderM++;
+                break;
+            case "ingredient_finder_s":
+                counts.ingredientFinderS++;
+                break;
+            case "skill_trigger_m":
+                counts.skillTriggerM++;
+                break;
+            case "skill_trigger_s":
+                counts.skillTriggerS++;
+                break;
+        }
+    }
+    return counts;
+};
+const calculatePokemonStatsSimple = (pokemon, level = 60, natureName, subSkills = [])=>{
+    // 性格補正を取得
+    const natureMultipliers = natureName ? getNatureMultipliers(natureName) : {
+        speed: 1.0,
+        ingredient: 1.0,
+        skill: 1.0
+    };
+    // サブスキルの個数を集計
+    const subSkillCounts = countSubSkills(subSkills);
+    // 計算パラメータを構築
+    const params = {
+        pokemon,
+        level,
+        speedNatureMultiplier: natureMultipliers.speed,
+        ingredientNatureMultiplier: natureMultipliers.ingredient,
+        skillNatureMultiplier: natureMultipliers.skill,
+        helpingSpeedMCount: subSkillCounts.helpingSpeedM,
+        helpingSpeedSCount: subSkillCounts.helpingSpeedS,
+        helpingBonusCount: subSkillCounts.helpingBonus,
+        ingredientFinderMCount: subSkillCounts.ingredientFinderM,
+        ingredientFinderSCount: subSkillCounts.ingredientFinderS,
+        skillTriggerMCount: subSkillCounts.skillTriggerM,
+        skillTriggerSCount: subSkillCounts.skillTriggerS
+    };
+    return calculatePokemonStats(params);
+};
+if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelpers !== null) {
+    __turbopack_context__.k.registerExports(__turbopack_context__.m, globalThis.$RefreshHelpers$);
+}
+}),
 "[project]/Develop/pokesleep-iv-comparator/src/components/Search.tsx [app-client] (ecmascript)", ((__turbopack_context__) => {
 "use strict";
 
@@ -5013,11 +5605,15 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2
 var __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$src$2f$components$2f$PokeNameCombobox$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Develop/pokesleep-iv-comparator/src/components/PokeNameCombobox.tsx [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$src$2f$components$2f$SubSkillSelect$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Develop/pokesleep-iv-comparator/src/components/SubSkillSelect.tsx [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$src$2f$components$2f$nature$2f$NatureSelector$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Develop/pokesleep-iv-comparator/src/components/nature/NatureSelector.tsx [app-client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$src$2f$components$2f$CalculatedPokemonInfo$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Develop/pokesleep-iv-comparator/src/components/CalculatedPokemonInfo.tsx [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$src$2f$data$2f$pokemonData$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Develop/pokesleep-iv-comparator/src/data/pokemonData.ts [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$src$2f$data$2f$kinomiData$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Develop/pokesleep-iv-comparator/src/data/kinomiData.ts [app-client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$src$2f$utils$2f$pokemonCalculator$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Develop/pokesleep-iv-comparator/src/utils/pokemonCalculator.ts [app-client] (ecmascript)");
 ;
 var _s = __turbopack_context__.k.signature();
 "use client";
+;
+;
 ;
 ;
 ;
@@ -5030,6 +5626,7 @@ function Search() {
     const [pokemon, setPokemon] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])("");
     const [selectedSubSkills, setSelectedSubSkills] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])([]);
     const [nature, setNature] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(null);
+    const [calculationResult, setCalculationResult] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(null);
     // 選択されたポケモンのデータを取得
     const selectedPokemon = __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$src$2f$data$2f$pokemonData$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["pokemonData"].find((p)=>p.name === pokemon);
     // きのみの日本語名を取得
@@ -5050,6 +5647,16 @@ function Search() {
                 return "";
         }
     };
+    // 決定ボタンのハンドラー
+    const handleCalculate = ()=>{
+        if (!selectedPokemon) {
+            alert("ポケモンを選択してください");
+            return;
+        }
+        // レベル60固定で計算
+        const result = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$src$2f$utils$2f$pokemonCalculator$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["calculatePokemonStatsSimple"])(selectedPokemon, 60, nature?.name, selectedSubSkills);
+        setCalculationResult(result);
+    };
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Fragment"], {
         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
             className: "m-4 max-w-md mx-auto",
@@ -5066,12 +5673,12 @@ function Search() {
                                         children: "ポケモン"
                                     }, void 0, false, {
                                         fileName: "[project]/Develop/pokesleep-iv-comparator/src/components/Search.tsx",
-                                        lineNumber: 57,
+                                        lineNumber: 79,
                                         columnNumber: 15
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/Develop/pokesleep-iv-comparator/src/components/Search.tsx",
-                                    lineNumber: 56,
+                                    lineNumber: 78,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$src$2f$components$2f$PokeNameCombobox$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Combobox"], {
@@ -5079,7 +5686,7 @@ function Search() {
                                     onChange: setPokemon
                                 }, void 0, false, {
                                     fileName: "[project]/Develop/pokesleep-iv-comparator/src/components/Search.tsx",
-                                    lineNumber: 59,
+                                    lineNumber: 81,
                                     columnNumber: 13
                                 }, this),
                                 selectedPokemon && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -5090,7 +5697,7 @@ function Search() {
                                             children: selectedPokemon.type
                                         }, void 0, false, {
                                             fileName: "[project]/Develop/pokesleep-iv-comparator/src/components/Search.tsx",
-                                            lineNumber: 67,
+                                            lineNumber: 89,
                                             columnNumber: 19
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -5098,7 +5705,7 @@ function Search() {
                                             children: kinomiName || ""
                                         }, void 0, false, {
                                             fileName: "[project]/Develop/pokesleep-iv-comparator/src/components/Search.tsx",
-                                            lineNumber: 75,
+                                            lineNumber: 97,
                                             columnNumber: 17
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -5106,19 +5713,19 @@ function Search() {
                                             children: selectedPokemon.mainSkill
                                         }, void 0, false, {
                                             fileName: "[project]/Develop/pokesleep-iv-comparator/src/components/Search.tsx",
-                                            lineNumber: 78,
+                                            lineNumber: 100,
                                             columnNumber: 17
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/Develop/pokesleep-iv-comparator/src/components/Search.tsx",
-                                    lineNumber: 65,
+                                    lineNumber: 87,
                                     columnNumber: 15
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/Develop/pokesleep-iv-comparator/src/components/Search.tsx",
-                            lineNumber: 55,
+                            lineNumber: 77,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -5127,12 +5734,12 @@ function Search() {
                                 onChange: setSelectedSubSkills
                             }, void 0, false, {
                                 fileName: "[project]/Develop/pokesleep-iv-comparator/src/components/Search.tsx",
-                                lineNumber: 85,
+                                lineNumber: 107,
                                 columnNumber: 13
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/Develop/pokesleep-iv-comparator/src/components/Search.tsx",
-                            lineNumber: 84,
+                            lineNumber: 106,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -5142,12 +5749,12 @@ function Search() {
                                 onChange: setNature
                             }, void 0, false, {
                                 fileName: "[project]/Develop/pokesleep-iv-comparator/src/components/Search.tsx",
-                                lineNumber: 90,
+                                lineNumber: 112,
                                 columnNumber: 13
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/Develop/pokesleep-iv-comparator/src/components/Search.tsx",
-                            lineNumber: 89,
+                            lineNumber: 111,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -5155,29 +5762,48 @@ function Search() {
                             children: "※同レベルでの比較を行うため、Lv.60固定で計算します。"
                         }, void 0, false, {
                             fileName: "[project]/Develop/pokesleep-iv-comparator/src/components/Search.tsx",
-                            lineNumber: 95,
+                            lineNumber: 117,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/Develop/pokesleep-iv-comparator/src/components/Search.tsx",
-                    lineNumber: 53,
+                    lineNumber: 75,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                     className: "flex justify-center my-4",
                     children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$src$2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Button"], {
                         className: "w-full max-w-xs md:w-48",
+                        onClick: handleCalculate,
                         children: "決定"
                     }, void 0, false, {
                         fileName: "[project]/Develop/pokesleep-iv-comparator/src/components/Search.tsx",
-                        lineNumber: 100,
+                        lineNumber: 122,
                         columnNumber: 11
                     }, this)
                 }, void 0, false, {
                     fileName: "[project]/Develop/pokesleep-iv-comparator/src/components/Search.tsx",
-                    lineNumber: 99,
+                    lineNumber: 121,
                     columnNumber: 9
+                }, this),
+                calculationResult && selectedPokemon && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                    className: "mb-4",
+                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$src$2f$components$2f$CalculatedPokemonInfo$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
+                        pokemonName: selectedPokemon.displayName,
+                        pokemonType: selectedPokemon.type,
+                        nature: nature ? `${nature.name}${nature.up ? ` (▲${nature.up} ▼${nature.down})` : " (補正なし)"}` : undefined,
+                        subSkills: selectedSubSkills,
+                        calculationResult: calculationResult
+                    }, void 0, false, {
+                        fileName: "[project]/Develop/pokesleep-iv-comparator/src/components/Search.tsx",
+                        lineNumber: 132,
+                        columnNumber: 13
+                    }, this)
+                }, void 0, false, {
+                    fileName: "[project]/Develop/pokesleep-iv-comparator/src/components/Search.tsx",
+                    lineNumber: 131,
+                    columnNumber: 11
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                     className: "text-center",
@@ -5189,7 +5815,7 @@ function Search() {
                             ]
                         }, void 0, true, {
                             fileName: "[project]/Develop/pokesleep-iv-comparator/src/components/Search.tsx",
-                            lineNumber: 105,
+                            lineNumber: 150,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -5200,14 +5826,14 @@ function Search() {
                             ]
                         }, void 0, true, {
                             fileName: "[project]/Develop/pokesleep-iv-comparator/src/components/Search.tsx",
-                            lineNumber: 106,
+                            lineNumber: 151,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                             children: "選択したサブスキル:"
                         }, void 0, false, {
                             fileName: "[project]/Develop/pokesleep-iv-comparator/src/components/Search.tsx",
-                            lineNumber: 116,
+                            lineNumber: 161,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
@@ -5221,29 +5847,29 @@ function Search() {
                                     ]
                                 }, skill.id, true, {
                                     fileName: "[project]/Develop/pokesleep-iv-comparator/src/components/Search.tsx",
-                                    lineNumber: 119,
+                                    lineNumber: 164,
                                     columnNumber: 15
                                 }, this))
                         }, void 0, false, {
                             fileName: "[project]/Develop/pokesleep-iv-comparator/src/components/Search.tsx",
-                            lineNumber: 117,
+                            lineNumber: 162,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/Develop/pokesleep-iv-comparator/src/components/Search.tsx",
-                    lineNumber: 104,
+                    lineNumber: 149,
                     columnNumber: 9
                 }, this)
             ]
         }, void 0, true, {
             fileName: "[project]/Develop/pokesleep-iv-comparator/src/components/Search.tsx",
-            lineNumber: 52,
+            lineNumber: 74,
             columnNumber: 7
         }, this)
     }, void 0, false);
 }
-_s(Search, "LE1aAq1ed/NJMH8jg5IbMMg7I1o=");
+_s(Search, "QqlmbJF50PFjiDIIshmT4xVS89w=");
 _c = Search;
 const __TURBOPACK__default__export__ = Search;
 var _c;
@@ -5312,4 +5938,4 @@ if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelper
 }),
 ]);
 
-//# sourceMappingURL=Develop_pokesleep-iv-comparator_9e603ba5._.js.map
+//# sourceMappingURL=Develop_pokesleep-iv-comparator_f4104bfb._.js.map

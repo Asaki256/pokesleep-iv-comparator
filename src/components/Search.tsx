@@ -5,10 +5,12 @@ import { Button } from "@/components/ui/button";
 import { Combobox } from "@/components/PokeNameCombobox";
 import SubSkillSelect from "./SubSkillSelect";
 import NatureSelector from "./nature/NatureSelector";
+import CalculatedPokemonInfo from "./CalculatedPokemonInfo";
 import { SelectedSubSkill } from "@/types/selectedSubSkill";
 import { SelectedNature } from "@/types/nature";
 import { pokemonData } from "@/data/pokemonData";
 import { kinomiData } from "@/data/kinomiData";
+import { calculatePokemonStatsSimple, CalculationResult } from "@/utils/pokemonCalculator";
 
 function Search() {
   const [pokemon, setPokemon] = useState("");
@@ -16,6 +18,8 @@ function Search() {
     useState<SelectedSubSkill[]>([]);
   const [nature, setNature] =
     useState<SelectedNature | null>(null);
+  const [calculationResult, setCalculationResult] =
+    useState<CalculationResult | null>(null);
 
   // 選択されたポケモンのデータを取得
   const selectedPokemon = pokemonData.find(
@@ -45,6 +49,24 @@ function Search() {
       default:
         return "";
     }
+  };
+
+  // 決定ボタンのハンドラー
+  const handleCalculate = () => {
+    if (!selectedPokemon) {
+      alert("ポケモンを選択してください");
+      return;
+    }
+
+    // レベル60固定で計算
+    const result = calculatePokemonStatsSimple(
+      selectedPokemon,
+      60,
+      nature?.name,
+      selectedSubSkills
+    );
+
+    setCalculationResult(result);
   };
 
   return (
@@ -97,10 +119,33 @@ function Search() {
           </div>
         </div>
         <div className="flex justify-center my-4">
-          <Button className="w-full max-w-xs md:w-48">
+          <Button
+            className="w-full max-w-xs md:w-48"
+            onClick={handleCalculate}
+          >
             決定
           </Button>
         </div>
+        {/* 計算結果の表示 */}
+        {calculationResult && selectedPokemon && (
+          <div className="mb-4">
+            <CalculatedPokemonInfo
+              pokemonName={selectedPokemon.displayName}
+              pokemonType={selectedPokemon.type}
+              nature={
+                nature
+                  ? `${nature.name}${
+                      nature.up
+                        ? ` (▲${nature.up} ▼${nature.down})`
+                        : " (補正なし)"
+                    }`
+                  : undefined
+              }
+              subSkills={selectedSubSkills}
+              calculationResult={calculationResult}
+            />
+          </div>
+        )}
         <div className="text-center">
           <p>ポケモン: {pokemon}</p>
           <p>
