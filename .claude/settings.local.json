@@ -12,7 +12,8 @@
       "Bash(npm run build:next:*)",
       "Bash(npm run:*)",
       "Read(//var/folders/51/jd9bhltd765_m55dxpt7j2fw0000gn/T/TemporaryItems/NSIRD_screencaptureui_gXRD68/**)",
-      "Bash(kill:*)"
+      "Bash(kill:*)",
+      "Bash(node add_pokemon_enNames.js:*)"
     ],
     "deny": [],
     "ask": []

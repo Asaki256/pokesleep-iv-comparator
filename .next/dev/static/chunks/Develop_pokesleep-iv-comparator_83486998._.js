@@ -687,7 +687,9 @@ __turbopack_context__.s([
 ]);
 const pokemonData = [
     {
+        number: 1,
         displayName: "フシギダネ",
+        enName: "Bulbasaur",
         name: "fushigidane",
         type: "食材",
         mainSkill: "食材ゲットS",
@@ -697,7 +699,9 @@ const pokemonData = [
         kinomiType: "dori"
     },
     {
+        number: 2,
         displayName: "フシギソウ",
+        enName: "Ivysaur",
         name: "fushigisou",
         type: "食材",
         mainSkill: "食材ゲットS",
@@ -707,7 +711,9 @@ const pokemonData = [
         kinomiType: "dori"
     },
     {
+        number: 3,
         displayName: "フシギバナ",
+        enName: "Venusaur",
         name: "fushigibana",
         type: "食材",
         mainSkill: "食材ゲットS",
@@ -717,7 +723,9 @@ const pokemonData = [
         kinomiType: "dori"
     },
     {
+        number: 4,
         displayName: "ヒトカゲ",
+        enName: "Charmander",
         name: "hitokage",
         type: "食材",
         mainSkill: "食材ゲットS",
@@ -727,7 +735,9 @@ const pokemonData = [
         kinomiType: "himeri"
     },
     {
+        number: 5,
         displayName: "リザード",
+        enName: "Charmeleon",
         name: "lizard",
         type: "食材",
         mainSkill: "食材ゲットS",
@@ -737,7 +747,9 @@ const pokemonData = [
         kinomiType: "himeri"
     },
     {
+        number: 6,
         displayName: "リザードン",
+        enName: "Charizard",
         name: "lizardon",
         type: "食材",
         mainSkill: "食材ゲットS",
@@ -747,7 +759,9 @@ const pokemonData = [
         kinomiType: "himeri"
     },
     {
+        number: 7,
         displayName: "ゼニガメ",
+        enName: "Squirtle",
         name: "zenigame",
         type: "食材",
         mainSkill: "食材ゲットS",
@@ -757,7 +771,9 @@ const pokemonData = [
         kinomiType: "oren"
     },
     {
+        number: 8,
         displayName: "カメール",
+        enName: "Wartortle",
         name: "kameil",
         type: "食材",
         mainSkill: "食材ゲットS",
@@ -767,7 +783,9 @@ const pokemonData = [
         kinomiType: "oren"
     },
     {
+        number: 9,
         displayName: "カメックス",
+        enName: "Blastoise",
         name: "kamex",
         type: "食材",
         mainSkill: "食材ゲットS",
@@ -777,7 +795,9 @@ const pokemonData = [
         kinomiType: "oren"
     },
     {
+        number: 10,
         displayName: "キャタピー",
+        enName: "Caterpie",
         name: "caterpie",
         type: "きのみ",
         mainSkill: "食材ゲットS",
@@ -787,7 +807,9 @@ const pokemonData = [
         kinomiType: "ramu"
     },
     {
+        number: 11,
         displayName: "トランセル",
+        enName: "Metapod",
         name: "transel",
         type: "きのみ",
         mainSkill: "食材ゲットS",
@@ -797,7 +819,9 @@ const pokemonData = [
         kinomiType: "ramu"
     },
     {
+        number: 12,
         displayName: "バタフリー",
+        enName: "Butterfree",
         name: "butterfree",
         type: "きのみ",
         mainSkill: "食材ゲットS",
@@ -807,7 +831,9 @@ const pokemonData = [
         kinomiType: "ramu"
     },
     {
+        number: 19,
         displayName: "コラッタ",
+        enName: "Rattata",
         name: "koratta",
         type: "きのみ",
         mainSkill: "げんきチャージS",
@@ -817,7 +843,9 @@ const pokemonData = [
         kinomiType: "ki"
     },
     {
+        number: 20,
         displayName: "ラッタ",
+        enName: "Raticate",
         name: "ratta",
         type: "きのみ",
         mainSkill: "げんきチャージS",
@@ -827,7 +855,9 @@ const pokemonData = [
         kinomiType: "ki"
     },
     {
+        number: 23,
         displayName: "アーボ",
+        enName: "Ekans",
         name: "arbo",
         type: "きのみ",
         mainSkill: "げんきチャージS",
@@ -837,7 +867,9 @@ const pokemonData = [
         kinomiType: "kago"
     },
     {
+        number: 24,
         displayName: "アーボック",
+        enName: "Arbok",
         name: "arbok",
         type: "きのみ",
         mainSkill: "げんきチャージS",
@@ -847,7 +879,9 @@ const pokemonData = [
         kinomiType: "kago"
     },
     {
+        number: 25,
         displayName: "ピカチュウ",
+        enName: "Pikachu",
         name: "pikachu",
         type: "きのみ",
         mainSkill: "エナジーチャージS",
@@ -857,7 +891,9 @@ const pokemonData = [
         kinomiType: "ubu"
     },
     {
+        number: 25,
         displayName: "ピカチュウ(ハロウィン)",
+        enName: "Pikachu",
         name: "pikachu_halloween",
         type: "きのみ",
         mainSkill: "エナジーチャージS(ランダム)",
@@ -867,7 +903,9 @@ const pokemonData = [
         kinomiType: "ubu"
     },
     {
+        number: 25,
         displayName: "ピカチュウ(ホリデー)",
+        enName: "Pikachu",
         name: "pikachu_holiday",
         type: "スキル",
         mainSkill: "ゆめのかけらゲットS",
@@ -877,7 +915,9 @@ const pokemonData = [
         kinomiType: "ubu"
     },
     {
+        number: 26,
         displayName: "ライチュウ",
+        enName: "Raichu",
         name: "raichu",
         type: "きのみ",
         mainSkill: "エナジーチャージS",
@@ -887,7 +927,9 @@ const pokemonData = [
         kinomiType: "ubu"
     },
     {
+        number: 35,
         displayName: "ピッピ",
+        enName: "Clefairy",
         name: "pippi",
         type: "きのみ",
         mainSkill: "ゆびをふる",
@@ -897,7 +939,9 @@ const pokemonData = [
         kinomiType: "momon"
     },
     {
+        number: 36,
         displayName: "ピクシー",
+        enName: "Clefable",
         name: "pixy",
         type: "きのみ",
         mainSkill: "ゆびをふる",
@@ -907,7 +951,9 @@ const pokemonData = [
         kinomiType: "momon"
     },
     {
+        number: 37,
         displayName: "ロコン",
+        enName: "Vulpix",
         name: "rokon",
         type: "きのみ",
         mainSkill: "げんきエールS",
@@ -917,7 +963,9 @@ const pokemonData = [
         kinomiType: "himeri"
     },
     {
+        number: 38,
         displayName: "キュウコン",
+        enName: "Ninetales",
         name: "kyukon",
         type: "きのみ",
         mainSkill: "げんきエールS",
@@ -927,7 +975,9 @@ const pokemonData = [
         kinomiType: "himeri"
     },
     {
+        number: 10103,
         displayName: "ロコン(アローラのすがた)",
+        enName: "Vulpix",
         name: "rokon_alola",
         type: "きのみ",
         mainSkill: "おてつだいサポートS",
@@ -937,7 +987,9 @@ const pokemonData = [
         kinomiType: "chigo"
     },
     {
+        number: 10103,
         displayName: "キュウコン(アローラのすがた)",
+        enName: "Ninetales",
         name: "kyukon_alola",
         type: "きのみ",
         mainSkill: "おてつだいサポートS",
@@ -947,7 +999,9 @@ const pokemonData = [
         kinomiType: "chigo"
     },
     {
+        number: 39,
         displayName: "プリン",
+        enName: "Jigglypuff",
         name: "purin",
         type: "スキル",
         mainSkill: "げんきオールS",
@@ -957,7 +1011,9 @@ const pokemonData = [
         kinomiType: "momon"
     },
     {
+        number: 40,
         displayName: "プクリン",
+        enName: "Wigglytuff",
         name: "pukurin",
         type: "スキル",
         mainSkill: "げんきオールS",
@@ -967,7 +1023,9 @@ const pokemonData = [
         kinomiType: "momon"
     },
     {
+        number: 50,
         displayName: "ディグダ",
+        enName: "Diglett",
         name: "digda",
         type: "食材",
         mainSkill: "エナジーチャージS",
@@ -977,7 +1035,9 @@ const pokemonData = [
         kinomiType: "fira"
     },
     {
+        number: 51,
         displayName: "ダグトリオ",
+        enName: "Dugtrio",
         name: "dugtrio",
         type: "食材",
         mainSkill: "エナジーチャージS",
@@ -987,7 +1047,9 @@ const pokemonData = [
         kinomiType: "fira"
     },
     {
+        number: 52,
         displayName: "ニャース",
+        enName: "Meowth",
         name: "nyarth",
         type: "スキル",
         mainSkill: "ゆめのかけらゲットS",
@@ -997,7 +1059,9 @@ const pokemonData = [
         kinomiType: "ki"
     },
     {
+        number: 53,
         displayName: "ペルシアン",
+        enName: "Persian",
         name: "persian",
         type: "スキル",
         mainSkill: "ゆめのかけらゲットS",
@@ -1007,7 +1071,9 @@ const pokemonData = [
         kinomiType: "ki"
     },
     {
+        number: 54,
         displayName: "コダック",
+        enName: "Psyduck",
         name: "koduck",
         type: "スキル",
         mainSkill: "エナジーチャージS(ランダム)",
@@ -1017,7 +1083,9 @@ const pokemonData = [
         kinomiType: "oren"
     },
     {
+        number: 55,
         displayName: "ゴルダック",
+        enName: "Golduck",
         name: "golduck",
         type: "スキル",
         mainSkill: "エナジーチャージS(ランダム)",
@@ -1027,7 +1095,9 @@ const pokemonData = [
         kinomiType: "oren"
     },
     {
+        number: 56,
         displayName: "マンキー",
+        enName: "Mankey",
         name: "mankey",
         type: "きのみ",
         mainSkill: "エナジーチャージS(ランダム)",
@@ -1037,7 +1107,9 @@ const pokemonData = [
         kinomiType: "kurabo"
     },
     {
+        number: 57,
         displayName: "オコリザル",
+        enName: "Primeape",
         name: "okorizaru",
         type: "きのみ",
         mainSkill: "エナジーチャージS(ランダム)",
@@ -1047,7 +1119,9 @@ const pokemonData = [
         kinomiType: "kurabo"
     },
     {
+        number: 58,
         displayName: "ガーディ",
+        enName: "Growlithe",
         name: "gardie",
         type: "スキル",
         mainSkill: "おてつだいサポートS",
@@ -1057,7 +1131,9 @@ const pokemonData = [
         kinomiType: "himeri"
     },
     {
+        number: 59,
         displayName: "ウインディ",
+        enName: "Arcanine",
         name: "windie",
         type: "スキル",
         mainSkill: "おてつだいサポートS",
@@ -1067,7 +1143,9 @@ const pokemonData = [
         kinomiType: "himeri"
     },
     {
+        number: 69,
         displayName: "マダツボミ",
+        enName: "Bellsprout",
         name: "madatsubomi",
         type: "食材",
         mainSkill: "げんきチャージS",
@@ -1077,7 +1155,9 @@ const pokemonData = [
         kinomiType: "dori"
     },
     {
+        number: 70,
         displayName: "ウツドン",
+        enName: "Weepinbell",
         name: "utsudon",
         type: "食材",
         mainSkill: "げんきチャージS",
@@ -1087,7 +1167,9 @@ const pokemonData = [
         kinomiType: "dori"
     },
     {
+        number: 71,
         displayName: "ウツボット",
+        enName: "Victreebel",
         name: "utsubot",
         type: "食材",
         mainSkill: "げんきチャージS",
@@ -1097,7 +1179,9 @@ const pokemonData = [
         kinomiType: "dori"
     },
     {
+        number: 74,
         displayName: "イシツブテ",
+        enName: "Geodude",
         name: "ishitsubute",
         type: "食材",
         mainSkill: "エナジーチャージS(ランダム)",
@@ -1107,7 +1191,9 @@ const pokemonData = [
         kinomiType: "obon"
     },
     {
+        number: 75,
         displayName: "ゴローン",
+        enName: "Graveler",
         name: "goron",
         type: "食材",
         mainSkill: "エナジーチャージS(ランダム)",
@@ -1117,7 +1203,9 @@ const pokemonData = [
         kinomiType: "obon"
     },
     {
+        number: 76,
         displayName: "ゴローニャ",
+        enName: "Golem",
         name: "goronya",
         type: "食材",
         mainSkill: "エナジーチャージS(ランダム)",
@@ -1127,7 +1215,9 @@ const pokemonData = [
         kinomiType: "obon"
     },
     {
+        number: 79,
         displayName: "ヤドン",
+        enName: "Slowpoke",
         name: "yadon",
         type: "スキル",
         mainSkill: "げんきエールS",
@@ -1137,7 +1227,9 @@ const pokemonData = [
         kinomiType: "oren"
     },
     {
+        number: 80,
         displayName: "ヤドラン",
+        enName: "Slowbro",
         name: "yadoran",
         type: "スキル",
         mainSkill: "げんきエールS",
@@ -1147,7 +1239,9 @@ const pokemonData = [
         kinomiType: "oren"
     },
     {
+        number: 81,
         displayName: "コイル",
+        enName: "Magnemite",
         name: "coil",
         type: "スキル",
         mainSkill: "料理パワーアップS",
@@ -1157,7 +1251,9 @@ const pokemonData = [
         kinomiType: "beribu"
     },
     {
+        number: 82,
         displayName: "レアコイル",
+        enName: "Magneton",
         name: "rarecoil",
         type: "スキル",
         mainSkill: "料理パワーアップS",
@@ -1167,7 +1263,9 @@ const pokemonData = [
         kinomiType: "beribu"
     },
     {
+        number: 83,
         displayName: "カモネギ",
+        enName: "Farfetch'd",
         name: "kamonegi",
         type: "食材",
         mainSkill: "エナジーチャージS(固定)",
@@ -1177,7 +1275,9 @@ const pokemonData = [
         kinomiType: "shiya"
     },
     {
+        number: 84,
         displayName: "ドードー",
+        enName: "Doduo",
         name: "dodo",
         type: "きのみ",
         mainSkill: "げんきチャージS",
@@ -1187,7 +1287,9 @@ const pokemonData = [
         kinomiType: "shiya"
     },
     {
+        number: 85,
         displayName: "ドードリオ",
+        enName: "Dodrio",
         name: "dodrio",
         type: "きのみ",
         mainSkill: "げんきチャージS",
@@ -1197,7 +1299,9 @@ const pokemonData = [
         kinomiType: "shiya"
     },
     {
+        number: 92,
         displayName: "ゴース",
+        enName: "Gastly",
         name: "ghos",
         type: "食材",
         mainSkill: "エナジーチャージS(ランダム)",
@@ -1207,7 +1311,9 @@ const pokemonData = [
         kinomiType: "buri"
     },
     {
+        number: 93,
         displayName: "ゴースト",
+        enName: "Haunter",
         name: "ghost",
         type: "食材",
         mainSkill: "エナジーチャージS(ランダム)",
@@ -1217,7 +1323,9 @@ const pokemonData = [
         kinomiType: "buri"
     },
     {
+        number: 94,
         displayName: "ゲンガー",
+        enName: "Gengar",
         name: "gangar",
         type: "食材",
         mainSkill: "エナジーチャージS(ランダム)",
@@ -1227,7 +1335,9 @@ const pokemonData = [
         kinomiType: "buri"
     },
     {
+        number: 95,
         displayName: "イワーク",
+        enName: "Onix",
         name: "iwark",
         type: "きのみ",
         mainSkill: "食材ゲットS",
@@ -1237,7 +1347,9 @@ const pokemonData = [
         kinomiType: "obon"
     },
     {
+        number: 104,
         displayName: "カラカラ",
+        enName: "Cubone",
         name: "karakara",
         type: "きのみ",
         mainSkill: "げんきチャージS",
@@ -1247,7 +1359,9 @@ const pokemonData = [
         kinomiType: "fira"
     },
     {
+        number: 105,
         displayName: "ガラガラ",
+        enName: "Marowak",
         name: "garagara",
         type: "きのみ",
         mainSkill: "げんきチャージS",
@@ -1257,7 +1371,9 @@ const pokemonData = [
         kinomiType: "fira"
     },
     {
+        number: 113,
         displayName: "ラッキー",
+        enName: "Chansey",
         name: "lucky",
         type: "食材",
         mainSkill: "げんきオールS",
@@ -1267,7 +1383,9 @@ const pokemonData = [
         kinomiType: "ki"
     },
     {
+        number: 115,
         displayName: "ガルーラ",
+        enName: "Kangaskhan",
         name: "garura",
         type: "食材",
         mainSkill: "食材ゲットS",
@@ -1277,7 +1395,9 @@ const pokemonData = [
         kinomiType: "ki"
     },
     {
+        number: 122,
         displayName: "バリヤード",
+        enName: "Mr. Mime",
         name: "barrierd",
         type: "食材",
         mainSkill: "ものまね(スキルコピー)",
@@ -1287,7 +1407,9 @@ const pokemonData = [
         kinomiType: "mago"
     },
     {
+        number: 127,
         displayName: "カイロス",
+        enName: "Pinsir",
         name: "kailios",
         type: "食材",
         mainSkill: "エナジーチャージS",
@@ -1297,7 +1419,9 @@ const pokemonData = [
         kinomiType: "ramu"
     },
     {
+        number: 132,
         displayName: "メタモン",
+        enName: "Ditto",
         name: "metamon",
         type: "食材",
         mainSkill: "へんしん(スキルコピー)",
@@ -1307,7 +1431,9 @@ const pokemonData = [
         kinomiType: "ki"
     },
     {
+        number: 133,
         displayName: "イーブイ",
+        enName: "Eevee",
         name: "eevee",
         type: "スキル",
         mainSkill: "食材ゲットS",
@@ -1317,7 +1443,9 @@ const pokemonData = [
         kinomiType: "ki"
     },
     {
+        number: 133,
         displayName: "イーブイ(ホリデー)",
+        enName: "Eevee",
         name: "eevee_holiday",
         type: "きのみ",
         mainSkill: "ゆめのかけらゲットS",
@@ -1327,7 +1455,9 @@ const pokemonData = [
         kinomiType: "ki"
     },
     {
+        number: 134,
         displayName: "シャワーズ",
+        enName: "Vaporeon",
         name: "showers",
         type: "スキル",
         mainSkill: "食材ゲットS",
@@ -1337,7 +1467,9 @@ const pokemonData = [
         kinomiType: "oren"
     },
     {
+        number: 135,
         displayName: "サンダース",
+        enName: "Jolteon",
         name: "thunders",
         type: "スキル",
         mainSkill: "おてつだいサポートS",
@@ -1347,7 +1479,9 @@ const pokemonData = [
         kinomiType: "ubu"
     },
     {
+        number: 136,
         displayName: "ブースター",
+        enName: "Flareon",
         name: "booster",
         type: "スキル",
         mainSkill: "料理パワーアップS",
@@ -1357,7 +1491,9 @@ const pokemonData = [
         kinomiType: "himeri"
     },
     {
+        number: 147,
         displayName: "ミニリュウ",
+        enName: "Dratini",
         name: "miniryu",
         type: "食材",
         mainSkill: "げんきチャージS",
@@ -1367,7 +1503,9 @@ const pokemonData = [
         kinomiType: "yache"
     },
     {
+        number: 148,
         displayName: "ハクリュー",
+        enName: "Dragonair",
         name: "hakuryu",
         type: "食材",
         mainSkill: "げんきチャージS",
@@ -1377,7 +1515,9 @@ const pokemonData = [
         kinomiType: "yache"
     },
     {
+        number: 149,
         displayName: "カイリュー",
+        enName: "Dragonite",
         name: "kairyu",
         type: "食材",
         mainSkill: "げんきチャージS",
@@ -1387,7 +1527,9 @@ const pokemonData = [
         kinomiType: "yache"
     },
     {
+        number: 152,
         displayName: "チコリータ",
+        enName: "Chikorita",
         name: "chicorita",
         type: "きのみ",
         mainSkill: "エナジーチャージS(ランダム)",
@@ -1397,7 +1539,9 @@ const pokemonData = [
         kinomiType: "dori"
     },
     {
+        number: 153,
         displayName: "ベイリーフ",
+        enName: "Bayleef",
         name: "bayleaf",
         type: "きのみ",
         mainSkill: "エナジーチャージS(ランダム)",
@@ -1407,7 +1551,9 @@ const pokemonData = [
         kinomiType: "dori"
     },
     {
+        number: 154,
         displayName: "メガニウム",
+        enName: "Meganium",
         name: "meganium",
         type: "きのみ",
         mainSkill: "エナジーチャージS(ランダム)",
@@ -1417,7 +1563,9 @@ const pokemonData = [
         kinomiType: "dori"
     },
     {
+        number: 155,
         displayName: "ヒノアラシ",
+        enName: "Cyndaquil",
         name: "hinoarashi",
         type: "きのみ",
         mainSkill: "エナジーチャージS(ランダム)",
@@ -1427,7 +1575,9 @@ const pokemonData = [
         kinomiType: "himeri"
     },
     {
+        number: 156,
         displayName: "マグマラシ",
+        enName: "Quilava",
         name: "magmarashi",
         type: "きのみ",
         mainSkill: "エナジーチャージS(ランダム)",
@@ -1437,7 +1587,9 @@ const pokemonData = [
         kinomiType: "himeri"
     },
     {
+        number: 157,
         displayName: "バクフーン",
+        enName: "Typhlosion",
         name: "bakphoon",
         type: "きのみ",
         mainSkill: "エナジーチャージS(ランダム)",
@@ -1447,7 +1599,9 @@ const pokemonData = [
         kinomiType: "himeri"
     },
     {
+        number: 158,
         displayName: "ワニノコ",
+        enName: "Totodile",
         name: "waninoko",
         type: "きのみ",
         mainSkill: "エナジーチャージS(ランダム)",
@@ -1457,7 +1611,9 @@ const pokemonData = [
         kinomiType: "oren"
     },
     {
+        number: 159,
         displayName: "アリゲイツ",
+        enName: "Croconaw",
         name: "alligates",
         type: "きのみ",
         mainSkill: "エナジーチャージS(ランダム)",
@@ -1467,7 +1623,9 @@ const pokemonData = [
         kinomiType: "oren"
     },
     {
+        number: 160,
         displayName: "オーダイル",
+        enName: "Feraligatr",
         name: "ordile",
         type: "きのみ",
         mainSkill: "エナジーチャージS(ランダム)",
@@ -1477,7 +1635,9 @@ const pokemonData = [
         kinomiType: "oren"
     },
     {
+        number: 172,
         displayName: "ピチュー",
+        enName: "Pichu",
         name: "pichu",
         type: "きのみ",
         mainSkill: "エナジーチャージS",
@@ -1487,7 +1647,9 @@ const pokemonData = [
         kinomiType: "ubu"
     },
     {
+        number: 173,
         displayName: "ピィ",
+        enName: "Cleffa",
         name: "py",
         type: "きのみ",
         mainSkill: "ゆびをふる",
@@ -1497,7 +1659,9 @@ const pokemonData = [
         kinomiType: "momon"
     },
     {
+        number: 174,
         displayName: "ププリン",
+        enName: "Igglybuff",
         name: "pupurin",
         type: "スキル",
         mainSkill: "げんきオールS",
@@ -1507,7 +1671,9 @@ const pokemonData = [
         kinomiType: "momon"
     },
     {
+        number: 175,
         displayName: "トゲピー",
+        enName: "Togepi",
         name: "togepi",
         type: "スキル",
         mainSkill: "ゆびをふる",
@@ -1517,7 +1683,9 @@ const pokemonData = [
         kinomiType: "momon"
     },
     {
+        number: 176,
         displayName: "トゲチック",
+        enName: "Togetic",
         name: "togetic",
         type: "スキル",
         mainSkill: "ゆびをふる",
@@ -1527,7 +1695,9 @@ const pokemonData = [
         kinomiType: "momon"
     },
     {
+        number: 177,
         displayName: "ネイティ",
+        enName: "Natu",
         name: "naty",
         type: "きのみ",
         mainSkill: "食材ゲットS",
@@ -1537,7 +1707,9 @@ const pokemonData = [
         kinomiType: "mago"
     },
     {
+        number: 178,
         displayName: "ネイティオ",
+        enName: "Xatu",
         name: "natio",
         type: "きのみ",
         mainSkill: "食材ゲットS",
@@ -1547,7 +1719,9 @@ const pokemonData = [
         kinomiType: "mago"
     },
     {
+        number: 179,
         displayName: "メリープ",
+        enName: "Mareep",
         name: "mareep",
         type: "スキル",
         mainSkill: "エナジーチャージM",
@@ -1557,7 +1731,9 @@ const pokemonData = [
         kinomiType: "ubu"
     },
     {
+        number: 180,
         displayName: "モココ",
+        enName: "Flaaffy",
         name: "mokoko",
         type: "スキル",
         mainSkill: "エナジーチャージM",
@@ -1567,7 +1743,9 @@ const pokemonData = [
         kinomiType: "ubu"
     },
     {
+        number: 181,
         displayName: "デンリュウ",
+        enName: "Ampharos",
         name: "denryu",
         type: "スキル",
         mainSkill: "エナジーチャージM",
@@ -1577,7 +1755,9 @@ const pokemonData = [
         kinomiType: "ubu"
     },
     {
+        number: 185,
         displayName: "ウソッキー",
+        enName: "Sudowoodo",
         name: "usokkie",
         type: "スキル",
         mainSkill: "エナジーチャージM",
@@ -1587,7 +1767,9 @@ const pokemonData = [
         kinomiType: "obon"
     },
     {
+        number: 194,
         displayName: "ウパー",
+        enName: "Wooper",
         name: "upah",
         type: "食材",
         mainSkill: "げんきチャージS",
@@ -1597,7 +1779,9 @@ const pokemonData = [
         kinomiType: "oren"
     },
     {
+        number: 10253,
         displayName: "ウパー(パルデアのすがた)",
+        enName: "Wooper",
         name: "upah_paldea",
         type: "食材",
         mainSkill: "げんきチャージS",
@@ -1607,7 +1791,9 @@ const pokemonData = [
         kinomiType: "kago"
     },
     {
+        number: 195,
         displayName: "ヌオー",
+        enName: "Quagsire",
         name: "nuoh",
         type: "食材",
         mainSkill: "げんきチャージS",
@@ -1617,7 +1803,9 @@ const pokemonData = [
         kinomiType: "oren"
     },
     {
+        number: 196,
         displayName: "エーフィ",
+        enName: "Espeon",
         name: "eifie",
         type: "スキル",
         mainSkill: "エナジーチャージM",
@@ -1627,7 +1815,9 @@ const pokemonData = [
         kinomiType: "mago"
     },
     {
+        number: 197,
         displayName: "ブラッキー",
+        enName: "Umbreon",
         name: "blacky",
         type: "スキル",
         mainSkill: "つきのひかり(げんきチャージS)",
@@ -1637,7 +1827,9 @@ const pokemonData = [
         kinomiType: "ui"
     },
     {
+        number: 198,
         displayName: "ヤミカラス",
+        enName: "Murkrow",
         name: "yamikarasu",
         type: "スキル",
         mainSkill: "きょううん(食材セレクトS)",
@@ -1647,7 +1839,9 @@ const pokemonData = [
         kinomiType: "ui"
     },
     {
+        number: 199,
         displayName: "ヤドキング",
+        enName: "Slowking",
         name: "yadoking",
         type: "スキル",
         mainSkill: "げんきエールS",
@@ -1657,7 +1851,9 @@ const pokemonData = [
         kinomiType: "oren"
     },
     {
+        number: 202,
         displayName: "ソーナンス",
+        enName: "Wobbuffet",
         name: "sonansu",
         type: "スキル",
         mainSkill: "げんきエールS",
@@ -1667,7 +1863,9 @@ const pokemonData = [
         kinomiType: "mago"
     },
     {
+        number: 208,
         displayName: "ハガネール",
+        enName: "Steelix",
         name: "haganeil",
         type: "きのみ",
         mainSkill: "食材ゲットS",
@@ -1677,7 +1875,9 @@ const pokemonData = [
         kinomiType: "beribu"
     },
     {
+        number: 214,
         displayName: "ヘラクロス",
+        enName: "Heracross",
         name: "heracros",
         type: "スキル",
         mainSkill: "食材ゲットS",
@@ -1687,7 +1887,9 @@ const pokemonData = [
         kinomiType: "ramu"
     },
     {
+        number: 215,
         displayName: "ニューラ",
+        enName: "Sneasel",
         name: "nyula",
         type: "きのみ",
         mainSkill: "料理チャンスS",
@@ -1697,7 +1899,9 @@ const pokemonData = [
         kinomiType: "ui"
     },
     {
+        number: 225,
         displayName: "デリバード",
+        enName: "Delibird",
         name: "delibird",
         type: "食材",
         mainSkill: "食材ゲットS",
@@ -1707,7 +1911,9 @@ const pokemonData = [
         kinomiType: "shiya"
     },
     {
+        number: 228,
         displayName: "デルビル",
+        enName: "Houndour",
         name: "delvil",
         type: "きのみ",
         mainSkill: "エナジーチャージM",
@@ -1717,7 +1923,9 @@ const pokemonData = [
         kinomiType: "ui"
     },
     {
+        number: 229,
         displayName: "ヘルガー",
+        enName: "Houndoom",
         name: "hellgar",
         type: "きのみ",
         mainSkill: "エナジーチャージM",
@@ -1727,7 +1935,9 @@ const pokemonData = [
         kinomiType: "ui"
     },
     {
+        number: 242,
         displayName: "ハピナス",
+        enName: "Blissey",
         name: "hapinas",
         type: "食材",
         mainSkill: "げんきオールS",
@@ -1737,7 +1947,9 @@ const pokemonData = [
         kinomiType: "ki"
     },
     {
+        number: 243,
         displayName: "ライコウ",
+        enName: "Raikou",
         name: "raikou",
         type: "スキル",
         mainSkill: "おてつだいブースト(でんき)",
@@ -1747,7 +1959,9 @@ const pokemonData = [
         kinomiType: "ubu"
     },
     {
+        number: 244,
         displayName: "エンテイ",
+        enName: "Entei",
         name: "entei",
         type: "スキル",
         mainSkill: "おてつだいブースト(ほのお)",
@@ -1757,7 +1971,9 @@ const pokemonData = [
         kinomiType: "himeri"
     },
     {
+        number: 245,
         displayName: "スイクン",
+        enName: "Suicune",
         name: "suicune",
         type: "スキル",
         mainSkill: "おてつだいブースト(みず)",
@@ -1767,7 +1983,9 @@ const pokemonData = [
         kinomiType: "oren"
     },
     {
+        number: 246,
         displayName: "ヨーギラス",
+        enName: "Larvitar",
         name: "yogiras",
         type: "食材",
         mainSkill: "げんきチャージS",
@@ -1777,7 +1995,9 @@ const pokemonData = [
         kinomiType: "obon"
     },
     {
+        number: 247,
         displayName: "サナギラス",
+        enName: "Pupitar",
         name: "sanagiras",
         type: "食材",
         mainSkill: "げんきチャージS",
@@ -1787,7 +2007,9 @@ const pokemonData = [
         kinomiType: "obon"
     },
     {
+        number: 248,
         displayName: "バンギラス",
+        enName: "Tyranitar",
         name: "bangiras",
         type: "食材",
         mainSkill: "げんきチャージS",
@@ -1797,7 +2019,9 @@ const pokemonData = [
         kinomiType: "ui"
     },
     {
+        number: 252,
         displayName: "キモリ",
+        enName: "Treecko",
         name: "kimori",
         type: "スキル",
         mainSkill: "きのみバースト",
@@ -1807,7 +2031,9 @@ const pokemonData = [
         kinomiType: "dori"
     },
     {
+        number: 253,
         displayName: "ジュプトル",
+        enName: "Grovyle",
         name: "juptile",
         type: "スキル",
         mainSkill: "きのみバースト",
@@ -1817,7 +2043,9 @@ const pokemonData = [
         kinomiType: "dori"
     },
     {
+        number: 254,
         displayName: "ジュカイン",
+        enName: "Sceptile",
         name: "jukain",
         type: "スキル",
         mainSkill: "きのみバースト",
@@ -1827,7 +2055,9 @@ const pokemonData = [
         kinomiType: "dori"
     },
     {
+        number: 255,
         displayName: "アチャモ",
+        enName: "Torchic",
         name: "achamo",
         type: "きのみ",
         mainSkill: "げんきチャージS",
@@ -1837,7 +2067,9 @@ const pokemonData = [
         kinomiType: "himeri"
     },
     {
+        number: 256,
         displayName: "ワカシャモ",
+        enName: "Combusken",
         name: "wakasyamo",
         type: "きのみ",
         mainSkill: "げんきチャージS",
@@ -1847,7 +2079,9 @@ const pokemonData = [
         kinomiType: "kurabo"
     },
     {
+        number: 257,
         displayName: "バシャーモ",
+        enName: "Blaziken",
         name: "bursyamo",
         type: "きのみ",
         mainSkill: "げんきチャージS",
@@ -1857,7 +2091,9 @@ const pokemonData = [
         kinomiType: "kurabo"
     },
     {
+        number: 258,
         displayName: "ミズゴロウ",
+        enName: "Mudkip",
         name: "mizugorou",
         type: "きのみ",
         mainSkill: "料理チャンスS",
@@ -1867,7 +2103,9 @@ const pokemonData = [
         kinomiType: "oren"
     },
     {
+        number: 259,
         displayName: "ヌマクロー",
+        enName: "Marshtomp",
         name: "numacraw",
         type: "きのみ",
         mainSkill: "料理チャンスS",
@@ -1877,7 +2115,9 @@ const pokemonData = [
         kinomiType: "fira"
     },
     {
+        number: 260,
         displayName: "ラグラージ",
+        enName: "Swampert",
         name: "laglarge",
         type: "きのみ",
         mainSkill: "料理チャンスS",
@@ -1887,7 +2127,9 @@ const pokemonData = [
         kinomiType: "fira"
     },
     {
+        number: 280,
         displayName: "ラルトス",
+        enName: "Ralts",
         name: "ralts",
         type: "スキル",
         mainSkill: "げんきオールS",
@@ -1897,7 +2139,9 @@ const pokemonData = [
         kinomiType: "mago"
     },
     {
+        number: 281,
         displayName: "キルリア",
+        enName: "Kirlia",
         name: "kirlia",
         type: "スキル",
         mainSkill: "げんきオールS",
@@ -1907,7 +2151,9 @@ const pokemonData = [
         kinomiType: "mago"
     },
     {
+        number: 282,
         displayName: "サーナイト",
+        enName: "Gardevoir",
         name: "sirnight",
         type: "スキル",
         mainSkill: "げんきオールS",
@@ -1917,7 +2163,9 @@ const pokemonData = [
         kinomiType: "mago"
     },
     {
+        number: 287,
         displayName: "ナマケロ",
+        enName: "Slakoth",
         name: "namakero",
         type: "きのみ",
         mainSkill: "食材ゲットS",
@@ -1927,7 +2175,9 @@ const pokemonData = [
         kinomiType: "ki"
     },
     {
+        number: 288,
         displayName: "ヤルキモノ",
+        enName: "Vigoroth",
         name: "yarukimono",
         type: "きのみ",
         mainSkill: "食材ゲットS",
@@ -1937,7 +2187,9 @@ const pokemonData = [
         kinomiType: "ki"
     },
     {
+        number: 289,
         displayName: "ケッキング",
+        enName: "Slaking",
         name: "kekking",
         type: "きのみ",
         mainSkill: "食材ゲットS",
@@ -1947,7 +2199,9 @@ const pokemonData = [
         kinomiType: "ki"
     },
     {
+        number: 302,
         displayName: "ヤミラミ",
+        enName: "Sableye",
         name: "yamirami",
         type: "スキル",
         mainSkill: "ゆめのかけらゲットS(ランダム)",
@@ -1957,7 +2211,9 @@ const pokemonData = [
         kinomiType: "ui"
     },
     {
+        number: 303,
         displayName: "クチート",
+        enName: "Mawile",
         name: "kucheat",
         type: "食材",
         mainSkill: "かいりきバサミ(食材セレクトS)",
@@ -1967,7 +2223,9 @@ const pokemonData = [
         kinomiType: "beribu"
     },
     {
+        number: 304,
         displayName: "ココドラ",
+        enName: "Aron",
         name: "cokodora",
         type: "食材",
         mainSkill: "げんきチャージS",
@@ -1977,7 +2235,9 @@ const pokemonData = [
         kinomiType: "beribu"
     },
     {
+        number: 305,
         displayName: "コドラ",
+        enName: "Lairon",
         name: "codora",
         type: "食材",
         mainSkill: "げんきチャージS",
@@ -1987,7 +2247,9 @@ const pokemonData = [
         kinomiType: "beribu"
     },
     {
+        number: 306,
         displayName: "ボスゴドラ",
+        enName: "Aggron",
         name: "bossgodora",
         type: "食材",
         mainSkill: "げんきチャージS",
@@ -1997,7 +2259,9 @@ const pokemonData = [
         kinomiType: "beribu"
     },
     {
+        number: 311,
         displayName: "プラスル",
+        enName: "Plusle",
         name: "plusle",
         type: "スキル",
         mainSkill: "プラス(食材ゲットS)",
@@ -2007,7 +2271,9 @@ const pokemonData = [
         kinomiType: "ubu"
     },
     {
+        number: 312,
         displayName: "マイナン",
+        enName: "Minun",
         name: "minun",
         type: "スキル",
         mainSkill: "マイナス(料理パワーアップS)",
@@ -2017,7 +2283,9 @@ const pokemonData = [
         kinomiType: "ubu"
     },
     {
+        number: 316,
         displayName: "ゴクリン",
+        enName: "Gulpin",
         name: "gokulin",
         type: "スキル",
         mainSkill: "ゆめのかけらゲットS(ランダム)",
@@ -2027,7 +2295,9 @@ const pokemonData = [
         kinomiType: "kago"
     },
     {
+        number: 317,
         displayName: "マルノーム",
+        enName: "Swalot",
         name: "marunoom",
         type: "スキル",
         mainSkill: "ゆめのかけらゲットS(ランダム)",
@@ -2037,7 +2307,9 @@ const pokemonData = [
         kinomiType: "kago"
     },
     {
+        number: 333,
         displayName: "チルット",
+        enName: "Swablu",
         name: "tyltto",
         type: "きのみ",
         mainSkill: "げんきチャージS",
@@ -2047,7 +2319,9 @@ const pokemonData = [
         kinomiType: "shiya"
     },
     {
+        number: 334,
         displayName: "チルタリス",
+        enName: "Altaria",
         name: "tyltalis",
         type: "きのみ",
         mainSkill: "げんきチャージS",
@@ -2057,7 +2331,9 @@ const pokemonData = [
         kinomiType: "yache"
     },
     {
+        number: 353,
         displayName: "カゲボウズ",
+        enName: "Shuppet",
         name: "kagebouzu",
         type: "きのみ",
         mainSkill: "エナジーチャージS(ランダム)",
@@ -2067,7 +2343,9 @@ const pokemonData = [
         kinomiType: "buri"
     },
     {
+        number: 354,
         displayName: "ジュペッタ",
+        enName: "Banette",
         name: "juppeta",
         type: "きのみ",
         mainSkill: "エナジーチャージS(ランダム)",
@@ -2077,7 +2355,9 @@ const pokemonData = [
         kinomiType: "buri"
     },
     {
+        number: 359,
         displayName: "アブソル",
+        enName: "Absol",
         name: "absol",
         type: "食材",
         mainSkill: "エナジーチャージS",
@@ -2087,7 +2367,9 @@ const pokemonData = [
         kinomiType: "ui"
     },
     {
+        number: 360,
         displayName: "ソーナノ",
+        enName: "Wynaut",
         name: "sohnano",
         type: "スキル",
         mainSkill: "げんきエールS",
@@ -2097,7 +2379,9 @@ const pokemonData = [
         kinomiType: "mago"
     },
     {
+        number: 363,
         displayName: "タマザラシ",
+        enName: "Spheal",
         name: "tamazarashi",
         type: "きのみ",
         mainSkill: "食材ゲットS",
@@ -2107,7 +2391,9 @@ const pokemonData = [
         kinomiType: "chigo"
     },
     {
+        number: 364,
         displayName: "トドグラー",
+        enName: "Sealeo",
         name: "todggler",
         type: "きのみ",
         mainSkill: "食材ゲットS",
@@ -2117,7 +2403,9 @@ const pokemonData = [
         kinomiType: "chigo"
     },
     {
+        number: 365,
         displayName: "トドゼルガ",
+        enName: "Walrein",
         name: "todoseruga",
         type: "きのみ",
         mainSkill: "食材ゲットS",
@@ -2127,7 +2415,9 @@ const pokemonData = [
         kinomiType: "chigo"
     },
     {
+        number: 403,
         displayName: "コリンク",
+        enName: "Shinx",
         name: "kolink",
         type: "食材",
         mainSkill: "料理パワーアップS",
@@ -2137,7 +2427,9 @@ const pokemonData = [
         kinomiType: "ubu"
     },
     {
+        number: 404,
         displayName: "ルクシオ",
+        enName: "Luxio",
         name: "luxio",
         type: "食材",
         mainSkill: "料理パワーアップS",
@@ -2147,7 +2439,9 @@ const pokemonData = [
         kinomiType: "ubu"
     },
     {
+        number: 405,
         displayName: "レントラー",
+        enName: "Luxray",
         name: "rentorar",
         type: "食材",
         mainSkill: "料理パワーアップS",
@@ -2157,7 +2451,9 @@ const pokemonData = [
         kinomiType: "ubu"
     },
     {
+        number: 425,
         displayName: "フワンテ",
+        enName: "Drifloon",
         name: "fuwante",
         type: "スキル",
         mainSkill: "たくわえる(エナジーチャージS)",
@@ -2167,7 +2463,9 @@ const pokemonData = [
         kinomiType: "buri"
     },
     {
+        number: 426,
         displayName: "フワライド",
+        enName: "Drifblim",
         name: "fuwaride",
         type: "スキル",
         mainSkill: "たくわえる(エナジーチャージS)",
@@ -2177,7 +2475,9 @@ const pokemonData = [
         kinomiType: "buri"
     },
     {
+        number: 430,
         displayName: "ドンカラス",
+        enName: "Honchkrow",
         name: "donkarasu",
         type: "スキル",
         mainSkill: "きょううん(食材セレクトS)",
@@ -2187,7 +2487,9 @@ const pokemonData = [
         kinomiType: "ui"
     },
     {
+        number: 438,
         displayName: "ウソハチ",
+        enName: "Bonsly",
         name: "usohachi",
         type: "スキル",
         mainSkill: "エナジーチャージM",
@@ -2197,7 +2499,9 @@ const pokemonData = [
         kinomiType: "obon"
     },
     {
+        number: 439,
         displayName: "マネネ",
+        enName: "Mime Jr.",
         name: "manene",
         type: "食材",
         mainSkill: "ものまね(スキルコピー)",
@@ -2207,7 +2511,9 @@ const pokemonData = [
         kinomiType: "mago"
     },
     {
+        number: 440,
         displayName: "ピンプク",
+        enName: "Happiny",
         name: "pinpuku",
         type: "食材",
         mainSkill: "げんきオールS",
@@ -2217,7 +2523,9 @@ const pokemonData = [
         kinomiType: "ki"
     },
     {
+        number: 447,
         displayName: "リオル",
+        enName: "Riolu",
         name: "riolu",
         type: "スキル",
         mainSkill: "ゆめのかけらゲットS",
@@ -2227,7 +2535,9 @@ const pokemonData = [
         kinomiType: "kurabo"
     },
     {
+        number: 448,
         displayName: "ルカリオ",
+        enName: "Lucario",
         name: "lucario",
         type: "スキル",
         mainSkill: "ゆめのかけらゲットS",
@@ -2237,7 +2547,9 @@ const pokemonData = [
         kinomiType: "kurabo"
     },
     {
+        number: 453,
         displayName: "グレッグル",
+        enName: "Croagunk",
         name: "gureggru",
         type: "食材",
         mainSkill: "エナジーチャージS",
@@ -2247,7 +2559,9 @@ const pokemonData = [
         kinomiType: "kago"
     },
     {
+        number: 454,
         displayName: "ドクロッグ",
+        enName: "Toxicroak",
         name: "dokurog",
         type: "食材",
         mainSkill: "エナジーチャージS",
@@ -2257,7 +2571,9 @@ const pokemonData = [
         kinomiType: "kago"
     },
     {
+        number: 459,
         displayName: "ユキカブリ",
+        enName: "Snover",
         name: "yukikaburi",
         type: "食材",
         mainSkill: "エナジーチャージS(ランダム)",
@@ -2267,7 +2583,9 @@ const pokemonData = [
         kinomiType: "chigo"
     },
     {
+        number: 460,
         displayName: "ユキノオー",
+        enName: "Abomasnow",
         name: "yukinooh",
         type: "食材",
         mainSkill: "エナジーチャージS(ランダム)",
@@ -2277,7 +2595,9 @@ const pokemonData = [
         kinomiType: "chigo"
     },
     {
+        number: 461,
         displayName: "マニューラ",
+        enName: "Weavile",
         name: "manyula",
         type: "きのみ",
         mainSkill: "料理チャンスS",
@@ -2287,7 +2607,9 @@ const pokemonData = [
         kinomiType: "ui"
     },
     {
+        number: 462,
         displayName: "ジバコイル",
+        enName: "Magnezone",
         name: "jibacoil",
         type: "スキル",
         mainSkill: "料理パワーアップS",
@@ -2297,7 +2619,9 @@ const pokemonData = [
         kinomiType: "beribu"
     },
     {
+        number: 468,
         displayName: "トゲキッス",
+        enName: "Togekiss",
         name: "togekiss",
         type: "スキル",
         mainSkill: "ゆびをふる",
@@ -2307,7 +2631,9 @@ const pokemonData = [
         kinomiType: "momon"
     },
     {
+        number: 470,
         displayName: "リーフィア",
+        enName: "Leafeon",
         name: "leafia",
         type: "スキル",
         mainSkill: "げんきエールS",
@@ -2317,7 +2643,9 @@ const pokemonData = [
         kinomiType: "dori"
     },
     {
+        number: 471,
         displayName: "グレイシア",
+        enName: "Glaceon",
         name: "glacia",
         type: "スキル",
         mainSkill: "料理パワーアップS",
@@ -2327,7 +2655,9 @@ const pokemonData = [
         kinomiType: "chigo"
     },
     {
+        number: 475,
         displayName: "エルレイド",
+        enName: "Gallade",
         name: "erureido",
         type: "スキル",
         mainSkill: "おてつだいサポートS",
@@ -2337,7 +2667,9 @@ const pokemonData = [
         kinomiType: "kurabo"
     },
     {
+        number: 488,
         displayName: "クレセリア",
+        enName: "Cresselia",
         name: "cresselia",
         type: "スキル",
         mainSkill: "みかづきのいのり(げんきオールS)",
@@ -2347,7 +2679,9 @@ const pokemonData = [
         kinomiType: "mago"
     },
     {
+        number: 491,
         displayName: "ダークライ",
+        enName: "Darkrai",
         name: "darkrai",
         type: "オール",
         mainSkill: "ナイトメア(エナジーチャージM)",
@@ -2357,7 +2691,9 @@ const pokemonData = [
         kinomiType: "ui"
     },
     {
+        number: 517,
         displayName: "ムンナ",
+        enName: "Munna",
         name: "munna",
         type: "きのみ",
         mainSkill: "ゆめのかけらゲットS(ランダム)",
@@ -2367,7 +2703,9 @@ const pokemonData = [
         kinomiType: "mago"
     },
     {
+        number: 518,
         displayName: "ムシャーナ",
+        enName: "Musharna",
         name: "musharna",
         type: "きのみ",
         mainSkill: "ゆめのかけらゲットS(ランダム)",
@@ -2377,7 +2715,9 @@ const pokemonData = [
         kinomiType: "mago"
     },
     {
+        number: 627,
         displayName: "ワシボン",
+        enName: "Rufflet",
         name: "washibon",
         type: "スキル",
         mainSkill: "きのみバースト",
@@ -2387,7 +2727,9 @@ const pokemonData = [
         kinomiType: "shiya"
     },
     {
+        number: 628,
         displayName: "ウォーグル",
+        enName: "Braviary",
         name: "warrgle",
         type: "スキル",
         mainSkill: "きのみバースト",
@@ -2397,7 +2739,9 @@ const pokemonData = [
         kinomiType: "shiya"
     },
     {
+        number: 700,
         displayName: "ニンフィア",
+        enName: "Sylveon",
         name: "nymphia",
         type: "スキル",
         mainSkill: "げんきオールS",
@@ -2407,7 +2751,9 @@ const pokemonData = [
         kinomiType: "momon"
     },
     {
+        number: 702,
         displayName: "デデンネ",
+        enName: "Dedenne",
         name: "dedenne",
         type: "スキル",
         mainSkill: "料理チャンスS",
@@ -2417,7 +2763,9 @@ const pokemonData = [
         kinomiType: "ubu"
     },
     {
+        number: 736,
         displayName: "アゴジムシ",
+        enName: "Grubbin",
         name: "agojimushi",
         type: "食材",
         mainSkill: "エナジーチャージS",
@@ -2427,7 +2775,9 @@ const pokemonData = [
         kinomiType: "ramu"
     },
     {
+        number: 737,
         displayName: "デンヂムシ",
+        enName: "Charjabug",
         name: "denjimushi",
         type: "食材",
         mainSkill: "エナジーチャージS",
@@ -2437,7 +2787,9 @@ const pokemonData = [
         kinomiType: "ramu"
     },
     {
+        number: 738,
         displayName: "クワガノン",
+        enName: "Vikavolt",
         name: "kuwaganon",
         type: "食材",
         mainSkill: "エナジーチャージS",
@@ -2447,7 +2799,9 @@ const pokemonData = [
         kinomiType: "ramu"
     },
     {
+        number: 759,
         displayName: "ヌイコグマ",
+        enName: "Stufful",
         name: "nuikoguma",
         type: "食材",
         mainSkill: "エナジーチャージS(ランダム)",
@@ -2457,7 +2811,9 @@ const pokemonData = [
         kinomiType: "kurabo"
     },
     {
+        number: 760,
         displayName: "キテルグマ",
+        enName: "Bewear",
         name: "kiteruguma",
         type: "食材",
         mainSkill: "エナジーチャージS(ランダム)",
@@ -2467,7 +2823,9 @@ const pokemonData = [
         kinomiType: "kurabo"
     },
     {
+        number: 764,
         displayName: "キュワワー",
+        enName: "Comfey",
         name: "cuwawa",
         type: "食材",
         mainSkill: "げんきエールS",
@@ -2477,7 +2835,9 @@ const pokemonData = [
         kinomiType: "momon"
     },
     {
+        number: 778,
         displayName: "ミミッキュ",
+        enName: "Mimikyu",
         name: "mimikyu",
         type: "スキル",
         mainSkill: "ばけのかわ(きのみバースト)",
@@ -2487,7 +2847,9 @@ const pokemonData = [
         kinomiType: "buri"
     },
     {
+        number: 845,
         displayName: "ウッウ",
+        enName: "Cramorant",
         name: "uu",
         type: "食材",
         mainSkill: "料理チャンスS",
@@ -2497,7 +2859,9 @@ const pokemonData = [
         kinomiType: "shiya"
     },
     {
+        number: 848,
         displayName: "エレズン",
+        enName: "Toxel",
         name: "eleson",
         type: "スキル",
         mainSkill: "食材ゲットS",
@@ -2507,7 +2871,9 @@ const pokemonData = [
         kinomiType: "kago"
     },
     {
+        number: 849,
         displayName: "ストリンダー(ハイなすがた)",
+        enName: "Toxtricity",
         name: "strinder_high",
         type: "スキル",
         mainSkill: "プラス(食材ゲットS)",
@@ -2517,7 +2883,9 @@ const pokemonData = [
         kinomiType: "kago"
     },
     {
+        number: 849,
         displayName: "ストリンダー(ローなすがた)",
+        enName: "Toxtricity",
         name: "strinder_low",
         type: "スキル",
         mainSkill: "マイナス(料理パワーアップS)",
@@ -2527,7 +2895,9 @@ const pokemonData = [
         kinomiType: "kago"
     },
     {
+        number: 906,
         displayName: "ニャオハ",
+        enName: "Sprigatito",
         name: "nyaoha",
         type: "食材",
         mainSkill: "料理パワーアップS",
@@ -2537,7 +2907,9 @@ const pokemonData = [
         kinomiType: "dori"
     },
     {
+        number: 907,
         displayName: "ニャローテ",
+        enName: "Floragato",
         name: "nyarote",
         type: "食材",
         mainSkill: "料理パワーアップS",
@@ -2547,7 +2919,9 @@ const pokemonData = [
         kinomiType: "dori"
     },
     {
+        number: 908,
         displayName: "マスカーニャ",
+        enName: "Meowscarada",
         name: "masquernya",
         type: "食材",
         mainSkill: "料理パワーアップS",
@@ -2557,7 +2931,9 @@ const pokemonData = [
         kinomiType: "ui"
     },
     {
+        number: 909,
         displayName: "ホゲータ",
+        enName: "Fuecoco",
         name: "hogeeta",
         type: "食材",
         mainSkill: "げんきチャージS",
@@ -2567,7 +2943,9 @@ const pokemonData = [
         kinomiType: "himeri"
     },
     {
+        number: 910,
         displayName: "アチゲータ",
+        enName: "Crocalor",
         name: "achgeeta",
         type: "食材",
         mainSkill: "げんきチャージS",
@@ -2577,7 +2955,9 @@ const pokemonData = [
         kinomiType: "himeri"
     },
     {
+        number: 911,
         displayName: "ラウドボーン",
+        enName: "Skeledirge",
         name: "loudbone",
         type: "食材",
         mainSkill: "げんきチャージS",
@@ -2587,7 +2967,9 @@ const pokemonData = [
         kinomiType: "buri"
     },
     {
+        number: 912,
         displayName: "クワッス",
+        enName: "Quaxly",
         name: "kwass",
         type: "食材",
         mainSkill: "エナジーチャージM",
@@ -2597,7 +2979,9 @@ const pokemonData = [
         kinomiType: "oren"
     },
     {
+        number: 913,
         displayName: "ウェルカモ",
+        enName: "Quaxwell",
         name: "welkamo",
         type: "食材",
         mainSkill: "エナジーチャージM",
@@ -2607,7 +2991,9 @@ const pokemonData = [
         kinomiType: "oren"
     },
     {
+        number: 914,
         displayName: "ウェーニバル",
+        enName: "Quaquaval",
         name: "quaquaval",
         type: "食材",
         mainSkill: "エナジーチャージM",
@@ -2617,7 +3003,9 @@ const pokemonData = [
         kinomiType: "kurabo"
     },
     {
+        number: 921,
         displayName: "パモ",
+        enName: "Pawmi",
         name: "pamo",
         type: "スキル",
         mainSkill: "げんきオールS",
@@ -2627,7 +3015,9 @@ const pokemonData = [
         kinomiType: "ubu"
     },
     {
+        number: 922,
         displayName: "パモット",
+        enName: "Pawmo",
         name: "pamot",
         type: "スキル",
         mainSkill: "げんきオールS",
@@ -2637,7 +3027,9 @@ const pokemonData = [
         kinomiType: "ubu"
     },
     {
+        number: 923,
         displayName: "パーモット",
+        enName: "Pawmot",
         name: "pawmot",
         type: "スキル",
         mainSkill: "げんきオールS",
@@ -2647,7 +3039,9 @@ const pokemonData = [
         kinomiType: "ubu"
     },
     {
+        number: 980,
         displayName: "ドオー",
+        enName: "Clodsire",
         name: "doh",
         type: "食材",
         mainSkill: "げんきチャージS",
