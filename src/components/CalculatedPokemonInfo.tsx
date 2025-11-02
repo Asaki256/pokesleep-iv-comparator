@@ -4,10 +4,12 @@ import React from "react";
 import { CalculationResult } from "@/utils/pokemonCalculator";
 import { SelectedSubSkill } from "@/types/selectedSubSkill";
 import { getRarityStyles } from "@/utils/subSkillUtils";
+import PokemonImage from "@/components/PokemonImage";
 
 // 型定義
 interface CalculatedPokemonInfoProps {
   pokemonName: string;
+  pokemonNumber?: number;
   pokemonType?: string;
   nature?: string;
   subSkills: SelectedSubSkill[];
@@ -57,6 +59,7 @@ const CalculatedPokemonInfo: React.FC<
   CalculatedPokemonInfoProps
 > = ({
   pokemonName,
+  pokemonNumber,
   pokemonType,
   nature,
   subSkills,
@@ -77,7 +80,7 @@ const CalculatedPokemonInfo: React.FC<
       <div className="p-2 md:p-3">
         {/* 1行目: ポケモン画像・名前・バッジ・日付 */}
         <div className="flex items-center gap-2 md:gap-3 mb-1.5">
-          <div className="text-xl md:text-2xl">🎮</div>
+          <PokemonImage pokemonNumber={pokemonNumber} size={48} />
           <h4 className="font-bold text-sm md:text-base text-gray-900">
             {pokemonName}
           </h4>

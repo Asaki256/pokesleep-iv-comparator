@@ -5301,6 +5301,137 @@ if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelper
     __turbopack_context__.k.registerExports(__turbopack_context__.m, globalThis.$RefreshHelpers$);
 }
 }),
+"[project]/Develop/pokesleep-iv-comparator/src/services/pokeApi.ts [app-client] (ecmascript)", ((__turbopack_context__) => {
+"use strict";
+
+/**
+ * PokeAPI関連のサービス関数
+ */ // 画像URLをキャッシュするためのMap（メモリキャッシュ）
+__turbopack_context__.s([
+    "fetchPokemonImage",
+    ()=>fetchPokemonImage
+]);
+const imageCache = new Map();
+async function fetchPokemonImage(pokemonNumber) {
+    // キャッシュをチェック
+    if (imageCache.has(pokemonNumber)) {
+        return imageCache.get(pokemonNumber) ?? null;
+    }
+    try {
+        const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${pokemonNumber}`);
+        if (!response.ok) {
+            console.error(`PokeAPI error: ${response.status} ${response.statusText}`);
+            imageCache.set(pokemonNumber, null);
+            return null;
+        }
+        const data = await response.json();
+        const imageUrl = data.sprites.front_default;
+        // キャッシュに保存
+        imageCache.set(pokemonNumber, imageUrl);
+        return imageUrl;
+    } catch (error) {
+        console.error(`Failed to fetch Pokemon image for #${pokemonNumber}:`, error);
+        // エラーの場合もキャッシュして、再試行を防ぐ
+        imageCache.set(pokemonNumber, null);
+        return null;
+    }
+}
+if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelpers !== null) {
+    __turbopack_context__.k.registerExports(__turbopack_context__.m, globalThis.$RefreshHelpers$);
+}
+}),
+"[project]/Develop/pokesleep-iv-comparator/src/components/PokemonImage.tsx [app-client] (ecmascript)", ((__turbopack_context__) => {
+"use strict";
+
+__turbopack_context__.s([
+    "default",
+    ()=>PokemonImage
+]);
+var __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Develop/pokesleep-iv-comparator/node_modules/next/dist/compiled/react/jsx-dev-runtime.js [app-client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Develop/pokesleep-iv-comparator/node_modules/next/dist/compiled/react/index.js [app-client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$src$2f$services$2f$pokeApi$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Develop/pokesleep-iv-comparator/src/services/pokeApi.ts [app-client] (ecmascript)");
+;
+var _s = __turbopack_context__.k.signature();
+"use client";
+;
+;
+function PokemonImage({ pokemonNumber, size = 40, className = "" }) {
+    _s();
+    const [imageUrl, setImageUrl] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(null);
+    const [isLoading, setIsLoading] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(true);
+    const [hasError, setHasError] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(false);
+    (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useEffect"])({
+        "PokemonImage.useEffect": ()=>{
+            // pokemonNumberがない場合は何もしない
+            if (!pokemonNumber) {
+                setIsLoading(false);
+                return;
+            }
+            // 状態をリセット
+            setIsLoading(true);
+            setHasError(false);
+            setImageUrl(null);
+            // 画像を取得
+            (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$src$2f$services$2f$pokeApi$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["fetchPokemonImage"])(pokemonNumber).then({
+                "PokemonImage.useEffect": (url)=>{
+                    if (url) {
+                        setImageUrl(url);
+                    } else {
+                        setHasError(true);
+                    }
+                }
+            }["PokemonImage.useEffect"]).catch({
+                "PokemonImage.useEffect": (error)=>{
+                    console.error("Failed to load Pokemon image:", error);
+                    setHasError(true);
+                }
+            }["PokemonImage.useEffect"]).finally({
+                "PokemonImage.useEffect": ()=>{
+                    setIsLoading(false);
+                }
+            }["PokemonImage.useEffect"]);
+        }
+    }["PokemonImage.useEffect"], [
+        pokemonNumber
+    ]);
+    // ローディング中またはエラー時はスケルトンローダーを表示
+    if (isLoading || hasError || !imageUrl) {
+        return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+            className: `bg-gray-200 rounded animate-pulse ${className}`,
+            style: {
+                width: size,
+                height: size
+            }
+        }, void 0, false, {
+            fileName: "[project]/Develop/pokesleep-iv-comparator/src/components/PokemonImage.tsx",
+            lineNumber: 61,
+            columnNumber: 7
+        }, this);
+    }
+    // 画像を表示
+    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
+        src: imageUrl,
+        alt: `Pokemon #${pokemonNumber}`,
+        className: `object-contain ${className}`,
+        style: {
+            width: size,
+            height: size
+        },
+        loading: "lazy"
+    }, void 0, false, {
+        fileName: "[project]/Develop/pokesleep-iv-comparator/src/components/PokemonImage.tsx",
+        lineNumber: 70,
+        columnNumber: 5
+    }, this);
+}
+_s(PokemonImage, "wEq48CoZ2YnXh28anLCAzjy+lvQ=");
+_c = PokemonImage;
+var _c;
+__turbopack_context__.k.register(_c, "PokemonImage");
+if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelpers !== null) {
+    __turbopack_context__.k.registerExports(__turbopack_context__.m, globalThis.$RefreshHelpers$);
+}
+}),
 "[project]/Develop/pokesleep-iv-comparator/src/components/CalculatedPokemonInfo.tsx [app-client] (ecmascript)", ((__turbopack_context__) => {
 "use strict";
 
@@ -5310,7 +5441,9 @@ __turbopack_context__.s([
 ]);
 var __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Develop/pokesleep-iv-comparator/node_modules/next/dist/compiled/react/jsx-dev-runtime.js [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$src$2f$utils$2f$subSkillUtils$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Develop/pokesleep-iv-comparator/src/utils/subSkillUtils.ts [app-client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$src$2f$components$2f$PokemonImage$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Develop/pokesleep-iv-comparator/src/components/PokemonImage.tsx [app-client] (ecmascript)");
 "use client";
+;
 ;
 ;
 // 日付フォーマット関数
@@ -5359,9 +5492,9 @@ const CalculatedPokemonInfo = ({ pokemonName, pokemonNumber, pokemonType, nature
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                         className: "flex items-center gap-2 md:gap-3 mb-1.5",
                         children: [
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                className: "text-xl md:text-2xl",
-                                children: "🎮"
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$src$2f$components$2f$PokemonImage$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
+                                pokemonNumber: pokemonNumber,
+                                size: 48
                             }, void 0, false, {
                                 fileName: "[project]/Develop/pokesleep-iv-comparator/src/components/CalculatedPokemonInfo.tsx",
                                 lineNumber: 83,
@@ -5797,7 +5930,9 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2
 var __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$chevron$2d$up$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__ChevronUp$3e$__ = __turbopack_context__.i("[project]/Develop/pokesleep-iv-comparator/node_modules/lucide-react/dist/esm/icons/chevron-up.js [app-client] (ecmascript) <export default as ChevronUp>");
 var __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$trash$2d$2$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Trash2$3e$__ = __turbopack_context__.i("[project]/Develop/pokesleep-iv-comparator/node_modules/lucide-react/dist/esm/icons/trash-2.js [app-client] (ecmascript) <export default as Trash2>");
 var __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$corner$2d$up$2d$left$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__CornerUpLeft$3e$__ = __turbopack_context__.i("[project]/Develop/pokesleep-iv-comparator/node_modules/lucide-react/dist/esm/icons/corner-up-left.js [app-client] (ecmascript) <export default as CornerUpLeft>");
+var __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$src$2f$components$2f$PokemonImage$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Develop/pokesleep-iv-comparator/src/components/PokemonImage.tsx [app-client] (ecmascript)");
 "use client";
+;
 ;
 ;
 ;
@@ -5847,12 +5982,12 @@ function HistoryItem({ item, isExpanded, onToggle, onDelete, onRestore }) {
                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                     className: "flex items-center gap-3",
                     children: [
-                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                            className: "text-xl",
-                            children: "🎮"
+                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$src$2f$components$2f$PokemonImage$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
+                            pokemonNumber: item.pokemonNumber,
+                            size: 48
                         }, void 0, false, {
                             fileName: "[project]/Develop/pokesleep-iv-comparator/src/components/HistoryItem.tsx",
-                            lineNumber: 79,
+                            lineNumber: 80,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -5866,7 +6001,7 @@ function HistoryItem({ item, isExpanded, onToggle, onDelete, onRestore }) {
                                             children: item.pokemonName
                                         }, void 0, false, {
                                             fileName: "[project]/Develop/pokesleep-iv-comparator/src/components/HistoryItem.tsx",
-                                            lineNumber: 82,
+                                            lineNumber: 83,
                                             columnNumber: 15
                                         }, this),
                                         item.pokemonType && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -5874,7 +6009,7 @@ function HistoryItem({ item, isExpanded, onToggle, onDelete, onRestore }) {
                                             children: item.pokemonType
                                         }, void 0, false, {
                                             fileName: "[project]/Develop/pokesleep-iv-comparator/src/components/HistoryItem.tsx",
-                                            lineNumber: 84,
+                                            lineNumber: 85,
                                             columnNumber: 17
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -5882,13 +6017,13 @@ function HistoryItem({ item, isExpanded, onToggle, onDelete, onRestore }) {
                                             children: formatDate(item.timestamp)
                                         }, void 0, false, {
                                             fileName: "[project]/Develop/pokesleep-iv-comparator/src/components/HistoryItem.tsx",
-                                            lineNumber: 92,
+                                            lineNumber: 93,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/Develop/pokesleep-iv-comparator/src/components/HistoryItem.tsx",
-                                    lineNumber: 81,
+                                    lineNumber: 82,
                                     columnNumber: 13
                                 }, this),
                                 !isExpanded && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -5902,7 +6037,7 @@ function HistoryItem({ item, isExpanded, onToggle, onDelete, onRestore }) {
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/Develop/pokesleep-iv-comparator/src/components/HistoryItem.tsx",
-                                            lineNumber: 101,
+                                            lineNumber: 102,
                                             columnNumber: 19
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -5912,7 +6047,7 @@ function HistoryItem({ item, isExpanded, onToggle, onDelete, onRestore }) {
                                                     children: "サブスキル:"
                                                 }, void 0, false, {
                                                     fileName: "[project]/Develop/pokesleep-iv-comparator/src/components/HistoryItem.tsx",
-                                                    lineNumber: 104,
+                                                    lineNumber: 105,
                                                     columnNumber: 19
                                                 }, this),
                                                 displaySubSkills.map((skill, index)=>{
@@ -5922,7 +6057,7 @@ function HistoryItem({ item, isExpanded, onToggle, onDelete, onRestore }) {
                                                             children: "未選択"
                                                         }, index, false, {
                                                             fileName: "[project]/Develop/pokesleep-iv-comparator/src/components/HistoryItem.tsx",
-                                                            lineNumber: 108,
+                                                            lineNumber: 109,
                                                             columnNumber: 25
                                                         }, this);
                                                     }
@@ -5932,26 +6067,26 @@ function HistoryItem({ item, isExpanded, onToggle, onDelete, onRestore }) {
                                                         children: skill.name
                                                     }, index, false, {
                                                         fileName: "[project]/Develop/pokesleep-iv-comparator/src/components/HistoryItem.tsx",
-                                                        lineNumber: 118,
+                                                        lineNumber: 119,
                                                         columnNumber: 23
                                                     }, this);
                                                 })
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/Develop/pokesleep-iv-comparator/src/components/HistoryItem.tsx",
-                                            lineNumber: 103,
+                                            lineNumber: 104,
                                             columnNumber: 17
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/Develop/pokesleep-iv-comparator/src/components/HistoryItem.tsx",
-                                    lineNumber: 99,
+                                    lineNumber: 100,
                                     columnNumber: 15
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/Develop/pokesleep-iv-comparator/src/components/HistoryItem.tsx",
-                            lineNumber: 80,
+                            lineNumber: 81,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -5970,7 +6105,7 @@ function HistoryItem({ item, isExpanded, onToggle, onDelete, onRestore }) {
                                             className: "h-4 w-4 mr-1"
                                         }, void 0, false, {
                                             fileName: "[project]/Develop/pokesleep-iv-comparator/src/components/HistoryItem.tsx",
-                                            lineNumber: 142,
+                                            lineNumber: 143,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -5978,13 +6113,13 @@ function HistoryItem({ item, isExpanded, onToggle, onDelete, onRestore }) {
                                             children: "反映"
                                         }, void 0, false, {
                                             fileName: "[project]/Develop/pokesleep-iv-comparator/src/components/HistoryItem.tsx",
-                                            lineNumber: 143,
+                                            lineNumber: 144,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/Develop/pokesleep-iv-comparator/src/components/HistoryItem.tsx",
-                                    lineNumber: 133,
+                                    lineNumber: 134,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$src$2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Button"], {
@@ -5999,42 +6134,42 @@ function HistoryItem({ item, isExpanded, onToggle, onDelete, onRestore }) {
                                         className: "h-4 w-4"
                                     }, void 0, false, {
                                         fileName: "[project]/Develop/pokesleep-iv-comparator/src/components/HistoryItem.tsx",
-                                        lineNumber: 154,
+                                        lineNumber: 155,
                                         columnNumber: 15
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/Develop/pokesleep-iv-comparator/src/components/HistoryItem.tsx",
-                                    lineNumber: 145,
+                                    lineNumber: 146,
                                     columnNumber: 13
                                 }, this),
                                 isExpanded ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$chevron$2d$up$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__ChevronUp$3e$__["ChevronUp"], {
                                     className: "h-5 w-5 text-gray-400"
                                 }, void 0, false, {
                                     fileName: "[project]/Develop/pokesleep-iv-comparator/src/components/HistoryItem.tsx",
-                                    lineNumber: 157,
+                                    lineNumber: 158,
                                     columnNumber: 15
                                 }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$chevron$2d$down$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__ChevronDown$3e$__["ChevronDown"], {
                                     className: "h-5 w-5 text-gray-400"
                                 }, void 0, false, {
                                     fileName: "[project]/Develop/pokesleep-iv-comparator/src/components/HistoryItem.tsx",
-                                    lineNumber: 159,
+                                    lineNumber: 160,
                                     columnNumber: 15
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/Develop/pokesleep-iv-comparator/src/components/HistoryItem.tsx",
-                            lineNumber: 132,
+                            lineNumber: 133,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/Develop/pokesleep-iv-comparator/src/components/HistoryItem.tsx",
-                    lineNumber: 77,
+                    lineNumber: 78,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/Develop/pokesleep-iv-comparator/src/components/HistoryItem.tsx",
-                lineNumber: 73,
+                lineNumber: 74,
                 columnNumber: 7
             }, this),
             isExpanded && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -6051,7 +6186,7 @@ function HistoryItem({ item, isExpanded, onToggle, onDelete, onRestore }) {
                                         children: "性格:"
                                     }, void 0, false, {
                                         fileName: "[project]/Develop/pokesleep-iv-comparator/src/components/HistoryItem.tsx",
-                                        lineNumber: 172,
+                                        lineNumber: 173,
                                         columnNumber: 17
                                     }, this),
                                     " ",
@@ -6059,7 +6194,7 @@ function HistoryItem({ item, isExpanded, onToggle, onDelete, onRestore }) {
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/Develop/pokesleep-iv-comparator/src/components/HistoryItem.tsx",
-                                lineNumber: 171,
+                                lineNumber: 172,
                                 columnNumber: 15
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -6070,7 +6205,7 @@ function HistoryItem({ item, isExpanded, onToggle, onDelete, onRestore }) {
                                         children: "サブスキル:"
                                     }, void 0, false, {
                                         fileName: "[project]/Develop/pokesleep-iv-comparator/src/components/HistoryItem.tsx",
-                                        lineNumber: 177,
+                                        lineNumber: 178,
                                         columnNumber: 15
                                     }, this),
                                     " ",
@@ -6081,7 +6216,7 @@ function HistoryItem({ item, isExpanded, onToggle, onDelete, onRestore }) {
                                                 children: "未選択"
                                             }, index, false, {
                                                 fileName: "[project]/Develop/pokesleep-iv-comparator/src/components/HistoryItem.tsx",
-                                                lineNumber: 181,
+                                                lineNumber: 182,
                                                 columnNumber: 21
                                             }, this);
                                         }
@@ -6091,20 +6226,20 @@ function HistoryItem({ item, isExpanded, onToggle, onDelete, onRestore }) {
                                             children: skill.name
                                         }, index, false, {
                                             fileName: "[project]/Develop/pokesleep-iv-comparator/src/components/HistoryItem.tsx",
-                                            lineNumber: 191,
+                                            lineNumber: 192,
                                             columnNumber: 19
                                         }, this);
                                     })
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/Develop/pokesleep-iv-comparator/src/components/HistoryItem.tsx",
-                                lineNumber: 176,
+                                lineNumber: 177,
                                 columnNumber: 13
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/Develop/pokesleep-iv-comparator/src/components/HistoryItem.tsx",
-                        lineNumber: 169,
+                        lineNumber: 170,
                         columnNumber: 11
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -6121,7 +6256,7 @@ function HistoryItem({ item, isExpanded, onToggle, onDelete, onRestore }) {
                                                 children: "お手伝い時間"
                                             }, void 0, false, {
                                                 fileName: "[project]/Develop/pokesleep-iv-comparator/src/components/HistoryItem.tsx",
-                                                lineNumber: 207,
+                                                lineNumber: 208,
                                                 columnNumber: 19
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("th", {
@@ -6129,7 +6264,7 @@ function HistoryItem({ item, isExpanded, onToggle, onDelete, onRestore }) {
                                                 children: "食材確率"
                                             }, void 0, false, {
                                                 fileName: "[project]/Develop/pokesleep-iv-comparator/src/components/HistoryItem.tsx",
-                                                lineNumber: 210,
+                                                lineNumber: 211,
                                                 columnNumber: 19
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("th", {
@@ -6137,7 +6272,7 @@ function HistoryItem({ item, isExpanded, onToggle, onDelete, onRestore }) {
                                                 children: "食材/日"
                                             }, void 0, false, {
                                                 fileName: "[project]/Develop/pokesleep-iv-comparator/src/components/HistoryItem.tsx",
-                                                lineNumber: 213,
+                                                lineNumber: 214,
                                                 columnNumber: 19
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("th", {
@@ -6145,7 +6280,7 @@ function HistoryItem({ item, isExpanded, onToggle, onDelete, onRestore }) {
                                                 children: "スキル確率"
                                             }, void 0, false, {
                                                 fileName: "[project]/Develop/pokesleep-iv-comparator/src/components/HistoryItem.tsx",
-                                                lineNumber: 216,
+                                                lineNumber: 217,
                                                 columnNumber: 19
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("th", {
@@ -6153,7 +6288,7 @@ function HistoryItem({ item, isExpanded, onToggle, onDelete, onRestore }) {
                                                 children: "スキル/日"
                                             }, void 0, false, {
                                                 fileName: "[project]/Develop/pokesleep-iv-comparator/src/components/HistoryItem.tsx",
-                                                lineNumber: 219,
+                                                lineNumber: 220,
                                                 columnNumber: 19
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("th", {
@@ -6161,7 +6296,7 @@ function HistoryItem({ item, isExpanded, onToggle, onDelete, onRestore }) {
                                                 children: "きのみ/日"
                                             }, void 0, false, {
                                                 fileName: "[project]/Develop/pokesleep-iv-comparator/src/components/HistoryItem.tsx",
-                                                lineNumber: 222,
+                                                lineNumber: 223,
                                                 columnNumber: 19
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("th", {
@@ -6169,18 +6304,18 @@ function HistoryItem({ item, isExpanded, onToggle, onDelete, onRestore }) {
                                                 children: "きのみE/日"
                                             }, void 0, false, {
                                                 fileName: "[project]/Develop/pokesleep-iv-comparator/src/components/HistoryItem.tsx",
-                                                lineNumber: 225,
+                                                lineNumber: 226,
                                                 columnNumber: 19
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/Develop/pokesleep-iv-comparator/src/components/HistoryItem.tsx",
-                                        lineNumber: 206,
+                                        lineNumber: 207,
                                         columnNumber: 17
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/Develop/pokesleep-iv-comparator/src/components/HistoryItem.tsx",
-                                    lineNumber: 205,
+                                    lineNumber: 206,
                                     columnNumber: 15
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("tbody", {
@@ -6194,7 +6329,7 @@ function HistoryItem({ item, isExpanded, onToggle, onDelete, onRestore }) {
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/Develop/pokesleep-iv-comparator/src/components/HistoryItem.tsx",
-                                                lineNumber: 232,
+                                                lineNumber: 233,
                                                 columnNumber: 19
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("td", {
@@ -6205,7 +6340,7 @@ function HistoryItem({ item, isExpanded, onToggle, onDelete, onRestore }) {
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/Develop/pokesleep-iv-comparator/src/components/HistoryItem.tsx",
-                                                lineNumber: 236,
+                                                lineNumber: 237,
                                                 columnNumber: 19
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("td", {
@@ -6216,7 +6351,7 @@ function HistoryItem({ item, isExpanded, onToggle, onDelete, onRestore }) {
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/Develop/pokesleep-iv-comparator/src/components/HistoryItem.tsx",
-                                                lineNumber: 242,
+                                                lineNumber: 243,
                                                 columnNumber: 19
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("td", {
@@ -6227,7 +6362,7 @@ function HistoryItem({ item, isExpanded, onToggle, onDelete, onRestore }) {
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/Develop/pokesleep-iv-comparator/src/components/HistoryItem.tsx",
-                                                lineNumber: 245,
+                                                lineNumber: 246,
                                                 columnNumber: 19
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("td", {
@@ -6238,7 +6373,7 @@ function HistoryItem({ item, isExpanded, onToggle, onDelete, onRestore }) {
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/Develop/pokesleep-iv-comparator/src/components/HistoryItem.tsx",
-                                                lineNumber: 251,
+                                                lineNumber: 252,
                                                 columnNumber: 19
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("td", {
@@ -6249,7 +6384,7 @@ function HistoryItem({ item, isExpanded, onToggle, onDelete, onRestore }) {
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/Develop/pokesleep-iv-comparator/src/components/HistoryItem.tsx",
-                                                lineNumber: 254,
+                                                lineNumber: 255,
                                                 columnNumber: 19
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("td", {
@@ -6257,41 +6392,41 @@ function HistoryItem({ item, isExpanded, onToggle, onDelete, onRestore }) {
                                                 children: item.calculationResult.berryEnergyPerDay.toLocaleString()
                                             }, void 0, false, {
                                                 fileName: "[project]/Develop/pokesleep-iv-comparator/src/components/HistoryItem.tsx",
-                                                lineNumber: 257,
+                                                lineNumber: 258,
                                                 columnNumber: 19
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/Develop/pokesleep-iv-comparator/src/components/HistoryItem.tsx",
-                                        lineNumber: 231,
+                                        lineNumber: 232,
                                         columnNumber: 17
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/Develop/pokesleep-iv-comparator/src/components/HistoryItem.tsx",
-                                    lineNumber: 230,
+                                    lineNumber: 231,
                                     columnNumber: 15
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/Develop/pokesleep-iv-comparator/src/components/HistoryItem.tsx",
-                            lineNumber: 204,
+                            lineNumber: 205,
                             columnNumber: 13
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/Develop/pokesleep-iv-comparator/src/components/HistoryItem.tsx",
-                        lineNumber: 203,
+                        lineNumber: 204,
                         columnNumber: 11
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/Develop/pokesleep-iv-comparator/src/components/HistoryItem.tsx",
-                lineNumber: 167,
+                lineNumber: 168,
                 columnNumber: 9
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/Develop/pokesleep-iv-comparator/src/components/HistoryItem.tsx",
-        lineNumber: 71,
+        lineNumber: 72,
         columnNumber: 5
     }, this);
 }
@@ -6826,6 +6961,8 @@ __turbopack_context__.s([
     "historyStorage",
     ()=>historyStorage
 ]);
+var __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$src$2f$data$2f$pokemonData$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Develop/pokesleep-iv-comparator/src/data/pokemonData.ts [app-client] (ecmascript)");
+;
 const STORAGE_KEY = "pokesleep-calculation-history";
 const MAX_HISTORY_COUNT = 50;
 const historyStorage = {
@@ -6838,7 +6975,19 @@ const historyStorage = {
             const parsed = JSON.parse(data);
             if (!Array.isArray(parsed)) return [];
             // バリデーションと日付順ソート
-            const validated = parsed.filter(isValidHistoryItem);
+            const validated = parsed.filter(isValidHistoryItem).map((item)=>{
+                // pokemonNumberがない場合は、pokemonInternalNameから復元
+                if (item.pokemonNumber === undefined) {
+                    const pokemon = __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$src$2f$data$2f$pokemonData$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["pokemonData"].find((p)=>p.name === item.pokemonInternalName);
+                    if (pokemon) {
+                        return {
+                            ...item,
+                            pokemonNumber: pokemon.number
+                        };
+                    }
+                }
+                return item;
+            });
             return validated.sort((a, b)=>b.timestamp - a.timestamp);
         } catch (error) {
             console.error("履歴の読み込みに失敗しました:", error);
@@ -7106,6 +7255,7 @@ function Search() {
         // 表示用スナップショットを更新
         const snapshot = {
             pokemonName: selectedPokemon.displayName,
+            pokemonNumber: selectedPokemon.number,
             pokemonType: selectedPokemon.type,
             nature: nature ? `${nature.name}${nature.up ? ` (▲${nature.up} ▼${nature.down})` : " (補正なし)"}` : undefined,
             subSkills: selectedSubSkills
@@ -7116,6 +7266,7 @@ function Search() {
             addHistory({
                 pokemonName: selectedPokemon.displayName,
                 pokemonInternalName: selectedPokemon.name,
+                pokemonNumber: selectedPokemon.number,
                 pokemonType: selectedPokemon.type,
                 natureName: nature?.name,
                 natureDisplay: snapshot.nature,
@@ -7176,12 +7327,12 @@ function Search() {
                                         children: "ポケモン"
                                     }, void 0, false, {
                                         fileName: "[project]/Develop/pokesleep-iv-comparator/src/components/Search.tsx",
-                                        lineNumber: 160,
+                                        lineNumber: 163,
                                         columnNumber: 15
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/Develop/pokesleep-iv-comparator/src/components/Search.tsx",
-                                    lineNumber: 159,
+                                    lineNumber: 162,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$src$2f$components$2f$PokeNameCombobox$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Combobox"], {
@@ -7189,7 +7340,7 @@ function Search() {
                                     onChange: setPokemon
                                 }, void 0, false, {
                                     fileName: "[project]/Develop/pokesleep-iv-comparator/src/components/Search.tsx",
-                                    lineNumber: 162,
+                                    lineNumber: 165,
                                     columnNumber: 13
                                 }, this),
                                 selectedPokemon && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -7200,7 +7351,7 @@ function Search() {
                                             children: selectedPokemon.type
                                         }, void 0, false, {
                                             fileName: "[project]/Develop/pokesleep-iv-comparator/src/components/Search.tsx",
-                                            lineNumber: 170,
+                                            lineNumber: 173,
                                             columnNumber: 19
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -7208,7 +7359,7 @@ function Search() {
                                             children: kinomiName || ""
                                         }, void 0, false, {
                                             fileName: "[project]/Develop/pokesleep-iv-comparator/src/components/Search.tsx",
-                                            lineNumber: 178,
+                                            lineNumber: 181,
                                             columnNumber: 17
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -7216,19 +7367,19 @@ function Search() {
                                             children: selectedPokemon.mainSkill
                                         }, void 0, false, {
                                             fileName: "[project]/Develop/pokesleep-iv-comparator/src/components/Search.tsx",
-                                            lineNumber: 181,
+                                            lineNumber: 184,
                                             columnNumber: 17
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/Develop/pokesleep-iv-comparator/src/components/Search.tsx",
-                                    lineNumber: 168,
+                                    lineNumber: 171,
                                     columnNumber: 15
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/Develop/pokesleep-iv-comparator/src/components/Search.tsx",
-                            lineNumber: 158,
+                            lineNumber: 161,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -7238,12 +7389,12 @@ function Search() {
                                 onChange: setSelectedSubSkills
                             }, void 0, false, {
                                 fileName: "[project]/Develop/pokesleep-iv-comparator/src/components/Search.tsx",
-                                lineNumber: 188,
+                                lineNumber: 191,
                                 columnNumber: 13
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/Develop/pokesleep-iv-comparator/src/components/Search.tsx",
-                            lineNumber: 187,
+                            lineNumber: 190,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -7253,12 +7404,12 @@ function Search() {
                                 onChange: setNature
                             }, void 0, false, {
                                 fileName: "[project]/Develop/pokesleep-iv-comparator/src/components/Search.tsx",
-                                lineNumber: 194,
+                                lineNumber: 197,
                                 columnNumber: 13
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/Develop/pokesleep-iv-comparator/src/components/Search.tsx",
-                            lineNumber: 193,
+                            lineNumber: 196,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -7266,13 +7417,13 @@ function Search() {
                             children: "※同レベルでの比較を行うため、Lv.60固定で計算します。"
                         }, void 0, false, {
                             fileName: "[project]/Develop/pokesleep-iv-comparator/src/components/Search.tsx",
-                            lineNumber: 199,
+                            lineNumber: 202,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/Develop/pokesleep-iv-comparator/src/components/Search.tsx",
-                    lineNumber: 156,
+                    lineNumber: 159,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -7283,30 +7434,31 @@ function Search() {
                         children: "決定"
                     }, void 0, false, {
                         fileName: "[project]/Develop/pokesleep-iv-comparator/src/components/Search.tsx",
-                        lineNumber: 204,
+                        lineNumber: 207,
                         columnNumber: 11
                     }, this)
                 }, void 0, false, {
                     fileName: "[project]/Develop/pokesleep-iv-comparator/src/components/Search.tsx",
-                    lineNumber: 203,
+                    lineNumber: 206,
                     columnNumber: 9
                 }, this),
                 calculationResult && displaySnapshot && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                     className: "mb-4",
                     children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$src$2f$components$2f$CalculatedPokemonInfo$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
                         pokemonName: displaySnapshot.pokemonName,
+                        pokemonNumber: displaySnapshot.pokemonNumber,
                         pokemonType: displaySnapshot.pokemonType,
                         nature: displaySnapshot.nature,
                         subSkills: displaySnapshot.subSkills,
                         calculationResult: calculationResult
                     }, void 0, false, {
                         fileName: "[project]/Develop/pokesleep-iv-comparator/src/components/Search.tsx",
-                        lineNumber: 214,
+                        lineNumber: 217,
                         columnNumber: 13
                     }, this)
                 }, void 0, false, {
                     fileName: "[project]/Develop/pokesleep-iv-comparator/src/components/Search.tsx",
-                    lineNumber: 213,
+                    lineNumber: 216,
                     columnNumber: 11
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -7320,79 +7472,23 @@ function Search() {
                             onRestore: handleRestoreFromHistory
                         }, void 0, false, {
                             fileName: "[project]/Develop/pokesleep-iv-comparator/src/components/Search.tsx",
-                            lineNumber: 228,
+                            lineNumber: 232,
                             columnNumber: 15
                         }, void 0)
                     }, void 0, false, {
                         fileName: "[project]/Develop/pokesleep-iv-comparator/src/components/Search.tsx",
-                        lineNumber: 226,
+                        lineNumber: 230,
                         columnNumber: 11
                     }, this)
                 }, void 0, false, {
                     fileName: "[project]/Develop/pokesleep-iv-comparator/src/components/Search.tsx",
-                    lineNumber: 225,
-                    columnNumber: 9
-                }, this),
-                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                    className: "text-center",
-                    children: [
-                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                            children: [
-                                "ポケモン: ",
-                                pokemon
-                            ]
-                        }, void 0, true, {
-                            fileName: "[project]/Develop/pokesleep-iv-comparator/src/components/Search.tsx",
-                            lineNumber: 239,
-                            columnNumber: 11
-                        }, this),
-                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                            children: [
-                                "性格:",
-                                " ",
-                                nature ? `${nature.name}${nature.up ? ` (▲${nature.up} ▼${nature.down})` : " (補正なし)"}` : "未選択"
-                            ]
-                        }, void 0, true, {
-                            fileName: "[project]/Develop/pokesleep-iv-comparator/src/components/Search.tsx",
-                            lineNumber: 240,
-                            columnNumber: 11
-                        }, this),
-                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                            children: "選択したサブスキル:"
-                        }, void 0, false, {
-                            fileName: "[project]/Develop/pokesleep-iv-comparator/src/components/Search.tsx",
-                            lineNumber: 250,
-                            columnNumber: 11
-                        }, this),
-                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
-                            className: "list-none",
-                            children: selectedSubSkills.map((skill)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
-                                    children: [
-                                        "Lv.",
-                                        skill.level,
-                                        " - ",
-                                        skill.name
-                                    ]
-                                }, skill.id, true, {
-                                    fileName: "[project]/Develop/pokesleep-iv-comparator/src/components/Search.tsx",
-                                    lineNumber: 253,
-                                    columnNumber: 15
-                                }, this))
-                        }, void 0, false, {
-                            fileName: "[project]/Develop/pokesleep-iv-comparator/src/components/Search.tsx",
-                            lineNumber: 251,
-                            columnNumber: 11
-                        }, this)
-                    ]
-                }, void 0, true, {
-                    fileName: "[project]/Develop/pokesleep-iv-comparator/src/components/Search.tsx",
-                    lineNumber: 238,
+                    lineNumber: 229,
                     columnNumber: 9
                 }, this)
             ]
         }, void 0, true, {
             fileName: "[project]/Develop/pokesleep-iv-comparator/src/components/Search.tsx",
-            lineNumber: 155,
+            lineNumber: 158,
             columnNumber: 7
         }, this)
     }, void 0, false);
@@ -7470,4 +7566,4 @@ if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelper
 }),
 ]);
 
-//# sourceMappingURL=Develop_pokesleep-iv-comparator_83486998._.js.map
+//# sourceMappingURL=Develop_pokesleep-iv-comparator_b4e2c394._.js.map

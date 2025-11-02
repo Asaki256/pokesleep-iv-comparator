@@ -1,4 +1,5 @@
 import { CalculationHistoryItem } from "@/types/calculationHistory";
+import { pokemonData } from "@/data/pokemonData";
 
 const STORAGE_KEY = "pokesleep-calculation-history";
 const MAX_HISTORY_COUNT = 50;
@@ -19,7 +20,18 @@ export const historyStorage = {
       if (!Array.isArray(parsed)) return [];
 
       // バリデーションと日付順ソート
-      const validated = parsed.filter(isValidHistoryItem);
+      const validated = parsed.filter(isValidHistoryItem).map((item) => {
+        // pokemonNumberがない場合は、pokemonInternalNameから復元
+        if (item.pokemonNumber === undefined) {
+          const pokemon = pokemonData.find(
+            (p) => p.name === item.pokemonInternalName
+          );
+          if (pokemon) {
+            return { ...item, pokemonNumber: pokemon.number };
+          }
+        }
+        return item;
+      });
       return validated.sort((a, b) => b.timestamp - a.timestamp);
     } catch (error) {
       console.error("履歴の読み込みに失敗しました:", error);
