@@ -5132,7 +5132,7 @@ const getTokuiStyle = (type)=>{
             return "bg-gray-400 text-white";
     }
 };
-const CalculatedPokemonInfo = ({ pokemonName, pokemonType, nature, subSkills, calculationResult })=>{
+const CalculatedPokemonInfo = ({ pokemonName, pokemonNumber, pokemonType, nature, subSkills, calculationResult })=>{
     // サブスキルを最大3つまで表示用に整形
     const displaySubSkills = [
         ...subSkills.slice(0, 3)
@@ -5156,7 +5156,7 @@ const CalculatedPokemonInfo = ({ pokemonName, pokemonType, nature, subSkills, ca
                                 children: "🎮"
                             }, void 0, false, {
                                 fileName: "[project]/Develop/pokesleep-iv-comparator/src/components/CalculatedPokemonInfo.tsx",
-                                lineNumber: 80,
+                                lineNumber: 83,
                                 columnNumber: 11
                             }, ("TURBOPACK compile-time value", void 0)),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h4", {
@@ -5164,7 +5164,7 @@ const CalculatedPokemonInfo = ({ pokemonName, pokemonType, nature, subSkills, ca
                                 children: pokemonName
                             }, void 0, false, {
                                 fileName: "[project]/Develop/pokesleep-iv-comparator/src/components/CalculatedPokemonInfo.tsx",
-                                lineNumber: 81,
+                                lineNumber: 84,
                                 columnNumber: 11
                             }, ("TURBOPACK compile-time value", void 0)),
                             pokemonType && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -5172,14 +5172,14 @@ const CalculatedPokemonInfo = ({ pokemonName, pokemonType, nature, subSkills, ca
                                 children: pokemonType
                             }, void 0, false, {
                                 fileName: "[project]/Develop/pokesleep-iv-comparator/src/components/CalculatedPokemonInfo.tsx",
-                                lineNumber: 85,
+                                lineNumber: 88,
                                 columnNumber: 13
                             }, ("TURBOPACK compile-time value", void 0)),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                 className: "flex-1"
                             }, void 0, false, {
                                 fileName: "[project]/Develop/pokesleep-iv-comparator/src/components/CalculatedPokemonInfo.tsx",
-                                lineNumber: 93,
+                                lineNumber: 96,
                                 columnNumber: 11
                             }, ("TURBOPACK compile-time value", void 0)),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -5187,13 +5187,13 @@ const CalculatedPokemonInfo = ({ pokemonName, pokemonType, nature, subSkills, ca
                                 children: formatDate(currentDate)
                             }, void 0, false, {
                                 fileName: "[project]/Develop/pokesleep-iv-comparator/src/components/CalculatedPokemonInfo.tsx",
-                                lineNumber: 94,
+                                lineNumber: 97,
                                 columnNumber: 11
                             }, ("TURBOPACK compile-time value", void 0))
                         ]
                     }, void 0, true, {
                         fileName: "[project]/Develop/pokesleep-iv-comparator/src/components/CalculatedPokemonInfo.tsx",
-                        lineNumber: 79,
+                        lineNumber: 82,
                         columnNumber: 9
                     }, ("TURBOPACK compile-time value", void 0)),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -5207,7 +5207,7 @@ const CalculatedPokemonInfo = ({ pokemonName, pokemonType, nature, subSkills, ca
                                         children: "性格:"
                                     }, void 0, false, {
                                         fileName: "[project]/Develop/pokesleep-iv-comparator/src/components/CalculatedPokemonInfo.tsx",
-                                        lineNumber: 103,
+                                        lineNumber: 106,
                                         columnNumber: 15
                                     }, ("TURBOPACK compile-time value", void 0)),
                                     " ",
@@ -5215,7 +5215,7 @@ const CalculatedPokemonInfo = ({ pokemonName, pokemonType, nature, subSkills, ca
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/Develop/pokesleep-iv-comparator/src/components/CalculatedPokemonInfo.tsx",
-                                lineNumber: 102,
+                                lineNumber: 105,
                                 columnNumber: 13
                             }, ("TURBOPACK compile-time value", void 0)),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -5226,7 +5226,7 @@ const CalculatedPokemonInfo = ({ pokemonName, pokemonType, nature, subSkills, ca
                                         children: "サブスキル:"
                                     }, void 0, false, {
                                         fileName: "[project]/Develop/pokesleep-iv-comparator/src/components/CalculatedPokemonInfo.tsx",
-                                        lineNumber: 108,
+                                        lineNumber: 111,
                                         columnNumber: 13
                                     }, ("TURBOPACK compile-time value", void 0)),
                                     " ",
@@ -5237,7 +5237,7 @@ const CalculatedPokemonInfo = ({ pokemonName, pokemonType, nature, subSkills, ca
                                                 children: "未選択"
                                             }, index, false, {
                                                 fileName: "[project]/Develop/pokesleep-iv-comparator/src/components/CalculatedPokemonInfo.tsx",
-                                                lineNumber: 114,
+                                                lineNumber: 117,
                                                 columnNumber: 19
                                             }, ("TURBOPACK compile-time value", void 0));
                                         }
@@ -5247,26 +5247,26 @@ const CalculatedPokemonInfo = ({ pokemonName, pokemonType, nature, subSkills, ca
                                             children: skill.name
                                         }, index, false, {
                                             fileName: "[project]/Develop/pokesleep-iv-comparator/src/components/CalculatedPokemonInfo.tsx",
-                                            lineNumber: 124,
+                                            lineNumber: 127,
                                             columnNumber: 17
                                         }, ("TURBOPACK compile-time value", void 0));
                                     })
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/Develop/pokesleep-iv-comparator/src/components/CalculatedPokemonInfo.tsx",
-                                lineNumber: 107,
+                                lineNumber: 110,
                                 columnNumber: 11
                             }, ("TURBOPACK compile-time value", void 0))
                         ]
                     }, void 0, true, {
                         fileName: "[project]/Develop/pokesleep-iv-comparator/src/components/CalculatedPokemonInfo.tsx",
-                        lineNumber: 100,
+                        lineNumber: 103,
                         columnNumber: 9
                     }, ("TURBOPACK compile-time value", void 0))
                 ]
             }, void 0, true, {
                 fileName: "[project]/Develop/pokesleep-iv-comparator/src/components/CalculatedPokemonInfo.tsx",
-                lineNumber: 77,
+                lineNumber: 80,
                 columnNumber: 7
             }, ("TURBOPACK compile-time value", void 0)),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -5285,7 +5285,7 @@ const CalculatedPokemonInfo = ({ pokemonName, pokemonType, nature, subSkills, ca
                                             children: "お手伝い時間"
                                         }, void 0, false, {
                                             fileName: "[project]/Develop/pokesleep-iv-comparator/src/components/CalculatedPokemonInfo.tsx",
-                                            lineNumber: 142,
+                                            lineNumber: 145,
                                             columnNumber: 17
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("th", {
@@ -5293,7 +5293,7 @@ const CalculatedPokemonInfo = ({ pokemonName, pokemonType, nature, subSkills, ca
                                             children: "食材確率"
                                         }, void 0, false, {
                                             fileName: "[project]/Develop/pokesleep-iv-comparator/src/components/CalculatedPokemonInfo.tsx",
-                                            lineNumber: 145,
+                                            lineNumber: 148,
                                             columnNumber: 17
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("th", {
@@ -5301,7 +5301,7 @@ const CalculatedPokemonInfo = ({ pokemonName, pokemonType, nature, subSkills, ca
                                             children: "食材/日"
                                         }, void 0, false, {
                                             fileName: "[project]/Develop/pokesleep-iv-comparator/src/components/CalculatedPokemonInfo.tsx",
-                                            lineNumber: 148,
+                                            lineNumber: 151,
                                             columnNumber: 17
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("th", {
@@ -5309,7 +5309,7 @@ const CalculatedPokemonInfo = ({ pokemonName, pokemonType, nature, subSkills, ca
                                             children: "スキル確率"
                                         }, void 0, false, {
                                             fileName: "[project]/Develop/pokesleep-iv-comparator/src/components/CalculatedPokemonInfo.tsx",
-                                            lineNumber: 151,
+                                            lineNumber: 154,
                                             columnNumber: 17
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("th", {
@@ -5317,7 +5317,7 @@ const CalculatedPokemonInfo = ({ pokemonName, pokemonType, nature, subSkills, ca
                                             children: "スキル/日"
                                         }, void 0, false, {
                                             fileName: "[project]/Develop/pokesleep-iv-comparator/src/components/CalculatedPokemonInfo.tsx",
-                                            lineNumber: 154,
+                                            lineNumber: 157,
                                             columnNumber: 17
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("th", {
@@ -5325,7 +5325,7 @@ const CalculatedPokemonInfo = ({ pokemonName, pokemonType, nature, subSkills, ca
                                             children: "きのみ/日"
                                         }, void 0, false, {
                                             fileName: "[project]/Develop/pokesleep-iv-comparator/src/components/CalculatedPokemonInfo.tsx",
-                                            lineNumber: 157,
+                                            lineNumber: 160,
                                             columnNumber: 17
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("th", {
@@ -5333,18 +5333,18 @@ const CalculatedPokemonInfo = ({ pokemonName, pokemonType, nature, subSkills, ca
                                             children: "きのみE/日"
                                         }, void 0, false, {
                                             fileName: "[project]/Develop/pokesleep-iv-comparator/src/components/CalculatedPokemonInfo.tsx",
-                                            lineNumber: 160,
+                                            lineNumber: 163,
                                             columnNumber: 17
                                         }, ("TURBOPACK compile-time value", void 0))
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/Develop/pokesleep-iv-comparator/src/components/CalculatedPokemonInfo.tsx",
-                                    lineNumber: 141,
+                                    lineNumber: 144,
                                     columnNumber: 15
                                 }, ("TURBOPACK compile-time value", void 0))
                             }, void 0, false, {
                                 fileName: "[project]/Develop/pokesleep-iv-comparator/src/components/CalculatedPokemonInfo.tsx",
-                                lineNumber: 140,
+                                lineNumber: 143,
                                 columnNumber: 13
                             }, ("TURBOPACK compile-time value", void 0)),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("tbody", {
@@ -5358,7 +5358,7 @@ const CalculatedPokemonInfo = ({ pokemonName, pokemonType, nature, subSkills, ca
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/Develop/pokesleep-iv-comparator/src/components/CalculatedPokemonInfo.tsx",
-                                            lineNumber: 167,
+                                            lineNumber: 170,
                                             columnNumber: 17
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("td", {
@@ -5369,7 +5369,7 @@ const CalculatedPokemonInfo = ({ pokemonName, pokemonType, nature, subSkills, ca
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/Develop/pokesleep-iv-comparator/src/components/CalculatedPokemonInfo.tsx",
-                                            lineNumber: 171,
+                                            lineNumber: 174,
                                             columnNumber: 17
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("td", {
@@ -5380,7 +5380,7 @@ const CalculatedPokemonInfo = ({ pokemonName, pokemonType, nature, subSkills, ca
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/Develop/pokesleep-iv-comparator/src/components/CalculatedPokemonInfo.tsx",
-                                            lineNumber: 178,
+                                            lineNumber: 181,
                                             columnNumber: 17
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("td", {
@@ -5391,7 +5391,7 @@ const CalculatedPokemonInfo = ({ pokemonName, pokemonType, nature, subSkills, ca
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/Develop/pokesleep-iv-comparator/src/components/CalculatedPokemonInfo.tsx",
-                                            lineNumber: 184,
+                                            lineNumber: 187,
                                             columnNumber: 17
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("td", {
@@ -5402,7 +5402,7 @@ const CalculatedPokemonInfo = ({ pokemonName, pokemonType, nature, subSkills, ca
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/Develop/pokesleep-iv-comparator/src/components/CalculatedPokemonInfo.tsx",
-                                            lineNumber: 191,
+                                            lineNumber: 194,
                                             columnNumber: 17
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("td", {
@@ -5413,7 +5413,7 @@ const CalculatedPokemonInfo = ({ pokemonName, pokemonType, nature, subSkills, ca
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/Develop/pokesleep-iv-comparator/src/components/CalculatedPokemonInfo.tsx",
-                                            lineNumber: 197,
+                                            lineNumber: 200,
                                             columnNumber: 17
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Develop$2f$pokesleep$2d$iv$2d$comparator$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("td", {
@@ -5421,40 +5421,40 @@ const CalculatedPokemonInfo = ({ pokemonName, pokemonType, nature, subSkills, ca
                                             children: calculationResult.berryEnergyPerDay.toLocaleString()
                                         }, void 0, false, {
                                             fileName: "[project]/Develop/pokesleep-iv-comparator/src/components/CalculatedPokemonInfo.tsx",
-                                            lineNumber: 203,
+                                            lineNumber: 206,
                                             columnNumber: 17
                                         }, ("TURBOPACK compile-time value", void 0))
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/Develop/pokesleep-iv-comparator/src/components/CalculatedPokemonInfo.tsx",
-                                    lineNumber: 166,
+                                    lineNumber: 169,
                                     columnNumber: 15
                                 }, ("TURBOPACK compile-time value", void 0))
                             }, void 0, false, {
                                 fileName: "[project]/Develop/pokesleep-iv-comparator/src/components/CalculatedPokemonInfo.tsx",
-                                lineNumber: 165,
+                                lineNumber: 168,
                                 columnNumber: 13
                             }, ("TURBOPACK compile-time value", void 0))
                         ]
                     }, void 0, true, {
                         fileName: "[project]/Develop/pokesleep-iv-comparator/src/components/CalculatedPokemonInfo.tsx",
-                        lineNumber: 139,
+                        lineNumber: 142,
                         columnNumber: 11
                     }, ("TURBOPACK compile-time value", void 0))
                 }, void 0, false, {
                     fileName: "[project]/Develop/pokesleep-iv-comparator/src/components/CalculatedPokemonInfo.tsx",
-                    lineNumber: 138,
+                    lineNumber: 141,
                     columnNumber: 9
                 }, ("TURBOPACK compile-time value", void 0))
             }, void 0, false, {
                 fileName: "[project]/Develop/pokesleep-iv-comparator/src/components/CalculatedPokemonInfo.tsx",
-                lineNumber: 137,
+                lineNumber: 140,
                 columnNumber: 7
             }, ("TURBOPACK compile-time value", void 0))
         ]
     }, void 0, true, {
         fileName: "[project]/Develop/pokesleep-iv-comparator/src/components/CalculatedPokemonInfo.tsx",
-        lineNumber: 75,
+        lineNumber: 78,
         columnNumber: 5
     }, ("TURBOPACK compile-time value", void 0));
 };

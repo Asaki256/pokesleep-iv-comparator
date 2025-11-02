@@ -5,6 +5,7 @@ import { CalculationHistoryItem } from "@/types/calculationHistory";
 import { Button } from "@/components/ui/button";
 import { getRarityStyles } from "@/utils/subSkillUtils";
 import { ChevronDown, ChevronUp, Trash2, CornerUpLeft } from "lucide-react";
+import PokemonImage from "@/components/PokemonImage";
 
 interface HistoryItemProps {
   item: CalculationHistoryItem;
@@ -76,7 +77,7 @@ export default function HistoryItem({
       >
         <div className="flex items-center gap-3">
           {/* ポケモン情報 */}
-          <div className="text-xl">🎮</div>
+          <PokemonImage pokemonNumber={item.pokemonNumber} size={48} />
           <div className="flex-1 min-w-0">
             <div className="flex items-center gap-2 mb-1 flex-wrap">
               <h4 className="font-bold text-sm">{item.pokemonName}</h4>
