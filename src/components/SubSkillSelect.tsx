@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { SubSkill } from "@/types/subSkill";
 import {
   SelectedSubSkill,
@@ -16,19 +16,28 @@ import {
 import { Plus } from "lucide-react";
 
 interface SubSkillSelectProps {
+  value?: SelectedSubSkill[];
   onChange?: (skills: SelectedSubSkill[]) => void;
 }
 
 const SubSkillSelect = ({
+  value,
   onChange,
 }: SubSkillSelectProps = {}) => {
   const [selectedSkills, setSelectedSkills] = useState<
     SelectedSubSkill[]
-  >([]);
+  >(value || []);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [editingSkillId, setEditingSkillId] = useState<
     string | null
   >(null);
+
+  // 外部からのvalue変更を反映
+  useEffect(() => {
+    if (value !== undefined) {
+      setSelectedSkills(value);
+    }
+  }, [value]);
 
   // スキル追加モードでモーダルを開く
   const openAddMode = () => {
