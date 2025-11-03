@@ -12,6 +12,13 @@ dist
 dist-ssr
 *.local
 
+# Next.js
+.next
+out
+
+# TypeScript
+tsconfig.tsbuildinfo
+
 # Testing
 coverage
 

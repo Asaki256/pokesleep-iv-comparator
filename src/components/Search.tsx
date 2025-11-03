@@ -155,10 +155,10 @@ function Search() {
 
   return (
     <>
-      <div className="m-4 max-w-md mx-auto">
+      <div className="px-4 py-4 max-w-md md:max-w-4xl lg:max-w-5xl mx-auto">
         <div>
           {/* ポケモン選択 */}
-          <div className="w-full max-w-md mx-auto">
+          <div className="w-full mx-auto">
             <div className="flex items-center justify-between mb-2">
               <h2 className="text-base">ポケモン</h2>
             </div>
