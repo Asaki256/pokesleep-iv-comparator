@@ -76,6 +76,13 @@ export default function IVAnalysisComponent({
   );
   const berryScore = getBerryScore(berryRanking, myBerryRank);
 
+  // ポケモンのタイプに応じて強調すべき項目を判定
+  const shouldEmphasize = (rowType: RankingType): boolean => {
+    if (pokemon.type === "スキル" && rowType === "skill") return true;
+    if (pokemon.type === "食材" && rowType === "ingredient") return true;
+    return false;
+  };
+
   // テーブル行のデータ
   const tableRows = [
     {
@@ -125,28 +132,37 @@ export default function IVAnalysisComponent({
             </tr>
           </thead>
           <tbody>
-            {tableRows.map((row) => (
-              <tr
-                key={row.type}
-                onClick={() => onRankingTypeChange(row.type)}
-                className="border-b border-blue-200 hover:bg-blue-100 cursor-pointer transition-colors"
-              >
-                <td className="py-2 px-2 md:px-3 font-medium text-gray-800">
-                  {row.label}
-                </td>
-                <td className="py-2 px-2 md:px-3 text-right font-semibold text-gray-900">
-                  {row.score}
-                </td>
-                <td className="py-2 px-2 md:px-3 text-center">
-                  <span className="inline-block px-2 py-1 bg-yellow-100 text-yellow-800 rounded-md font-bold text-xs md:text-sm">
-                    {row.rank}
-                  </span>
-                </td>
-                <td className="py-2 px-2 md:px-3 text-center text-gray-700">
-                  {row.percent}
-                </td>
-              </tr>
-            ))}
+            {tableRows.map((row) => {
+              const isEmphasized = shouldEmphasize(row.type);
+              return (
+                <tr
+                  key={row.type}
+                  onClick={() => onRankingTypeChange(row.type)}
+                  className="border-b border-blue-200 hover:bg-blue-100 cursor-pointer transition-colors"
+                >
+                  <td
+                    className={`py-2 px-2 md:px-3 ${isEmphasized ? "font-bold" : "font-medium"} text-gray-800`}
+                  >
+                    {row.label}
+                  </td>
+                  <td
+                    className={`py-2 px-2 md:px-3 text-right ${isEmphasized ? "font-bold" : "font-semibold"} text-gray-900`}
+                  >
+                    {row.score}
+                  </td>
+                  <td className="py-2 px-2 md:px-3 text-center">
+                    <span className="inline-block px-2 py-1 bg-yellow-100 text-yellow-800 rounded-md font-bold text-xs md:text-sm">
+                      {row.rank}
+                    </span>
+                  </td>
+                  <td
+                    className={`py-2 px-2 md:px-3 text-center ${isEmphasized ? "font-bold" : ""} text-gray-700`}
+                  >
+                    {row.percent}
+                  </td>
+                </tr>
+              );
+            })}
           </tbody>
         </table>
       </div>
