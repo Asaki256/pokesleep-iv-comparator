@@ -43,7 +43,7 @@ export function useVirtualScroll({
   const [scrollTop, setScrollTop] = useState(0);
   const containerRef = useRef<HTMLDivElement>(null);
 
-  // Calculate total height (using useMemo to avoid recalculation)
+  // Calculate total height
   const totalHeight = totalItems * itemHeight;
 
   // Calculate visible range
@@ -56,7 +56,7 @@ export function useVirtualScroll({
     Math.ceil((scrollTop + containerHeight) / itemHeight) + overscan
   );
 
-  // Generate array of visible item indices (useMemo to avoid recreation)
+  // Generate array of visible item indices
   const visibleItems = [];
   for (let i = startIndex; i <= endIndex; i++) {
     visibleItems.push(i);
