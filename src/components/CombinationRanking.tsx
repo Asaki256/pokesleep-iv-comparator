@@ -26,9 +26,30 @@ export default function CombinationRanking({
   currentNature,
   currentSubSkills,
 }: CombinationRankingProps) {
-  const [activeRankingType, setActiveRankingType] =
-    useState<RankingType>("ingredient");
+  // Determine initial ranking type based on Pokemon specialty
+  const getInitialRankingType = (pokemon: Pokemon): RankingType => {
+    switch (pokemon.type) {
+      case "スキル":
+        return "skill";
+      case "きのみ":
+        return "berry";
+      case "食材":
+        return "ingredient";
+      case "オール":
+      default:
+        return "ingredient";
+    }
+  };
+
+  const [activeRankingType, setActiveRankingType] = useState<RankingType>(
+    getInitialRankingType(pokemon)
+  );
   const [isGenerating, setIsGenerating] = useState(true);
+
+  // Update active ranking type when Pokemon changes
+  useEffect(() => {
+    setActiveRankingType(getInitialRankingType(pokemon));
+  }, [pokemon]);
 
   // Generate ranking data (memoized)
   const rankingData = useMemo(() => {
