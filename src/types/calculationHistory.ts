@@ -17,6 +17,9 @@ export interface CalculationHistoryItem {
   /** ポケモンの内部名（再表示用） */
   pokemonInternalName: string;
 
+  /** ポケモン図鑑番号 */
+  pokemonNumber: number;
+
   /** とくいタイプ（きのみ、食材、スキル、オール） */
   pokemonType?: string;
 

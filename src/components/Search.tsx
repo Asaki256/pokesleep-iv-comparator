@@ -28,6 +28,7 @@ function Search() {
   // 表示用のスナップショット（決定ボタン押下時のみ更新）
   const [displaySnapshot, setDisplaySnapshot] = useState<{
     pokemonName: string;
+    pokemonNumber: number;
     pokemonType?: string;
     nature?: string;
     subSkills: SelectedSubSkill[];
@@ -86,6 +87,7 @@ function Search() {
     // 表示用スナップショットを更新
     const snapshot = {
       pokemonName: selectedPokemon.displayName,
+      pokemonNumber: selectedPokemon.number,
       pokemonType: selectedPokemon.type,
       nature: nature
         ? `${nature.name}${
@@ -101,6 +103,7 @@ function Search() {
       addHistory({
         pokemonName: selectedPokemon.displayName,
         pokemonInternalName: selectedPokemon.name,
+        pokemonNumber: selectedPokemon.number,
         pokemonType: selectedPokemon.type,
         natureName: nature?.name,
         natureDisplay: snapshot.nature,
@@ -213,6 +216,7 @@ function Search() {
           <div className="mb-4">
             <CalculatedPokemonInfo
               pokemonName={displaySnapshot.pokemonName}
+              pokemonNumber={displaySnapshot.pokemonNumber}
               pokemonType={displaySnapshot.pokemonType}
               nature={displaySnapshot.nature}
               subSkills={displaySnapshot.subSkills}
@@ -234,27 +238,6 @@ function Search() {
               />
             }
           />
-        </div>
-        <div className="text-center">
-          <p>ポケモン: {pokemon}</p>
-          <p>
-            性格:{" "}
-            {nature
-              ? `${nature.name}${
-                  nature.up
-                    ? ` (▲${nature.up} ▼${nature.down})`
-                    : " (補正なし)"
-                }`
-              : "未選択"}
-          </p>
-          <p>選択したサブスキル:</p>
-          <ul className="list-none">
-            {selectedSubSkills.map((skill) => (
-              <li key={skill.id}>
-                Lv.{skill.level} - {skill.name}
-              </li>
-            ))}
-          </ul>
         </div>
       </div>
     </>
