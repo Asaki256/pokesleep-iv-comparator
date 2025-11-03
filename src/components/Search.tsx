@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Combobox } from "@/components/PokeNameCombobox";
 import SubSkillSelect from "./SubSkillSelect";
@@ -153,6 +153,25 @@ function Search() {
     // 画面をトップにスクロール
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
+
+  // 初回ロード時に最新の履歴を自動反映
+  useEffect(() => {
+    if (!isLoading && history.length > 0 && !calculationResult) {
+      const latestHistory = history[0];
+
+      // 計算結果を復元
+      setCalculationResult(latestHistory.calculationResult);
+
+      // 表示用スナップショットを復元
+      setDisplaySnapshot({
+        pokemonName: latestHistory.pokemonName,
+        pokemonNumber: latestHistory.pokemonNumber,
+        pokemonType: latestHistory.pokemonType,
+        nature: latestHistory.natureDisplay,
+        subSkills: latestHistory.subSkills,
+      });
+    }
+  }, [isLoading, history, calculationResult]);
 
   return (
     <>
