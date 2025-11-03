@@ -183,6 +183,33 @@ export default function CombinationRanking({
     { id: "berry" as const, label: "きのみ" },
   ];
 
+  // Handle ranking type change with automatic scroll to user's rank
+  const handleRankingTypeChange = (type: RankingType) => {
+    setActiveRankingType(type);
+
+    // Get the corresponding rank index for the new ranking type
+    let targetRankIndex: number | null = null;
+    switch (type) {
+      case "skill":
+        targetRankIndex = mySkillRank;
+        break;
+      case "ingredient":
+        targetRankIndex = myIngredientRank;
+        break;
+      case "berry":
+        targetRankIndex = myBerryRank;
+        break;
+    }
+
+    // Scroll to the user's rank after state update
+    if (targetRankIndex !== null) {
+      // Use setTimeout to ensure state update and re-render complete first
+      setTimeout(() => {
+        virtualScroll.scrollToIndex(targetRankIndex);
+      }, 0);
+    }
+  };
+
   if (isGenerating) {
     return (
       <div className="text-center py-12">
@@ -204,7 +231,7 @@ export default function CombinationRanking({
         mySkillRank={mySkillRank}
         myIngredientRank={myIngredientRank}
         myBerryRank={myBerryRank}
-        onRankingTypeChange={setActiveRankingType}
+        onRankingTypeChange={handleRankingTypeChange}
       />
 
       {/* Sub-tabs for ranking type */}
