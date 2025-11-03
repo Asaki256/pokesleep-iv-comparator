@@ -159,6 +159,33 @@ function Search() {
     if (!isLoading && history.length > 0 && !calculationResult) {
       const latestHistory = history[0];
 
+      // ポケモン選択を復元
+      setPokemon(latestHistory.pokemonInternalName);
+
+      // サブスキルを復元
+      setSelectedSubSkills(latestHistory.subSkills);
+
+      // 性格を復元
+      if (latestHistory.natureName) {
+        // natureName から SelectedNature を再構築
+        let foundNature: SelectedNature | null = null;
+        for (const group of NATURE_GROUPS) {
+          const nature = group.natures.find(
+            (n) => n.name === latestHistory.natureName
+          );
+          if (nature) {
+            foundNature = {
+              ...nature,
+              color: group.color,
+            };
+            break;
+          }
+        }
+        setNature(foundNature);
+      } else {
+        setNature(null);
+      }
+
       // 計算結果を復元
       setCalculationResult(latestHistory.calculationResult);
 

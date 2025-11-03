@@ -80,6 +80,8 @@ export default function IVAnalysisComponent({
   const shouldEmphasize = (rowType: RankingType): boolean => {
     if (pokemon.type === "スキル" && rowType === "skill") return true;
     if (pokemon.type === "食材" && rowType === "ingredient") return true;
+    if (pokemon.type === "きのみ" && rowType === "berry") return true;
+    if (pokemon.type === "オール") return true;
     return false;
   };
 
