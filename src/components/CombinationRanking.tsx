@@ -337,11 +337,6 @@ export default function CombinationRanking({
                         <span className="text-xs md:text-sm font-medium text-gray-800 truncate">
                           {entry.natureDisplay}
                         </span>
-                        {isMyRank && (
-                          <span className="text-xs px-1.5 md:px-2 py-0.5 bg-yellow-500 text-white rounded-full font-medium flex-shrink-0">
-                            現在
-                          </span>
-                        )}
                       </div>
                       <div className="flex flex-wrap gap-0.5 md:gap-1">
                         {entry.subSkills.length === 0 ? (
