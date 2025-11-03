@@ -99,14 +99,8 @@ const CalculatedPokemonInfo: React.FC<
           </span>
         </div>
 
-        {/* 2-3行目グループ: 性格とサブスキル */}
+        {/* 2-3行目グループ: サブスキルと性格 */}
         <div className="ml-8 md:ml-10 space-y-0.5">
-          {nature && (
-            <div className="text-[10px] md:text-xs text-gray-700">
-              <span className="font-semibold">性格:</span>{" "}
-              {nature}
-            </div>
-          )}
           <div className="text-[10px] md:text-xs text-gray-700">
             <span className="font-semibold">
               サブスキル:
@@ -133,6 +127,12 @@ const CalculatedPokemonInfo: React.FC<
               );
             })}
           </div>
+          {nature && (
+            <div className="text-[10px] md:text-xs text-gray-700">
+              <span className="font-semibold">性格:</span>{" "}
+              {nature}
+            </div>
+          )}
         </div>
       </div>
 

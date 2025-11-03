@@ -98,9 +98,6 @@ export default function HistoryItem({
             {/* コンパクト情報（折りたたみ時） */}
             {!isExpanded && (
               <div className="text-[10px] text-gray-600 space-y-0.5">
-                {item.natureDisplay && (
-                  <div className="truncate">性格: {item.natureDisplay}</div>
-                )}
                 <div className="flex items-center gap-1 flex-wrap">
                   <span>サブスキル:</span>
                   {displaySubSkills.map((skill, index) => {
@@ -125,6 +122,9 @@ export default function HistoryItem({
                     );
                   })}
                 </div>
+                {item.natureDisplay && (
+                  <div className="truncate">性格: {item.natureDisplay}</div>
+                )}
               </div>
             )}
           </div>
@@ -166,14 +166,8 @@ export default function HistoryItem({
       {/* 詳細情報（展開時） */}
       {isExpanded && (
         <div className="border-t border-gray-200 p-3 bg-gray-50">
-          {/* 性格とサブスキル */}
+          {/* サブスキルと性格 */}
           <div className="mb-3 space-y-1">
-            {item.natureDisplay && (
-              <div className="text-xs text-gray-700">
-                <span className="font-semibold">性格:</span>{" "}
-                {item.natureDisplay}
-              </div>
-            )}
             <div className="text-xs text-gray-700">
               <span className="font-semibold">サブスキル:</span>{" "}
               {displaySubSkills.map((skill, index) => {
@@ -198,6 +192,12 @@ export default function HistoryItem({
                 );
               })}
             </div>
+            {item.natureDisplay && (
+              <div className="text-xs text-gray-700">
+                <span className="font-semibold">性格:</span>{" "}
+                {item.natureDisplay}
+              </div>
+            )}
           </div>
 
           {/* 計算結果テーブル */}
