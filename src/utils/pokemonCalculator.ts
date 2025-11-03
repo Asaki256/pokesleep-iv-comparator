@@ -213,7 +213,7 @@ export const calculateFoodHelpsPerDay = (
   helpsPerDay: number,
   calculatedFoodDropRate: number
 ): number => {
-  return Math.floor(helpsPerDay * calculatedFoodDropRate);
+  return helpsPerDay * calculatedFoodDropRate;
 };
 
 /**
@@ -250,7 +250,7 @@ export const calculateSkillTriggersPerDay = (
   helpsPerDay: number,
   calculatedSkillRate: number
 ): number => {
-  return Math.floor(helpsPerDay * calculatedSkillRate);
+  return helpsPerDay * calculatedSkillRate;
 };
 
 /**
@@ -261,9 +261,7 @@ export const calculateBerryHelpsPerDay = (
   helpsPerDay: number,
   calculatedFoodDropRate: number
 ): number => {
-  return Math.floor(
-    helpsPerDay * (1 - calculatedFoodDropRate)
-  );
+  return helpsPerDay * (1 - calculatedFoodDropRate);
 };
 
 /**
