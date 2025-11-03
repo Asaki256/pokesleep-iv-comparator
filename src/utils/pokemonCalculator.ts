@@ -395,24 +395,36 @@ export const countSubSkills = (
 
   for (const subSkill of subSkills) {
     switch (subSkill.baseId) {
+      // おてつだいスピードM (variantベースとnameベースの両方をサポート)
+      case "supportSpeedM":
       case "helping_speed_m":
         counts.helpingSpeedM++;
         break;
+      // おてつだいスピードS (variantベースとnameベースの両方をサポート)
+      case "supportSpeedS":
       case "helping_speed_s":
         counts.helpingSpeedS++;
         break;
       case "helping_bonus":
         counts.helpingBonus++;
         break;
+      // 食材確率アップM (variantベースとnameベースの両方をサポート)
+      case "ingredientFinderM":
       case "ingredient_finder_m":
         counts.ingredientFinderM++;
         break;
+      // 食材確率アップS (variantベースとnameベースの両方をサポート)
+      case "ingredientFinderS":
       case "ingredient_finder_s":
         counts.ingredientFinderS++;
         break;
+      // スキル確率アップM (variantベースとnameベースの両方をサポート)
+      case "skillTriggerM":
       case "skill_trigger_m":
         counts.skillTriggerM++;
         break;
+      // スキル確率アップS (variantベースとnameベースの両方をサポート)
+      case "skillTriggerS":
       case "skill_trigger_s":
         counts.skillTriggerS++;
         break;
