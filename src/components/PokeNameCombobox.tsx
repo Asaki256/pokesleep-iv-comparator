@@ -19,6 +19,7 @@ import {
   PopoverTrigger,
 } from "@/components/ui/popover";
 import { pokemonData } from "@/data/pokemonData";
+import { kanaInsensitiveIncludes } from "@/utils/kanaConverter";
 
 const pokemonList = pokemonData.map((pokemon) => ({
   value: pokemon.name,
@@ -32,6 +33,15 @@ interface Props {
 
 export function Combobox({ value, onChange }: Props) {
   const [open, setOpen] = React.useState(false);
+
+  // カスタムフィルター関数: カタカナ・ひらがなを区別せずに検索
+  const filterFunction = React.useCallback(
+    (value: string, search: string) => {
+      if (search === "") return 1;
+      return kanaInsensitiveIncludes(value, search) ? 1 : 0;
+    },
+    []
+  );
 
   return (
     <Popover open={open} onOpenChange={setOpen}>
@@ -51,7 +61,7 @@ export function Combobox({ value, onChange }: Props) {
         </Button>
       </PopoverTrigger>
       <PopoverContent className="w-full p-0">
-        <Command>
+        <Command filter={filterFunction}>
           <CommandInput
             placeholder="ポケモン名を検索"
             className="h-9"
