@@ -258,8 +258,7 @@ export default function CombinationRanking({
                     <div className="flex-1 min-w-0">
                       <div className="flex items-center gap-1 md:gap-2 mb-1">
                         <span className="text-xs md:text-sm font-medium text-gray-800 truncate">
-                          <span className="hidden md:inline">{entry.natureDisplay}</span>
-                          <span className="md:hidden">{entry.natureName}</span>
+                          {entry.natureDisplay}
                         </span>
                         {isMyRank && (
                           <span className="text-xs px-1.5 md:px-2 py-0.5 bg-yellow-500 text-white rounded-full font-medium flex-shrink-0">
