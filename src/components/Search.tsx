@@ -35,13 +35,30 @@ function Search() {
     subSkills: SelectedSubSkill[];
   } | null>(null);
 
+  // 初期表示用のランキング表示データ（履歴から復元、入力欄には反映しない）
+  const [initialDisplayData, setInitialDisplayData] = useState<{
+    pokemonInternalName: string;
+    natureName?: string;
+    subSkills: SelectedSubSkill[];
+  } | null>(null);
+
   const { history, addHistory, deleteHistory, clearHistory, getHistoryById, isLoading } =
     useCalculationHistory();
 
-  // 選択されたポケモンのデータを取得
+  // 選択されたポケモンのデータを取得（入力欄から）
   const selectedPokemon = pokemonData.find(
     (p) => p.name === pokemon
   );
+
+  // ランキング表示用のポケモン（入力欄 or 初期表示データ）
+  const rankingPokemon = selectedPokemon ||
+    (initialDisplayData ? pokemonData.find(
+      (p) => p.name === initialDisplayData.pokemonInternalName
+    ) : null);
+
+  // ランキング表示用の性格とサブスキル
+  const rankingNature = pokemon ? nature?.name : initialDisplayData?.natureName;
+  const rankingSubSkills = pokemon ? selectedSubSkills : (initialDisplayData?.subSkills || []);
 
   // きのみの日本語名を取得
   const kinomiName = selectedPokemon
@@ -99,6 +116,9 @@ function Search() {
     };
     setDisplaySnapshot(snapshot);
 
+    // 初期表示データをクリア（新しい計算結果を表示するため）
+    setInitialDisplayData(null);
+
     // 履歴に保存
     try {
       addHistory({
@@ -150,41 +170,17 @@ function Search() {
       setNature(null);
     }
 
+    // 初期表示データをクリア（履歴から復元したため）
+    setInitialDisplayData(null);
+
     // 画面をトップにスクロール
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
-  // 初回ロード時に最新の履歴を自動反映
+  // 初回ロード時に最新の履歴を自動反映（入力欄は空のまま、結果表示のみ）
   useEffect(() => {
     if (!isLoading && history.length > 0 && !calculationResult) {
       const latestHistory = history[0];
-
-      // ポケモン選択を復元
-      setPokemon(latestHistory.pokemonInternalName);
-
-      // サブスキルを復元
-      setSelectedSubSkills(latestHistory.subSkills);
-
-      // 性格を復元
-      if (latestHistory.natureName) {
-        // natureName から SelectedNature を再構築
-        let foundNature: SelectedNature | null = null;
-        for (const group of NATURE_GROUPS) {
-          const nature = group.natures.find(
-            (n) => n.name === latestHistory.natureName
-          );
-          if (nature) {
-            foundNature = {
-              ...nature,
-              color: group.color,
-            };
-            break;
-          }
-        }
-        setNature(foundNature);
-      } else {
-        setNature(null);
-      }
 
       // 計算結果を復元
       setCalculationResult(latestHistory.calculationResult);
@@ -195,6 +191,13 @@ function Search() {
         pokemonNumber: latestHistory.pokemonNumber,
         pokemonType: latestHistory.pokemonType,
         nature: latestHistory.natureDisplay,
+        subSkills: latestHistory.subSkills,
+      });
+
+      // ランキング表示用の初期データを設定（入力欄には反映しない）
+      setInitialDisplayData({
+        pokemonInternalName: latestHistory.pokemonInternalName,
+        natureName: latestHistory.natureName,
         subSkills: latestHistory.subSkills,
       });
     }
@@ -276,11 +279,11 @@ function Search() {
         <div className="mt-6">
           <ResultTabs
             rankingContent={
-              selectedPokemon ? (
+              rankingPokemon ? (
                 <CombinationRanking
-                  pokemon={selectedPokemon}
-                  currentNature={nature?.name}
-                  currentSubSkills={selectedSubSkills}
+                  pokemon={rankingPokemon}
+                  currentNature={rankingNature}
+                  currentSubSkills={rankingSubSkills}
                 />
               ) : (
                 <div className="text-center py-12 text-gray-500">
