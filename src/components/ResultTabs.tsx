@@ -2,32 +2,25 @@
 
 import React, { useState } from "react";
 
-type TabType = "analysis" | "ranking" | "history";
+type TabType = "ranking" | "history";
 
 interface ResultTabsProps {
   /** 初期表示タブ */
   defaultTab?: TabType;
 
   /** 各タブのコンテンツ */
-  analysisContent?: React.ReactNode;
   rankingContent?: React.ReactNode;
   historyContent: React.ReactNode;
 }
 
 export default function ResultTabs({
-  defaultTab = "history",
-  analysisContent,
+  defaultTab = "ranking",
   rankingContent,
   historyContent,
 }: ResultTabsProps) {
   const [activeTab, setActiveTab] = useState<TabType>(defaultTab);
 
   const tabs = [
-    {
-      id: "analysis" as const,
-      label: "個体値分析",
-      content: analysisContent,
-    },
     {
       id: "ranking" as const,
       label: "組み合わせランキング",

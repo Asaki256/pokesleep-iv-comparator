@@ -13,6 +13,7 @@ import {
   RankingEntry,
 } from "@/utils/rankingGenerator";
 import { getRarityStyles } from "@/utils/subSkillUtils";
+import IVAnalysisComponent from "./IVAnalysisComponent";
 
 type RankingType = "skill" | "ingredient" | "berry";
 
@@ -63,31 +64,68 @@ export default function CombinationRanking({
     return data;
   }, [pokemon]);
 
-  // Get current ranking based on active tab
-  const currentRanking = useMemo(() => {
-    let ranking: RankingEntry[];
-    switch (activeRankingType) {
-      case "skill":
-        ranking = rankingData.skillRanking;
-        break;
-      case "ingredient":
-        ranking = rankingData.ingredientRanking;
-        break;
-      case "berry":
-        ranking = rankingData.berryRanking;
-        break;
-    }
-    // Ensure user's current combination is in the ranking
+  // Ensure user's current combination is in each ranking
+  const skillRankingWithUser = useMemo(() => {
     return ensureUserRankInRanking(
-      ranking,
+      rankingData.skillRanking,
       pokemon,
       currentNature,
       currentSubSkills,
-      activeRankingType
+      "skill"
     );
-  }, [activeRankingType, rankingData, pokemon, currentNature, currentSubSkills]);
+  }, [rankingData.skillRanking, pokemon, currentNature, currentSubSkills]);
 
-  // Find current user's rank
+  const ingredientRankingWithUser = useMemo(() => {
+    return ensureUserRankInRanking(
+      rankingData.ingredientRanking,
+      pokemon,
+      currentNature,
+      currentSubSkills,
+      "ingredient"
+    );
+  }, [rankingData.ingredientRanking, pokemon, currentNature, currentSubSkills]);
+
+  const berryRankingWithUser = useMemo(() => {
+    return ensureUserRankInRanking(
+      rankingData.berryRanking,
+      pokemon,
+      currentNature,
+      currentSubSkills,
+      "berry"
+    );
+  }, [rankingData.berryRanking, pokemon, currentNature, currentSubSkills]);
+
+  // Get current ranking based on active tab
+  const currentRanking = useMemo(() => {
+    switch (activeRankingType) {
+      case "skill":
+        return skillRankingWithUser;
+      case "ingredient":
+        return ingredientRankingWithUser;
+      case "berry":
+        return berryRankingWithUser;
+    }
+  }, [
+    activeRankingType,
+    skillRankingWithUser,
+    ingredientRankingWithUser,
+    berryRankingWithUser,
+  ]);
+
+  // Find current user's rank for each ranking type
+  const mySkillRank = useMemo(() => {
+    return findMyRank(skillRankingWithUser, currentNature, currentSubSkills);
+  }, [skillRankingWithUser, currentNature, currentSubSkills]);
+
+  const myIngredientRank = useMemo(() => {
+    return findMyRank(ingredientRankingWithUser, currentNature, currentSubSkills);
+  }, [ingredientRankingWithUser, currentNature, currentSubSkills]);
+
+  const myBerryRank = useMemo(() => {
+    return findMyRank(berryRankingWithUser, currentNature, currentSubSkills);
+  }, [berryRankingWithUser, currentNature, currentSubSkills]);
+
+  // Find current user's rank for active ranking type
   const myRankIndex = useMemo(() => {
     return findMyRank(currentRanking, currentNature, currentSubSkills);
   }, [currentRanking, currentNature, currentSubSkills]);
@@ -157,6 +195,18 @@ export default function CombinationRanking({
 
   return (
     <div className="w-full">
+      {/* IV Analysis Component */}
+      <IVAnalysisComponent
+        pokemon={pokemon}
+        skillRanking={skillRankingWithUser}
+        ingredientRanking={ingredientRankingWithUser}
+        berryRanking={berryRankingWithUser}
+        mySkillRank={mySkillRank}
+        myIngredientRank={myIngredientRank}
+        myBerryRank={myBerryRank}
+        onRankingTypeChange={setActiveRankingType}
+      />
+
       {/* Sub-tabs for ranking type */}
       <div className="flex border-b border-gray-300 mb-4">
         {rankingTabs.map((tab) => (
