@@ -143,28 +143,31 @@ export function generateRankingData(
   }
 
   // Sort by skill score (descending) and assign ranks
-  const skillRanking = [...allCombinations].sort(
-    (a, b) => b.skillScore - a.skillScore
-  );
-  skillRanking.forEach((entry, index) => {
-    entry.rank = index + 1;
-  });
+  const skillRanking = [...allCombinations]
+    .sort((a, b) => b.skillScore - a.skillScore)
+    .map((entry, index) => ({
+      ...entry,
+      rank: index + 1,
+      subSkills: [...entry.subSkills],
+    }));
 
   // Sort by ingredient score (descending) and assign ranks
-  const ingredientRanking = [...allCombinations].sort(
-    (a, b) => b.ingredientScore - a.ingredientScore
-  );
-  ingredientRanking.forEach((entry, index) => {
-    entry.rank = index + 1;
-  });
+  const ingredientRanking = [...allCombinations]
+    .sort((a, b) => b.ingredientScore - a.ingredientScore)
+    .map((entry, index) => ({
+      ...entry,
+      rank: index + 1,
+      subSkills: [...entry.subSkills],
+    }));
 
   // Sort by berry score (descending) and assign ranks
-  const berryRanking = [...allCombinations].sort(
-    (a, b) => b.berryScore - a.berryScore
-  );
-  berryRanking.forEach((entry, index) => {
-    entry.rank = index + 1;
-  });
+  const berryRanking = [...allCombinations]
+    .sort((a, b) => b.berryScore - a.berryScore)
+    .map((entry, index) => ({
+      ...entry,
+      rank: index + 1,
+      subSkills: [...entry.subSkills],
+    }));
 
   return {
     skillRanking,
