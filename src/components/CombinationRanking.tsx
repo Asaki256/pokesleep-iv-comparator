@@ -27,7 +27,7 @@ export default function CombinationRanking({
   currentSubSkills,
 }: CombinationRankingProps) {
   const [activeRankingType, setActiveRankingType] =
-    useState<RankingType>("skill");
+    useState<RankingType>("ingredient");
   const [isGenerating, setIsGenerating] = useState(true);
 
   // Generate ranking data (memoized)
@@ -59,8 +59,8 @@ export default function CombinationRanking({
   }, [currentRanking, currentNature, currentSubSkills]);
 
   // Virtual scroll settings
-  const ITEM_HEIGHT = 80; // Height of each ranking entry in pixels
-  const CONTAINER_HEIGHT = 600; // Height of the scrollable container
+  const ITEM_HEIGHT = 70; // Height of each ranking entry in pixels (more compact)
+  const CONTAINER_HEIGHT = 500; // Height of the scrollable container
 
   const virtualScroll = useVirtualScroll({
     totalItems: currentRanking.length,
@@ -106,8 +106,8 @@ export default function CombinationRanking({
   };
 
   const rankingTabs = [
-    { id: "skill" as const, label: "スキル" },
     { id: "ingredient" as const, label: "食材" },
+    { id: "skill" as const, label: "スキル" },
     { id: "berry" as const, label: "きのみ" },
   ];
 
@@ -144,25 +144,27 @@ export default function CombinationRanking({
       </div>
 
       {/* Navigation buttons */}
-      <div className="flex gap-2 mb-3">
+      <div className="flex gap-2 mb-2">
         <Button
           variant="outline"
           size="sm"
           onClick={() => virtualScroll.scrollToIndex(0)}
-          className="flex items-center gap-1 text-xs"
+          className="flex items-center gap-1 text-xs px-2 md:px-3"
         >
           <ArrowUp className="h-3 w-3" />
-          トップへ
+          <span className="hidden sm:inline">トップへ</span>
         </Button>
         {myRankIndex !== null && (
           <Button
             variant="outline"
             size="sm"
             onClick={() => virtualScroll.scrollToIndex(myRankIndex)}
-            className="flex items-center gap-1 text-xs"
+            className="flex items-center gap-1 text-xs px-2 md:px-3"
           >
             <Target className="h-3 w-3" />
-            自分のランク ({myRankIndex + 1}位)
+            <span className="hidden sm:inline">自分のランク</span>
+            <span className="sm:hidden">#{myRankIndex + 1}</span>
+            <span className="hidden sm:inline">({myRankIndex + 1}位)</span>
           </Button>
         )}
       </div>
@@ -196,16 +198,16 @@ export default function CombinationRanking({
                 <div
                   key={index}
                   className={`
-                    border-b border-gray-200 p-3
-                    ${isMyRank ? "bg-yellow-50 border-l-4 border-l-yellow-500" : ""}
+                    border-b border-gray-200 p-2 md:p-3
+                    ${isMyRank ? "bg-yellow-50 border-l-2 md:border-l-4 border-l-yellow-500" : ""}
                   `}
                   style={{ height: `${ITEM_HEIGHT}px` }}
                 >
-                  <div className="flex items-center gap-3 h-full">
+                  <div className="flex items-center gap-2 md:gap-3 h-full">
                     {/* Rank number */}
                     <div
                       className={`
-                        flex-shrink-0 w-12 h-12 rounded-full flex items-center justify-center font-bold text-sm
+                        flex-shrink-0 w-8 h-8 md:w-10 md:h-10 rounded-full flex items-center justify-center font-bold text-xs md:text-sm
                         ${
                           entry.rank === 1
                             ? "bg-yellow-400 text-yellow-900"
@@ -222,20 +224,21 @@ export default function CombinationRanking({
 
                     {/* Details */}
                     <div className="flex-1 min-w-0">
-                      <div className="flex items-center gap-2 mb-1">
-                        <span className="text-sm font-medium text-gray-800">
-                          {entry.natureDisplay}
+                      <div className="flex items-center gap-1 md:gap-2 mb-1">
+                        <span className="text-xs md:text-sm font-medium text-gray-800 truncate">
+                          <span className="hidden md:inline">{entry.natureDisplay}</span>
+                          <span className="md:hidden">{entry.natureName}</span>
                         </span>
                         {isMyRank && (
-                          <span className="text-xs px-2 py-0.5 bg-yellow-500 text-white rounded-full font-medium">
+                          <span className="text-xs px-1.5 md:px-2 py-0.5 bg-yellow-500 text-white rounded-full font-medium flex-shrink-0">
                             現在
                           </span>
                         )}
                       </div>
-                      <div className="flex flex-wrap gap-1">
+                      <div className="flex flex-wrap gap-0.5 md:gap-1">
                         {entry.subSkills.length === 0 ? (
                           <span className="text-xs text-gray-500 italic">
-                            サブスキルなし
+                            なし
                           </span>
                         ) : (
                           entry.subSkills.map((skill, idx) => {
@@ -243,7 +246,7 @@ export default function CombinationRanking({
                             return (
                               <span
                                 key={idx}
-                                className={`text-xs px-2 py-0.5 rounded-md font-medium ${rarityStyle.chip}`}
+                                className={`text-xs px-1.5 md:px-2 py-0.5 rounded-md font-medium ${rarityStyle.chip}`}
                               >
                                 {skill.name}
                               </span>
@@ -255,10 +258,10 @@ export default function CombinationRanking({
 
                     {/* Score */}
                     <div className="flex-shrink-0 text-right">
-                      <div className="text-lg font-bold text-gray-900">
+                      <div className="text-sm md:text-lg font-bold text-gray-900">
                         {formatScore(score)}
                       </div>
-                      <div className="text-xs text-gray-600">
+                      <div className="text-xs text-gray-600 hidden md:block">
                         {getScoreLabel(activeRankingType)}
                       </div>
                     </div>
