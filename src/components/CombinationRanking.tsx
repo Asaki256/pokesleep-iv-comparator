@@ -183,8 +183,7 @@ export default function CombinationRanking({
             className="flex items-center gap-1 text-xs px-2 md:px-3"
           >
             <Target className="h-3 w-3" />
-            <span className="hidden sm:inline">自分のランク</span>
-            <span className="sm:hidden">#{myRankIndex + 1}</span>
+            <span>自分のランク</span>
             <span className="hidden sm:inline">({myRankIndex + 1}位)</span>
           </Button>
         )}
