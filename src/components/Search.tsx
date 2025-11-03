@@ -8,6 +8,7 @@ import NatureSelector from "./nature/NatureSelector";
 import CalculatedPokemonInfo from "./CalculatedPokemonInfo";
 import ResultTabs from "./ResultTabs";
 import HistoryList from "./HistoryList";
+import CombinationRanking from "./CombinationRanking";
 import { SelectedSubSkill } from "@/types/selectedSubSkill";
 import { SelectedNature } from "@/types/nature";
 import { pokemonData } from "@/data/pokemonData";
@@ -228,6 +229,19 @@ function Search() {
         {/* タブ切り替え（常に表示） */}
         <div className="mt-6">
           <ResultTabs
+            rankingContent={
+              selectedPokemon ? (
+                <CombinationRanking
+                  pokemon={selectedPokemon}
+                  currentNature={nature?.name}
+                  currentSubSkills={selectedSubSkills}
+                />
+              ) : (
+                <div className="text-center py-12 text-gray-500">
+                  <p className="text-sm">ポケモンを選択してください</p>
+                </div>
+              )
+            }
             historyContent={
               <HistoryList
                 history={history}
