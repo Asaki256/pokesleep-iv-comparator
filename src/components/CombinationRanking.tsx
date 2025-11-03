@@ -4,11 +4,12 @@ import { useState, useMemo, useEffect } from "react";
 import { Pokemon } from "@/types/pokemon";
 import { SelectedSubSkill } from "@/types/selectedSubSkill";
 import { Button } from "@/components/ui/button";
-import { ArrowUp, Target } from "lucide-react";
+import { ArrowUp } from "lucide-react";
 import { useVirtualScroll } from "@/hooks/useVirtualScroll";
 import {
   generateRankingData,
   findMyRank,
+  ensureUserRankInRanking,
   RankingEntry,
 } from "@/utils/rankingGenerator";
 import { getRarityStyles } from "@/utils/subSkillUtils";
@@ -64,15 +65,27 @@ export default function CombinationRanking({
 
   // Get current ranking based on active tab
   const currentRanking = useMemo(() => {
+    let ranking: RankingEntry[];
     switch (activeRankingType) {
       case "skill":
-        return rankingData.skillRanking;
+        ranking = rankingData.skillRanking;
+        break;
       case "ingredient":
-        return rankingData.ingredientRanking;
+        ranking = rankingData.ingredientRanking;
+        break;
       case "berry":
-        return rankingData.berryRanking;
+        ranking = rankingData.berryRanking;
+        break;
     }
-  }, [activeRankingType, rankingData]);
+    // Ensure user's current combination is in the ranking
+    return ensureUserRankInRanking(
+      ranking,
+      pokemon,
+      currentNature,
+      currentSubSkills,
+      activeRankingType
+    );
+  }, [activeRankingType, rankingData, pokemon, currentNature, currentSubSkills]);
 
   // Find current user's rank
   const myRankIndex = useMemo(() => {
@@ -182,7 +195,6 @@ export default function CombinationRanking({
             onClick={() => virtualScroll.scrollToIndex(myRankIndex)}
             className="flex items-center gap-1 text-xs px-2 md:px-3"
           >
-            <Target className="h-3 w-3" />
             <span>自分のランク</span>
             <span className="hidden sm:inline">({myRankIndex + 1}位)</span>
           </Button>

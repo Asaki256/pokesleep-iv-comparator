@@ -202,3 +202,72 @@ export function findMyRank(
 
   return index >= 0 ? index : null;
 }
+
+/**
+ * Ensure user's current combination is included in the ranking.
+ * If not found, calculate and insert it at the appropriate position.
+ */
+export function ensureUserRankInRanking(
+  ranking: RankingEntry[],
+  pokemon: Pokemon,
+  natureName: string | undefined,
+  subSkills: SelectedSubSkill[],
+  rankingType: "skill" | "ingredient" | "berry"
+): RankingEntry[] {
+  if (!natureName) return ranking;
+
+  // Check if user's combination already exists
+  const existingIndex = findMyRank(ranking, natureName, subSkills);
+  if (existingIndex !== null) {
+    return ranking; // Already exists, no need to add
+  }
+
+  // Calculate score for user's combination
+  const result = calculatePokemonStatsSimple(
+    pokemon,
+    60,
+    natureName,
+    subSkills
+  );
+
+  // Get nature display from nature data
+  const allNatures = NATURE_GROUPS.flatMap((group) => group.natures);
+  const nature = allNatures.find((n) => n.name === natureName);
+  if (!nature) return ranking;
+
+  const natureDisplay = nature.up
+    ? `${nature.name} (▲${nature.up} ▼${nature.down})`
+    : `${nature.name} (補正なし)`;
+
+  // Create entry for user's combination
+  const userEntry: RankingEntry = {
+    rank: 0, // Will be set after sorting
+    natureName: nature.name,
+    natureDisplay,
+    subSkills: [...subSkills],
+    skillScore: result.skillTriggersPerDay,
+    ingredientScore: result.foodHelpsPerDay,
+    berryScore: result.berryEnergyPerDay,
+  };
+
+  // Add user's entry to ranking
+  const newRanking = [...ranking, userEntry];
+
+  // Sort by the appropriate score and reassign ranks
+  const sortedRanking = newRanking.sort((a, b) => {
+    switch (rankingType) {
+      case "skill":
+        return b.skillScore - a.skillScore;
+      case "ingredient":
+        return b.ingredientScore - a.ingredientScore;
+      case "berry":
+        return b.berryScore - a.berryScore;
+    }
+  });
+
+  // Reassign ranks
+  return sortedRanking.map((entry, index) => ({
+    ...entry,
+    rank: index + 1,
+  }));
+}
