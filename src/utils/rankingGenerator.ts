@@ -35,6 +35,7 @@ const CALCULATION_AFFECTING_SKILLS = [
   "ingredient_finder_s",
   "skill_trigger_m",
   "skill_trigger_s",
+  "berry_finding_s",
 ];
 
 /**

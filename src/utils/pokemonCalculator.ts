@@ -63,6 +63,8 @@ export interface CalculationParams {
   skillTriggerMCount?: number;
   /** スキル確率アップSの個数 */
   skillTriggerSCount?: number;
+  /** きのみの数Sの個数 */
+  berryFindingSCount?: number;
 }
 
 /**
@@ -265,12 +267,38 @@ export const calculateBerryHelpsPerDay = (
 };
 
 /**
+ * きのみの数を計算
+ * ルール:
+ * - すべてのポケモン: 基本1個
+ * - きのみタイプまたはオールタイプ: +1個
+ * - サブスキル「きのみの数S」: +1個ずつ
+ */
+export const calculateBerryCount = (
+  pokemon: Pokemon,
+  berryFindingSCount: number = 0
+): number => {
+  let count = 1; // 基本1個
+
+  // きのみタイプまたはオールタイプは+1個
+  if (pokemon.type === "きのみ" || pokemon.type === "オール") {
+    count++;
+  }
+
+  // サブスキル「きのみの数S」の個数分追加
+  count += berryFindingSCount;
+
+  return count;
+};
+
+/**
  * きのみエナジー(/回)を計算
  * MAX[ (pokemonData.kinomiTypeと一致するkinomiData.energy) + (Lv-1), (pokemonData.kinomiTypeと一致するkinomiData.energy) × 1.025 ^ (レベル - 1) ]
+ * きのみの数による倍率も適用する
  */
 export const calculateBerryEnergyPerHelp = (
   pokemon: Pokemon,
-  level: number = 60
+  level: number = 60,
+  berryCount: number = 1
 ): number => {
   const kinomiInfo = kinomiData.find(
     (k) => k.type === pokemon.kinomiType
@@ -286,7 +314,9 @@ export const calculateBerryEnergyPerHelp = (
   const exponentialGrowth =
     baseEnergy * Math.pow(1.025, level - 1);
 
-  return Math.max(linearGrowth, exponentialGrowth);
+  // きのみ1個あたりのエナジーにきのみの数を掛ける
+  const energyPerBerry = Math.max(linearGrowth, exponentialGrowth);
+  return energyPerBerry * berryCount;
 };
 
 /**
@@ -342,10 +372,17 @@ export const calculatePokemonStats = (
     calculatedFoodDropRate
   );
 
+  // きのみの数を計算
+  const berryCount = calculateBerryCount(
+    params.pokemon,
+    params.berryFindingSCount ?? 0
+  );
+
   // きのみエナジー/回
   const berryEnergyPerHelp = calculateBerryEnergyPerHelp(
     params.pokemon,
-    level
+    level,
+    berryCount
   );
 
   // きのみエナジー/日
@@ -376,6 +413,7 @@ interface SubSkillCounts {
   ingredientFinderS: number;
   skillTriggerM: number;
   skillTriggerS: number;
+  berryFindingS: number;
 }
 
 export const countSubSkills = (
@@ -389,6 +427,7 @@ export const countSubSkills = (
     ingredientFinderS: 0,
     skillTriggerM: 0,
     skillTriggerS: 0,
+    berryFindingS: 0,
   };
 
   for (const subSkill of subSkills) {
@@ -425,6 +464,10 @@ export const countSubSkills = (
       case "skillTriggerS":
       case "skill_trigger_s":
         counts.skillTriggerS++;
+        break;
+      // きのみの数S
+      case "berry_finding_s":
+        counts.berryFindingS++;
         break;
     }
   }
@@ -467,6 +510,7 @@ export const calculatePokemonStatsSimple = (
       subSkillCounts.ingredientFinderS,
     skillTriggerMCount: subSkillCounts.skillTriggerM,
     skillTriggerSCount: subSkillCounts.skillTriggerS,
+    berryFindingSCount: subSkillCounts.berryFindingS,
   };
 
   return calculatePokemonStats(params);
