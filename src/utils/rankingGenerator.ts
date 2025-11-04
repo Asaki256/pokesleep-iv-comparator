@@ -25,25 +25,47 @@ export interface RankingEntry {
 }
 
 /**
- * Sub-skills that affect calculations
+ * Sub-skills that affect each ranking type
  */
-const CALCULATION_AFFECTING_SKILLS = [
+const SKILL_RANKING_SKILLS = [
+  "helping_speed_m",
+  "helping_speed_s",
+  "helping_bonus",
+  "skill_trigger_m",
+  "skill_trigger_s",
+];
+
+const INGREDIENT_RANKING_SKILLS = [
   "helping_speed_m",
   "helping_speed_s",
   "helping_bonus",
   "ingredient_finder_m",
   "ingredient_finder_s",
-  "skill_trigger_m",
-  "skill_trigger_s",
+];
+
+const BERRY_RANKING_SKILLS = [
+  "helping_speed_m",
+  "helping_speed_s",
+  "helping_bonus",
+  "berry_finding_s",
 ];
 
 /**
  * Generate all sub-skill combinations (0 to 3 skills)
- * Only includes skills that affect calculations
+ * Only includes skills that affect the specified ranking type
  */
-function generateSubSkillCombinations(): SelectedSubSkill[][] {
+function generateSubSkillCombinations(
+  rankingType: "skill" | "ingredient" | "berry"
+): SelectedSubSkill[][] {
+  const skillList =
+    rankingType === "skill"
+      ? SKILL_RANKING_SKILLS
+      : rankingType === "ingredient"
+      ? INGREDIENT_RANKING_SKILLS
+      : BERRY_RANKING_SKILLS;
+
   const relevantSkills = subSkillData.filter((skill) =>
-    CALCULATION_AFFECTING_SKILLS.includes(skill.name)
+    skillList.includes(skill.name)
   );
 
   const combinations: SelectedSubSkill[][] = [];
@@ -108,17 +130,18 @@ export function generateRankingData(
   ingredientRanking: RankingEntry[];
   berryRanking: RankingEntry[];
 } {
-  const allCombinations: RankingEntry[] = [];
-
   // Get all natures
   const allNatures = NATURE_GROUPS.flatMap((group) => group.natures);
 
-  // Get all sub-skill combinations
-  const subSkillCombinations = generateSubSkillCombinations();
+  // Generate combinations for each ranking type separately
+  const skillCombinations: RankingEntry[] = [];
+  const ingredientCombinations: RankingEntry[] = [];
+  const berryCombinations: RankingEntry[] = [];
 
-  // Calculate score for each combination
+  // Generate skill ranking combinations
+  const skillSubSkillCombos = generateSubSkillCombinations("skill");
   for (const nature of allNatures) {
-    for (const subSkills of subSkillCombinations) {
+    for (const subSkills of skillSubSkillCombos) {
       const result = calculatePokemonStatsSimple(
         pokemon,
         60,
@@ -130,8 +153,62 @@ export function generateRankingData(
         ? `${nature.name} (▲${nature.up} ▼${nature.down})`
         : `${nature.name} (補正なし)`;
 
-      allCombinations.push({
-        rank: 0, // Will be set after sorting
+      skillCombinations.push({
+        rank: 0,
+        natureName: nature.name,
+        natureDisplay,
+        subSkills: [...subSkills],
+        skillScore: result.skillTriggersPerDay,
+        ingredientScore: result.foodHelpsPerDay,
+        berryScore: result.berryEnergyPerDay,
+      });
+    }
+  }
+
+  // Generate ingredient ranking combinations
+  const ingredientSubSkillCombos = generateSubSkillCombinations("ingredient");
+  for (const nature of allNatures) {
+    for (const subSkills of ingredientSubSkillCombos) {
+      const result = calculatePokemonStatsSimple(
+        pokemon,
+        60,
+        nature.name,
+        subSkills
+      );
+
+      const natureDisplay = nature.up
+        ? `${nature.name} (▲${nature.up} ▼${nature.down})`
+        : `${nature.name} (補正なし)`;
+
+      ingredientCombinations.push({
+        rank: 0,
+        natureName: nature.name,
+        natureDisplay,
+        subSkills: [...subSkills],
+        skillScore: result.skillTriggersPerDay,
+        ingredientScore: result.foodHelpsPerDay,
+        berryScore: result.berryEnergyPerDay,
+      });
+    }
+  }
+
+  // Generate berry ranking combinations
+  const berrySubSkillCombos = generateSubSkillCombinations("berry");
+  for (const nature of allNatures) {
+    for (const subSkills of berrySubSkillCombos) {
+      const result = calculatePokemonStatsSimple(
+        pokemon,
+        60,
+        nature.name,
+        subSkills
+      );
+
+      const natureDisplay = nature.up
+        ? `${nature.name} (▲${nature.up} ▼${nature.down})`
+        : `${nature.name} (補正なし)`;
+
+      berryCombinations.push({
+        rank: 0,
         natureName: nature.name,
         natureDisplay,
         subSkills: [...subSkills],
@@ -143,30 +220,27 @@ export function generateRankingData(
   }
 
   // Sort by skill score (descending) and assign ranks
-  const skillRanking = [...allCombinations]
+  const skillRanking = skillCombinations
     .sort((a, b) => b.skillScore - a.skillScore)
     .map((entry, index) => ({
       ...entry,
       rank: index + 1,
-      subSkills: [...entry.subSkills],
     }));
 
   // Sort by ingredient score (descending) and assign ranks
-  const ingredientRanking = [...allCombinations]
+  const ingredientRanking = ingredientCombinations
     .sort((a, b) => b.ingredientScore - a.ingredientScore)
     .map((entry, index) => ({
       ...entry,
       rank: index + 1,
-      subSkills: [...entry.subSkills],
     }));
 
   // Sort by berry score (descending) and assign ranks
-  const berryRanking = [...allCombinations]
+  const berryRanking = berryCombinations
     .sort((a, b) => b.berryScore - a.berryScore)
     .map((entry, index) => ({
       ...entry,
       rank: index + 1,
-      subSkills: [...entry.subSkills],
     }));
 
   return {
