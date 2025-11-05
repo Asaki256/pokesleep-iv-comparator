@@ -97,8 +97,8 @@ export default function NatureSelector({
             w-full py-1.5 px-3 rounded-lg border-2 border-dashed
             flex items-center justify-center gap-1.5
             text-sm font-medium transition-all
-            border-secondary text-secondary bg-blue-50
-            hover:bg-blue-100 hover:border-slate-400 active:scale-95
+            border-secondary text-secondary bg-blue-50/30
+            hover:bg-blue-50 hover:border-slate-400 active:scale-95
           "
         >
           <Plus className="w-4 h-4" />
