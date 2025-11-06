@@ -349,7 +349,8 @@ export default function CombinationRanking({
                             return (
                               <span
                                 key={idx}
-                                className={`text-xs px-1.5 md:px-2 py-0.5 rounded-md font-medium ${rarityStyle.chip}`}
+                                className={`inline-block text-xs px-1.5 md:px-2 py-0.5 rounded-md font-medium max-w-[120px] md:max-w-none truncate ${rarityStyle.chip}`}
+                                title={skill.name}
                               >
                                 {skill.name}
                               </span>
