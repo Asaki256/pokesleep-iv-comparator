@@ -19,7 +19,7 @@ export const SkillCard = ({
     <div
       className={`
         relative rounded-lg border-2
-        ${styles.gradient} ${styles.border}
+        ${styles.chip}
         transition-all
         overflow-hidden
       `}
@@ -29,7 +29,7 @@ export const SkillCard = ({
         onClick={onEdit}
         className={`
           flex items-center gap-1.5 px-2 py-1
-          ${styles.hover}
+          hover:opacity-80
           cursor-pointer
           transition-all active:scale-[0.98]
         `}
