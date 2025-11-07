@@ -103,11 +103,7 @@ export const SkillListView = ({
           text-center cursor-pointer
         `}
       >
-        <div
-          className={`text-xs font-medium text-wrap ${
-            isSelected ? "text-foreground" : "text-gray-800"
-          }`}
-        >
+        <div className="text-xs font-medium text-wrap text-foreground">
           {skill.displayName}
         </div>
       </button>

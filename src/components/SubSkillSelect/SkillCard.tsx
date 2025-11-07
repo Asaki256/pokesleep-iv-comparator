@@ -47,7 +47,7 @@ export const SkillCard = ({
         </div>
 
         {/* スキル名（中央、拡大） */}
-        <div className="text-xs font-medium text-gray-800 flex-1 min-w-0">
+        <div className="text-xs font-medium text-foreground flex-1 min-w-0">
           <div className="truncate">{skill.name}</div>
         </div>
 
