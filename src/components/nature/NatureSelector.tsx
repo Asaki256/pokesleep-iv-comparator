@@ -60,21 +60,21 @@ export default function NatureSelector({
             flex items-center justify-between
           `}
         >
-          <span className="text-sm text-gray-800">
+          <span className="text-sm text-gray-800 dark:text-white">
             {selectedNature.name}
           </span>
           <div className="flex items-center gap-2">
             {selectedNature.up ? (
               <div className="flex flex-col gap-0 text-[10px] leading-tight">
-                <span className="text-red-600 font-medium">
+                <span className="text-red-600 dark:text-red-300 font-medium">
                   ▲{selectedNature.up}
                 </span>
-                <span className="text-blue-600 font-medium">
+                <span className="text-blue-600 dark:text-blue-300 font-medium">
                   ▼{selectedNature.down}
                 </span>
               </div>
             ) : (
-              <span className="text-[10px] text-gray-500">
+              <span className="text-[10px] text-gray-500 dark:text-gray-300">
                 補正なし
               </span>
             )}
