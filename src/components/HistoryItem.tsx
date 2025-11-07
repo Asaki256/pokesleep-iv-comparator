@@ -222,8 +222,8 @@ export default function HistoryItem({
               <tbody>
                 <tr>
                   <td className="px-2 py-1.5 font-bold text-foreground whitespace-nowrap">
-                    {item.calculationResult.calculatedSupportTime.toLocaleString()}
-                    秒
+                    {(item.calculationResult.calculatedSupportTime / 60).toFixed(1)}
+                    分
                   </td>
                   <td className="px-2 py-1.5 whitespace-nowrap">
                     <div className="font-bold text-orange-600 dark:text-orange-400">
