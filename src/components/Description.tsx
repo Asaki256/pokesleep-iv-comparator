@@ -9,7 +9,7 @@ function Description() {
             href="https://wikiwiki.jp/poke_sleep/"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-primary hover:underline"
+            className="text-primary underline"
           >
             ポケモンスリープ攻略・検証Wiki
           </a>
