@@ -258,7 +258,8 @@ export function findMyRank(
   natureName: string | undefined,
   subSkills: SelectedSubSkill[]
 ): number | null {
-  if (!natureName) return null;
+  // Default to "すなお" (neutral nature) if no nature is selected
+  const effectiveNature = natureName || "すなお";
 
   // Normalize sub-skills for comparison
   const normalizedSubSkills = subSkills
@@ -271,7 +272,7 @@ export function findMyRank(
       .map((s) => s.baseId)
       .sort()
       .join(",");
-    return entry.natureName === natureName && entrySubSkills === normalizedSubSkills;
+    return entry.natureName === effectiveNature && entrySubSkills === normalizedSubSkills;
   });
 
   return index >= 0 ? index : null;
@@ -288,10 +289,11 @@ export function ensureUserRankInRanking(
   subSkills: SelectedSubSkill[],
   rankingType: "skill" | "ingredient" | "berry"
 ): RankingEntry[] {
-  if (!natureName) return ranking;
+  // Default to "すなお" (neutral nature) if no nature is selected
+  const effectiveNature = natureName || "すなお";
 
   // Check if user's combination already exists
-  const existingIndex = findMyRank(ranking, natureName, subSkills);
+  const existingIndex = findMyRank(ranking, effectiveNature, subSkills);
   if (existingIndex !== null) {
     return ranking; // Already exists, no need to add
   }
@@ -300,13 +302,13 @@ export function ensureUserRankInRanking(
   const result = calculatePokemonStatsSimple(
     pokemon,
     60,
-    natureName,
+    effectiveNature,
     subSkills
   );
 
   // Get nature display from nature data
   const allNatures = NATURE_GROUPS.flatMap((group) => group.natures);
-  const nature = allNatures.find((n) => n.name === natureName);
+  const nature = allNatures.find((n) => n.name === effectiveNature);
   if (!nature) return ranking;
 
   const natureDisplay = nature.up
