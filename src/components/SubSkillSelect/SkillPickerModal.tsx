@@ -81,6 +81,7 @@ export const SkillPickerModal = ({
                   p-1.5 rounded-full
                   hover:bg-muted
                   transition-colors
+                  cursor-pointer
                 "
                 aria-label="閉じる"
               >
@@ -141,6 +142,7 @@ export const SkillPickerModal = ({
                               transition-colors
                               shrink-0
                               p-0.5
+                              cursor-pointer
                             "
                             aria-label={`${skill.name}を削除`}
                           >

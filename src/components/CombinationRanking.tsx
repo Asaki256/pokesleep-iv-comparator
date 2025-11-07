@@ -241,7 +241,7 @@ export default function CombinationRanking({
             key={tab.id}
             onClick={() => setActiveRankingType(tab.id)}
             className={`
-              flex-1 px-3 py-2 text-xs md:text-sm font-medium transition-colors
+              flex-1 px-3 py-2 text-xs md:text-sm font-medium transition-colors cursor-pointer
               ${
                 activeRankingType === tab.id
                   ? "border-b-2 border-secondary text-secondary bg-secondary/10"
