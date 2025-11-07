@@ -22,23 +22,31 @@ export default function NatureButton({
         p-1.5 rounded-lg border-2 transition-all flex items-center gap-1.5
         ${
           isSelected
-            ? `${config.selected} shadow-md scale-95`
+            ? `${config.selected} shadow-md scale-95 !bg-gray-800 dark:!bg-gray-700`
             : `${config.button} active:scale-95`
         }
       `}
       aria-label={nature.name}
       aria-pressed={isSelected}
     >
-      <div className="font-medium text-sm text-foreground flex-1 text-left">
+      <div className={`font-medium text-sm flex-1 text-left ${
+        isSelected ? "text-white" : "text-foreground"
+      }`}>
         {nature.name}
       </div>
       {nature.up ? (
         <div className="flex flex-col gap-0 text-[9px] leading-tight">
-          <div className="text-red-600 dark:text-red-400 font-medium">▲{nature.up}</div>
-          <div className="text-blue-600 dark:text-blue-400 font-medium">▼{nature.down}</div>
+          <div className={`font-medium ${
+            isSelected ? "text-red-300" : "text-red-600 dark:text-red-400"
+          }`}>▲{nature.up}</div>
+          <div className={`font-medium ${
+            isSelected ? "text-blue-300" : "text-blue-600 dark:text-blue-400"
+          }`}>▼{nature.down}</div>
         </div>
       ) : (
-        <div className="text-[9px] text-muted-foreground whitespace-nowrap">
+        <div className={`text-[9px] whitespace-nowrap ${
+          isSelected ? "text-white" : "text-muted-foreground"
+        }`}>
           補正なし
         </div>
       )}
