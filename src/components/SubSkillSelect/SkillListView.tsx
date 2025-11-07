@@ -96,18 +96,14 @@ export const SkillListView = ({
           p-2 rounded-lg border-2
           ${
             isSelected
-              ? "bg-gray-500 hover:opacity-80"
+              ? "bg-muted hover:opacity-80 border-border"
               : `${styles.gradient} ${styles.border} ${styles.hover}`
           }
           transition-all active:scale-95
           text-center cursor-pointer
         `}
       >
-        <div
-          className={`text-xs font-medium text-wrap ${
-            isSelected ? "text-white" : "text-gray-800"
-          }`}
-        >
+        <div className="text-xs font-medium text-wrap text-foreground">
           {skill.displayName}
         </div>
       </button>
@@ -127,11 +123,11 @@ export const SkillListView = ({
         key={skillGroup}
         className="
           p-1.5 rounded-lg border-2
-          bg-white border-gray-300
+          bg-card border-border
           text-center
         "
       >
-        <div className="text-xs font-medium break-words mb-1 text-gray-800">
+        <div className="text-xs font-medium break-words mb-1 text-foreground">
           {config.label}
         </div>
         {/* バリアントタグ（クリック可能） */}
@@ -170,7 +166,7 @@ export const SkillListView = ({
                   flex-1
                   ${
                     isVariantSelected
-                      ? "bg-gray-500 text-white"
+                      ? "bg-muted text-foreground border-border"
                       : variantStyles.chip
                   }
                   px-2 py-1.5 rounded-md text-sm font-bold
@@ -191,7 +187,7 @@ export const SkillListView = ({
 
   return (
     <div className="space-y-2">
-      <h3 className="text-base font-bold text-gray-800">
+      <h3 className="text-base font-bold text-foreground">
         スキルを選択
       </h3>
 

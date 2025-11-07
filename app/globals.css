@@ -120,5 +120,19 @@
   }
   body {
     @apply bg-background text-foreground;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+
+  /* Smooth transitions for theme changes */
+  * {
+    transition-property: background-color, border-color, color, fill, stroke;
+    transition-timing-function: ease;
+    transition-duration: 100ms;
+  }
+
+  /* Preserve intentional transitions */
+  button, a, [role="button"] {
+    transition-property: all;
+    transition-duration: 100ms;
   }
 }

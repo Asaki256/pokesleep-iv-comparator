@@ -69,10 +69,10 @@ export default function HistoryItem({
   }
 
   return (
-    <div className="border border-gray-200 rounded-lg overflow-hidden bg-white">
+    <div className="border border-border rounded-lg overflow-hidden bg-card">
       {/* ヘッダー（常に表示） */}
       <div
-        className="p-3 cursor-pointer hover:bg-gray-50 transition-colors"
+        className="p-3 cursor-pointer hover:bg-muted/50 transition-colors"
         onClick={onToggle}
       >
         <div className="flex items-center gap-3">
@@ -80,7 +80,7 @@ export default function HistoryItem({
           <PokemonImage pokemonNumber={item.pokemonNumber} size={48} />
           <div className="flex-1 min-w-0">
             <div className="flex items-center gap-2 mb-1 flex-wrap">
-              <h4 className="font-bold text-sm">{item.pokemonName}</h4>
+              <h4 className="font-bold text-sm text-foreground">{item.pokemonName}</h4>
               {item.pokemonType && (
                 <span
                   className={`text-[9px] px-2 py-0.5 rounded-full font-bold ${getTokuiStyle(
@@ -90,14 +90,14 @@ export default function HistoryItem({
                   {item.pokemonType}
                 </span>
               )}
-              <span className="text-[10px] text-gray-500">
+              <span className="text-[10px] text-muted-foreground">
                 {formatDate(item.timestamp)}
               </span>
             </div>
 
             {/* コンパクト情報（折りたたみ時） */}
             {!isExpanded && (
-              <div className="text-[10px] text-gray-600 space-y-0.5">
+              <div className="text-[10px] text-foreground space-y-0.5">
                 <div className="flex items-center gap-1 flex-wrap">
                   <span>サブスキル:</span>
                   {displaySubSkills.map((skill, index) => {
@@ -105,7 +105,7 @@ export default function HistoryItem({
                       return (
                         <span
                           key={index}
-                          className="inline-block px-1 py-0.5 rounded bg-gray-100 text-gray-400 text-[9px]"
+                          className="inline-block px-1 py-0.5 rounded bg-muted text-muted-foreground text-[9px]"
                         >
                           未選択
                         </span>
@@ -123,7 +123,7 @@ export default function HistoryItem({
                   })}
                 </div>
                 {item.natureDisplay && (
-                  <div className="truncate">性格: {item.natureDisplay}</div>
+                  <div className="truncate">性格: <span className="font-semibold text-secondary">{item.natureDisplay}</span></div>
                 )}
               </div>
             )}
@@ -150,14 +150,14 @@ export default function HistoryItem({
                 e.stopPropagation();
                 onDelete();
               }}
-              className="h-8 px-2 text-gray-400 hover:text-gray-600 hover:bg-gray-100"
+              className="h-8 px-2 text-muted-foreground hover:text-foreground hover:bg-muted/50"
             >
               <Trash2 className="h-4 w-4" />
             </Button>
             {isExpanded ? (
-              <ChevronUp className="h-5 w-5 text-gray-400" />
+              <ChevronUp className="h-5 w-5 text-muted-foreground" />
             ) : (
-              <ChevronDown className="h-5 w-5 text-gray-400" />
+              <ChevronDown className="h-5 w-5 text-muted-foreground" />
             )}
           </div>
         </div>
@@ -165,17 +165,17 @@ export default function HistoryItem({
 
       {/* 詳細情報（展開時） */}
       {isExpanded && (
-        <div className="border-t border-gray-200 p-3 bg-gray-50">
+        <div className="border-t border-border p-3 bg-muted/30">
           {/* サブスキルと性格 */}
           <div className="mb-3 space-y-1">
-            <div className="text-xs text-gray-700">
+            <div className="text-xs text-foreground">
               <span className="font-semibold">サブスキル:</span>{" "}
               {displaySubSkills.map((skill, index) => {
                 if (!skill) {
                   return (
                     <span
                       key={index}
-                      className="inline-block px-1.5 py-0.5 rounded mx-0.5 bg-gray-100 text-gray-400 border border-gray-200 text-[10px]"
+                      className="inline-block px-1.5 py-0.5 rounded mx-0.5 bg-muted text-muted-foreground border border-border text-[10px]"
                     >
                       未選択
                     </span>
@@ -193,69 +193,69 @@ export default function HistoryItem({
               })}
             </div>
             {item.natureDisplay && (
-              <div className="text-xs text-gray-700">
+              <div className="text-xs text-foreground">
                 <span className="font-semibold">性格:</span>{" "}
-                {item.natureDisplay}
+                <span className="font-semibold text-secondary">{item.natureDisplay}</span>
               </div>
             )}
           </div>
 
           {/* 計算結果テーブル */}
-          <div className="bg-white rounded border border-gray-200 overflow-x-auto">
+          <div className="bg-background rounded border border-border overflow-x-auto">
             <table className="w-full text-[10px]">
-              <thead className="bg-cyan-50">
+              <thead className="bg-muted/50">
                 <tr>
-                  <th className="px-2 py-1 text-left font-semibold text-gray-700 whitespace-nowrap">
+                  <th className="px-2 py-1 text-left font-semibold text-muted-foreground whitespace-nowrap">
                     お手伝い時間
                   </th>
-                  <th className="px-2 py-1 text-left font-semibold text-gray-700 whitespace-nowrap">
+                  <th className="px-2 py-1 text-left font-semibold text-muted-foreground whitespace-nowrap">
                     食材確率
                   </th>
-                  <th className="px-2 py-1 text-left font-semibold text-gray-700 whitespace-nowrap">
+                  <th className="px-2 py-1 text-left font-semibold text-muted-foreground whitespace-nowrap">
                     食材/日
                   </th>
-                  <th className="px-2 py-1 text-left font-semibold text-gray-700 whitespace-nowrap">
+                  <th className="px-2 py-1 text-left font-semibold text-muted-foreground whitespace-nowrap">
                     スキル確率
                   </th>
-                  <th className="px-2 py-1 text-left font-semibold text-gray-700 whitespace-nowrap">
+                  <th className="px-2 py-1 text-left font-semibold text-muted-foreground whitespace-nowrap">
                     スキル/日
                   </th>
-                  <th className="px-2 py-1 text-left font-semibold text-gray-700 whitespace-nowrap">
+                  <th className="px-2 py-1 text-left font-semibold text-muted-foreground whitespace-nowrap">
                     きのみ/日
                   </th>
-                  <th className="px-2 py-1 text-left font-semibold text-gray-700 whitespace-nowrap">
+                  <th className="px-2 py-1 text-left font-semibold text-muted-foreground whitespace-nowrap">
                     きのみE/日
                   </th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
-                  <td className="px-2 py-1.5 font-bold text-gray-800 whitespace-nowrap">
+                  <td className="px-2 py-1.5 font-bold text-foreground whitespace-nowrap">
                     {item.calculationResult.calculatedSupportTime.toLocaleString()}
                     秒
                   </td>
-                  <td className="px-2 py-1.5 font-bold text-gray-800 whitespace-nowrap">
+                  <td className="px-2 py-1.5 font-bold text-foreground whitespace-nowrap">
                     {(
                       item.calculationResult.calculatedFoodDropRate * 100
                     ).toFixed(1)}
                     %
                   </td>
-                  <td className="px-2 py-1.5 font-bold text-orange-600 whitespace-nowrap">
+                  <td className="px-2 py-1.5 font-bold text-orange-600 dark:text-orange-400 whitespace-nowrap">
                     {item.calculationResult.foodHelpsPerDay.toFixed(1)}回
                   </td>
-                  <td className="px-2 py-1.5 font-bold text-gray-800 whitespace-nowrap">
+                  <td className="px-2 py-1.5 font-bold text-foreground whitespace-nowrap">
                     {(
                       item.calculationResult.calculatedSkillRate * 100
                     ).toFixed(1)}
                     %
                   </td>
-                  <td className="px-2 py-1.5 font-bold text-purple-600 whitespace-nowrap">
+                  <td className="px-2 py-1.5 font-bold text-purple-600 dark:text-purple-400 whitespace-nowrap">
                     {item.calculationResult.skillTriggersPerDay.toFixed(1)}回
                   </td>
-                  <td className="px-2 py-1.5 font-bold text-green-600 whitespace-nowrap">
+                  <td className="px-2 py-1.5 font-bold text-green-600 dark:text-green-400 whitespace-nowrap">
                     {item.calculationResult.berryHelpsPerDay.toFixed(1)}回
                   </td>
-                  <td className="px-2 py-1.5 font-bold text-blue-600 whitespace-nowrap">
+                  <td className="px-2 py-1.5 font-bold text-blue-600 dark:text-blue-400 whitespace-nowrap">
                     {item.calculationResult.berryEnergyPerDay.toLocaleString()}
                   </td>
                 </tr>

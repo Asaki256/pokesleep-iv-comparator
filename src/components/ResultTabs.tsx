@@ -36,7 +36,7 @@ export default function ResultTabs({
   return (
     <div className="w-full">
       {/* タブヘッダー */}
-      <div className="flex border-b border-gray-200">
+      <div className="flex border-b border-border">
         {tabs.map((tab) => (
           <button
             key={tab.id}
@@ -45,8 +45,8 @@ export default function ResultTabs({
               flex-1 px-2 md:px-4 py-2 text-xs md:text-sm font-medium transition-colors
               ${
                 activeTab === tab.id
-                  ? "border-b-2 border-blue-500 text-blue-600"
-                  : "text-gray-600 hover:text-gray-800"
+                  ? "border-b-2 border-blue-500 text-blue-600 dark:text-blue-400"
+                  : "text-muted-foreground hover:text-foreground"
               }
             `}
           >
@@ -63,7 +63,7 @@ export default function ResultTabs({
             className={activeTab === tab.id ? "block" : "hidden"}
           >
             {tab.content || (
-              <div className="text-center py-12 text-gray-500">
+              <div className="text-center py-12 text-muted-foreground">
                 <p className="text-sm">この機能は準備中です</p>
                 <p className="text-xs mt-2">
                   ポケモンを選択して決定ボタンを押してください

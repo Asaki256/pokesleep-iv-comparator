@@ -19,7 +19,7 @@ export const SkillCard = ({
     <div
       className={`
         relative rounded-lg border-2
-        ${styles.gradient} ${styles.border}
+        ${styles.chip}
         transition-all
         overflow-hidden
       `}
@@ -29,7 +29,7 @@ export const SkillCard = ({
         onClick={onEdit}
         className={`
           flex items-center gap-1.5 px-2 py-1
-          ${styles.hover}
+          hover:opacity-80
           cursor-pointer
           transition-all active:scale-[0.98]
         `}
@@ -37,7 +37,7 @@ export const SkillCard = ({
         {/* レベルバッジ（左端） */}
         <div
           className="
-            text-secondary text-xs
+            text-secondary dark:text-gray-200 text-xs
             rounded-full w-8 h-5
             flex items-center justify-center
             shrink-0
@@ -47,7 +47,7 @@ export const SkillCard = ({
         </div>
 
         {/* スキル名（中央、拡大） */}
-        <div className="text-xs font-medium text-gray-800 flex-1 min-w-0">
+        <div className="text-xs font-medium text-foreground flex-1 min-w-0">
           <div className="truncate">{skill.name}</div>
         </div>
 

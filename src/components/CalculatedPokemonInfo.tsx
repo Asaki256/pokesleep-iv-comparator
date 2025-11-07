@@ -75,13 +75,13 @@ const CalculatedPokemonInfo: React.FC<
   const currentDate = new Date();
 
   return (
-    <div className="bg-linear-to-br from-sky-50 to-cyan-50 rounded-lg shadow-md border-2 border-cyan-200 overflow-hidden">
+    <div className="bg-card rounded-xl shadow-lg border border-border overflow-hidden">
       {/* ヘッダー */}
-      <div className="p-2 md:p-3">
+      <div className="p-3 md:p-4 border-b border-border">
         {/* 1行目: ポケモン画像・名前・バッジ・日付 */}
-        <div className="flex items-center gap-2 md:gap-3 mb-1.5">
+        <div className="flex items-center gap-2 md:gap-3 mb-2">
           <PokemonImage pokemonNumber={pokemonNumber} size={48} />
-          <h4 className="font-bold text-sm md:text-base text-gray-900">
+          <h4 className="font-bold text-sm md:text-base text-foreground">
             {pokemonName}
           </h4>
           {pokemonType && (
@@ -94,14 +94,14 @@ const CalculatedPokemonInfo: React.FC<
             </span>
           )}
           <div className="flex-1"></div>
-          <span className="text-[9px] md:text-[10px] text-gray-600 font-medium">
+          <span className="text-[9px] md:text-[10px] text-muted-foreground font-medium">
             {formatDate(currentDate)}
           </span>
         </div>
 
         {/* 2-3行目グループ: サブスキルと性格 */}
-        <div className="ml-8 md:ml-10 space-y-0.5">
-          <div className="text-[10px] md:text-xs text-gray-700">
+        <div className="ml-8 md:ml-12 space-y-1">
+          <div className="text-[10px] md:text-xs text-foreground">
             <span className="font-semibold">
               サブスキル:
             </span>{" "}
@@ -110,7 +110,7 @@ const CalculatedPokemonInfo: React.FC<
                 return (
                   <span
                     key={index}
-                    className="inline-block px-1.5 py-0.5 rounded mx-0.5 bg-gray-50 text-gray-400 border border-gray-200"
+                    className="inline-block px-1.5 py-0.5 rounded mx-0.5 bg-muted text-muted-foreground border border-border"
                   >
                     未選択
                   </span>
@@ -128,82 +128,82 @@ const CalculatedPokemonInfo: React.FC<
             })}
           </div>
           {nature && (
-            <div className="text-[10px] md:text-xs text-gray-700">
+            <div className="text-[10px] md:text-xs text-foreground">
               <span className="font-semibold">性格:</span>{" "}
-              {nature}
+              <span className="font-semibold text-secondary">{nature}</span>
             </div>
           )}
         </div>
       </div>
 
       {/* 計算結果 */}
-      <div className="p-2 md:p-3 bg-white bg-opacity-50">
-        <div className="bg-white rounded border border-cyan-200 overflow-x-auto">
+      <div className="p-3 md:p-4 bg-muted/30">
+        <div className="bg-background rounded-lg border border-border overflow-x-auto shadow-sm">
           <table className="w-full text-[10px] md:text-xs">
-            <thead className="bg-cyan-50">
+            <thead className="bg-muted/50">
               <tr>
-                <th className="px-1.5 md:px-2 py-1 text-left font-semibold text-gray-700 whitespace-nowrap">
+                <th className="px-2 md:px-3 py-2 text-left font-semibold text-muted-foreground whitespace-nowrap">
                   お手伝い時間
                 </th>
-                <th className="px-1.5 md:px-2 py-1 text-left font-semibold text-gray-700 whitespace-nowrap">
+                <th className="px-2 md:px-3 py-2 text-left font-semibold text-muted-foreground whitespace-nowrap">
                   食材確率
                 </th>
-                <th className="px-1.5 md:px-2 py-1 text-left font-semibold text-gray-700 whitespace-nowrap">
+                <th className="px-2 md:px-3 py-2 text-left font-semibold text-muted-foreground whitespace-nowrap">
                   食材/日
                 </th>
-                <th className="px-1.5 md:px-2 py-1 text-left font-semibold text-gray-700 whitespace-nowrap">
+                <th className="px-2 md:px-3 py-2 text-left font-semibold text-muted-foreground whitespace-nowrap">
                   スキル確率
                 </th>
-                <th className="px-1.5 md:px-2 py-1 text-left font-semibold text-gray-700 whitespace-nowrap">
+                <th className="px-2 md:px-3 py-2 text-left font-semibold text-muted-foreground whitespace-nowrap">
                   スキル/日
                 </th>
-                <th className="px-1.5 md:px-2 py-1 text-left font-semibold text-gray-700 whitespace-nowrap">
+                <th className="px-2 md:px-3 py-2 text-left font-semibold text-muted-foreground whitespace-nowrap">
                   きのみ/日
                 </th>
-                <th className="px-1.5 md:px-2 py-1 text-left font-semibold text-gray-700 whitespace-nowrap">
+                <th className="px-2 md:px-3 py-2 text-left font-semibold text-muted-foreground whitespace-nowrap">
                   きのみE/日
                 </th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td className="px-1.5 md:px-2 py-1.5 font-bold text-gray-800 whitespace-nowrap">
+                <td className="px-2 md:px-3 py-2 font-bold text-foreground whitespace-nowrap">
                   {calculationResult.calculatedSupportTime.toLocaleString()}
                   秒
                 </td>
-                <td className="px-1.5 md:px-2 py-1.5 font-bold text-gray-800 whitespace-nowrap">
+                <td className="px-2 md:px-3 py-2 font-bold text-foreground whitespace-nowrap">
                   {(
                     calculationResult.calculatedFoodDropRate *
                     100
                   ).toFixed(1)}
                   %
                 </td>
-                <td className="px-1.5 md:px-2 py-1.5 font-bold text-orange-600 whitespace-nowrap">
+                <td className="px-2 md:px-3 py-2 font-bold text-orange-600 dark:text-orange-400 whitespace-nowrap">
                   {calculationResult.foodHelpsPerDay.toFixed(
                     1
                   )}
                   回
                 </td>
-                <td className="px-1.5 md:px-2 py-1.5 font-bold text-gray-800 whitespace-nowrap">
+                <td className="px-2 md:px-3 py-2 font-bold text-foreground whitespace-nowrap">
                   {(
                     calculationResult.calculatedSkillRate *
                     100
                   ).toFixed(1)}
                   %
                 </td>
-                <td className="px-1.5 md:px-2 py-1.5 font-bold text-purple-600 whitespace-nowrap">
+                <td className="px-2 md:px-3 py-2 font-bold text-purple-600 dark:text-purple-400 whitespace-nowrap">
                   {calculationResult.skillTriggersPerDay.toFixed(
                     1
                   )}
                   回
                 </td>
-                <td className="px-1.5 md:px-2 py-1.5 font-bold text-green-600 whitespace-nowrap">
+                <td className="px-2 md:px-3 py-2 font-bold text-green-600 dark:text-green-400 whitespace-nowrap">
                   {calculationResult.berryHelpsPerDay.toFixed(
                     1
                   )}
                   回
                 </td>
-                <td className="px-1.5 md:px-2 py-1.5 font-bold text-blue-600 whitespace-nowrap">
+                <td className="px-2 md:px-3 py-2 font-bold text-blue-600 dark:text-blue-400 whitespace-nowrap">
                   {calculationResult.berryEnergyPerDay.toLocaleString()}
                 </td>
               </tr>

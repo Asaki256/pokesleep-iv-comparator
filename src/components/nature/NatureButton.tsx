@@ -22,23 +22,31 @@ export default function NatureButton({
         p-1.5 rounded-lg border-2 transition-all flex items-center gap-1.5
         ${
           isSelected
-            ? `${config.selected} shadow-md scale-95`
-            : `${config.button} active:scale-95`
+            ? `${config.selected} shadow-md scale-95 dark:!bg-gray-800`
+            : `${config.button} active:scale-95 dark:bg-gray-700`
         }
       `}
       aria-label={nature.name}
       aria-pressed={isSelected}
     >
-      <div className="font-medium text-sm text-gray-800 flex-1 text-left">
+      <div className={`font-medium text-sm flex-1 text-left text-foreground dark:text-gray-100 ${
+        isSelected ? "dark:!text-white" : ""
+      }`}>
         {nature.name}
       </div>
       {nature.up ? (
         <div className="flex flex-col gap-0 text-[9px] leading-tight">
-          <div className="text-red-600 font-medium">▲{nature.up}</div>
-          <div className="text-blue-600 font-medium">▼{nature.down}</div>
+          <div className={`font-medium text-red-600 dark:text-red-300 ${
+            isSelected ? "dark:!text-red-200" : ""
+          }`}>▲{nature.up}</div>
+          <div className={`font-medium text-blue-600 dark:text-blue-300 ${
+            isSelected ? "dark:!text-blue-200" : ""
+          }`}>▼{nature.down}</div>
         </div>
       ) : (
-        <div className="text-[9px] text-gray-500 whitespace-nowrap">
+        <div className={`text-[9px] whitespace-nowrap text-muted-foreground dark:text-gray-300 ${
+          isSelected ? "dark:!text-white" : ""
+        }`}>
           補正なし
         </div>
       )}
