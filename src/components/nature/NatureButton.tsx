@@ -23,30 +23,30 @@ export default function NatureButton({
         ${
           isSelected
             ? `${config.selected} shadow-md scale-95 dark:!bg-gray-800`
-            : `${config.button} active:scale-95`
+            : `${config.button} active:scale-95 dark:bg-gray-700`
         }
       `}
       aria-label={nature.name}
       aria-pressed={isSelected}
     >
-      <div className={`font-medium text-sm flex-1 text-left ${
-        isSelected ? "dark:text-white" : ""
-      } text-foreground`}>
+      <div className={`font-medium text-sm flex-1 text-left text-foreground dark:text-gray-100 ${
+        isSelected ? "dark:!text-white" : ""
+      }`}>
         {nature.name}
       </div>
       {nature.up ? (
         <div className="flex flex-col gap-0 text-[9px] leading-tight">
-          <div className={`font-medium ${
-            isSelected ? "dark:text-red-300" : ""
-          } text-red-600 dark:text-red-400`}>▲{nature.up}</div>
-          <div className={`font-medium ${
-            isSelected ? "dark:text-blue-300" : ""
-          } text-blue-600 dark:text-blue-400`}>▼{nature.down}</div>
+          <div className={`font-medium text-red-600 dark:text-red-300 ${
+            isSelected ? "dark:!text-red-200" : ""
+          }`}>▲{nature.up}</div>
+          <div className={`font-medium text-blue-600 dark:text-blue-300 ${
+            isSelected ? "dark:!text-blue-200" : ""
+          }`}>▼{nature.down}</div>
         </div>
       ) : (
-        <div className={`text-[9px] whitespace-nowrap ${
-          isSelected ? "dark:text-white" : ""
-        } text-muted-foreground`}>
+        <div className={`text-[9px] whitespace-nowrap text-muted-foreground dark:text-gray-300 ${
+          isSelected ? "dark:!text-white" : ""
+        }`}>
           補正なし
         </div>
       )}
