@@ -96,7 +96,7 @@ export default function NatureBottomSheet({
               <h2 className="text-lg font-bold text-foreground">性格を選択</h2>
               <button
                 onClick={onClose}
-                className="p-1.5 rounded-full hover:bg-muted transition-colors"
+                className="p-1.5 rounded-full hover:bg-muted transition-colors cursor-pointer"
                 aria-label="閉じる"
               >
                 <X className="w-4 h-4 text-muted-foreground" />
@@ -134,7 +134,7 @@ export default function NatureBottomSheet({
                 {inputValue && (
                   <button
                     onClick={() => setInputValue('')}
-                    className="absolute right-3 top-1/2 transform -translate-y-1/2 text-muted-foreground hover:text-foreground transition-colors"
+                    className="absolute right-3 top-1/2 transform -translate-y-1/2 text-muted-foreground hover:text-foreground transition-colors cursor-pointer"
                     aria-label="検索をクリア"
                   >
                     <X className="w-4 h-4" />

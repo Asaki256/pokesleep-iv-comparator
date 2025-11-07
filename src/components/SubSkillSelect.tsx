@@ -216,6 +216,7 @@ const SubSkillSelect = ({
             className="
               text-xs font-medium text-red-600
               hover:text-red-700 transition-colors
+              cursor-pointer
             "
           >
             クリア
@@ -246,6 +247,7 @@ const SubSkillSelect = ({
             flex items-center justify-center gap-1.5
             text-sm font-medium transition-all
             border-secondary text-secondary bg-blue-50/30 dark:bg-blue-900/20 hover:bg-blue-50 dark:hover:bg-blue-900/30 hover:border-slate-400 dark:hover:border-slate-600 active:scale-95
+            cursor-pointer
           "
         >
           <Plus className="w-4 h-4" />

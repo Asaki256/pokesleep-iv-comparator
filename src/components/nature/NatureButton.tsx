@@ -19,7 +19,7 @@ export default function NatureButton({
     <button
       onClick={onSelect}
       className={`
-        p-1.5 rounded-lg border-2 transition-all flex items-center gap-1.5
+        p-1.5 rounded-lg border-2 transition-all flex items-center gap-1.5 cursor-pointer
         ${
           isSelected
             ? `${config.selected} shadow-md scale-95 dark:!bg-gray-800`

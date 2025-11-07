@@ -42,7 +42,7 @@ export default function ResultTabs({
             key={tab.id}
             onClick={() => setActiveTab(tab.id)}
             className={`
-              flex-1 px-2 md:px-4 py-2 text-xs md:text-sm font-medium transition-colors
+              flex-1 px-2 md:px-4 py-2 text-xs md:text-sm font-medium transition-colors cursor-pointer
               ${
                 activeTab === tab.id
                   ? "border-b-2 border-blue-500 text-blue-600 dark:text-blue-400"

@@ -83,7 +83,7 @@ export default function NatureSelector({
                 e.stopPropagation();
                 clearNature();
               }}
-              className="text-red-500 hover:text-red-700 transition-colors p-0.5 ml-1"
+              className="text-red-500 hover:text-red-700 transition-colors p-0.5 ml-1 cursor-pointer"
               aria-label="性格をクリア"
             >
               <X className="w-4 h-4" />
