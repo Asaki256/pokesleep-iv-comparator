@@ -73,12 +73,12 @@ export default function HistoryList({
   };
 
   if (isLoading) {
-    return <div className="text-center py-8 text-gray-500">読み込み中...</div>;
+    return <div className="text-center py-8 text-muted-foreground">読み込み中...</div>;
   }
 
   if (!history || history.length === 0) {
     return (
-      <div className="text-center py-12 text-gray-500">
+      <div className="text-center py-12 text-muted-foreground">
         <p className="mb-2">まだ履歴がありません</p>
         <p className="text-sm">決定ボタンを押すと自動的に保存されます</p>
       </div>
@@ -89,10 +89,10 @@ export default function HistoryList({
     <div className="space-y-3">
       {/* コントロールバー */}
       <div className="flex items-center justify-between">
-        <div className="text-sm text-gray-600">
+        <div className="text-sm text-muted-foreground">
           {history.length}件の履歴
           {history.length >= 50 && (
-            <span className="ml-2 text-orange-600">(上限に達しています)</span>
+            <span className="ml-2 text-orange-600 dark:text-orange-400">(上限に達しています)</span>
           )}
         </div>
         <div className="flex gap-2">
@@ -103,7 +103,7 @@ export default function HistoryList({
             size="sm"
             variant="ghost"
             onClick={handleClearAll}
-            className="text-gray-500 hover:text-gray-700"
+            className="text-muted-foreground hover:text-foreground"
           >
             すべて削除
           </Button>
@@ -124,7 +124,7 @@ export default function HistoryList({
         ))}
       </div>
 
-      <div className="text-center text-xs text-gray-500 mt-4">
+      <div className="text-center text-xs text-muted-foreground mt-4">
         履歴は最大50件まで保存されます。古いものから自動的に削除されます。
       </div>
     </div>

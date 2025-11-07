@@ -64,13 +64,13 @@ export const SkillPickerModal = ({
         >
           {/* ハンドル */}
           <div className="flex justify-center pt-2 pb-1">
-            <div className="w-12 h-1 bg-gray-300 rounded-full" />
+            <div className="w-12 h-1 bg-border rounded-full" />
           </div>
 
           {/* ヘッダー */}
-          <div className="px-4 pb-2 border-b border-gray-200">
+          <div className="px-4 pb-2 border-b border-border">
             <div className="flex items-center justify-between">
-              <h2 className="text-lg font-bold text-gray-800">
+              <h2 className="text-lg font-bold text-foreground">
                 {isEditing
                   ? "スキルを変更"
                   : "スキルを選択"}
@@ -79,12 +79,12 @@ export const SkillPickerModal = ({
                 onClick={onClose}
                 className="
                   p-1.5 rounded-full
-                  hover:bg-gray-100
+                  hover:bg-muted
                   transition-colors
                 "
                 aria-label="閉じる"
               >
-                <X className="w-4 h-4 text-gray-600" />
+                <X className="w-4 h-4 text-muted-foreground" />
               </button>
             </div>
 
@@ -94,7 +94,7 @@ export const SkillPickerModal = ({
                 <div
                   className={`
                     inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full
-                    bg-slate-100 border border-slate-300
+                    bg-secondary/10 border border-secondary/30
                   `}
                 >
                   <span className="text-xs text-secondary">
@@ -137,7 +137,7 @@ export const SkillPickerModal = ({
                               onRemoveSkill(skill.id);
                             }}
                             className="
-                              text-red-500 hover:text-red-700
+                              text-red-600 dark:text-red-400 hover:text-red-700 dark:hover:text-red-300
                               transition-colors
                               shrink-0
                               p-0.5
@@ -155,10 +155,10 @@ export const SkillPickerModal = ({
                 {/* メッセージ */}
                 {selectedSkills.length < 3 && (
                   <div className="space-y-0.5">
-                    <p className="text-xs text-gray-600">
+                    <p className="text-xs text-muted-foreground">
                       続けて選択できます
                     </p>
-                    <p className="text-xs font-medium text-blue-600">
+                    <p className="text-xs font-medium text-secondary">
                       次のスキル: Lv.{nextLevel} に自動設定
                     </p>
                   </div>

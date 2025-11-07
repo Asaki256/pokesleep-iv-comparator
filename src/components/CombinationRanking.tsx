@@ -214,7 +214,7 @@ export default function CombinationRanking({
     return (
       <div className="text-center py-12">
         <div className="animate-pulse">
-          <p className="text-sm text-gray-600">ランキングを生成中...</p>
+          <p className="text-sm text-muted-foreground">ランキングを生成中...</p>
         </div>
       </div>
     );
@@ -235,7 +235,7 @@ export default function CombinationRanking({
       />
 
       {/* Sub-tabs for ranking type */}
-      <div className="flex border-b border-gray-300 mb-4">
+      <div className="flex border-b border-border mb-4">
         {rankingTabs.map((tab) => (
           <button
             key={tab.id}
@@ -244,8 +244,8 @@ export default function CombinationRanking({
               flex-1 px-3 py-2 text-xs md:text-sm font-medium transition-colors
               ${
                 activeRankingType === tab.id
-                  ? "border-b-2 border-cyan-500 text-cyan-600 bg-cyan-50"
-                  : "text-gray-600 hover:text-gray-800 hover:bg-gray-50"
+                  ? "border-b-2 border-secondary text-secondary bg-secondary/10"
+                  : "text-muted-foreground hover:text-foreground hover:bg-muted/50"
               }
             `}
           >
@@ -279,7 +279,7 @@ export default function CombinationRanking({
       </div>
 
       {/* Display range indicator */}
-      <div className="text-xs text-gray-600 mb-2">
+      <div className="text-xs text-muted-foreground mb-2">
         表示: {visibleStartRank}-{visibleEndRank} / 全{currentRanking.length}
         件
       </div>
@@ -287,7 +287,7 @@ export default function CombinationRanking({
       {/* Virtual scrolling container */}
       <div
         ref={virtualScroll.containerRef}
-        className="border border-gray-300 rounded-lg overflow-y-auto relative"
+        className="border border-border rounded-lg overflow-y-auto relative bg-card"
         style={{ height: `${CONTAINER_HEIGHT}px` }}
       >
         {/* Spacer for total height */}
@@ -307,8 +307,8 @@ export default function CombinationRanking({
                 <div
                   key={index}
                   className={`
-                    border-b border-gray-200 p-2 md:p-3
-                    ${isMyRank ? "bg-yellow-50 border-l-2 md:border-l-4 border-l-yellow-500" : ""}
+                    border-b border-border p-2 md:p-3
+                    ${isMyRank ? "bg-accent/20 border-l-2 md:border-l-4 border-l-accent" : ""}
                   `}
                   style={{ height: `${ITEM_HEIGHT}px` }}
                 >
@@ -321,10 +321,10 @@ export default function CombinationRanking({
                           entry.rank === 1
                             ? "bg-yellow-400 text-yellow-900"
                             : entry.rank === 2
-                            ? "bg-gray-300 text-gray-800"
+                            ? "bg-gray-300 text-gray-800 dark:bg-gray-600 dark:text-gray-100"
                             : entry.rank === 3
                             ? "bg-amber-600 text-white"
-                            : "bg-gray-100 text-gray-700"
+                            : "bg-muted text-muted-foreground"
                         }
                       `}
                     >
@@ -334,13 +334,13 @@ export default function CombinationRanking({
                     {/* Details */}
                     <div className="flex-1 min-w-0">
                       <div className="flex items-center gap-1 md:gap-2 mb-1">
-                        <span className="text-xs md:text-sm font-medium text-gray-800 truncate">
+                        <span className="text-xs md:text-sm font-medium text-foreground truncate">
                           {entry.natureDisplay}
                         </span>
                       </div>
                       <div className="flex flex-wrap gap-0.5 md:gap-1">
                         {entry.subSkills.length === 0 ? (
-                          <span className="text-xs text-gray-500 italic">
+                          <span className="text-xs text-muted-foreground italic">
                             なし
                           </span>
                         ) : (
@@ -362,10 +362,10 @@ export default function CombinationRanking({
 
                     {/* Score */}
                     <div className="flex-shrink-0 text-right">
-                      <div className="text-sm md:text-lg font-bold text-gray-900">
+                      <div className="text-sm md:text-lg font-bold text-foreground">
                         {formatScore(score)}
                       </div>
-                      <div className="text-xs text-gray-600 hidden md:block">
+                      <div className="text-xs text-muted-foreground hidden md:block">
                         {getScoreLabel(activeRankingType)}
                       </div>
                     </div>
@@ -378,7 +378,7 @@ export default function CombinationRanking({
       </div>
 
       {/* Summary */}
-      <div className="mt-3 text-xs text-gray-600">
+      <div className="mt-3 text-xs text-muted-foreground">
         <p>
           {pokemon.displayName}の全{currentRanking.length}
           通りの組み合わせから、{getScoreLabel(activeRankingType)}

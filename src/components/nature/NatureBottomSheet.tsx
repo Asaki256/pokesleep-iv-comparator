@@ -84,35 +84,35 @@ export default function NatureBottomSheet({
 
       {/* モーダル本体 */}
       <div className="fixed inset-x-0 bottom-0 z-50 animate-in slide-in-from-bottom duration-300">
-        <div className="bg-white rounded-t-3xl max-h-[80vh] overflow-y-auto shadow-2xl">
+        <div className="bg-card rounded-t-3xl max-h-[80vh] overflow-y-auto shadow-2xl">
           {/* ハンドル */}
           <div className="flex justify-center pt-2 pb-1">
-            <div className="w-12 h-1 bg-gray-300 rounded-full" />
+            <div className="w-12 h-1 bg-border rounded-full" />
           </div>
 
           {/* ヘッダー */}
-          <div className="px-4 pb-2 border-b border-gray-200">
+          <div className="px-4 pb-2 border-b border-border">
             <div className="flex items-center justify-between">
-              <h2 className="text-lg font-bold text-gray-800">性格を選択</h2>
+              <h2 className="text-lg font-bold text-foreground">性格を選択</h2>
               <button
                 onClick={onClose}
-                className="p-1.5 rounded-full hover:bg-gray-100 transition-colors"
+                className="p-1.5 rounded-full hover:bg-muted transition-colors"
                 aria-label="閉じる"
               >
-                <X className="w-4 h-4 text-gray-600" />
+                <X className="w-4 h-4 text-muted-foreground" />
               </button>
             </div>
 
             {/* 選択中の性格を表示 */}
             {selectedNature && (
               <div className="mt-1.5">
-                <div className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-slate-100 border border-slate-300">
+                <div className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-secondary/10 border border-secondary/30">
                   <span className="text-xs text-secondary">選択中</span>
                   <span className="text-xs font-semibold text-secondary">
                     {selectedNature.name}
                   </span>
                   {selectedNature.up && (
-                    <span className="text-[10px] text-gray-600">
+                    <span className="text-[10px] text-foreground">
                       (▲{selectedNature.up} ▼{selectedNature.down})
                     </span>
                   )}
@@ -123,18 +123,18 @@ export default function NatureBottomSheet({
             {/* 検索フィールド */}
             <div className="mt-2 relative">
               <div className="relative">
-                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400" />
+                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-muted-foreground" />
                 <input
                   type="text"
                   value={inputValue}
                   onChange={(e) => setInputValue(e.target.value)}
                   placeholder="性格名で検索..."
-                  className="w-full pl-9 pr-3 py-2 text-sm border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  className="w-full pl-9 pr-3 py-2 text-sm bg-background text-foreground border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-secondary focus:border-transparent"
                 />
                 {inputValue && (
                   <button
                     onClick={() => setInputValue('')}
-                    className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-gray-600 transition-colors"
+                    className="absolute right-3 top-1/2 transform -translate-y-1/2 text-muted-foreground hover:text-foreground transition-colors"
                     aria-label="検索をクリア"
                   >
                     <X className="w-4 h-4" />
@@ -148,11 +148,11 @@ export default function NatureBottomSheet({
           <div className="px-4 py-3">
             {hasNoResults ? (
               <div className="flex flex-col items-center justify-center py-8 text-center">
-                <Search className="w-12 h-12 text-gray-300 mb-3" />
-                <p className="text-sm text-gray-500 font-medium">
+                <Search className="w-12 h-12 text-muted mb-3" />
+                <p className="text-sm text-muted-foreground font-medium">
                   「{debouncedQuery}」に一致する性格が見つかりませんでした
                 </p>
-                <p className="text-xs text-gray-400 mt-1">
+                <p className="text-xs text-muted-foreground/70 mt-1">
                   別のキーワードで検索してください
                 </p>
               </div>

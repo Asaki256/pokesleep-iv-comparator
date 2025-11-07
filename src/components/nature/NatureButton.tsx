@@ -29,16 +29,16 @@ export default function NatureButton({
       aria-label={nature.name}
       aria-pressed={isSelected}
     >
-      <div className="font-medium text-sm text-gray-800 flex-1 text-left">
+      <div className="font-medium text-sm text-foreground flex-1 text-left">
         {nature.name}
       </div>
       {nature.up ? (
         <div className="flex flex-col gap-0 text-[9px] leading-tight">
-          <div className="text-red-600 font-medium">▲{nature.up}</div>
-          <div className="text-blue-600 font-medium">▼{nature.down}</div>
+          <div className="text-red-600 dark:text-red-400 font-medium">▲{nature.up}</div>
+          <div className="text-blue-600 dark:text-blue-400 font-medium">▼{nature.down}</div>
         </div>
       ) : (
-        <div className="text-[9px] text-gray-500 whitespace-nowrap">
+        <div className="text-[9px] text-muted-foreground whitespace-nowrap">
           補正なし
         </div>
       )}
