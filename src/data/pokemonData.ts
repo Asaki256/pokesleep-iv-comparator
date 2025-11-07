@@ -2179,7 +2179,7 @@ export const pokemonData: Pokemon[] = [
   },
   {
     number: 710,
-    displayName: "バケッチャ(小)",
+    displayName: "バケッチャ(こだましゅ)",
     enName: "Pumpkaboo",
     name: "pumpkaboo_small",
     type: "食材",
@@ -2191,7 +2191,7 @@ export const pokemonData: Pokemon[] = [
   },
   {
     number: 710,
-    displayName: "バケッチャ(中)",
+    displayName: "バケッチャ(ちゅうだましゅ)",
     enName: "Pumpkaboo",
     name: "pumpkaboo_medium",
     type: "食材",
@@ -2203,7 +2203,7 @@ export const pokemonData: Pokemon[] = [
   },
   {
     number: 710,
-    displayName: "バケッチャ(大)",
+    displayName: "バケッチャ(おおだましゅ)",
     enName: "Pumpkaboo",
     name: "pumpkaboo_large",
     type: "食材",
@@ -2215,7 +2215,7 @@ export const pokemonData: Pokemon[] = [
   },
   {
     number: 710,
-    displayName: "バケッチャ(特大)",
+    displayName: "バケッチャ(ぎがだましゅ)",
     enName: "Pumpkaboo",
     name: "pumpkaboo_super",
     type: "食材",
@@ -2227,7 +2227,7 @@ export const pokemonData: Pokemon[] = [
   },
   {
     number: 711,
-    displayName: "パンプジン(小)",
+    displayName: "パンプジン(こだましゅ)",
     enName: "Gourgeist",
     name: "gourgeist_small",
     type: "食材",
@@ -2239,7 +2239,7 @@ export const pokemonData: Pokemon[] = [
   },
   {
     number: 711,
-    displayName: "パンプジン(中)",
+    displayName: "パンプジン(ちゅうだましゅ)",
     enName: "Gourgeist",
     name: "gourgeist_medium",
     type: "食材",
@@ -2251,7 +2251,7 @@ export const pokemonData: Pokemon[] = [
   },
   {
     number: 711,
-    displayName: "パンプジン(大)",
+    displayName: "パンプジン(おおだましゅ)",
     enName: "Gourgeist",
     name: "gourgeist_large",
     type: "食材",
@@ -2263,7 +2263,7 @@ export const pokemonData: Pokemon[] = [
   },
   {
     number: 711,
-    displayName: "パンプジン(特大)",
+    displayName: "パンプジン(ぎがだましゅ)",
     enName: "Gourgeist",
     name: "gourgeist_super",
     type: "食材",
