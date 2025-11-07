@@ -205,26 +205,17 @@ export default function HistoryItem({
             <table className="w-full text-[10px]">
               <thead className="bg-muted/50">
                 <tr>
-                  <th className="px-2 py-1 text-left font-semibold text-muted-foreground whitespace-nowrap">
+                  <th className="px-2 py-1.5 text-left font-semibold text-muted-foreground whitespace-nowrap">
                     お手伝い時間
                   </th>
-                  <th className="px-2 py-1 text-left font-semibold text-muted-foreground whitespace-nowrap">
-                    食材確率
+                  <th className="px-2 py-1.5 text-left font-semibold text-muted-foreground whitespace-nowrap">
+                    食材
                   </th>
-                  <th className="px-2 py-1 text-left font-semibold text-muted-foreground whitespace-nowrap">
-                    食材/日
+                  <th className="px-2 py-1.5 text-left font-semibold text-muted-foreground whitespace-nowrap">
+                    スキル
                   </th>
-                  <th className="px-2 py-1 text-left font-semibold text-muted-foreground whitespace-nowrap">
-                    スキル確率
-                  </th>
-                  <th className="px-2 py-1 text-left font-semibold text-muted-foreground whitespace-nowrap">
-                    スキル/日
-                  </th>
-                  <th className="px-2 py-1 text-left font-semibold text-muted-foreground whitespace-nowrap">
-                    きのみ/日
-                  </th>
-                  <th className="px-2 py-1 text-left font-semibold text-muted-foreground whitespace-nowrap">
-                    きのみE/日
+                  <th className="px-2 py-1.5 text-left font-semibold text-muted-foreground whitespace-nowrap">
+                    きのみ
                   </th>
                 </tr>
               </thead>
@@ -234,29 +225,53 @@ export default function HistoryItem({
                     {item.calculationResult.calculatedSupportTime.toLocaleString()}
                     秒
                   </td>
-                  <td className="px-2 py-1.5 font-bold text-foreground whitespace-nowrap">
-                    {(
-                      item.calculationResult.calculatedFoodDropRate * 100
-                    ).toFixed(1)}
-                    %
+                  <td className="px-2 py-1.5 whitespace-nowrap">
+                    <div className="font-bold text-orange-600 dark:text-orange-400">
+                      {item.calculationResult.foodHelpsPerDay.toFixed(1)}
+                      回/日{" "}
+                      <span className="text-foreground">
+                        (
+                        {(
+                          item.calculationResult.calculatedFoodDropRate *
+                          100
+                        ).toFixed(1)}
+                        %)
+                      </span>
+                    </div>
                   </td>
-                  <td className="px-2 py-1.5 font-bold text-orange-600 dark:text-orange-400 whitespace-nowrap">
-                    {item.calculationResult.foodHelpsPerDay.toFixed(1)}回
+                  <td className="px-2 py-1.5 whitespace-nowrap">
+                    <div className="font-bold text-purple-600 dark:text-purple-400">
+                      {item.calculationResult.skillTriggersPerDay.toFixed(1)}
+                      回/日{" "}
+                      <span className="text-foreground">
+                        (
+                        {(
+                          item.calculationResult.calculatedSkillRate *
+                          100
+                        ).toFixed(1)}
+                        %)
+                      </span>
+                    </div>
                   </td>
-                  <td className="px-2 py-1.5 font-bold text-foreground whitespace-nowrap">
-                    {(
-                      item.calculationResult.calculatedSkillRate * 100
-                    ).toFixed(1)}
-                    %
-                  </td>
-                  <td className="px-2 py-1.5 font-bold text-purple-600 dark:text-purple-400 whitespace-nowrap">
-                    {item.calculationResult.skillTriggersPerDay.toFixed(1)}回
-                  </td>
-                  <td className="px-2 py-1.5 font-bold text-green-600 dark:text-green-400 whitespace-nowrap">
-                    {item.calculationResult.berryHelpsPerDay.toFixed(1)}回
-                  </td>
-                  <td className="px-2 py-1.5 font-bold text-blue-600 dark:text-blue-400 whitespace-nowrap">
-                    {item.calculationResult.berryEnergyPerDay.toLocaleString()}
+                  <td className="px-2 py-1.5 whitespace-nowrap">
+                    <div className="flex flex-col gap-0.5">
+                      <div className="font-bold text-green-600 dark:text-green-400">
+                        {item.calculationResult.berryHelpsPerDay.toFixed(1)}
+                        回/日{" "}
+                        <span className="text-foreground">
+                          (
+                          {(
+                            (1 - item.calculationResult.calculatedFoodDropRate) *
+                            100
+                          ).toFixed(1)}
+                          %)
+                        </span>
+                      </div>
+                      <div className="font-bold text-blue-600 dark:text-blue-400">
+                        {item.calculationResult.berryEnergyPerDay.toLocaleString()}
+                        E/日
+                      </div>
+                    </div>
                   </td>
                 </tr>
               </tbody>
