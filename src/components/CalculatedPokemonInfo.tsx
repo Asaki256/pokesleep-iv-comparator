@@ -146,22 +146,13 @@ const CalculatedPokemonInfo: React.FC<
                   お手伝い時間
                 </th>
                 <th className="px-2 md:px-3 py-2 text-left font-semibold text-muted-foreground whitespace-nowrap">
-                  食材確率
+                  食材
                 </th>
                 <th className="px-2 md:px-3 py-2 text-left font-semibold text-muted-foreground whitespace-nowrap">
-                  食材/日
+                  スキル
                 </th>
                 <th className="px-2 md:px-3 py-2 text-left font-semibold text-muted-foreground whitespace-nowrap">
-                  スキル確率
-                </th>
-                <th className="px-2 md:px-3 py-2 text-left font-semibold text-muted-foreground whitespace-nowrap">
-                  スキル/日
-                </th>
-                <th className="px-2 md:px-3 py-2 text-left font-semibold text-muted-foreground whitespace-nowrap">
-                  きのみ/日
-                </th>
-                <th className="px-2 md:px-3 py-2 text-left font-semibold text-muted-foreground whitespace-nowrap">
-                  きのみE/日
+                  きのみ
                 </th>
               </tr>
             </thead>
@@ -171,40 +162,53 @@ const CalculatedPokemonInfo: React.FC<
                   {calculationResult.calculatedSupportTime.toLocaleString()}
                   秒
                 </td>
-                <td className="px-2 md:px-3 py-2 font-bold text-foreground whitespace-nowrap">
-                  {(
-                    calculationResult.calculatedFoodDropRate *
-                    100
-                  ).toFixed(1)}
-                  %
+                <td className="px-2 md:px-3 py-2 whitespace-nowrap">
+                  <div className="flex flex-col gap-0.5">
+                    <div className="font-bold text-foreground">
+                      {(
+                        calculationResult.calculatedFoodDropRate *
+                        100
+                      ).toFixed(1)}
+                      %
+                    </div>
+                    <div className="font-bold text-orange-600 dark:text-orange-400">
+                      {calculationResult.foodHelpsPerDay.toFixed(
+                        1
+                      )}
+                      回/日
+                    </div>
+                  </div>
                 </td>
-                <td className="px-2 md:px-3 py-2 font-bold text-orange-600 dark:text-orange-400 whitespace-nowrap">
-                  {calculationResult.foodHelpsPerDay.toFixed(
-                    1
-                  )}
-                  回
+                <td className="px-2 md:px-3 py-2 whitespace-nowrap">
+                  <div className="flex flex-col gap-0.5">
+                    <div className="font-bold text-foreground">
+                      {(
+                        calculationResult.calculatedSkillRate *
+                        100
+                      ).toFixed(1)}
+                      %
+                    </div>
+                    <div className="font-bold text-purple-600 dark:text-purple-400">
+                      {calculationResult.skillTriggersPerDay.toFixed(
+                        1
+                      )}
+                      回/日
+                    </div>
+                  </div>
                 </td>
-                <td className="px-2 md:px-3 py-2 font-bold text-foreground whitespace-nowrap">
-                  {(
-                    calculationResult.calculatedSkillRate *
-                    100
-                  ).toFixed(1)}
-                  %
-                </td>
-                <td className="px-2 md:px-3 py-2 font-bold text-purple-600 dark:text-purple-400 whitespace-nowrap">
-                  {calculationResult.skillTriggersPerDay.toFixed(
-                    1
-                  )}
-                  回
-                </td>
-                <td className="px-2 md:px-3 py-2 font-bold text-green-600 dark:text-green-400 whitespace-nowrap">
-                  {calculationResult.berryHelpsPerDay.toFixed(
-                    1
-                  )}
-                  回
-                </td>
-                <td className="px-2 md:px-3 py-2 font-bold text-blue-600 dark:text-blue-400 whitespace-nowrap">
-                  {calculationResult.berryEnergyPerDay.toLocaleString()}
+                <td className="px-2 md:px-3 py-2 whitespace-nowrap">
+                  <div className="flex flex-col gap-0.5">
+                    <div className="font-bold text-green-600 dark:text-green-400">
+                      {calculationResult.berryHelpsPerDay.toFixed(
+                        1
+                      )}
+                      回/日
+                    </div>
+                    <div className="font-bold text-blue-600 dark:text-blue-400">
+                      {calculationResult.berryEnergyPerDay.toLocaleString()}
+                      E/日
+                    </div>
+                  </div>
                 </td>
               </tr>
             </tbody>
