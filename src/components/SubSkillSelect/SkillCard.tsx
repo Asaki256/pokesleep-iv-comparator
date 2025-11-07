@@ -37,7 +37,7 @@ export const SkillCard = ({
         {/* レベルバッジ（左端） */}
         <div
           className="
-            text-secondary text-xs
+            text-secondary dark:text-gray-200 text-xs
             rounded-full w-8 h-5
             flex items-center justify-center
             shrink-0
