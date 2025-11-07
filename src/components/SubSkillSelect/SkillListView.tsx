@@ -96,7 +96,7 @@ export const SkillListView = ({
           p-2 rounded-lg border-2
           ${
             isSelected
-              ? "bg-muted hover:opacity-80"
+              ? "bg-muted hover:opacity-80 border-border"
               : `${styles.gradient} ${styles.border} ${styles.hover}`
           }
           transition-all active:scale-95
@@ -166,7 +166,7 @@ export const SkillListView = ({
                   flex-1
                   ${
                     isVariantSelected
-                      ? "bg-muted text-foreground"
+                      ? "bg-muted text-foreground border-border"
                       : variantStyles.chip
                   }
                   px-2 py-1.5 rounded-md text-sm font-bold

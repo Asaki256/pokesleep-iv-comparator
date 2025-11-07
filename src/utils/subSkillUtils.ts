@@ -92,33 +92,33 @@ export const getRarityStyles = (rarity: Rarity) => {
   const styles = {
     gold: {
       gradient:
-        "bg-gradient-to-br from-yellow-100 to-amber-100",
-      border: "border-amber-300",
+        "bg-gradient-to-br from-yellow-100 to-amber-100 dark:from-amber-900/40 dark:to-yellow-900/40",
+      border: "border-amber-300 dark:border-amber-700",
       badge: "bg-yellow-500",
       hover:
-        "hover:from-yellow-100 hover:to-amber-100 hover:border-amber-400",
-      chip: "bg-amber-100 text-amber-700 border-amber-300",
-      text: "text-yellow-700",
+        "hover:from-yellow-100 hover:to-amber-100 hover:border-amber-400 dark:hover:from-amber-900/50 dark:hover:to-yellow-900/50 dark:hover:border-amber-600",
+      chip: "bg-amber-100 text-amber-700 border-amber-300 dark:bg-amber-900/40 dark:text-amber-300 dark:border-amber-700",
+      text: "text-yellow-700 dark:text-yellow-300",
     },
     blue: {
       gradient:
-        "bg-gradient-to-br from-cyan-100 to-blue-100",
-      border: "border-cyan-300",
+        "bg-gradient-to-br from-cyan-100 to-blue-100 dark:from-cyan-900/40 dark:to-blue-900/40",
+      border: "border-cyan-300 dark:border-cyan-700",
       badge: "bg-cyan-500",
       hover:
-        "hover:from-cyan-100 hover:to-blue-100 hover:border-cyan-400",
-      chip: "bg-cyan-100 text-cyan-700 border-cyan-300",
-      text: "text-cyan-700",
+        "hover:from-cyan-100 hover:to-blue-100 hover:border-cyan-400 dark:hover:from-cyan-900/50 dark:hover:to-blue-900/50 dark:hover:border-cyan-600",
+      chip: "bg-cyan-100 text-cyan-700 border-cyan-300 dark:bg-cyan-900/40 dark:text-cyan-300 dark:border-cyan-700",
+      text: "text-cyan-700 dark:text-cyan-300",
     },
     gray: {
       gradient:
-        "bg-gradient-to-br from-gray-100 to-slate-100",
-      border: "border-gray-300",
+        "bg-gradient-to-br from-gray-100 to-slate-100 dark:from-gray-800/60 dark:to-slate-800/60",
+      border: "border-gray-300 dark:border-gray-600",
       badge: "bg-gray-500",
       hover:
-        "hover:from-gray-200 hover:to-slate-200 hover:border-gray-400",
-      chip: "bg-gray-100 text-gray-700 border-gray-300",
-      text: "text-gray-700",
+        "hover:from-gray-200 hover:to-slate-200 hover:border-gray-400 dark:hover:from-gray-800/70 dark:hover:to-slate-800/70 dark:hover:border-gray-500",
+      chip: "bg-gray-100 text-gray-700 border-gray-300 dark:bg-gray-800/60 dark:text-gray-300 dark:border-gray-600",
+      text: "text-gray-700 dark:text-gray-300",
     },
   };
 
