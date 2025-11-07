@@ -130,7 +130,7 @@ const CalculatedPokemonInfo: React.FC<
           {nature && (
             <div className="text-[10px] md:text-xs text-foreground">
               <span className="font-semibold">性格:</span>{" "}
-              {nature}
+              <span className="font-semibold text-secondary">{nature}</span>
             </div>
           )}
         </div>

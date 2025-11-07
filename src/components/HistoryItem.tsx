@@ -123,7 +123,7 @@ export default function HistoryItem({
                   })}
                 </div>
                 {item.natureDisplay && (
-                  <div className="truncate">性格: {item.natureDisplay}</div>
+                  <div className="truncate">性格: <span className="font-semibold text-secondary">{item.natureDisplay}</span></div>
                 )}
               </div>
             )}
@@ -195,7 +195,7 @@ export default function HistoryItem({
             {item.natureDisplay && (
               <div className="text-xs text-foreground">
                 <span className="font-semibold">性格:</span>{" "}
-                {item.natureDisplay}
+                <span className="font-semibold text-secondary">{item.natureDisplay}</span>
               </div>
             )}
           </div>
