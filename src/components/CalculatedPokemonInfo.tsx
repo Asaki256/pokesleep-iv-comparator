@@ -159,8 +159,10 @@ const CalculatedPokemonInfo: React.FC<
             <tbody>
               <tr>
                 <td className="px-2 md:px-3 py-1.5 font-bold text-foreground whitespace-nowrap">
-                  {(calculationResult.calculatedSupportTime / 60).toFixed(1)}
+                  {Math.floor(calculationResult.calculatedSupportTime / 60)}
                   分
+                  {calculationResult.calculatedSupportTime % 60}
+                  秒
                 </td>
                 <td className="px-2 md:px-3 py-1.5 whitespace-nowrap">
                   <div className="font-bold text-orange-600 dark:text-orange-400">
