@@ -205,12 +205,12 @@ function Search() {
 
   return (
     <>
-      <div className="px-4 py-4 max-w-md md:max-w-4xl lg:max-w-5xl mx-auto">
-        <div>
+      <div className="px-4 py-6 max-w-md md:max-w-4xl lg:max-w-5xl mx-auto">
+        <div className="bg-card rounded-xl border border-border shadow-sm p-4 md:p-6 mb-6">
           {/* ポケモン選択 */}
           <div className="w-full max-w-md mx-auto">
-            <div className="flex items-center justify-between mb-2">
-              <h2 className="text-base">ポケモン</h2>
+            <div className="flex items-center justify-between mb-3">
+              <h2 className="text-base font-semibold text-foreground">ポケモン</h2>
             </div>
             <Combobox
               value={pokemon}
@@ -218,7 +218,7 @@ function Search() {
             />
             {/* とくいときのみ表示 */}
             {selectedPokemon && (
-              <div className="flex flex-wrap gap-2 mt-2 items-center justify-center">
+              <div className="flex flex-wrap gap-2 mt-3 items-center justify-center">
                 {selectedPokemon?.type && (
                   <span
                     className={`text-xs px-3 py-1 rounded-full font-bold ${getTokuiStyle(
@@ -228,34 +228,34 @@ function Search() {
                     {selectedPokemon.type}
                   </span>
                 )}
-                <div className="text-xs">
+                <div className="text-xs text-foreground">
                   {kinomiName || ""}
                 </div>
-                <div className="text-xs px-3 py-1 bg-purple-100 text-purple-800 rounded-md font-medium">
+                <div className="text-xs px-3 py-1 bg-purple-100 dark:bg-purple-900/30 text-purple-800 dark:text-purple-300 rounded-md font-medium">
                   {selectedPokemon.mainSkill}
                 </div>
               </div>
             )}
           </div>
-          <div className="mt-4">
+          <div className="mt-5">
             <SubSkillSelect
               value={selectedSubSkills}
               onChange={setSelectedSubSkills}
             />
           </div>
-          <div className="mt-4">
+          <div className="mt-5">
             <NatureSelector
               value={nature}
               onChange={setNature}
             />
           </div>
-          <div className="text-xs mt-4 text-center">
+          <div className="text-xs mt-5 text-center text-muted-foreground">
             ※同レベルでの比較を行うため、Lv.60固定で計算します。
           </div>
         </div>
-        <div className="flex justify-center my-4">
+        <div className="flex justify-center my-6">
           <Button
-            className="w-full max-w-xs md:w-48"
+            className="w-full max-w-xs md:w-48 h-11 text-base font-semibold shadow-md hover:shadow-lg transition-shadow"
             onClick={handleCalculate}
           >
             決定
@@ -286,7 +286,7 @@ function Search() {
                   currentSubSkills={rankingSubSkills}
                 />
               ) : (
-                <div className="text-center py-12 text-gray-500">
+                <div className="text-center py-12 text-muted-foreground">
                   <p className="text-sm">ポケモンを選択してください</p>
                 </div>
               )

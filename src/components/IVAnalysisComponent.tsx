@@ -111,24 +111,24 @@ export default function IVAnalysisComponent({
   ];
 
   return (
-    <div className="mb-6 p-4 bg-gradient-to-r from-blue-50 to-cyan-50 rounded-lg border border-blue-200 shadow-sm">
-      <h3 className="text-sm md:text-base font-bold text-gray-800 mb-3">
+    <div className="mb-6 p-5 bg-card rounded-xl border border-border shadow-lg transition-all hover:shadow-xl">
+      <h3 className="text-sm md:text-base font-bold text-foreground mb-4">
         {pokemon.displayName} の個体値分析
       </h3>
       <div className="overflow-x-auto">
         <table className="w-full text-xs md:text-sm">
           <thead>
-            <tr className="border-b-2 border-blue-300">
-              <th className="text-left py-2 px-2 md:px-3 font-semibold text-gray-700">
+            <tr className="border-b-2 border-border">
+              <th className="text-left py-3 px-2 md:px-3 font-semibold text-muted-foreground">
                 項目
               </th>
-              <th className="text-right py-2 px-2 md:px-3 font-semibold text-gray-700">
+              <th className="text-right py-3 px-2 md:px-3 font-semibold text-muted-foreground">
                 値/日
               </th>
-              <th className="text-center py-2 px-2 md:px-3 font-semibold text-gray-700">
+              <th className="text-center py-3 px-2 md:px-3 font-semibold text-muted-foreground">
                 順位
               </th>
-              <th className="text-center py-2 px-2 md:px-3 font-semibold text-gray-700">
+              <th className="text-center py-3 px-2 md:px-3 font-semibold text-muted-foreground">
                 割合
               </th>
             </tr>
@@ -140,25 +140,25 @@ export default function IVAnalysisComponent({
                 <tr
                   key={row.type}
                   onClick={() => onRankingTypeChange(row.type)}
-                  className="border-b border-blue-200 hover:bg-blue-100 cursor-pointer transition-colors"
+                  className="border-b border-border hover:bg-muted/50 cursor-pointer transition-colors"
                 >
                   <td
-                    className={`py-2 px-2 md:px-3 ${isEmphasized ? "font-bold" : "font-medium"} text-gray-800`}
+                    className={`py-3 px-2 md:px-3 ${isEmphasized ? "font-bold" : "font-medium"} text-foreground`}
                   >
                     {row.label}
                   </td>
                   <td
-                    className={`py-2 px-2 md:px-3 text-right ${isEmphasized ? "font-bold" : "font-semibold"} text-gray-900`}
+                    className={`py-3 px-2 md:px-3 text-right ${isEmphasized ? "font-bold" : "font-semibold"} text-foreground`}
                   >
                     {row.score}
                   </td>
-                  <td className="py-2 px-2 md:px-3 text-center">
-                    <span className="inline-block px-2 py-1 bg-yellow-100 text-yellow-800 rounded-md font-bold text-xs md:text-sm">
+                  <td className="py-3 px-2 md:px-3 text-center">
+                    <span className="inline-block px-3 py-1.5 bg-accent text-accent-foreground rounded-lg font-bold text-xs md:text-sm shadow-sm">
                       {row.rank}
                     </span>
                   </td>
                   <td
-                    className={`py-2 px-2 md:px-3 text-center ${isEmphasized ? "font-bold" : ""} text-gray-700`}
+                    className={`py-3 px-2 md:px-3 text-center ${isEmphasized ? "font-bold" : ""} text-muted-foreground`}
                   >
                     {row.percent}
                   </td>
@@ -168,7 +168,7 @@ export default function IVAnalysisComponent({
           </tbody>
         </table>
       </div>
-      <p className="text-xs text-gray-600 mt-3">
+      <p className="text-xs text-muted-foreground mt-4 text-center">
         クリックすると対応するランキングタブに切り替わります
       </p>
     </div>
