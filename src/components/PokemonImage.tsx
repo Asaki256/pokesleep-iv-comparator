@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
+import Image from "next/image";
 import { fetchPokemonImage } from "@/services/pokeApi";
 
 interface PokemonImageProps {
@@ -83,11 +84,12 @@ export default function PokemonImage({
 
   // 画像を表示
   return (
-    <img
+    <Image
       src={imageUrl}
       alt={`Pokemon #${pokemonNumber}`}
+      width={size}
+      height={size}
       className={`object-contain ${className}`}
-      style={{ width: size, height: size }}
       loading="lazy"
     />
   );
