@@ -63,9 +63,9 @@ export default function HistoryItem({
   onDelete,
   onRestore,
 }: HistoryItemProps) {
-  const displaySubSkills = [...item.subSkills.slice(0, 3)];
+  const displaySubSkills: (typeof item.subSkills[number] | null)[] = [...item.subSkills.slice(0, 3)];
   while (displaySubSkills.length < 3) {
-    displaySubSkills.push(null as any);
+    displaySubSkills.push(null);
   }
 
   return (

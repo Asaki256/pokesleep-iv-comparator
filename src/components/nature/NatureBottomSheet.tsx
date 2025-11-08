@@ -28,8 +28,11 @@ export default function NatureBottomSheet({
   useEffect(() => {
     if (isOpen) {
       document.body.style.overflow = 'hidden';
-      setInputValue(''); // モーダルを開く際に入力値をリセット
-      setDebouncedQuery(''); // 検索クエリもリセット
+      // queueMicrotaskを使用して状態更新を次のイベントループに遅延
+      queueMicrotask(() => {
+        setInputValue(''); // モーダルを開く際に入力値をリセット
+        setDebouncedQuery(''); // 検索クエリもリセット
+      });
     } else {
       document.body.style.overflow = 'unset';
     }

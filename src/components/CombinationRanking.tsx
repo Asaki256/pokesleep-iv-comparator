@@ -48,21 +48,24 @@ export default function CombinationRanking({
   );
   const [isGenerating, setIsGenerating] = useState(true);
 
-  // Update active ranking type when Pokemon changes
+  // Update active ranking type when Pokemon changes (deferred to avoid cascading renders)
   useEffect(() => {
-    setActiveRankingType(getInitialRankingType(pokemon));
+    queueMicrotask(() => {
+      setActiveRankingType(getInitialRankingType(pokemon));
+    });
   }, [pokemon]);
 
   // Generate ranking data (memoized)
   const rankingData = useMemo(() => {
-    setIsGenerating(true);
-    const startTime = performance.now();
-    const data = generateRankingData(pokemon);
-    const endTime = performance.now();
-    console.log(`Ranking generation time: ${endTime - startTime}ms`);
-    setIsGenerating(false);
-    return data;
+    return generateRankingData(pokemon);
   }, [pokemon]);
+
+  // Track generation completion (deferred to avoid cascading renders)
+  useEffect(() => {
+    queueMicrotask(() => {
+      setIsGenerating(false);
+    });
+  }, [rankingData]);
 
   // Ensure user's current combination is in each ranking
   const skillRankingWithUser = useMemo(() => {
@@ -134,7 +137,15 @@ export default function CombinationRanking({
   const ITEM_HEIGHT = 70; // Height of each ranking entry in pixels (more compact)
   const CONTAINER_HEIGHT = 500; // Height of the scrollable container
 
-  const virtualScroll = useVirtualScroll({
+  const {
+    startIndex,
+    endIndex,
+    visibleItems,
+    totalHeight,
+    offsetY,
+    containerRef,
+    scrollToIndex,
+  } = useVirtualScroll({
     totalItems: currentRanking.length,
     itemHeight: ITEM_HEIGHT,
     containerHeight: CONTAINER_HEIGHT,
@@ -142,9 +153,9 @@ export default function CombinationRanking({
   });
 
   // Calculate visible range
-  const visibleStartRank = virtualScroll.startIndex + 1;
+  const visibleStartRank = startIndex + 1;
   const visibleEndRank = Math.min(
-    virtualScroll.endIndex + 1,
+    endIndex + 1,
     currentRanking.length
   );
 
@@ -205,7 +216,7 @@ export default function CombinationRanking({
     if (targetRankIndex !== null) {
       // Use setTimeout to ensure state update and re-render complete first
       setTimeout(() => {
-        virtualScroll.scrollToIndex(targetRankIndex);
+        scrollToIndex(targetRankIndex);
       }, 0);
     }
   };
@@ -261,7 +272,7 @@ export default function CombinationRanking({
           <Button
             variant="outline"
             size="sm"
-            onClick={() => virtualScroll.scrollToIndex(0)}
+            onClick={() => scrollToIndex(0)}
             className="flex items-center gap-1 text-xs px-2 md:px-3"
           >
             <ArrowUp className="h-3 w-3" />
@@ -271,7 +282,7 @@ export default function CombinationRanking({
             <Button
               variant="outline"
               size="sm"
-              onClick={() => virtualScroll.scrollToIndex(myRankIndex)}
+              onClick={() => scrollToIndex(myRankIndex)}
               className="flex items-center gap-1 text-xs px-2 md:px-3"
             >
               <span>自分のランク</span>
@@ -288,19 +299,19 @@ export default function CombinationRanking({
 
         {/* Virtual scrolling container */}
         <div
-          ref={virtualScroll.containerRef}
+          ref={containerRef}
           className="border border-border rounded-lg overflow-y-auto relative bg-card"
           style={{ height: `${CONTAINER_HEIGHT}px` }}
         >
           {/* Spacer for total height */}
-          <div style={{ height: `${virtualScroll.totalHeight}px` }}>
+          <div style={{ height: `${totalHeight}px` }}>
             {/* Visible items container */}
             <div
               style={{
-                transform: `translateY(${virtualScroll.offsetY}px)`,
+                transform: `translateY(${offsetY}px)`,
               }}
             >
-              {virtualScroll.visibleItems.map((index) => {
+              {visibleItems.map((index) => {
                 const entry = currentRanking[index];
                 const isMyRank = index === myRankIndex;
                 const score = getScore(entry, activeRankingType);

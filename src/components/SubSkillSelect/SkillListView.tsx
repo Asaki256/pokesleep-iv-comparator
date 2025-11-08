@@ -38,16 +38,6 @@ export const SkillListView = ({
     return selected ? selected.id : null;
   };
 
-  // バリアントありスキルグループが選択済みかチェック
-  const isVariantGroupSelected = (
-    skillGroup: string
-  ): string | null => {
-    const selected = selectedSkills.find((s) =>
-      s.baseId.startsWith(skillGroup)
-    );
-    return selected ? selected.id : null;
-  };
-
   // 特定のバリアントが選択済みかチェック
   const isSpecificVariantSelected = (
     skillGroup: string,
