@@ -245,156 +245,159 @@ export default function CombinationRanking({
         onRankingTypeChange={handleRankingTypeChange}
       />
 
-      {/* Sub-tabs for ranking type */}
-      <div className="flex border-b border-border mb-4">
-        {rankingTabs.map((tab) => (
-          <button
-            key={tab.id}
-            onClick={() => setActiveRankingType(tab.id)}
-            className={`
-              flex-1 px-3 py-2 text-xs md:text-sm font-medium transition-colors cursor-pointer
-              ${
-                activeRankingType === tab.id
-                  ? "border-b-2 border-secondary text-secondary bg-secondary/10"
-                  : "text-muted-foreground hover:text-foreground hover:bg-muted/50"
-              }
-            `}
-          >
-            {tab.label}
-          </button>
-        ))}
-      </div>
+      {/* Ranking display card */}
+      <div className="bg-card rounded-xl border border-border shadow-lg p-4 md:p-6">
+        {/* Sub-tabs for ranking type */}
+        <div className="flex border-b border-border mb-4">
+          {rankingTabs.map((tab) => (
+            <button
+              key={tab.id}
+              onClick={() => setActiveRankingType(tab.id)}
+              className={`
+                flex-1 px-3 py-2 text-xs md:text-sm font-medium transition-colors cursor-pointer
+                ${
+                  activeRankingType === tab.id
+                    ? "border-b-2 border-secondary text-secondary bg-secondary/10"
+                    : "text-muted-foreground hover:text-foreground hover:bg-muted/50"
+                }
+              `}
+            >
+              {tab.label}
+            </button>
+          ))}
+        </div>
 
-      {/* Navigation buttons */}
-      <div className="flex gap-2 mb-2">
-        <Button
-          variant="outline"
-          size="sm"
-          onClick={() => scrollToIndex(0)}
-          className="flex items-center gap-1 text-xs px-2 md:px-3"
-        >
-          <ArrowUp className="h-3 w-3" />
-          <span className="hidden sm:inline">トップへ</span>
-        </Button>
-        {myRankIndex !== null && (
+        {/* Navigation buttons */}
+        <div className="flex gap-2 mb-2">
           <Button
             variant="outline"
             size="sm"
-            onClick={() => scrollToIndex(myRankIndex)}
+            onClick={() => scrollToIndex(0)}
             className="flex items-center gap-1 text-xs px-2 md:px-3"
           >
-            <span>自分のランク</span>
-            <span className="hidden sm:inline">({myRankIndex + 1}位)</span>
+            <ArrowUp className="h-3 w-3" />
+            <span className="hidden sm:inline">トップへ</span>
           </Button>
-        )}
-      </div>
+          {myRankIndex !== null && (
+            <Button
+              variant="outline"
+              size="sm"
+              onClick={() => scrollToIndex(myRankIndex)}
+              className="flex items-center gap-1 text-xs px-2 md:px-3"
+            >
+              <span>自分のランク</span>
+              <span className="hidden sm:inline">({myRankIndex + 1}位)</span>
+            </Button>
+          )}
+        </div>
 
-      {/* Display range indicator */}
-      <div className="text-xs text-muted-foreground mb-2">
-        表示: {visibleStartRank}-{visibleEndRank} / 全{currentRanking.length}
-        件
-      </div>
+        {/* Display range indicator */}
+        <div className="text-xs text-muted-foreground mb-2">
+          表示: {visibleStartRank}-{visibleEndRank} / 全{currentRanking.length}
+          件
+        </div>
 
-      {/* Virtual scrolling container */}
-      <div
-        ref={containerRef}
-        className="border border-border rounded-lg overflow-y-auto relative bg-card"
-        style={{ height: `${CONTAINER_HEIGHT}px` }}
-      >
-        {/* Spacer for total height */}
-        <div style={{ height: `${totalHeight}px` }}>
-          {/* Visible items container */}
-          <div
-            style={{
-              transform: `translateY(${offsetY}px)`,
-            }}
-          >
-            {visibleItems.map((index) => {
-              const entry = currentRanking[index];
-              const isMyRank = index === myRankIndex;
-              const score = getScore(entry, activeRankingType);
+        {/* Virtual scrolling container */}
+        <div
+          ref={containerRef}
+          className="border border-border rounded-lg overflow-y-auto relative bg-card"
+          style={{ height: `${CONTAINER_HEIGHT}px` }}
+        >
+          {/* Spacer for total height */}
+          <div style={{ height: `${totalHeight}px` }}>
+            {/* Visible items container */}
+            <div
+              style={{
+                transform: `translateY(${offsetY}px)`,
+              }}
+            >
+              {visibleItems.map((index) => {
+                const entry = currentRanking[index];
+                const isMyRank = index === myRankIndex;
+                const score = getScore(entry, activeRankingType);
 
-              return (
-                <div
-                  key={index}
-                  className={`
-                    border-b border-border p-2 md:p-3
-                    ${isMyRank ? "bg-accent/20 border-l-2 md:border-l-4 border-l-accent" : ""}
-                  `}
-                  style={{ height: `${ITEM_HEIGHT}px` }}
-                >
-                  <div className="flex items-center gap-2 md:gap-3 h-full">
-                    {/* Rank number */}
-                    <div
-                      className={`
-                        flex-shrink-0 w-8 h-8 md:w-10 md:h-10 rounded-full flex items-center justify-center font-bold text-xs md:text-sm
-                        ${
-                          entry.rank === 1
-                            ? "bg-yellow-400 text-yellow-900"
-                            : entry.rank === 2
-                            ? "bg-gray-300 text-gray-800 dark:bg-gray-600 dark:text-gray-100"
-                            : entry.rank === 3
-                            ? "bg-amber-600 text-white"
-                            : "bg-muted text-muted-foreground"
-                        }
-                      `}
-                    >
-                      {entry.rank}
-                    </div>
-
-                    {/* Details */}
-                    <div className="flex-1 min-w-0">
-                      <div className="flex items-center gap-1 md:gap-2 mb-1">
-                        <span className="text-xs md:text-sm font-medium text-foreground truncate">
-                          {entry.natureDisplay}
-                        </span>
+                return (
+                  <div
+                    key={index}
+                    className={`
+                      border-b border-border p-2 md:p-3
+                      ${isMyRank ? "bg-accent/20 border-l-2 md:border-l-4 border-l-accent" : ""}
+                    `}
+                    style={{ height: `${ITEM_HEIGHT}px` }}
+                  >
+                    <div className="flex items-center gap-2 md:gap-3 h-full">
+                      {/* Rank number */}
+                      <div
+                        className={`
+                          flex-shrink-0 w-8 h-8 md:w-10 md:h-10 rounded-full flex items-center justify-center font-bold text-xs md:text-sm
+                          ${
+                            entry.rank === 1
+                              ? "bg-yellow-400 text-yellow-900"
+                              : entry.rank === 2
+                              ? "bg-gray-300 text-gray-800 dark:bg-gray-600 dark:text-gray-100"
+                              : entry.rank === 3
+                              ? "bg-amber-600 text-white"
+                              : "bg-muted text-muted-foreground"
+                          }
+                        `}
+                      >
+                        {entry.rank}
                       </div>
-                      <div className="flex flex-wrap gap-0.5 md:gap-1">
-                        {entry.subSkills.length === 0 ? (
-                          <span className="text-xs text-muted-foreground italic">
-                            なし
+
+                      {/* Details */}
+                      <div className="flex-1 min-w-0">
+                        <div className="flex items-center gap-1 md:gap-2 mb-1">
+                          <span className="text-xs md:text-sm font-medium text-foreground truncate">
+                            {entry.natureDisplay}
                           </span>
-                        ) : (
-                          entry.subSkills.map((skill, idx) => {
-                            const rarityStyle = getRarityStyles(skill.rarity);
-                            return (
-                              <span
-                                key={idx}
-                                className={`inline-block text-xs px-1.5 md:px-2 py-0.5 rounded-md font-medium max-w-[120px] md:max-w-none truncate ${rarityStyle.chip}`}
-                                title={skill.name}
-                              >
-                                {skill.name}
-                              </span>
-                            );
-                          })
-                        )}
+                        </div>
+                        <div className="flex flex-wrap gap-0.5 md:gap-1">
+                          {entry.subSkills.length === 0 ? (
+                            <span className="text-xs text-muted-foreground italic">
+                              なし
+                            </span>
+                          ) : (
+                            entry.subSkills.map((skill, idx) => {
+                              const rarityStyle = getRarityStyles(skill.rarity);
+                              return (
+                                <span
+                                  key={idx}
+                                  className={`inline-block text-xs px-1.5 md:px-2 py-0.5 rounded-md font-medium max-w-[120px] md:max-w-none truncate ${rarityStyle.chip}`}
+                                  title={skill.name}
+                                >
+                                  {skill.name}
+                                </span>
+                              );
+                            })
+                          )}
+                        </div>
                       </div>
-                    </div>
 
-                    {/* Score */}
-                    <div className="flex-shrink-0 text-right">
-                      <div className="text-sm md:text-lg font-bold text-foreground">
-                        {formatScore(score)}
-                      </div>
-                      <div className="text-xs text-muted-foreground hidden md:block">
-                        {getScoreLabel(activeRankingType)}
+                      {/* Score */}
+                      <div className="flex-shrink-0 text-right">
+                        <div className="text-sm md:text-lg font-bold text-foreground">
+                          {formatScore(score)}
+                        </div>
+                        <div className="text-xs text-muted-foreground hidden md:block">
+                          {getScoreLabel(activeRankingType)}
+                        </div>
                       </div>
                     </div>
                   </div>
-                </div>
-              );
-            })}
+                );
+              })}
+            </div>
           </div>
         </div>
-      </div>
 
-      {/* Summary */}
-      <div className="mt-3 text-xs text-muted-foreground">
-        <p>
-          {pokemon.displayName}の全{currentRanking.length}
-          通りの組み合わせから、{getScoreLabel(activeRankingType)}
-          の降順でランキング表示しています。
-        </p>
+        {/* Summary */}
+        <div className="mt-3 text-xs text-muted-foreground">
+          <p>
+            {pokemon.displayName}の全{currentRanking.length}
+            通りの組み合わせから、{getScoreLabel(activeRankingType)}
+            の降順でランキング表示しています。
+          </p>
+        </div>
       </div>
     </div>
   );

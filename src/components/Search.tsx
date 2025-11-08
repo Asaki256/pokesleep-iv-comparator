@@ -254,14 +254,14 @@ function Search() {
           <div className="text-xs mt-5 text-center text-muted-foreground">
             ※同レベルでの比較を行うため、Lv.60固定で計算します。
           </div>
-        </div>
-        <div className="flex justify-center my-6">
-          <Button
-            className="w-full max-w-xs md:w-48 h-11 text-base font-semibold shadow-md hover:shadow-lg transition-shadow"
-            onClick={handleCalculate}
-          >
-            決定
-          </Button>
+          <div className="flex justify-center mt-6">
+            <Button
+              className="w-full max-w-xs md:w-48 h-11 text-base font-semibold shadow-md hover:shadow-lg transition-shadow"
+              onClick={handleCalculate}
+            >
+              決定
+            </Button>
+          </div>
         </div>
         {/* 計算結果の表示（スナップショットを使用） */}
         {calculationResult && displaySnapshot && (
