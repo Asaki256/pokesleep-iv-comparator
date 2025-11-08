@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Button } from "@/components/ui/button";
 import { Combobox } from "@/components/PokeNameCombobox";
 import SubSkillSelect from "./SubSkillSelect";
@@ -44,6 +44,9 @@ function Search() {
 
   const { history, addHistory, deleteHistory, clearHistory, getHistoryById, isLoading } =
     useCalculationHistory();
+
+  // 初回ロード時の履歴復元を追跡
+  const hasRestoredFromHistory = useRef(false);
 
   // 選択されたポケモンのデータを取得（入力欄から）
   const selectedPokemon = pokemonData.find(
@@ -179,26 +182,25 @@ function Search() {
 
   // 初回ロード時に最新の履歴を自動反映（入力欄は空のまま、結果表示のみ）
   useEffect(() => {
-    if (!isLoading && history.length > 0 && !calculationResult) {
+    if (!isLoading && history.length > 0 && !calculationResult && !hasRestoredFromHistory.current) {
+      hasRestoredFromHistory.current = true;
       const latestHistory = history[0];
 
-      // 計算結果を復元
-      setCalculationResult(latestHistory.calculationResult);
-
-      // 表示用スナップショットを復元
-      setDisplaySnapshot({
-        pokemonName: latestHistory.pokemonName,
-        pokemonNumber: latestHistory.pokemonNumber,
-        pokemonType: latestHistory.pokemonType,
-        nature: latestHistory.natureDisplay,
-        subSkills: latestHistory.subSkills,
-      });
-
-      // ランキング表示用の初期データを設定（入力欄には反映しない）
-      setInitialDisplayData({
-        pokemonInternalName: latestHistory.pokemonInternalName,
-        natureName: latestHistory.natureName,
-        subSkills: latestHistory.subSkills,
+      // 履歴から状態を一括復元（バッチ更新を使用）
+      queueMicrotask(() => {
+        setCalculationResult(latestHistory.calculationResult);
+        setDisplaySnapshot({
+          pokemonName: latestHistory.pokemonName,
+          pokemonNumber: latestHistory.pokemonNumber,
+          pokemonType: latestHistory.pokemonType,
+          nature: latestHistory.natureDisplay,
+          subSkills: latestHistory.subSkills,
+        });
+        setInitialDisplayData({
+          pokemonInternalName: latestHistory.pokemonInternalName,
+          natureName: latestHistory.natureName,
+          subSkills: latestHistory.subSkills,
+        });
       });
     }
   }, [isLoading, history, calculationResult]);

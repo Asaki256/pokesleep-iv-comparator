@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { SubSkill } from "@/types/subSkill";
 import {
   SelectedSubSkill,
@@ -32,10 +32,17 @@ const SubSkillSelect = ({
     string | null
   >(null);
 
-  // 外部からのvalue変更を反映
+  // 前回のvalue参照を保持
+  const prevValueRef = useRef<SelectedSubSkill[] | undefined>(value);
+
+  // 外部からのvalue変更を反映（値が実際に変更された場合のみ）
   useEffect(() => {
-    if (value !== undefined) {
-      setSelectedSkills(value);
+    if (value !== undefined && value !== prevValueRef.current) {
+      prevValueRef.current = value;
+      // queueMicrotaskを使用して次のイベントループで更新
+      queueMicrotask(() => {
+        setSelectedSkills(value);
+      });
     }
   }, [value]);
 

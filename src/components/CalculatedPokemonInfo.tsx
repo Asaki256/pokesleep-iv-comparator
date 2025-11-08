@@ -66,9 +66,9 @@ const CalculatedPokemonInfo: React.FC<
   calculationResult,
 }) => {
   // サブスキルを最大3つまで表示用に整形
-  const displaySubSkills = [...subSkills.slice(0, 3)];
+  const displaySubSkills: (SelectedSubSkill | null)[] = [...subSkills.slice(0, 3)];
   while (displaySubSkills.length < 3) {
-    displaySubSkills.push(null as any);
+    displaySubSkills.push(null);
   }
 
   // 現在の日時を取得

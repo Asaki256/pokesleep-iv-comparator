@@ -114,7 +114,7 @@ export const SkillPickerModal = ({
                 {/* 選択中スキル（チップ形式） */}
                 {selectedSkills.length > 0 && (
                   <div className="flex flex-wrap gap-1.5">
-                    {selectedSkills.map((skill, index) => {
+                    {selectedSkills.map((skill) => {
                       const styles = getRarityStyles(
                         skill.rarity
                       );

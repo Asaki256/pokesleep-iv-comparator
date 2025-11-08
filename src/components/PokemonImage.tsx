@@ -22,37 +22,53 @@ export default function PokemonImage({
   className = "",
 }: PokemonImageProps) {
   const [imageUrl, setImageUrl] = useState<string | null>(null);
-  const [isLoading, setIsLoading] = useState(true);
+  const [isLoading, setIsLoading] = useState(!!pokemonNumber);
   const [hasError, setHasError] = useState(false);
 
   useEffect(() => {
     // pokemonNumberがない場合は何もしない
     if (!pokemonNumber) {
-      setIsLoading(false);
       return;
     }
 
-    // 状態をリセット
-    setIsLoading(true);
-    setHasError(false);
-    setImageUrl(null);
+    // キャンセルフラグ
+    let cancelled = false;
+
+    // 状態をリセット（非同期で行い、レンダリング中のsetStateを回避）
+    queueMicrotask(() => {
+      if (!cancelled) {
+        setIsLoading(true);
+        setHasError(false);
+        setImageUrl(null);
+      }
+    });
 
     // 画像を取得
     fetchPokemonImage(pokemonNumber)
       .then((url) => {
-        if (url) {
-          setImageUrl(url);
-        } else {
-          setHasError(true);
+        if (!cancelled) {
+          if (url) {
+            setImageUrl(url);
+          } else {
+            setHasError(true);
+          }
         }
       })
       .catch((error) => {
-        console.error("Failed to load Pokemon image:", error);
-        setHasError(true);
+        if (!cancelled) {
+          console.error("Failed to load Pokemon image:", error);
+          setHasError(true);
+        }
       })
       .finally(() => {
-        setIsLoading(false);
+        if (!cancelled) {
+          setIsLoading(false);
+        }
       });
+
+    return () => {
+      cancelled = true;
+    };
   }, [pokemonNumber]);
 
   // ローディング中またはエラー時はスケルトンローダーを表示

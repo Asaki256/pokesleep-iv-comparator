@@ -1,4 +1,4 @@
-const fs = require('fs');
+import fs from 'fs';
 
 // Read the pokemon data file
 const filePath = './src/data/pokemonData.ts';
