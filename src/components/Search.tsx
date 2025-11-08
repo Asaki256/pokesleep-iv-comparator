@@ -15,14 +15,14 @@ import { pokemonData } from "@/data/pokemonData";
 import { kinomiData } from "@/data/kinomiData";
 import { calculatePokemonStatsSimple, CalculationResult } from "@/utils/pokemonCalculator";
 import { useCalculationHistory } from "@/hooks/useCalculationHistory";
-import { NATURE_GROUPS } from "@/data/natureData";
+import { NATURE_GROUPS, getDefaultNature } from "@/data/natureData";
 
 function Search() {
   const [pokemon, setPokemon] = useState("");
   const [selectedSubSkills, setSelectedSubSkills] =
     useState<SelectedSubSkill[]>([]);
   const [nature, setNature] =
-    useState<SelectedNature | null>(null);
+    useState<SelectedNature | null>(getDefaultNature() as SelectedNature);
   const [calculationResult, setCalculationResult] =
     useState<CalculationResult | null>(null);
 
@@ -170,7 +170,8 @@ function Search() {
       }
       setNature(foundNature);
     } else {
-      setNature(null);
+      // 履歴に性格が保存されていない場合はデフォルト性格を使用
+      setNature(getDefaultNature() as SelectedNature);
     }
 
     // 初期表示データをクリア（履歴から復元したため）
