@@ -4,6 +4,7 @@ import { useState, useEffect, useRef } from "react";
 import { Button } from "@/components/ui/button";
 import { Combobox } from "@/components/PokeNameCombobox";
 import SubSkillSelect from "./SubSkillSelect";
+import LevelSelector from "./LevelSelector";
 import NatureSelector from "./nature/NatureSelector";
 import CalculatedPokemonInfo from "./CalculatedPokemonInfo";
 import ResultTabs from "./ResultTabs";
@@ -19,6 +20,7 @@ import { NATURE_GROUPS, getDefaultNature } from "@/data/natureData";
 
 function Search() {
   const [pokemon, setPokemon] = useState("");
+  const [level, setLevel] = useState(60);
   const [selectedSubSkills, setSelectedSubSkills] =
     useState<SelectedSubSkill[]>([]);
   const [nature, setNature] =
@@ -32,6 +34,7 @@ function Search() {
     pokemonNumber: number;
     pokemonType?: string;
     nature?: string;
+    level: number;
     subSkills: SelectedSubSkill[];
   } | null>(null);
 
@@ -39,6 +42,7 @@ function Search() {
   const [initialDisplayData, setInitialDisplayData] = useState<{
     pokemonInternalName: string;
     natureName?: string;
+    level: number;
     subSkills: SelectedSubSkill[];
   } | null>(null);
 
@@ -88,6 +92,29 @@ function Search() {
     }
   };
 
+  // レベルに応じてサブスキルをフィルタリング
+  const filterSubSkillsByLevel = (
+    subSkills: SelectedSubSkill[],
+    pokemonLevel: number
+  ): SelectedSubSkill[] => {
+    // レベル範囲に応じた適用個数
+    // Lv.1-9: 0個, Lv.10-24: 1個, Lv.25-49: 2個, Lv.50-100: 3個
+    let maxSkills = 0;
+    if (pokemonLevel >= 50) {
+      maxSkills = 3;
+    } else if (pokemonLevel >= 25) {
+      maxSkills = 2;
+    } else if (pokemonLevel >= 10) {
+      maxSkills = 1;
+    }
+
+    // レベルの低い順にソートして、maxSkills個まで適用
+    return subSkills
+      .slice()
+      .sort((a, b) => a.level - b.level)
+      .slice(0, maxSkills);
+  };
+
   // 決定ボタンのハンドラー
   const handleCalculate = () => {
     if (!selectedPokemon) {
@@ -95,12 +122,15 @@ function Search() {
       return;
     }
 
+    // レベルに応じてサブスキルをフィルタリング
+    const filteredSubSkills = filterSubSkillsByLevel(selectedSubSkills, level);
+
     // 計算実行
     const result = calculatePokemonStatsSimple(
       selectedPokemon,
-      60,
+      level,
       nature?.name,
-      selectedSubSkills
+      filteredSubSkills
     );
 
     setCalculationResult(result);
@@ -115,6 +145,7 @@ function Search() {
             nature.up ? ` (▲${nature.up} ▼${nature.down})` : " (補正なし)"
           }`
         : undefined,
+      level,
       subSkills: selectedSubSkills,
     };
     setDisplaySnapshot(snapshot);
@@ -131,6 +162,7 @@ function Search() {
         pokemonType: selectedPokemon.type,
         natureName: nature?.name,
         natureDisplay: snapshot.nature,
+        level,
         subSkills: selectedSubSkills,
         calculationResult: result,
       });
@@ -148,6 +180,9 @@ function Search() {
 
     // ポケモン選択を復元
     setPokemon(historyItem.pokemonInternalName);
+
+    // レベルを復元（デフォルトは60）
+    setLevel(historyItem.level ?? 60);
 
     // サブスキルを復元
     setSelectedSubSkills(historyItem.subSkills);
@@ -194,11 +229,13 @@ function Search() {
           pokemonNumber: latestHistory.pokemonNumber,
           pokemonType: latestHistory.pokemonType,
           nature: latestHistory.natureDisplay,
+          level: latestHistory.level ?? 60,
           subSkills: latestHistory.subSkills,
         });
         setInitialDisplayData({
           pokemonInternalName: latestHistory.pokemonInternalName,
           natureName: latestHistory.natureName,
+          level: latestHistory.level ?? 60,
           subSkills: latestHistory.subSkills,
         });
       });
@@ -240,6 +277,12 @@ function Search() {
             )}
           </div>
           <div className="mt-5">
+            <LevelSelector
+              value={level}
+              onChange={setLevel}
+            />
+          </div>
+          <div className="mt-5">
             <SubSkillSelect
               value={selectedSubSkills}
               onChange={setSelectedSubSkills}
@@ -250,9 +293,6 @@ function Search() {
               value={nature}
               onChange={setNature}
             />
-          </div>
-          <div className="text-xs mt-5 text-center text-muted-foreground">
-            ※同レベルでの比較を行うため、Lv.60固定で計算します。
           </div>
           <div className="flex justify-center mt-6">
             <Button
@@ -271,6 +311,7 @@ function Search() {
               pokemonNumber={displaySnapshot.pokemonNumber}
               pokemonType={displaySnapshot.pokemonType}
               nature={displaySnapshot.nature}
+              level={displaySnapshot.level}
               subSkills={displaySnapshot.subSkills}
               calculationResult={calculationResult}
             />
