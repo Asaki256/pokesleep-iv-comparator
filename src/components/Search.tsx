@@ -170,8 +170,7 @@ function Search() {
       }
       setNature(foundNature);
     } else {
-      // 履歴に性格が保存されていない場合はデフォルト性格を使用
-      setNature(getDefaultNature() as SelectedNature);
+      setNature(null);
     }
 
     // 初期表示データをクリア（履歴から復元したため）

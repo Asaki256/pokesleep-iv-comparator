@@ -2,7 +2,6 @@
 
 import { useState, useCallback } from 'react';
 import { SelectedNature } from '@/types/nature';
-import { getDefaultNature } from '@/data/natureData';
 
 interface UseNatureSelectorProps {
   /** 親コンポーネントから渡される選択済み性格 */
@@ -74,14 +73,13 @@ export function useNatureSelector({
   );
 
   /**
-   * 性格をクリア（デフォルト性格に戻す）
+   * 性格をクリア
    */
   const clearNature = useCallback(() => {
-    const defaultNature = getDefaultNature() as SelectedNature;
     if (isControlled) {
-      onChange?.(defaultNature);
+      onChange?.(null);
     } else {
-      setInternalNature(defaultNature);
+      setInternalNature(null);
     }
   }, [isControlled, onChange]);
 
