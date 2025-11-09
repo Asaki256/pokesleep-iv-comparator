@@ -101,11 +101,10 @@ const CalculatedPokemonInfo: React.FC<
           </span>
         </div>
 
-        {/* 2-4行目グループ: レベル、サブスキル、性格 */}
+        {/* 2-3行目グループ: サブスキル、その下にレベルと性格 */}
         <div className="ml-9 space-y-0.5">
-          <div className="text-[10px] text-foreground flex items-center gap-1">
-            <span className="text-muted-foreground">Lv.{level}</span>
-            <span className="text-muted-foreground">|</span>
+          {/* サブスキル */}
+          <div className="text-[10px] text-foreground flex items-center gap-1 flex-wrap">
             {displaySubSkills.map((skill, index) => {
               if (!skill) return null;
               const styles = getRarityStyles(skill.rarity);
@@ -118,12 +117,11 @@ const CalculatedPokemonInfo: React.FC<
                 </span>
               );
             })}
-            {nature && (
-              <>
-                <span className="text-muted-foreground">|</span>
-                <span className="text-secondary text-[10px]">{nature}</span>
-              </>
-            )}
+          </div>
+          {/* レベルと性格 */}
+          <div className="text-[10px] text-muted-foreground flex items-center gap-2">
+            <span>Lv.{level}</span>
+            {nature && <span className="text-secondary">{nature}</span>}
           </div>
         </div>
       </div>

@@ -101,7 +101,6 @@ export default function HistoryItem({
                 <span>Lv.{item.level ?? 60}</span>
                 {displaySubSkills.some(s => s) && (
                   <>
-                    <span>|</span>
                     {displaySubSkills.map((skill, index) => {
                       if (!skill) return null;
                       const styles = getRarityStyles(skill.rarity);
@@ -117,10 +116,7 @@ export default function HistoryItem({
                   </>
                 )}
                 {item.natureDisplay && (
-                  <>
-                    <span>|</span>
-                    <span className="text-secondary">{item.natureDisplay.split(' ')[0]}</span>
-                  </>
+                  <span className="text-secondary">{item.natureDisplay.split(' ')[0]}</span>
                 )}
               </div>
             )}
@@ -162,28 +158,28 @@ export default function HistoryItem({
       {/* 詳細情報（展開時） */}
       {isExpanded && (
         <div className="border-t border-border p-2 bg-muted/20">
-          {/* レベル、サブスキル、性格を1行に */}
-          <div className="mb-2 text-[10px] text-foreground flex items-center gap-1 flex-wrap">
-            <span className="text-muted-foreground">Lv.{item.level ?? 60}</span>
-            <span className="text-muted-foreground">|</span>
-            {displaySubSkills.map((skill, index) => {
-              if (!skill) return null;
-              const styles = getRarityStyles(skill.rarity);
-              return (
-                <span
-                  key={index}
-                  className={`inline-block px-1 py-0.5 rounded text-[9px] border ${styles.chip}`}
-                >
-                  {skill.name}
-                </span>
-              );
-            })}
-            {item.natureDisplay && (
-              <>
-                <span className="text-muted-foreground">|</span>
-                <span className="text-secondary">{item.natureDisplay}</span>
-              </>
-            )}
+          {/* サブスキル、その下にレベルと性格 */}
+          <div className="mb-2 space-y-0.5">
+            {/* サブスキル */}
+            <div className="text-[10px] text-foreground flex items-center gap-1 flex-wrap">
+              {displaySubSkills.map((skill, index) => {
+                if (!skill) return null;
+                const styles = getRarityStyles(skill.rarity);
+                return (
+                  <span
+                    key={index}
+                    className={`inline-block px-1 py-0.5 rounded text-[9px] border ${styles.chip}`}
+                  >
+                    {skill.name}
+                  </span>
+                );
+              })}
+            </div>
+            {/* レベルと性格 */}
+            <div className="text-[10px] text-muted-foreground flex items-center gap-2">
+              <span>Lv.{item.level ?? 60}</span>
+              {item.natureDisplay && <span className="text-secondary">{item.natureDisplay}</span>}
+            </div>
           </div>
 
           {/* 計算結果テーブル */}

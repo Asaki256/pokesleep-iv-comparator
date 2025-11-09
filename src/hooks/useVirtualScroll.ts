@@ -98,6 +98,14 @@ export function useVirtualScroll({
     }
   }, [handleScroll]);
 
+  // Reset scroll position when total items change
+  useEffect(() => {
+    if (containerRef.current) {
+      containerRef.current.scrollTop = 0;
+      setScrollTop(0);
+    }
+  }, [totalItems]);
+
   return {
     startIndex,
     endIndex,
