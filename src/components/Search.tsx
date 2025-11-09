@@ -244,11 +244,11 @@ function Search() {
 
   return (
     <>
-      <div className="px-4 py-6 max-w-md md:max-w-4xl lg:max-w-5xl mx-auto">
-        <div className="bg-card rounded-xl border border-border shadow-sm p-4 md:p-6 mb-6">
+      <div className="px-4 py-4 max-w-md md:max-w-4xl lg:max-w-5xl mx-auto">
+        <div className="bg-card rounded-lg border border-border shadow-sm p-3 mb-4">
           {/* ポケモン選択 */}
           <div className="w-full max-w-md mx-auto">
-            <div className="flex items-center justify-between mb-3">
+            <div className="flex items-center justify-between mb-2">
               <h2 className="text-base font-semibold text-foreground">ポケモン</h2>
             </div>
             <Combobox
@@ -257,7 +257,7 @@ function Search() {
             />
             {/* とくいときのみ表示 */}
             {selectedPokemon && (
-              <div className="flex flex-wrap gap-2 mt-3 items-center justify-center">
+              <div className="flex flex-wrap gap-2 mt-2 items-center justify-center">
                 {selectedPokemon?.type && (
                   <span
                     className={`text-xs px-3 py-1 rounded-full font-bold ${getTokuiStyle(
@@ -276,27 +276,27 @@ function Search() {
               </div>
             )}
           </div>
-          <div className="mt-5">
+          <div className="mt-3">
             <LevelSelector
               value={level}
               onChange={setLevel}
             />
           </div>
-          <div className="mt-5">
+          <div className="mt-3">
             <SubSkillSelect
               value={selectedSubSkills}
               onChange={setSelectedSubSkills}
             />
           </div>
-          <div className="mt-5">
+          <div className="mt-3">
             <NatureSelector
               value={nature}
               onChange={setNature}
             />
           </div>
-          <div className="flex justify-center mt-6">
+          <div className="flex justify-center mt-4">
             <Button
-              className="w-full max-w-xs md:w-48 h-11 text-base font-semibold shadow-md hover:shadow-lg transition-shadow"
+              className="w-full max-w-xs md:w-48 h-10 text-base font-semibold shadow-md hover:shadow-lg transition-shadow"
               onClick={handleCalculate}
             >
               決定
@@ -305,7 +305,7 @@ function Search() {
         </div>
         {/* 計算結果の表示（スナップショットを使用） */}
         {calculationResult && displaySnapshot && (
-          <div className="mb-4">
+          <div className="mb-3">
             <CalculatedPokemonInfo
               pokemonName={displaySnapshot.pokemonName}
               pokemonNumber={displaySnapshot.pokemonNumber}
@@ -319,7 +319,7 @@ function Search() {
         )}
 
         {/* タブ切り替え（常に表示） */}
-        <div className="mt-6">
+        <div className="mt-4">
           <ResultTabs
             rankingContent={
               rankingPokemon ? (

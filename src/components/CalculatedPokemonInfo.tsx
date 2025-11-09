@@ -77,18 +77,18 @@ const CalculatedPokemonInfo: React.FC<
   const currentDate = new Date();
 
   return (
-    <div className="bg-card rounded-xl shadow-lg border border-border overflow-hidden">
+    <div className="bg-card rounded-lg shadow border border-border overflow-hidden">
       {/* ヘッダー */}
-      <div className="p-3 md:p-4 border-b border-border">
+      <div className="p-2 border-b border-border">
         {/* 1行目: ポケモン画像・名前・バッジ・日付 */}
-        <div className="flex items-center gap-2 md:gap-3 mb-2">
-          <PokemonImage pokemonNumber={pokemonNumber} size={48} />
-          <h4 className="font-bold text-sm md:text-base text-foreground">
+        <div className="flex items-center gap-2 mb-1">
+          <PokemonImage pokemonNumber={pokemonNumber} size={40} />
+          <h4 className="font-bold text-sm text-foreground">
             {pokemonName}
           </h4>
           {pokemonType && (
             <span
-              className={`text-[9px] md:text-[10px] px-3 py-1 rounded-full font-bold ${getTokuiStyle(
+              className={`text-[9px] px-2 py-0.5 rounded-full font-bold ${getTokuiStyle(
                 pokemonType
               )}`}
             >
@@ -96,125 +96,94 @@ const CalculatedPokemonInfo: React.FC<
             </span>
           )}
           <div className="flex-1"></div>
-          <span className="text-[9px] md:text-[10px] text-muted-foreground font-medium">
+          <span className="text-[9px] text-muted-foreground">
             {formatDate(currentDate)}
           </span>
         </div>
 
         {/* 2-4行目グループ: レベル、サブスキル、性格 */}
-        <div className="ml-8 md:ml-12 space-y-1">
-          <div className="text-[10px] md:text-xs text-foreground">
-            <span className="font-semibold">レベル:</span>{" "}
-            <span className="font-semibold text-secondary">Lv.{level}</span>
-          </div>
-          <div className="text-[10px] md:text-xs text-foreground">
-            <span className="font-semibold">
-              サブスキル:
-            </span>{" "}
+        <div className="ml-9 space-y-0.5">
+          <div className="text-[10px] text-foreground flex items-center gap-1">
+            <span className="text-muted-foreground">Lv.{level}</span>
+            <span className="text-muted-foreground">|</span>
             {displaySubSkills.map((skill, index) => {
-              if (!skill) {
-                return (
-                  <span
-                    key={index}
-                    className="inline-block px-1.5 py-0.5 rounded mx-0.5 bg-muted text-muted-foreground border border-border"
-                  >
-                    未選択
-                  </span>
-                );
-              }
+              if (!skill) return null;
               const styles = getRarityStyles(skill.rarity);
               return (
                 <span
                   key={index}
-                  className={`inline-block px-1.5 py-0.5 rounded mx-0.5 border ${styles.chip}`}
+                  className={`inline-block px-1 py-0.5 rounded text-[9px] border ${styles.chip}`}
                 >
                   {skill.name}
                 </span>
               );
             })}
+            {nature && (
+              <>
+                <span className="text-muted-foreground">|</span>
+                <span className="text-secondary text-[10px]">{nature}</span>
+              </>
+            )}
           </div>
-          {nature && (
-            <div className="text-[10px] md:text-xs text-foreground">
-              <span className="font-semibold">性格:</span>{" "}
-              <span className="font-semibold text-secondary">{nature}</span>
-            </div>
-          )}
         </div>
       </div>
 
       {/* 計算結果 */}
-      <div className="p-3 md:p-4 bg-muted/30">
-        <div className="bg-background rounded-lg border border-border overflow-x-auto shadow-sm">
-          <table className="w-full text-[10px] md:text-xs">
-            <thead className="bg-muted/50">
+      <div className="p-2 bg-muted/20">
+        <div className="bg-background rounded border border-border overflow-x-auto">
+          <table className="w-full text-[10px]">
+            <thead className="bg-muted/30">
               <tr>
-                <th className="px-2 md:px-3 py-1.5 text-left font-semibold text-muted-foreground whitespace-nowrap">
-                  お手伝い時間
+                <th className="px-2 py-1 text-left font-semibold text-muted-foreground whitespace-nowrap">
+                  お手伝い
                 </th>
-                <th className="px-2 md:px-3 py-1.5 text-left font-semibold text-muted-foreground whitespace-nowrap">
+                <th className="px-2 py-1 text-left font-semibold text-muted-foreground whitespace-nowrap">
                   食材
                 </th>
-                <th className="px-2 md:px-3 py-1.5 text-left font-semibold text-muted-foreground whitespace-nowrap">
+                <th className="px-2 py-1 text-left font-semibold text-muted-foreground whitespace-nowrap">
                   スキル
                 </th>
-                <th className="px-2 md:px-3 py-1.5 text-left font-semibold text-muted-foreground whitespace-nowrap">
+                <th className="px-2 py-1 text-left font-semibold text-muted-foreground whitespace-nowrap">
                   きのみ
                 </th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td className="px-2 md:px-3 py-1.5 font-bold text-foreground whitespace-nowrap">
+                <td className="px-2 py-1 font-bold text-foreground whitespace-nowrap">
                   {Math.floor(calculationResult.calculatedSupportTime / 60)}
                   分
                   {calculationResult.calculatedSupportTime % 60}
                   秒
                 </td>
-                <td className="px-2 md:px-3 py-1.5 whitespace-nowrap">
+                <td className="px-2 py-1 whitespace-nowrap">
                   <div className="font-bold text-orange-600 dark:text-orange-400">
                     {calculationResult.foodHelpsPerDay.toFixed(1)}
-                    回/日{" "}
-                    <span className="text-foreground">
-                      (
-                      {(
-                        calculationResult.calculatedFoodDropRate *
-                        100
-                      ).toFixed(1)}
-                      %)
+                    回{" "}
+                    <span className="text-foreground text-[9px]">
+                      ({(calculationResult.calculatedFoodDropRate * 100).toFixed(1)}%)
                     </span>
                   </div>
                 </td>
-                <td className="px-2 md:px-3 py-1.5 whitespace-nowrap">
+                <td className="px-2 py-1 whitespace-nowrap">
                   <div className="font-bold text-purple-600 dark:text-purple-400">
                     {calculationResult.skillTriggersPerDay.toFixed(1)}
-                    回/日{" "}
-                    <span className="text-foreground">
-                      (
-                      {(
-                        calculationResult.calculatedSkillRate *
-                        100
-                      ).toFixed(1)}
-                      %)
+                    回{" "}
+                    <span className="text-foreground text-[9px]">
+                      ({(calculationResult.calculatedSkillRate * 100).toFixed(1)}%)
                     </span>
                   </div>
                 </td>
-                <td className="px-2 md:px-3 py-1.5 whitespace-nowrap">
-                  <div className="flex flex-col gap-0.5">
+                <td className="px-2 py-1 whitespace-nowrap">
+                  <div className="flex flex-col">
                     <div className="font-bold text-green-600 dark:text-green-400">
-                      {calculationResult.berryHelpsPerDay.toFixed(1)}
-                      回/日{" "}
-                      <span className="text-foreground">
-                        (
-                        {(
-                          (1 - calculationResult.calculatedFoodDropRate) *
-                          100
-                        ).toFixed(1)}
-                        %)
+                      {calculationResult.berryHelpsPerDay.toFixed(1)}回{" "}
+                      <span className="text-foreground text-[9px]">
+                        ({((1 - calculationResult.calculatedFoodDropRate) * 100).toFixed(1)}%)
                       </span>
                     </div>
-                    <div className="font-bold text-blue-600 dark:text-blue-400">
-                      {calculationResult.berryEnergyPerDay.toLocaleString()}
-                      E/日
+                    <div className="font-bold text-blue-600 dark:text-blue-400 text-[9px]">
+                      {calculationResult.berryEnergyPerDay.toLocaleString()}E
                     </div>
                   </div>
                 </td>
