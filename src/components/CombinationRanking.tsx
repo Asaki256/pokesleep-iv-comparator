@@ -145,12 +145,24 @@ export default function CombinationRanking({
     offsetY,
     containerRef,
     scrollToIndex,
+    scrollTop,
   } = useVirtualScroll({
     totalItems: currentRanking.length,
     itemHeight: ITEM_HEIGHT,
     containerHeight: CONTAINER_HEIGHT,
     overscan: 5,
   });
+
+  // Debug: Log scroll state changes
+  useEffect(() => {
+    console.log('[CombinationRanking] Scroll state:', {
+      scrollTop,
+      startIndex,
+      endIndex,
+      visibleItemsCount: visibleItems.length,
+      totalItems: currentRanking.length,
+    });
+  }, [scrollTop, startIndex, endIndex, visibleItems.length, currentRanking.length]);
 
   // Calculate visible range
   const visibleStartRank = startIndex + 1;
@@ -308,12 +320,14 @@ export default function CombinationRanking({
           {/* Spacer for total height */}
           <div style={{ height: `${totalHeight}px`, position: 'relative' }}>
             {/* Visible items - using absolute positioning */}
-            {visibleItems.map((index) => {
-              const entry = currentRanking[index];
-              const isMyRank = index === myRankIndex;
-              const score = getScore(entry, activeRankingType);
+            {(() => {
+              console.log('[CombinationRanking] Rendering', visibleItems.length, 'items');
+              return visibleItems.map((index) => {
+                const entry = currentRanking[index];
+                const isMyRank = index === myRankIndex;
+                const score = getScore(entry, activeRankingType);
 
-              return (
+                return (
                 <div
                   key={index}
                   className={`
@@ -385,7 +399,8 @@ export default function CombinationRanking({
                     </div>
                   </div>
                 );
-              })}
+              });
+            })()}
           </div>
         </div>
 

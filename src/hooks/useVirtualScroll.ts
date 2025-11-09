@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef, useCallback } from "react";
+import { useState, useEffect, useRef, useCallback, useMemo } from "react";
 
 export interface VirtualScrollOptions {
   /** Total number of items */
@@ -42,26 +42,33 @@ export function useVirtualScroll({
 }: VirtualScrollOptions): VirtualScrollResult {
   const [scrollTop, setScrollTop] = useState(0);
   const containerRef = useRef<HTMLDivElement>(null);
-  const rafRef = useRef<number | null>(null);
 
   // Calculate total height
-  const totalHeight = totalItems * itemHeight;
+  const totalHeight = useMemo(() => totalItems * itemHeight, [totalItems, itemHeight]);
 
   // Calculate visible range
-  const startIndex = Math.max(0, Math.floor(scrollTop / itemHeight) - overscan);
-  const endIndex = Math.min(
-    totalItems - 1,
-    Math.ceil((scrollTop + containerHeight) / itemHeight) + overscan
+  const startIndex = useMemo(
+    () => Math.max(0, Math.floor(scrollTop / itemHeight) - overscan),
+    [scrollTop, itemHeight, overscan]
   );
 
-  // Generate array of visible item indices
-  const visibleItems: number[] = [];
-  for (let i = startIndex; i <= endIndex; i++) {
-    visibleItems.push(i);
-  }
+  const endIndex = useMemo(
+    () => Math.min(totalItems - 1, Math.ceil((scrollTop + containerHeight) / itemHeight) + overscan),
+    [scrollTop, containerHeight, itemHeight, totalItems, overscan]
+  );
+
+  // Generate array of visible item indices (memoized to prevent unnecessary re-renders)
+  const visibleItems = useMemo(() => {
+    const items: number[] = [];
+    for (let i = startIndex; i <= endIndex; i++) {
+      items.push(i);
+    }
+    console.log('[VirtualScroll] Recalculating visibleItems:', items.length, 'items from', startIndex, 'to', endIndex);
+    return items;
+  }, [startIndex, endIndex]);
 
   // Calculate offset for positioning
-  const offsetY = startIndex * itemHeight;
+  const offsetY = useMemo(() => startIndex * itemHeight, [startIndex, itemHeight]);
 
   // Scroll to specific index
   const scrollToIndex = useCallback(
@@ -72,7 +79,7 @@ export function useVirtualScroll({
           Math.min(index * itemHeight, totalHeight - containerHeight)
         );
         containerRef.current.scrollTop = targetScrollTop;
-        // Update state immediately for smoother UX
+        // Update state immediately
         setScrollTop(targetScrollTop);
       }
     },
@@ -84,18 +91,12 @@ export function useVirtualScroll({
     const container = containerRef.current;
     if (!container) return;
 
-    const handleScroll = () => {
-      // Cancel any pending animation frame
-      if (rafRef.current !== null) {
-        cancelAnimationFrame(rafRef.current);
-      }
-
-      // Use requestAnimationFrame for smooth updates
-      rafRef.current = requestAnimationFrame(() => {
-        if (containerRef.current) {
-          setScrollTop(containerRef.current.scrollTop);
-        }
-      });
+    const handleScroll = (e: Event) => {
+      const target = e.target as HTMLDivElement;
+      const newScrollTop = target.scrollTop;
+      console.log('[VirtualScroll] Scroll event:', newScrollTop);
+      // Directly update state on every scroll event
+      setScrollTop(newScrollTop);
     };
 
     // Set initial scroll position
@@ -106,9 +107,6 @@ export function useVirtualScroll({
 
     return () => {
       container.removeEventListener("scroll", handleScroll);
-      if (rafRef.current !== null) {
-        cancelAnimationFrame(rafRef.current);
-      }
     };
   }, []); // Empty deps - attach once on mount
 
