@@ -246,7 +246,7 @@ export default function CombinationRanking({
       />
 
       {/* Ranking display card */}
-      <div className="bg-card rounded-xl border border-border shadow-lg p-4 md:p-6">
+      <div className="bg-card rounded-xl border border-border shadow-lg p-4 md:p-6 flex flex-col">
         {/* Sub-tabs for ranking type */}
         <div className="flex border-b border-border mb-4">
           {rankingTabs.map((tab) => (
@@ -300,7 +300,7 @@ export default function CombinationRanking({
         {/* Virtual scrolling container */}
         <div
           ref={containerRef}
-          className="border border-border rounded-lg overflow-y-auto relative bg-card"
+          className="border border-border rounded-lg overflow-y-auto relative bg-card flex-shrink-0"
           style={{ height: `${CONTAINER_HEIGHT}px` }}
         >
           {/* Spacer for total height */}
