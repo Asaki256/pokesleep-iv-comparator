@@ -306,27 +306,25 @@ export default function CombinationRanking({
           style={{ height: `${CONTAINER_HEIGHT}px` }}
         >
           {/* Spacer for total height */}
-          <div style={{ height: `${totalHeight}px` }}>
-            {/* Visible items container */}
-            <div
-              style={{
-                transform: `translateY(${offsetY}px)`,
-              }}
-            >
-              {visibleItems.map((index) => {
-                const entry = currentRanking[index];
-                const isMyRank = index === myRankIndex;
-                const score = getScore(entry, activeRankingType);
+          <div style={{ height: `${totalHeight}px`, position: 'relative' }}>
+            {/* Visible items - using absolute positioning */}
+            {visibleItems.map((index) => {
+              const entry = currentRanking[index];
+              const isMyRank = index === myRankIndex;
+              const score = getScore(entry, activeRankingType);
 
-                return (
-                  <div
-                    key={index}
-                    className={`
-                      border-b border-border p-2 md:p-3
-                      ${isMyRank ? "bg-accent/20 border-l-2 md:border-l-4 border-l-accent" : ""}
-                    `}
-                    style={{ height: `${ITEM_HEIGHT}px` }}
-                  >
+              return (
+                <div
+                  key={index}
+                  className={`
+                    border-b border-border p-2 md:p-3 absolute w-full
+                    ${isMyRank ? "bg-accent/20 border-l-2 md:border-l-4 border-l-accent" : ""}
+                  `}
+                  style={{
+                    height: `${ITEM_HEIGHT}px`,
+                    top: `${index * ITEM_HEIGHT}px`
+                  }}
+                >
                     <div className="flex items-center gap-2 md:gap-3 h-full">
                       {/* Rank number */}
                       <div
@@ -388,7 +386,6 @@ export default function CombinationRanking({
                   </div>
                 );
               })}
-            </div>
           </div>
         </div>
 

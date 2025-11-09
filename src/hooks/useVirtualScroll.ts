@@ -1,5 +1,4 @@
 import { useState, useEffect, useRef, useCallback } from "react";
-import { flushSync } from "react-dom";
 
 export interface VirtualScrollOptions {
   /** Total number of items */
@@ -43,6 +42,7 @@ export function useVirtualScroll({
 }: VirtualScrollOptions): VirtualScrollResult {
   const [scrollTop, setScrollTop] = useState(0);
   const containerRef = useRef<HTMLDivElement>(null);
+  const rafRef = useRef<number | null>(null);
 
   // Calculate total height
   const totalHeight = totalItems * itemHeight;
@@ -72,9 +72,8 @@ export function useVirtualScroll({
           Math.min(index * itemHeight, totalHeight - containerHeight)
         );
         containerRef.current.scrollTop = targetScrollTop;
-        flushSync(() => {
-          setScrollTop(targetScrollTop);
-        });
+        // Update state immediately for smoother UX
+        setScrollTop(targetScrollTop);
       }
     },
     [itemHeight, totalHeight, containerHeight]
@@ -86,22 +85,30 @@ export function useVirtualScroll({
     if (!container) return;
 
     const handleScroll = () => {
-      if (containerRef.current) {
-        const newScrollTop = containerRef.current.scrollTop;
-        // Use flushSync to ensure immediate synchronous update
-        flushSync(() => {
-          setScrollTop(newScrollTop);
-        });
+      // Cancel any pending animation frame
+      if (rafRef.current !== null) {
+        cancelAnimationFrame(rafRef.current);
       }
+
+      // Use requestAnimationFrame for smooth updates
+      rafRef.current = requestAnimationFrame(() => {
+        if (containerRef.current) {
+          setScrollTop(containerRef.current.scrollTop);
+        }
+      });
     };
 
     // Set initial scroll position
     setScrollTop(container.scrollTop);
 
-    container.addEventListener("scroll", handleScroll);
+    // Use passive listener for better scroll performance
+    container.addEventListener("scroll", handleScroll, { passive: true });
 
     return () => {
       container.removeEventListener("scroll", handleScroll);
+      if (rafRef.current !== null) {
+        cancelAnimationFrame(rafRef.current);
+      }
     };
   }, []); // Empty deps - attach once on mount
 
