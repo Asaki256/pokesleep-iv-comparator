@@ -301,7 +301,11 @@ export default function CombinationRanking({
         <div
           ref={containerRef}
           className="border border-border rounded-lg overflow-y-auto relative bg-card flex-shrink-0"
-          style={{ height: `${CONTAINER_HEIGHT}px` }}
+          style={{
+            height: `${CONTAINER_HEIGHT}px`,
+            minHeight: `${CONTAINER_HEIGHT}px`,
+            maxHeight: `${CONTAINER_HEIGHT}px`
+          }}
         >
           {/* Spacer for total height */}
           <div style={{ height: `${totalHeight}px` }}>
