@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef, useCallback } from "react";
+import { useState, useEffect, useRef, useCallback, useMemo } from "react";
 
 export interface VirtualScrollOptions {
   /** Total number of items */
@@ -44,26 +44,30 @@ export function useVirtualScroll({
   const containerRef = useRef<HTMLDivElement>(null);
 
   // Calculate total height (using useMemo to avoid recalculation)
-  const totalHeight = totalItems * itemHeight;
+  const totalHeight = useMemo(() => totalItems * itemHeight, [totalItems, itemHeight]);
 
   // Calculate visible range
-  const startIndex = Math.max(
-    0,
-    Math.floor(scrollTop / itemHeight) - overscan
+  const startIndex = useMemo(
+    () => Math.max(0, Math.floor(scrollTop / itemHeight) - overscan),
+    [scrollTop, itemHeight, overscan]
   );
-  const endIndex = Math.min(
-    totalItems - 1,
-    Math.ceil((scrollTop + containerHeight) / itemHeight) + overscan
+
+  const endIndex = useMemo(
+    () => Math.min(totalItems - 1, Math.ceil((scrollTop + containerHeight) / itemHeight) + overscan),
+    [scrollTop, containerHeight, itemHeight, totalItems, overscan]
   );
 
   // Generate array of visible item indices (useMemo to avoid recreation)
-  const visibleItems = [];
-  for (let i = startIndex; i <= endIndex; i++) {
-    visibleItems.push(i);
-  }
+  const visibleItems = useMemo(() => {
+    const items = [];
+    for (let i = startIndex; i <= endIndex; i++) {
+      items.push(i);
+    }
+    return items;
+  }, [startIndex, endIndex]);
 
   // Calculate offset for positioning
-  const offsetY = startIndex * itemHeight;
+  const offsetY = useMemo(() => startIndex * itemHeight, [startIndex, itemHeight]);
 
   // Handle scroll event
   const handleScroll = useCallback(() => {
@@ -100,9 +104,9 @@ export function useVirtualScroll({
 
   // Reset scroll position when total items change
   useEffect(() => {
+    setScrollTop(0);
     if (containerRef.current) {
       containerRef.current.scrollTop = 0;
-      setScrollTop(0);
     }
   }, [totalItems]);
 

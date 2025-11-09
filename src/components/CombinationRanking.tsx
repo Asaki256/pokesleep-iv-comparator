@@ -212,12 +212,14 @@ export default function CombinationRanking({
         break;
     }
 
-    // Scroll to the user's rank after state update
+    // Scroll to the user's rank after state update and re-render
     if (targetRankIndex !== null) {
-      // Use setTimeout to ensure state update and re-render complete first
-      setTimeout(() => {
-        scrollToIndex(targetRankIndex);
-      }, 0);
+      // Use requestAnimationFrame to ensure DOM has been updated
+      requestAnimationFrame(() => {
+        requestAnimationFrame(() => {
+          scrollToIndex(targetRankIndex);
+        });
+      });
     }
   };
 
