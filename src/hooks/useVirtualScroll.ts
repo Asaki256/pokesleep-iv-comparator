@@ -1,4 +1,5 @@
-import { useState, useEffect, useRef, useCallback, useMemo } from "react";
+import { useState, useEffect, useRef, useCallback } from "react";
+import { flushSync } from "react-dom";
 
 export interface VirtualScrollOptions {
   /** Total number of items */
@@ -43,38 +44,24 @@ export function useVirtualScroll({
   const [scrollTop, setScrollTop] = useState(0);
   const containerRef = useRef<HTMLDivElement>(null);
 
-  // Calculate total height (using useMemo to avoid recalculation)
-  const totalHeight = useMemo(() => totalItems * itemHeight, [totalItems, itemHeight]);
+  // Calculate total height
+  const totalHeight = totalItems * itemHeight;
 
   // Calculate visible range
-  const startIndex = useMemo(
-    () => Math.max(0, Math.floor(scrollTop / itemHeight) - overscan),
-    [scrollTop, itemHeight, overscan]
+  const startIndex = Math.max(0, Math.floor(scrollTop / itemHeight) - overscan);
+  const endIndex = Math.min(
+    totalItems - 1,
+    Math.ceil((scrollTop + containerHeight) / itemHeight) + overscan
   );
 
-  const endIndex = useMemo(
-    () => Math.min(totalItems - 1, Math.ceil((scrollTop + containerHeight) / itemHeight) + overscan),
-    [scrollTop, containerHeight, itemHeight, totalItems, overscan]
-  );
-
-  // Generate array of visible item indices (useMemo to avoid recreation)
-  const visibleItems = useMemo(() => {
-    const items = [];
-    for (let i = startIndex; i <= endIndex; i++) {
-      items.push(i);
-    }
-    return items;
-  }, [startIndex, endIndex]);
+  // Generate array of visible item indices
+  const visibleItems: number[] = [];
+  for (let i = startIndex; i <= endIndex; i++) {
+    visibleItems.push(i);
+  }
 
   // Calculate offset for positioning
-  const offsetY = useMemo(() => startIndex * itemHeight, [startIndex, itemHeight]);
-
-  // Handle scroll event
-  const handleScroll = useCallback(() => {
-    if (containerRef.current) {
-      setScrollTop(containerRef.current.scrollTop);
-    }
-  }, []);
+  const offsetY = startIndex * itemHeight;
 
   // Scroll to specific index
   const scrollToIndex = useCallback(
@@ -85,22 +72,38 @@ export function useVirtualScroll({
           Math.min(index * itemHeight, totalHeight - containerHeight)
         );
         containerRef.current.scrollTop = targetScrollTop;
-        setScrollTop(targetScrollTop);
+        flushSync(() => {
+          setScrollTop(targetScrollTop);
+        });
       }
     },
     [itemHeight, totalHeight, containerHeight]
   );
 
-  // Attach scroll listener
+  // Attach scroll listener using useEffect
   useEffect(() => {
     const container = containerRef.current;
-    if (container) {
-      container.addEventListener("scroll", handleScroll, { passive: true });
-      return () => {
-        container.removeEventListener("scroll", handleScroll);
-      };
-    }
-  }, [handleScroll]);
+    if (!container) return;
+
+    const handleScroll = () => {
+      if (containerRef.current) {
+        const newScrollTop = containerRef.current.scrollTop;
+        // Use flushSync to ensure immediate synchronous update
+        flushSync(() => {
+          setScrollTop(newScrollTop);
+        });
+      }
+    };
+
+    // Set initial scroll position
+    setScrollTop(container.scrollTop);
+
+    container.addEventListener("scroll", handleScroll);
+
+    return () => {
+      container.removeEventListener("scroll", handleScroll);
+    };
+  }, []); // Empty deps - attach once on mount
 
   // Reset scroll position when total items change
   useEffect(() => {
