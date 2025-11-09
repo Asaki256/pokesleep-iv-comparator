@@ -80,12 +80,15 @@ const CalculatedPokemonInfo: React.FC<
     <div className="bg-card rounded-lg shadow border border-border overflow-hidden">
       {/* ヘッダー */}
       <div className="p-2 border-b border-border">
-        {/* 1行目: ポケモン画像・名前・バッジ・日付 */}
+        {/* 1行目: ポケモン画像・名前・レベル・バッジ・日付 */}
         <div className="flex items-center gap-2 mb-1">
           <PokemonImage pokemonNumber={pokemonNumber} size={40} />
           <h4 className="font-bold text-sm text-foreground">
             {pokemonName}
           </h4>
+          <span className="text-[10px] text-muted-foreground">
+            Lv.{level}
+          </span>
           {pokemonType && (
             <span
               className={`text-[9px] px-2 py-0.5 rounded-full font-bold ${getTokuiStyle(
@@ -101,7 +104,7 @@ const CalculatedPokemonInfo: React.FC<
           </span>
         </div>
 
-        {/* 2-3行目グループ: サブスキル、その下にレベルと性格 */}
+        {/* 2-3行目グループ: サブスキル、その下に性格 */}
         <div className="ml-9 space-y-0.5">
           {/* サブスキル */}
           <div className="text-[10px] text-foreground flex items-center gap-1 flex-wrap">
@@ -118,11 +121,12 @@ const CalculatedPokemonInfo: React.FC<
               );
             })}
           </div>
-          {/* レベルと性格 */}
-          <div className="text-[10px] text-muted-foreground flex items-center gap-2">
-            <span>Lv.{level}</span>
-            {nature && <span className="text-secondary">{nature}</span>}
-          </div>
+          {/* 性格 */}
+          {nature && (
+            <div className="text-[10px] text-muted-foreground">
+              <span className="text-secondary">{nature}</span>
+            </div>
+          )}
         </div>
       </div>
 

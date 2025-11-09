@@ -81,6 +81,7 @@ export default function HistoryItem({
           <div className="flex-1 min-w-0">
             <div className="flex items-center gap-1 mb-0.5 flex-wrap">
               <h4 className="font-bold text-xs text-foreground">{item.pokemonName}</h4>
+              <span className="text-[9px] text-muted-foreground">Lv.{item.level ?? 60}</span>
               {item.pokemonType && (
                 <span
                   className={`text-[8px] px-1.5 py-0.5 rounded-full font-bold ${getTokuiStyle(
@@ -98,7 +99,6 @@ export default function HistoryItem({
             {/* コンパクト情報（折りたたみ時） */}
             {!isExpanded && (
               <div className="text-[9px] text-muted-foreground flex items-center gap-1 flex-wrap">
-                <span>Lv.{item.level ?? 60}</span>
                 {displaySubSkills.some(s => s) && (
                   <>
                     {displaySubSkills.map((skill, index) => {
@@ -158,7 +158,7 @@ export default function HistoryItem({
       {/* 詳細情報（展開時） */}
       {isExpanded && (
         <div className="border-t border-border p-2 bg-muted/20">
-          {/* サブスキル、その下にレベルと性格 */}
+          {/* サブスキル、その下に性格 */}
           <div className="mb-2 space-y-0.5">
             {/* サブスキル */}
             <div className="text-[10px] text-foreground flex items-center gap-1 flex-wrap">
@@ -175,11 +175,12 @@ export default function HistoryItem({
                 );
               })}
             </div>
-            {/* レベルと性格 */}
-            <div className="text-[10px] text-muted-foreground flex items-center gap-2">
-              <span>Lv.{item.level ?? 60}</span>
-              {item.natureDisplay && <span className="text-secondary">{item.natureDisplay}</span>}
-            </div>
+            {/* 性格 */}
+            {item.natureDisplay && (
+              <div className="text-[10px] text-muted-foreground">
+                <span className="text-secondary">{item.natureDisplay}</span>
+              </div>
+            )}
           </div>
 
           {/* 計算結果テーブル */}
