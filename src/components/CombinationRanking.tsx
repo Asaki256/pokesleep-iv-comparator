@@ -21,12 +21,14 @@ interface CombinationRankingProps {
   pokemon: Pokemon;
   currentNature?: string;
   currentSubSkills: SelectedSubSkill[];
+  level?: number;
 }
 
 export default function CombinationRanking({
   pokemon,
   currentNature,
   currentSubSkills,
+  level = 60,
 }: CombinationRankingProps) {
   // Determine initial ranking type based on Pokemon specialty
   const getInitialRankingType = (pokemon: Pokemon): RankingType => {
@@ -57,8 +59,8 @@ export default function CombinationRanking({
 
   // Generate ranking data (memoized)
   const rankingData = useMemo(() => {
-    return generateRankingData(pokemon);
-  }, [pokemon]);
+    return generateRankingData(pokemon, level);
+  }, [pokemon, level]);
 
   // Track generation completion (deferred to avoid cascading renders)
   useEffect(() => {
@@ -74,9 +76,10 @@ export default function CombinationRanking({
       pokemon,
       currentNature,
       currentSubSkills,
-      "skill"
+      "skill",
+      level
     );
-  }, [rankingData.skillRanking, pokemon, currentNature, currentSubSkills]);
+  }, [rankingData.skillRanking, pokemon, currentNature, currentSubSkills, level]);
 
   const ingredientRankingWithUser = useMemo(() => {
     return ensureUserRankInRanking(
@@ -84,9 +87,10 @@ export default function CombinationRanking({
       pokemon,
       currentNature,
       currentSubSkills,
-      "ingredient"
+      "ingredient",
+      level
     );
-  }, [rankingData.ingredientRanking, pokemon, currentNature, currentSubSkills]);
+  }, [rankingData.ingredientRanking, pokemon, currentNature, currentSubSkills, level]);
 
   const berryRankingWithUser = useMemo(() => {
     return ensureUserRankInRanking(
@@ -94,9 +98,10 @@ export default function CombinationRanking({
       pokemon,
       currentNature,
       currentSubSkills,
-      "berry"
+      "berry",
+      level
     );
-  }, [rankingData.berryRanking, pokemon, currentNature, currentSubSkills]);
+  }, [rankingData.berryRanking, pokemon, currentNature, currentSubSkills, level]);
 
   // Get current ranking based on active tab
   const currentRanking = useMemo(() => {

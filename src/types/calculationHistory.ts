@@ -29,6 +29,9 @@ export interface CalculationHistoryItem {
   /** 性格（表示用テキスト） */
   natureDisplay?: string;
 
+  /** レベル */
+  level: number;
+
   /** 選択されたサブスキル */
   subSkills: SelectedSubSkill[];
 

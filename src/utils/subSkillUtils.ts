@@ -124,3 +124,25 @@ export const getRarityStyles = (rarity: Rarity) => {
 
   return styles[rarity];
 };
+
+/**
+ * レベルに基づいてサブスキルをフィルタリング
+ * レベル1-9: サブスキルなし
+ * レベル10-24: 最初のサブスキルのみ
+ * レベル25-49: 最初と2番目のサブスキル
+ * レベル50-100: 3つのサブスキルすべて
+ */
+export const filterSubSkillsByLevel = <T>(
+  subSkills: T[],
+  level: number
+): T[] => {
+  if (level < 10) {
+    return [];
+  } else if (level < 25) {
+    return subSkills.slice(0, 1);
+  } else if (level < 50) {
+    return subSkills.slice(0, 2);
+  } else {
+    return subSkills.slice(0, 3);
+  }
+};

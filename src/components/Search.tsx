@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Combobox } from "@/components/PokeNameCombobox";
 import SubSkillSelect from "./SubSkillSelect";
 import NatureSelector from "./nature/NatureSelector";
+import LevelSelector from "./LevelSelector";
 import CalculatedPokemonInfo from "./CalculatedPokemonInfo";
 import ResultTabs from "./ResultTabs";
 import HistoryList from "./HistoryList";
@@ -16,6 +17,7 @@ import { kinomiData } from "@/data/kinomiData";
 import { calculatePokemonStatsSimple, CalculationResult } from "@/utils/pokemonCalculator";
 import { useCalculationHistory } from "@/hooks/useCalculationHistory";
 import { NATURE_GROUPS, getDefaultNature } from "@/data/natureData";
+import { filterSubSkillsByLevel } from "@/utils/subSkillUtils";
 
 function Search() {
   const [pokemon, setPokemon] = useState("");
@@ -23,6 +25,7 @@ function Search() {
     useState<SelectedSubSkill[]>([]);
   const [nature, setNature] =
     useState<SelectedNature | null>(getDefaultNature() as SelectedNature);
+  const [level, setLevel] = useState(60);
   const [calculationResult, setCalculationResult] =
     useState<CalculationResult | null>(null);
 
@@ -95,12 +98,15 @@ function Search() {
       return;
     }
 
+    // レベルに基づいてサブスキルをフィルタリング
+    const filteredSubSkills = filterSubSkillsByLevel(selectedSubSkills, level);
+
     // 計算実行
     const result = calculatePokemonStatsSimple(
       selectedPokemon,
-      60,
+      level,
       nature?.name,
-      selectedSubSkills
+      filteredSubSkills
     );
 
     setCalculationResult(result);
@@ -115,7 +121,7 @@ function Search() {
             nature.up ? ` (▲${nature.up} ▼${nature.down})` : " (補正なし)"
           }`
         : undefined,
-      subSkills: selectedSubSkills,
+      subSkills: filteredSubSkills,
     };
     setDisplaySnapshot(snapshot);
 
@@ -131,7 +137,8 @@ function Search() {
         pokemonType: selectedPokemon.type,
         natureName: nature?.name,
         natureDisplay: snapshot.nature,
-        subSkills: selectedSubSkills,
+        level: level,
+        subSkills: filteredSubSkills,
         calculationResult: result,
       });
     } catch (error) {
@@ -148,6 +155,9 @@ function Search() {
 
     // ポケモン選択を復元
     setPokemon(historyItem.pokemonInternalName);
+
+    // レベルを復元（デフォルト60）
+    setLevel(historyItem.level ?? 60);
 
     // サブスキルを復元
     setSelectedSubSkills(historyItem.subSkills);
@@ -239,6 +249,13 @@ function Search() {
               </div>
             )}
           </div>
+          {/* レベル選択 */}
+          <div className="mt-5">
+            <LevelSelector
+              value={level}
+              onChange={setLevel}
+            />
+          </div>
           <div className="mt-5">
             <SubSkillSelect
               value={selectedSubSkills}
@@ -252,7 +269,9 @@ function Search() {
             />
           </div>
           <div className="text-xs mt-5 text-center text-muted-foreground">
-            ※同レベルでの比較を行うため、Lv.60固定で計算します。
+            ※レベルに応じてサブスキルが自動的に適用されます。
+            <br />
+            Lv.1-9: サブスキルなし / Lv.10-24: 1つ目のみ / Lv.25-49: 2つまで / Lv.50-100: 全て
           </div>
           <div className="flex justify-center mt-6">
             <Button
@@ -286,6 +305,7 @@ function Search() {
                   pokemon={rankingPokemon}
                   currentNature={rankingNature}
                   currentSubSkills={rankingSubSkills}
+                  level={level}
                 />
               ) : (
                 <div className="text-center py-12 text-muted-foreground">
