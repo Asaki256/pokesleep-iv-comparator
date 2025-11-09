@@ -59,7 +59,7 @@ const LevelSelector = ({ value = 60, onChange }: LevelSelectorProps) => {
         <h2 className="text-base font-semibold text-foreground">レベル</h2>
       </div>
 
-      {/* クイック選択ボタンと手動入力を1行に */}
+      {/* クイック選択ボタン、手動入力、サブスキル適用状態を1行に */}
       <div className="flex items-center gap-2 flex-wrap">
         {QUICK_LEVELS.map((quickLevel) => (
           <button
@@ -77,7 +77,7 @@ const LevelSelector = ({ value = 60, onChange }: LevelSelectorProps) => {
             Lv.{quickLevel}
           </button>
         ))}
-        <div className="flex items-center gap-1 ml-auto">
+        <div className="flex items-center gap-1">
           <span className="text-xs text-muted-foreground">Lv.</span>
           <input
             type="number"
@@ -89,14 +89,12 @@ const LevelSelector = ({ value = 60, onChange }: LevelSelectorProps) => {
             className="w-16 h-7 rounded border border-border bg-background px-2 text-xs ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring"
           />
         </div>
-      </div>
-
-      {/* サブスキル適用状態の表示 */}
-      <div className="mt-2 px-2 py-1 bg-muted/50 rounded text-[10px] text-muted-foreground">
-        {level < 10 && "サブスキルなし"}
-        {level >= 10 && level < 25 && "サブスキル1つ目まで適用"}
-        {level >= 25 && level < 50 && "サブスキル2つ目まで適用"}
-        {level >= 50 && "サブスキル3つ目まで適用"}
+        <span className="text-[10px] text-muted-foreground ml-1">
+          {level < 10 && "サブスキルなし"}
+          {level >= 10 && level < 25 && "サブスキル1つ目まで"}
+          {level >= 25 && level < 50 && "サブスキル2つ目まで"}
+          {level >= 50 && "サブスキル3つ目まで"}
+        </span>
       </div>
     </div>
   );
