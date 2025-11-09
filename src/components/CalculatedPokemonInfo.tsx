@@ -157,7 +157,7 @@ const CalculatedPokemonInfo: React.FC<
                 <td className="px-2 py-1 whitespace-nowrap">
                   <div className="font-bold text-orange-600 dark:text-orange-400">
                     {calculationResult.foodHelpsPerDay.toFixed(1)}
-                    回{" "}
+                    回/日{" "}
                     <span className="text-foreground text-[9px]">
                       ({(calculationResult.calculatedFoodDropRate * 100).toFixed(1)}%)
                     </span>
@@ -166,7 +166,7 @@ const CalculatedPokemonInfo: React.FC<
                 <td className="px-2 py-1 whitespace-nowrap">
                   <div className="font-bold text-purple-600 dark:text-purple-400">
                     {calculationResult.skillTriggersPerDay.toFixed(1)}
-                    回{" "}
+                    回/日{" "}
                     <span className="text-foreground text-[9px]">
                       ({(calculationResult.calculatedSkillRate * 100).toFixed(1)}%)
                     </span>
@@ -175,13 +175,13 @@ const CalculatedPokemonInfo: React.FC<
                 <td className="px-2 py-1 whitespace-nowrap">
                   <div className="flex flex-col">
                     <div className="font-bold text-green-600 dark:text-green-400">
-                      {calculationResult.berryHelpsPerDay.toFixed(1)}回{" "}
+                      {calculationResult.berryHelpsPerDay.toFixed(1)}回/日{" "}
                       <span className="text-foreground text-[9px]">
                         ({((1 - calculationResult.calculatedFoodDropRate) * 100).toFixed(1)}%)
                       </span>
                     </div>
                     <div className="font-bold text-blue-600 dark:text-blue-400 text-[9px]">
-                      {calculationResult.berryEnergyPerDay.toLocaleString()}E
+                      {calculationResult.berryEnergyPerDay.toLocaleString()}E/日
                     </div>
                   </div>
                 </td>

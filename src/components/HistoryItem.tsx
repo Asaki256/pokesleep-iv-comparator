@@ -211,7 +211,7 @@ export default function HistoryItem({
                   </td>
                   <td className="px-1.5 py-0.5 whitespace-nowrap">
                     <div className="font-bold text-orange-600 dark:text-orange-400">
-                      {item.calculationResult.foodHelpsPerDay.toFixed(1)}回{" "}
+                      {item.calculationResult.foodHelpsPerDay.toFixed(1)}回/日{" "}
                       <span className="text-foreground text-[8px]">
                         ({(item.calculationResult.calculatedFoodDropRate * 100).toFixed(1)}%)
                       </span>
@@ -219,7 +219,7 @@ export default function HistoryItem({
                   </td>
                   <td className="px-1.5 py-0.5 whitespace-nowrap">
                     <div className="font-bold text-purple-600 dark:text-purple-400">
-                      {item.calculationResult.skillTriggersPerDay.toFixed(1)}回{" "}
+                      {item.calculationResult.skillTriggersPerDay.toFixed(1)}回/日{" "}
                       <span className="text-foreground text-[8px]">
                         ({(item.calculationResult.calculatedSkillRate * 100).toFixed(1)}%)
                       </span>
@@ -228,13 +228,13 @@ export default function HistoryItem({
                   <td className="px-1.5 py-0.5 whitespace-nowrap">
                     <div className="flex flex-col">
                       <div className="font-bold text-green-600 dark:text-green-400">
-                        {item.calculationResult.berryHelpsPerDay.toFixed(1)}回{" "}
+                        {item.calculationResult.berryHelpsPerDay.toFixed(1)}回/日{" "}
                         <span className="text-foreground text-[8px]">
                           ({((1 - item.calculationResult.calculatedFoodDropRate) * 100).toFixed(1)}%)
                         </span>
                       </div>
                       <div className="font-bold text-blue-600 dark:text-blue-400 text-[8px]">
-                        {item.calculationResult.berryEnergyPerDay.toLocaleString()}E
+                        {item.calculationResult.berryEnergyPerDay.toLocaleString()}E/日
                       </div>
                     </div>
                   </td>
