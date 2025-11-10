@@ -57,21 +57,14 @@ export default function ResultTabs({
 
       {/* タブコンテンツ */}
       <div className="mt-4">
-        {tabs.map((tab) => (
-          <div
-            key={tab.id}
-            className={activeTab === tab.id ? "block" : "hidden"}
-          >
-            {tab.content || (
-              <div className="text-center py-12 text-muted-foreground">
-                <p className="text-sm">この機能は準備中です</p>
-                <p className="text-xs mt-2">
-                  ポケモンを選択して決定ボタンを押してください
-                </p>
-              </div>
-            )}
+        {tabs.find((tab) => tab.id === activeTab)?.content || (
+          <div className="text-center py-12 text-muted-foreground">
+            <p className="text-sm">この機能は準備中です</p>
+            <p className="text-xs mt-2">
+              ポケモンを選択して決定ボタンを押してください
+            </p>
           </div>
-        ))}
+        )}
       </div>
     </div>
   );
