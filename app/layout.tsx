@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
+import { StructuredData } from "./structured-data";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -14,6 +15,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://pokesleep-iv-comparator.vercel.app"),
   title: {
     default: "ポケスリ個体値比較 - Pokémon Sleep IV Comparator",
     template: "%s | ポケスリ個体値比較",
@@ -34,6 +36,12 @@ export const metadata: Metadata = {
   authors: [{ name: "Asaki256" }],
   creator: "Asaki256",
   publisher: "Asaki256",
+  alternates: {
+    canonical: "https://pokesleep-iv-comparator.vercel.app",
+    languages: {
+      "ja-JP": "https://pokesleep-iv-comparator.vercel.app",
+    },
+  },
   robots: {
     index: true,
     follow: true,
@@ -55,7 +63,7 @@ export const metadata: Metadata = {
       "ポケモンスリープの個体値を簡単に比較できるツールです。複数のポケモンの個体値を一度に比較し、最適な育成を支援します。",
     images: [
       {
-        url: "/og-image.png",
+        url: "https://pokesleep-iv-comparator.vercel.app/og-image.png",
         width: 1200,
         height: 630,
         alt: "ポケスリ個体値比較",
@@ -67,7 +75,7 @@ export const metadata: Metadata = {
     title: "ポケスリ個体値比較 - Pokémon Sleep IV Comparator",
     description:
       "ポケモンスリープの個体値を簡単に比較できるツールです。複数のポケモンの個体値を一度に比較し、最適な育成を支援します。",
-    images: ["/og-image.png"],
+    images: ["https://pokesleep-iv-comparator.vercel.app/og-image.png"],
     creator: "@Asaki256",
   },
   viewport: {
@@ -92,7 +100,6 @@ export const metadata: Metadata = {
   formatDetection: {
     telephone: false,
   },
-  metadataBase: new URL("https://pokesleep-iv-comparator.vercel.app"),
 };
 
 export default function RootLayout({
@@ -104,6 +111,7 @@ export default function RootLayout({
     <html lang="ja" suppressHydrationWarning>
       <head>
         <meta name="google-site-verification" content="DVy7jur6OcUHxGHsiFBOh-eDqXQfSPK3odti0T0pR7w" />
+        <StructuredData />
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
