@@ -93,6 +93,9 @@ export const metadata: Metadata = {
     telephone: false,
   },
   metadataBase: new URL("https://pokesleep-iv-comparator.vercel.app"),
+  verification: {
+    google: "c6ae21711c3cd1fd",
+  },
 };
 
 export default function RootLayout({
