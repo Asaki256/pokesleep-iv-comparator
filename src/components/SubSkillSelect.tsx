@@ -189,7 +189,7 @@ const SubSkillSelect = ({ value, onChange }: SubSkillSelectProps = {}) => {
       {/* ヘッダー */}
       <div className="flex items-center justify-between mb-2">
         <div className="flex items-center gap-2">
-          <h2 className="text-base">サブスキル</h2>
+          <h2 className="text-base font-semibold text-foreground">サブスキル</h2>
           <span className="bg-secondary text-white text-xs px-1.5 py-0.5 rounded-full">
             {selectedSkills.length}/3
           </span>

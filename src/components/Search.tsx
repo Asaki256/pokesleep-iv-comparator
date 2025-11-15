@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Combobox } from "@/components/PokeNameCombobox";
 import SubSkillSelect from "./SubSkillSelect";
 import NatureSelector from "./nature/NatureSelector";
+import LevelSelector from "./LevelSelector";
 import CalculatedPokemonInfo from "./CalculatedPokemonInfo";
 import ResultTabs from "./ResultTabs";
 import HistoryList from "./HistoryList";
@@ -28,6 +29,7 @@ function Search() {
   const [nature, setNature] = useState<SelectedNature | null>(
     getDefaultNature() as SelectedNature,
   );
+  const [level, setLevel] = useState(60);
   const [calculationResult, setCalculationResult] =
     useState<CalculationResult | null>(null);
 
@@ -38,6 +40,7 @@ function Search() {
     pokemonType?: string;
     nature?: string;
     subSkills: SelectedSubSkill[];
+    level: number;
   } | null>(null);
 
   // 初期表示用のランキング表示データ（履歴から復元、入力欄には反映しない）
@@ -45,6 +48,7 @@ function Search() {
     pokemonInternalName: string;
     natureName?: string;
     subSkills: SelectedSubSkill[];
+    level: number;
   } | null>(null);
 
   const {
@@ -80,6 +84,11 @@ function Search() {
     : displaySnapshot
       ? displaySnapshot.subSkills
       : [];
+  const rankingLevel = initialDisplayData
+    ? initialDisplayData.level
+    : displaySnapshot
+      ? displaySnapshot.level
+      : 60;
 
   // きのみの日本語名を取得
   const kinomiName = selectedPokemon
@@ -111,10 +120,10 @@ function Search() {
       return;
     }
 
-    // 計算実行
+    // 計算実行（選択されたレベルを使用）
     const result = calculatePokemonStatsSimple(
       selectedPokemon,
-      60,
+      level,
       nature?.name,
       selectedSubSkills,
     );
@@ -132,6 +141,7 @@ function Search() {
           }`
         : undefined,
       subSkills: selectedSubSkills,
+      level,
     };
     setDisplaySnapshot(snapshot);
 
@@ -145,6 +155,7 @@ function Search() {
         pokemonInternalName: selectedPokemon.name,
         pokemonNumber: selectedPokemon.number,
         pokemonType: selectedPokemon.type,
+        level,
         natureName: nature?.name,
         natureDisplay: snapshot.nature,
         subSkills: selectedSubSkills,
@@ -164,6 +175,9 @@ function Search() {
 
     // ポケモン選択を復元
     setPokemon(historyItem.pokemonInternalName);
+
+    // レベルを復元（履歴にない場合はデフォルト60）
+    setLevel(historyItem.level ?? 60);
 
     // サブスキルを復元
     setSelectedSubSkills(historyItem.subSkills);
@@ -216,11 +230,13 @@ function Search() {
           pokemonType: latestHistory.pokemonType,
           nature: latestHistory.natureDisplay,
           subSkills: latestHistory.subSkills,
+          level: latestHistory.level ?? 60,
         });
         setInitialDisplayData({
           pokemonInternalName: latestHistory.pokemonInternalName,
           natureName: latestHistory.natureName,
           subSkills: latestHistory.subSkills,
+          level: latestHistory.level ?? 60,
         });
       });
     }
@@ -232,7 +248,7 @@ function Search() {
         <div className="bg-card rounded-xl border border-border shadow-sm p-4 md:p-6 mb-6">
           {/* ポケモン選択 */}
           <div className="w-full max-w-md mx-auto">
-            <div className="flex items-center justify-between mb-3">
+            <div className="flex items-center justify-between mb-2">
               <h2 className="text-base font-semibold text-foreground">
                 ポケモン
               </h2>
@@ -260,6 +276,9 @@ function Search() {
             )}
           </div>
           <div className="mt-5">
+            <LevelSelector value={level} onChange={setLevel} />
+          </div>
+          <div className="mt-5">
             <SubSkillSelect
               value={selectedSubSkills}
               onChange={setSelectedSubSkills}
@@ -267,9 +286,6 @@ function Search() {
           </div>
           <div className="mt-5">
             <NatureSelector value={nature} onChange={setNature} />
-          </div>
-          <div className="text-xs mt-5 text-center text-muted-foreground">
-            ※同レベルでの比較を行うため、Lv.60固定で計算します。
           </div>
           <div className="flex justify-center mt-6">
             <Button
@@ -287,6 +303,7 @@ function Search() {
               pokemonName={displaySnapshot.pokemonName}
               pokemonNumber={displaySnapshot.pokemonNumber}
               pokemonType={displaySnapshot.pokemonType}
+              level={displaySnapshot.level}
               nature={displaySnapshot.nature}
               subSkills={displaySnapshot.subSkills}
               calculationResult={calculationResult}
@@ -303,6 +320,7 @@ function Search() {
                   pokemon={rankingPokemon}
                   currentNature={rankingNature}
                   currentSubSkills={rankingSubSkills}
+                  level={rankingLevel}
                 />
               ) : (
                 <div className="text-center py-12 text-muted-foreground">

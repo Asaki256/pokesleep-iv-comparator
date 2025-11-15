@@ -102,6 +102,14 @@ export default function HistoryItem({
             {/* コンパクト情報（折りたたみ時） */}
             {!isExpanded && (
               <div className="text-[10px] text-foreground space-y-0.5">
+                {item.level && (
+                  <div>
+                    レベル:{" "}
+                    <span className="font-semibold text-secondary">
+                      Lv.{item.level}
+                    </span>
+                  </div>
+                )}
                 <div className="flex items-center gap-1 flex-wrap">
                   <span>サブスキル:</span>
                   {displaySubSkills.map((skill, index) => {
@@ -175,8 +183,16 @@ export default function HistoryItem({
       {/* 詳細情報（展開時） */}
       {isExpanded && (
         <div className="border-t border-border p-3 bg-muted/30">
-          {/* サブスキルと性格 */}
+          {/* レベル、サブスキル、性格 */}
           <div className="mb-3 space-y-1">
+            {item.level && (
+              <div className="text-xs text-foreground">
+                <span className="font-semibold">レベル:</span>{" "}
+                <span className="font-semibold text-secondary">
+                  Lv.{item.level}
+                </span>
+              </div>
+            )}
             <div className="text-xs text-foreground">
               <span className="font-semibold">サブスキル:</span>{" "}
               {displaySubSkills.map((skill, index) => {

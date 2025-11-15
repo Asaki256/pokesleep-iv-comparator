@@ -11,6 +11,7 @@ interface CalculatedPokemonInfoProps {
   pokemonName: string;
   pokemonNumber?: number;
   pokemonType?: string;
+  level?: number;
   nature?: string;
   subSkills: SelectedSubSkill[];
   calculationResult: CalculationResult;
@@ -55,6 +56,7 @@ const CalculatedPokemonInfo: React.FC<CalculatedPokemonInfoProps> = ({
   pokemonName,
   pokemonNumber,
   pokemonType,
+  level,
   nature,
   subSkills,
   calculationResult,
@@ -95,8 +97,14 @@ const CalculatedPokemonInfo: React.FC<CalculatedPokemonInfoProps> = ({
           </span>
         </div>
 
-        {/* 2-3行目グループ: サブスキルと性格 */}
+        {/* 2-4行目グループ: レベル、サブスキル、性格 */}
         <div className="ml-8 md:ml-12 space-y-1">
+          {level && (
+            <div className="text-[10px] md:text-xs text-foreground">
+              <span className="font-semibold">レベル:</span>{" "}
+              <span className="font-semibold text-secondary">Lv.{level}</span>
+            </div>
+          )}
           <div className="text-[10px] md:text-xs text-foreground">
             <span className="font-semibold">サブスキル:</span>{" "}
             {displaySubSkills.map((skill, index) => {

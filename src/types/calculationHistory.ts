@@ -23,6 +23,9 @@ export interface CalculationHistoryItem {
   /** とくいタイプ（きのみ、食材、スキル、オール） */
   pokemonType?: string;
 
+  /** レベル */
+  level?: number;
+
   /** 性格名（再表示用） */
   natureName?: string;
 

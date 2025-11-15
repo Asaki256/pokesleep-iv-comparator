@@ -445,6 +445,7 @@ export const countSubSkills = (
 /**
  * より簡単に使えるラッパー関数
  * ポケモン、レベル、性格名、サブスキル配列を渡すだけで計算結果を取得
+ * レベルに応じてサブスキルをフィルタリングして計算を行う
  */
 export const calculatePokemonStatsSimple = (
   pokemon: Pokemon,
@@ -452,13 +453,27 @@ export const calculatePokemonStatsSimple = (
   natureName?: string,
   subSkills: SelectedSubSkill[] = [],
 ): CalculationResult => {
+  // レベルに応じてサブスキルをフィルタリング
+  // Lv.1-9: なし, Lv.10-24: 1つ目, Lv.25-49: 1-2つ目, Lv.50-100: 全て
+  const filterSubSkillsByLevel = (
+    skills: SelectedSubSkill[],
+    lvl: number,
+  ): SelectedSubSkill[] => {
+    if (lvl < 10) return [];
+    if (lvl < 25) return skills.slice(0, 1);
+    if (lvl < 50) return skills.slice(0, 2);
+    return skills;
+  };
+
+  const filteredSubSkills = filterSubSkillsByLevel(subSkills, level);
+
   // 性格補正を取得
   const natureMultipliers = natureName
     ? getNatureMultipliers(natureName)
     : { speed: 1.0, ingredient: 1.0, skill: 1.0 };
 
-  // サブスキルの個数を集計
-  const subSkillCounts = countSubSkills(subSkills);
+  // サブスキルの個数を集計（フィルタリング後）
+  const subSkillCounts = countSubSkills(filteredSubSkills);
 
   // 計算パラメータを構築
   const params: CalculationParams = {
