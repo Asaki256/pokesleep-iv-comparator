@@ -13,16 +13,24 @@ import { SelectedSubSkill } from "@/types/selectedSubSkill";
 import { SelectedNature } from "@/types/nature";
 import { pokemonData } from "@/data/pokemonData";
 import { kinomiData } from "@/data/kinomiData";
-import { calculatePokemonStatsSimple, CalculationResult } from "@/utils/pokemonCalculator";
+import {
+  calculatePokemonStatsSimple,
+  CalculationResult,
+} from "@/utils/pokemonCalculator";
 import { useCalculationHistory } from "@/hooks/useCalculationHistory";
-import { NATURE_GROUPS, getDefaultNature } from "@/data/natureData";
+import {
+  NATURE_GROUPS,
+  getDefaultNature,
+} from "@/data/natureData";
 
 function Search() {
   const [pokemon, setPokemon] = useState("");
   const [selectedSubSkills, setSelectedSubSkills] =
     useState<SelectedSubSkill[]>([]);
   const [nature, setNature] =
-    useState<SelectedNature | null>(getDefaultNature() as SelectedNature);
+    useState<SelectedNature | null>(
+      getDefaultNature() as SelectedNature
+    );
   const [calculationResult, setCalculationResult] =
     useState<CalculationResult | null>(null);
 
@@ -36,14 +44,21 @@ function Search() {
   } | null>(null);
 
   // 初期表示用のランキング表示データ（履歴から復元、入力欄には反映しない）
-  const [initialDisplayData, setInitialDisplayData] = useState<{
-    pokemonInternalName: string;
-    natureName?: string;
-    subSkills: SelectedSubSkill[];
-  } | null>(null);
+  const [initialDisplayData, setInitialDisplayData] =
+    useState<{
+      pokemonInternalName: string;
+      natureName?: string;
+      subSkills: SelectedSubSkill[];
+    } | null>(null);
 
-  const { history, addHistory, deleteHistory, clearHistory, getHistoryById, isLoading } =
-    useCalculationHistory();
+  const {
+    history,
+    addHistory,
+    deleteHistory,
+    clearHistory,
+    getHistoryById,
+    isLoading,
+  } = useCalculationHistory();
 
   // 初回ロード時の履歴復元を追跡
   const hasRestoredFromHistory = useRef(false);
@@ -53,15 +68,29 @@ function Search() {
     (p) => p.name === pokemon
   );
 
-  // ランキング表示用のポケモン（入力欄 or 初期表示データ）
-  const rankingPokemon = selectedPokemon ||
-    (initialDisplayData ? pokemonData.find(
-      (p) => p.name === initialDisplayData.pokemonInternalName
-    ) : null);
+  // ランキング表示用のポケモン（決定ボタン押下時のスナップショット or 初期表示データ）
+  const rankingPokemon = initialDisplayData
+    ? pokemonData.find(
+        (p) =>
+          p.name === initialDisplayData.pokemonInternalName
+      )
+    : displaySnapshot
+    ? pokemonData.find(
+        (p) => p.displayName === displaySnapshot.pokemonName
+      )
+    : null;
 
-  // ランキング表示用の性格とサブスキル
-  const rankingNature = pokemon ? nature?.name : initialDisplayData?.natureName;
-  const rankingSubSkills = pokemon ? selectedSubSkills : (initialDisplayData?.subSkills || []);
+  // ランキング表示用の性格とサブスキル（決定ボタン押下時のスナップショット or 初期表示データ）
+  const rankingNature = initialDisplayData
+    ? initialDisplayData.natureName
+    : displaySnapshot
+    ? nature?.name
+    : undefined;
+  const rankingSubSkills = initialDisplayData
+    ? initialDisplayData.subSkills
+    : displaySnapshot
+    ? displaySnapshot.subSkills
+    : [];
 
   // きのみの日本語名を取得
   const kinomiName = selectedPokemon
@@ -112,7 +141,9 @@ function Search() {
       pokemonType: selectedPokemon.type,
       nature: nature
         ? `${nature.name}${
-            nature.up ? ` (▲${nature.up} ▼${nature.down})` : " (補正なし)"
+            nature.up
+              ? ` (▲${nature.up} ▼${nature.down})`
+              : " (補正なし)"
           }`
         : undefined,
       subSkills: selectedSubSkills,
@@ -182,13 +213,20 @@ function Search() {
 
   // 初回ロード時に最新の履歴を自動反映（入力欄は空のまま、結果表示のみ）
   useEffect(() => {
-    if (!isLoading && history.length > 0 && !calculationResult && !hasRestoredFromHistory.current) {
+    if (
+      !isLoading &&
+      history.length > 0 &&
+      !calculationResult &&
+      !hasRestoredFromHistory.current
+    ) {
       hasRestoredFromHistory.current = true;
       const latestHistory = history[0];
 
       // 履歴から状態を一括復元（バッチ更新を使用）
       queueMicrotask(() => {
-        setCalculationResult(latestHistory.calculationResult);
+        setCalculationResult(
+          latestHistory.calculationResult
+        );
         setDisplaySnapshot({
           pokemonName: latestHistory.pokemonName,
           pokemonNumber: latestHistory.pokemonNumber,
@@ -197,7 +235,8 @@ function Search() {
           subSkills: latestHistory.subSkills,
         });
         setInitialDisplayData({
-          pokemonInternalName: latestHistory.pokemonInternalName,
+          pokemonInternalName:
+            latestHistory.pokemonInternalName,
           natureName: latestHistory.natureName,
           subSkills: latestHistory.subSkills,
         });
@@ -212,7 +251,9 @@ function Search() {
           {/* ポケモン選択 */}
           <div className="w-full max-w-md mx-auto">
             <div className="flex items-center justify-between mb-3">
-              <h2 className="text-base font-semibold text-foreground">ポケモン</h2>
+              <h2 className="text-base font-semibold text-foreground">
+                ポケモン
+              </h2>
             </div>
             <Combobox
               value={pokemon}
@@ -289,7 +330,9 @@ function Search() {
                 />
               ) : (
                 <div className="text-center py-12 text-muted-foreground">
-                  <p className="text-sm">ポケモンを選択してください</p>
+                  <p className="text-sm">
+                    ポケモンを選択してください
+                  </p>
                 </div>
               )
             }
