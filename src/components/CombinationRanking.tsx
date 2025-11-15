@@ -20,12 +20,14 @@ interface CombinationRankingProps {
   pokemon: Pokemon;
   currentNature?: string;
   currentSubSkills: SelectedSubSkill[];
+  level?: number;
 }
 
 export default function CombinationRanking({
   pokemon,
   currentNature,
   currentSubSkills,
+  level = 60,
 }: CombinationRankingProps) {
   // Determine initial ranking type based on Pokemon specialty
   const getInitialRankingType = (pokemon: Pokemon): RankingType => {
@@ -56,8 +58,8 @@ export default function CombinationRanking({
 
   // Generate ranking data (memoized)
   const rankingData = useMemo(() => {
-    return generateRankingData(pokemon, currentNature, currentSubSkills);
-  }, [pokemon, currentNature, currentSubSkills]);
+    return generateRankingData(pokemon, currentNature, currentSubSkills, level);
+  }, [pokemon, currentNature, currentSubSkills, level]);
 
   // Track generation completion (deferred to avoid cascading renders)
   useEffect(() => {
@@ -73,8 +75,9 @@ export default function CombinationRanking({
       currentNature,
       currentSubSkills,
       "skill",
+      level,
     );
-  }, [pokemon, currentNature, currentSubSkills]);
+  }, [pokemon, currentNature, currentSubSkills, level]);
 
   const selectedIngredientRank = useMemo(() => {
     return calculateSelectedRank(
@@ -82,8 +85,9 @@ export default function CombinationRanking({
       currentNature,
       currentSubSkills,
       "ingredient",
+      level,
     );
-  }, [pokemon, currentNature, currentSubSkills]);
+  }, [pokemon, currentNature, currentSubSkills, level]);
 
   const selectedBerryRank = useMemo(() => {
     return calculateSelectedRank(
@@ -91,8 +95,9 @@ export default function CombinationRanking({
       currentNature,
       currentSubSkills,
       "berry",
+      level,
     );
-  }, [pokemon, currentNature, currentSubSkills]);
+  }, [pokemon, currentNature, currentSubSkills, level]);
 
   // Get current ranking based on active tab
   const currentRanking = useMemo(() => {

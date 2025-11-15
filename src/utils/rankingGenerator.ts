@@ -153,6 +153,7 @@ export function generateRankingData(
   pokemon: Pokemon,
   selectedNature?: string,
   selectedSubSkills?: SelectedSubSkill[],
+  level: number = 60,
 ): {
   skillRanking: RankingEntry[];
   ingredientRanking: RankingEntry[];
@@ -172,7 +173,7 @@ export function generateRankingData(
     for (const subSkills of skillSubSkillCombos) {
       const result = calculatePokemonStatsSimple(
         pokemon,
-        60,
+        level,
         nature.name,
         subSkills,
       );
@@ -199,7 +200,7 @@ export function generateRankingData(
     for (const subSkills of ingredientSubSkillCombos) {
       const result = calculatePokemonStatsSimple(
         pokemon,
-        60,
+        level,
         nature.name,
         subSkills,
       );
@@ -226,7 +227,7 @@ export function generateRankingData(
     for (const subSkills of berrySubSkillCombos) {
       const result = calculatePokemonStatsSimple(
         pokemon,
-        60,
+        level,
         nature.name,
         subSkills,
       );
@@ -357,6 +358,7 @@ export function calculateSelectedRank(
   natureName: string | undefined,
   subSkills: SelectedSubSkill[],
   rankingType: "skill" | "ingredient" | "berry",
+  level: number = 60,
 ): { rank: number; score: number; totalCombinations: number } {
   // Default to "すなお" (neutral nature) if no nature is selected
   const effectiveNature = natureName || "すなお";
@@ -364,7 +366,7 @@ export function calculateSelectedRank(
   // Calculate the score for the selected combination
   const result = calculatePokemonStatsSimple(
     pokemon,
-    60,
+    level,
     effectiveNature,
     subSkills,
   );
@@ -391,7 +393,7 @@ export function calculateSelectedRank(
 
       const comboResult = calculatePokemonStatsSimple(
         pokemon,
-        60,
+        level,
         nature.name,
         combo,
       );

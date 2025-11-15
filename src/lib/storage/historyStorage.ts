@@ -181,6 +181,10 @@ export const historyStorage = {
     )
       return false;
 
+    // レベルが異なる
+    if ((item1.level ?? 60) !== (item2.level ?? 60))
+      return false;
+
     // 性格が異なる
     if (item1.natureName !== item2.natureName) return false;
 
