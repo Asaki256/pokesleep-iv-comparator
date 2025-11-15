@@ -121,10 +121,35 @@ function generateCombinations(
 }
 
 /**
+ * Check if an entry matches the selected combination
+ */
+function isSelectedCombination(
+  entry: RankingEntry,
+  selectedNature?: string,
+  selectedSubSkills?: SelectedSubSkill[]
+): boolean {
+  if (!selectedNature || !selectedSubSkills) return false;
+
+  const effectiveNature = selectedNature || "すなお";
+  const normalizedSelected = selectedSubSkills
+    .map((s) => s.baseId)
+    .sort()
+    .join(",");
+  const normalizedEntry = entry.subSkills
+    .map((s) => s.baseId)
+    .sort()
+    .join(",");
+
+  return entry.natureName === effectiveNature && normalizedEntry === normalizedSelected;
+}
+
+/**
  * Generate ranking data for all nature and sub-skill combinations
  */
 export function generateRankingData(
-  pokemon: Pokemon
+  pokemon: Pokemon,
+  selectedNature?: string,
+  selectedSubSkills?: SelectedSubSkill[]
 ): {
   skillRanking: RankingEntry[];
   ingredientRanking: RankingEntry[];
@@ -220,24 +245,57 @@ export function generateRankingData(
   }
 
   // Sort by skill score (descending) and assign ranks
+  // Prioritize selected combination when scores are equal
   const skillRanking = skillCombinations
-    .sort((a, b) => b.skillScore - a.skillScore)
+    .sort((a, b) => {
+      const scoreDiff = b.skillScore - a.skillScore;
+      if (scoreDiff !== 0) return scoreDiff;
+
+      // If scores are equal, prioritize selected combination
+      const aIsSelected = isSelectedCombination(a, selectedNature, selectedSubSkills);
+      const bIsSelected = isSelectedCombination(b, selectedNature, selectedSubSkills);
+      if (aIsSelected && !bIsSelected) return -1;
+      if (!aIsSelected && bIsSelected) return 1;
+      return 0;
+    })
     .map((entry, index) => ({
       ...entry,
       rank: index + 1,
     }));
 
   // Sort by ingredient score (descending) and assign ranks
+  // Prioritize selected combination when scores are equal
   const ingredientRanking = ingredientCombinations
-    .sort((a, b) => b.ingredientScore - a.ingredientScore)
+    .sort((a, b) => {
+      const scoreDiff = b.ingredientScore - a.ingredientScore;
+      if (scoreDiff !== 0) return scoreDiff;
+
+      // If scores are equal, prioritize selected combination
+      const aIsSelected = isSelectedCombination(a, selectedNature, selectedSubSkills);
+      const bIsSelected = isSelectedCombination(b, selectedNature, selectedSubSkills);
+      if (aIsSelected && !bIsSelected) return -1;
+      if (!aIsSelected && bIsSelected) return 1;
+      return 0;
+    })
     .map((entry, index) => ({
       ...entry,
       rank: index + 1,
     }));
 
   // Sort by berry score (descending) and assign ranks
+  // Prioritize selected combination when scores are equal
   const berryRanking = berryCombinations
-    .sort((a, b) => b.berryScore - a.berryScore)
+    .sort((a, b) => {
+      const scoreDiff = b.berryScore - a.berryScore;
+      if (scoreDiff !== 0) return scoreDiff;
+
+      // If scores are equal, prioritize selected combination
+      const aIsSelected = isSelectedCombination(a, selectedNature, selectedSubSkills);
+      const bIsSelected = isSelectedCombination(b, selectedNature, selectedSubSkills);
+      if (aIsSelected && !bIsSelected) return -1;
+      if (!aIsSelected && bIsSelected) return 1;
+      return 0;
+    })
     .map((entry, index) => ({
       ...entry,
       rank: index + 1,
@@ -330,15 +388,29 @@ export function ensureUserRankInRanking(
   const newRanking = [...ranking, userEntry];
 
   // Sort by the appropriate score and reassign ranks
+  // Prioritize user's combination when scores are equal
   const sortedRanking = newRanking.sort((a, b) => {
+    let scoreDiff = 0;
     switch (rankingType) {
       case "skill":
-        return b.skillScore - a.skillScore;
+        scoreDiff = b.skillScore - a.skillScore;
+        break;
       case "ingredient":
-        return b.ingredientScore - a.ingredientScore;
+        scoreDiff = b.ingredientScore - a.ingredientScore;
+        break;
       case "berry":
-        return b.berryScore - a.berryScore;
+        scoreDiff = b.berryScore - a.berryScore;
+        break;
     }
+
+    if (scoreDiff !== 0) return scoreDiff;
+
+    // If scores are equal, prioritize user's combination
+    const aIsUser = isSelectedCombination(a, effectiveNature, subSkills);
+    const bIsUser = isSelectedCombination(b, effectiveNature, subSkills);
+    if (aIsUser && !bIsUser) return -1;
+    if (!aIsUser && bIsUser) return 1;
+    return 0;
   });
 
   // Reassign ranks

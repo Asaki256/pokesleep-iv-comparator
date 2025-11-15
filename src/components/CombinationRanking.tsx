@@ -57,8 +57,8 @@ export default function CombinationRanking({
 
   // Generate ranking data (memoized)
   const rankingData = useMemo(() => {
-    return generateRankingData(pokemon);
-  }, [pokemon]);
+    return generateRankingData(pokemon, currentNature, currentSubSkills);
+  }, [pokemon, currentNature, currentSubSkills]);
 
   // Track generation completion (deferred to avoid cascading renders)
   useEffect(() => {
