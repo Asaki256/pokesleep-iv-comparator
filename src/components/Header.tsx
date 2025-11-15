@@ -9,7 +9,7 @@ function Header() {
       <div className="bg-primary h-14 w-full flex items-center justify-between sticky top-0 z-50 border-b border-primary-foreground/10 shadow-sm">
         <div className="flex items-center gap-2 pl-4">
           <Image
-            src="/favicon.ico"
+            src="/icon-512.png"
             alt="Master Ball"
             width={32}
             height={32}
