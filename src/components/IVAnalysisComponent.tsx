@@ -1,80 +1,42 @@
 "use client";
 
 import { Pokemon } from "@/types/pokemon";
-import { RankingEntry } from "@/utils/rankingGenerator";
 
 type RankingType = "skill" | "ingredient" | "berry";
 
+interface SelectedRankData {
+  rank: number;
+  score: number;
+  totalCombinations: number;
+}
+
 interface IVAnalysisComponentProps {
   pokemon: Pokemon;
-  skillRanking: RankingEntry[];
-  ingredientRanking: RankingEntry[];
-  berryRanking: RankingEntry[];
-  mySkillRank: number | null;
-  myIngredientRank: number | null;
-  myBerryRank: number | null;
+  selectedSkillRank: SelectedRankData;
+  selectedIngredientRank: SelectedRankData;
+  selectedBerryRank: SelectedRankData;
   onRankingTypeChange: (type: RankingType) => void;
 }
 
 export default function IVAnalysisComponent({
   pokemon,
-  skillRanking,
-  ingredientRanking,
-  berryRanking,
-  mySkillRank,
-  myIngredientRank,
-  myBerryRank,
+  selectedSkillRank,
+  selectedIngredientRank,
+  selectedBerryRank,
   onRankingTypeChange,
 }: IVAnalysisComponentProps) {
   // ランキングとパーセンテージを計算
-  const getRankDisplay = (rank: number | null, total: number) => {
-    if (rank === null) return { rankText: "-", percentText: "-" };
-    const actualRank = rank + 1; // 0-indexed to 1-indexed
-    const percentage = ((actualRank / total) * 100).toFixed(1);
+  const getRankDisplay = (rankData: SelectedRankData) => {
+    const percentage = ((rankData.rank / rankData.totalCombinations) * 100).toFixed(1);
     return {
-      rankText: `${actualRank}位`,
+      rankText: `${rankData.rank}位`,
       percentText: `上位${percentage}%`,
     };
   };
 
-  const skillRankDisplay = getRankDisplay(mySkillRank, skillRanking.length);
-  const ingredientRankDisplay = getRankDisplay(
-    myIngredientRank,
-    ingredientRanking.length
-  );
-  const berryRankDisplay = getRankDisplay(myBerryRank, berryRanking.length);
-
-  // スコアを取得
-  const getScore = (
-    ranking: RankingEntry[],
-    myRank: number | null
-  ): string => {
-    if (myRank === null) return "-";
-    return ranking[myRank]?.skillScore?.toFixed(1) || "-";
-  };
-
-  const getIngredientScore = (
-    ranking: RankingEntry[],
-    myRank: number | null
-  ): string => {
-    if (myRank === null) return "-";
-    return ranking[myRank]?.ingredientScore?.toFixed(1) || "-";
-  };
-
-  const getBerryScore = (
-    ranking: RankingEntry[],
-    myRank: number | null
-  ): string => {
-    if (myRank === null) return "-";
-    return ranking[myRank]?.berryScore?.toFixed(1) || "-";
-  };
-
-  const skillScore = getScore(skillRanking, mySkillRank);
-  const ingredientScore = getIngredientScore(
-    ingredientRanking,
-    myIngredientRank
-  );
-  const berryScore = getBerryScore(berryRanking, myBerryRank);
+  const skillRankDisplay = getRankDisplay(selectedSkillRank);
+  const ingredientRankDisplay = getRankDisplay(selectedIngredientRank);
+  const berryRankDisplay = getRankDisplay(selectedBerryRank);
 
   // ポケモンのタイプに応じて強調すべき項目を判定
   const shouldEmphasize = (rowType: RankingType): boolean => {
@@ -90,21 +52,21 @@ export default function IVAnalysisComponent({
     {
       type: "ingredient" as RankingType,
       label: "食材回数",
-      score: ingredientScore,
+      score: selectedIngredientRank.score.toFixed(1),
       rank: ingredientRankDisplay.rankText,
       percent: ingredientRankDisplay.percentText,
     },
     {
       type: "skill" as RankingType,
       label: "スキル回数",
-      score: skillScore,
+      score: selectedSkillRank.score.toFixed(1),
       rank: skillRankDisplay.rankText,
       percent: skillRankDisplay.percentText,
     },
     {
       type: "berry" as RankingType,
       label: "きのみエナジー",
-      score: berryScore,
+      score: selectedBerryRank.score.toFixed(1),
       rank: berryRankDisplay.rankText,
       percent: berryRankDisplay.percentText,
     },

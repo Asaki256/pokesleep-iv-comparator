@@ -8,8 +8,7 @@ import { ArrowUp } from "lucide-react";
 import { useVirtualScroll } from "@/hooks/useVirtualScroll";
 import {
   generateRankingData,
-  findMyRank,
-  ensureUserRankInRanking,
+  calculateSelectedRank,
   RankingEntry,
 } from "@/utils/rankingGenerator";
 import { getRarityStyles } from "@/utils/subSkillUtils";
@@ -57,8 +56,8 @@ export default function CombinationRanking({
 
   // Generate ranking data (memoized)
   const rankingData = useMemo(() => {
-    return generateRankingData(pokemon);
-  }, [pokemon]);
+    return generateRankingData(pokemon, currentNature, currentSubSkills);
+  }, [pokemon, currentNature, currentSubSkills]);
 
   // Track generation completion (deferred to avoid cascading renders)
   useEffect(() => {
@@ -67,71 +66,59 @@ export default function CombinationRanking({
     });
   }, [rankingData]);
 
-  // Ensure user's current combination is in each ranking
-  const skillRankingWithUser = useMemo(() => {
-    return ensureUserRankInRanking(
-      rankingData.skillRanking,
-      pokemon,
-      currentNature,
-      currentSubSkills,
-      "skill"
-    );
-  }, [rankingData.skillRanking, pokemon, currentNature, currentSubSkills]);
+  // Calculate virtual ranks for selected combination
+  const selectedSkillRank = useMemo(() => {
+    return calculateSelectedRank(pokemon, currentNature, currentSubSkills, "skill");
+  }, [pokemon, currentNature, currentSubSkills]);
 
-  const ingredientRankingWithUser = useMemo(() => {
-    return ensureUserRankInRanking(
-      rankingData.ingredientRanking,
-      pokemon,
-      currentNature,
-      currentSubSkills,
-      "ingredient"
-    );
-  }, [rankingData.ingredientRanking, pokemon, currentNature, currentSubSkills]);
+  const selectedIngredientRank = useMemo(() => {
+    return calculateSelectedRank(pokemon, currentNature, currentSubSkills, "ingredient");
+  }, [pokemon, currentNature, currentSubSkills]);
 
-  const berryRankingWithUser = useMemo(() => {
-    return ensureUserRankInRanking(
-      rankingData.berryRanking,
-      pokemon,
-      currentNature,
-      currentSubSkills,
-      "berry"
-    );
-  }, [rankingData.berryRanking, pokemon, currentNature, currentSubSkills]);
+  const selectedBerryRank = useMemo(() => {
+    return calculateSelectedRank(pokemon, currentNature, currentSubSkills, "berry");
+  }, [pokemon, currentNature, currentSubSkills]);
 
   // Get current ranking based on active tab
   const currentRanking = useMemo(() => {
     switch (activeRankingType) {
       case "skill":
-        return skillRankingWithUser;
+        return rankingData.skillRanking;
       case "ingredient":
-        return ingredientRankingWithUser;
+        return rankingData.ingredientRanking;
       case "berry":
-        return berryRankingWithUser;
+        return rankingData.berryRanking;
     }
   }, [
     activeRankingType,
-    skillRankingWithUser,
-    ingredientRankingWithUser,
-    berryRankingWithUser,
+    rankingData.skillRanking,
+    rankingData.ingredientRanking,
+    rankingData.berryRanking,
   ]);
 
-  // Find current user's rank for each ranking type
-  const mySkillRank = useMemo(() => {
-    return findMyRank(skillRankingWithUser, currentNature, currentSubSkills);
-  }, [skillRankingWithUser, currentNature, currentSubSkills]);
+  // Get current selected rank data based on active tab
+  const currentSelectedRank = useMemo(() => {
+    switch (activeRankingType) {
+      case "skill":
+        return selectedSkillRank;
+      case "ingredient":
+        return selectedIngredientRank;
+      case "berry":
+        return selectedBerryRank;
+    }
+  }, [activeRankingType, selectedSkillRank, selectedIngredientRank, selectedBerryRank]);
 
-  const myIngredientRank = useMemo(() => {
-    return findMyRank(ingredientRankingWithUser, currentNature, currentSubSkills);
-  }, [ingredientRankingWithUser, currentNature, currentSubSkills]);
-
-  const myBerryRank = useMemo(() => {
-    return findMyRank(berryRankingWithUser, currentNature, currentSubSkills);
-  }, [berryRankingWithUser, currentNature, currentSubSkills]);
-
-  // Find current user's rank for active ranking type
-  const myRankIndex = useMemo(() => {
-    return findMyRank(currentRanking, currentNature, currentSubSkills);
-  }, [currentRanking, currentNature, currentSubSkills]);
+  // Handle click on selected combination card to scroll to approximate rank position
+  const handleScrollToSelectedRank = () => {
+    // Since the selected combination is excluded from the ranking,
+    // we need to adjust the scroll position:
+    // - If rank is 1, scroll to index 0 (top)
+    // - If rank is N, the list shows: 1,2,...,N-1,N+1,N+2,...
+    // - To see the position around rank N, scroll to index N-1 (which shows rank N+1)
+    // - But to center better, we scroll to index N-2 when rank > 1
+    const targetIndex = currentSelectedRank.rank === 1 ? 0 : Math.max(0, currentSelectedRank.rank - 2);
+    scrollToIndex(targetIndex);
+  };
 
   // Virtual scroll settings
   const ITEM_HEIGHT = 70; // Height of each ranking entry in pixels (more compact)
@@ -194,31 +181,22 @@ export default function CombinationRanking({
     { id: "berry" as const, label: "きのみ" },
   ];
 
-  // Handle ranking type change with automatic scroll to user's rank
+  // Handle ranking type change
   const handleRankingTypeChange = (type: RankingType) => {
     setActiveRankingType(type);
 
-    // Get the corresponding rank index for the new ranking type
-    let targetRankIndex: number | null = null;
-    switch (type) {
-      case "skill":
-        targetRankIndex = mySkillRank;
-        break;
-      case "ingredient":
-        targetRankIndex = myIngredientRank;
-        break;
-      case "berry":
-        targetRankIndex = myBerryRank;
-        break;
-    }
+    // Scroll to the selected rank position after tab change
+    // Use setTimeout to ensure state update completes first
+    setTimeout(() => {
+      const rankData =
+        type === "skill" ? selectedSkillRank :
+        type === "ingredient" ? selectedIngredientRank :
+        selectedBerryRank;
 
-    // Scroll to the user's rank after state update
-    if (targetRankIndex !== null) {
-      // Use setTimeout to ensure state update and re-render complete first
-      setTimeout(() => {
-        scrollToIndex(targetRankIndex);
-      }, 0);
-    }
+      // Adjust index since selected combination is excluded from ranking
+      const targetIndex = rankData.rank === 1 ? 0 : Math.max(0, rankData.rank - 2);
+      scrollToIndex(targetIndex);
+    }, 100);
   };
 
   if (isGenerating) {
@@ -236,12 +214,9 @@ export default function CombinationRanking({
       {/* IV Analysis Component */}
       <IVAnalysisComponent
         pokemon={pokemon}
-        skillRanking={skillRankingWithUser}
-        ingredientRanking={ingredientRankingWithUser}
-        berryRanking={berryRankingWithUser}
-        mySkillRank={mySkillRank}
-        myIngredientRank={myIngredientRank}
-        myBerryRank={myBerryRank}
+        selectedSkillRank={selectedSkillRank}
+        selectedIngredientRank={selectedIngredientRank}
+        selectedBerryRank={selectedBerryRank}
         onRankingTypeChange={handleRankingTypeChange}
       />
 
@@ -267,6 +242,66 @@ export default function CombinationRanking({
           ))}
         </div>
 
+        {/* Selected combination card */}
+        <div
+          className="mb-4 p-3 bg-accent/20 border-2 border-accent rounded-lg cursor-pointer transition-all hover:bg-accent/30 hover:shadow-md"
+          onClick={handleScrollToSelectedRank}
+        >
+          <div className="flex items-center gap-2 md:gap-3">
+            {/* Rank badge */}
+            <div className="flex-shrink-0 w-10 h-10 md:w-12 md:h-12 rounded-full flex items-center justify-center font-bold text-sm md:text-base bg-accent text-accent-foreground">
+              {currentSelectedRank.rank}
+            </div>
+
+            {/* Details */}
+            <div className="flex-1 min-w-0">
+              <div className="flex items-center gap-2 mb-1">
+                <span className="text-xs font-semibold text-foreground">
+                  あなたの{pokemon.displayName}の組み合わせ
+                </span>
+                <span className="text-xs text-muted-foreground">
+                  (上位{((currentSelectedRank.rank / currentSelectedRank.totalCombinations) * 100).toFixed(1)}%)
+                </span>
+              </div>
+              <div className="flex items-center gap-2">
+                <span className="text-xs md:text-sm font-medium text-foreground">
+                  {currentNature || "すなお"}
+                </span>
+                <div className="flex flex-wrap gap-1">
+                  {currentSubSkills.length === 0 ? (
+                    <span className="text-xs text-muted-foreground italic">
+                      サブスキルなし
+                    </span>
+                  ) : (
+                    currentSubSkills.map((skill, idx) => {
+                      const rarityStyle = getRarityStyles(skill.rarity);
+                      return (
+                        <span
+                          key={idx}
+                          className={`inline-block text-xs px-1.5 md:px-2 py-0.5 rounded-md font-medium ${rarityStyle.chip}`}
+                          title={skill.name}
+                        >
+                          {skill.name}
+                        </span>
+                      );
+                    })
+                  )}
+                </div>
+              </div>
+            </div>
+
+            {/* Score */}
+            <div className="flex-shrink-0 text-right">
+              <div className="text-sm md:text-base font-bold text-foreground">
+                {currentSelectedRank.score.toFixed(1)}
+              </div>
+              <div className="text-xs text-muted-foreground">
+                {activeRankingType === "berry" ? "エナジー/日" : "回/日"}
+              </div>
+            </div>
+          </div>
+        </div>
+
         {/* Navigation buttons */}
         <div className="flex gap-2 mb-2">
           <Button
@@ -278,17 +313,6 @@ export default function CombinationRanking({
             <ArrowUp className="h-3 w-3" />
             <span className="hidden sm:inline">トップへ</span>
           </Button>
-          {myRankIndex !== null && (
-            <Button
-              variant="outline"
-              size="sm"
-              onClick={() => scrollToIndex(myRankIndex)}
-              className="flex items-center gap-1 text-xs px-2 md:px-3"
-            >
-              <span>自分のランク</span>
-              <span className="hidden sm:inline">({myRankIndex + 1}位)</span>
-            </Button>
-          )}
         </div>
 
         {/* Display range indicator */}
@@ -313,16 +337,12 @@ export default function CombinationRanking({
             >
               {visibleItems.map((index) => {
                 const entry = currentRanking[index];
-                const isMyRank = index === myRankIndex;
                 const score = getScore(entry, activeRankingType);
 
                 return (
                   <div
                     key={index}
-                    className={`
-                      border-b border-border p-2 md:p-3
-                      ${isMyRank ? "bg-accent/20 border-l-2 md:border-l-4 border-l-accent" : ""}
-                    `}
+                    className="border-b border-border p-2 md:p-3"
                     style={{ height: `${ITEM_HEIGHT}px` }}
                   >
                     <div className="flex items-center gap-2 md:gap-3 h-full">
