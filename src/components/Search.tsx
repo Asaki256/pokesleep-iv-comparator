@@ -18,19 +18,16 @@ import {
   CalculationResult,
 } from "@/utils/pokemonCalculator";
 import { useCalculationHistory } from "@/hooks/useCalculationHistory";
-import {
-  NATURE_GROUPS,
-  getDefaultNature,
-} from "@/data/natureData";
+import { NATURE_GROUPS, getDefaultNature } from "@/data/natureData";
 
 function Search() {
   const [pokemon, setPokemon] = useState("");
-  const [selectedSubSkills, setSelectedSubSkills] =
-    useState<SelectedSubSkill[]>([]);
-  const [nature, setNature] =
-    useState<SelectedNature | null>(
-      getDefaultNature() as SelectedNature
-    );
+  const [selectedSubSkills, setSelectedSubSkills] = useState<
+    SelectedSubSkill[]
+  >([]);
+  const [nature, setNature] = useState<SelectedNature | null>(
+    getDefaultNature() as SelectedNature,
+  );
   const [calculationResult, setCalculationResult] =
     useState<CalculationResult | null>(null);
 
@@ -44,12 +41,11 @@ function Search() {
   } | null>(null);
 
   // 初期表示用のランキング表示データ（履歴から復元、入力欄には反映しない）
-  const [initialDisplayData, setInitialDisplayData] =
-    useState<{
-      pokemonInternalName: string;
-      natureName?: string;
-      subSkills: SelectedSubSkill[];
-    } | null>(null);
+  const [initialDisplayData, setInitialDisplayData] = useState<{
+    pokemonInternalName: string;
+    natureName?: string;
+    subSkills: SelectedSubSkill[];
+  } | null>(null);
 
   const {
     history,
@@ -64,39 +60,30 @@ function Search() {
   const hasRestoredFromHistory = useRef(false);
 
   // 選択されたポケモンのデータを取得（入力欄から）
-  const selectedPokemon = pokemonData.find(
-    (p) => p.name === pokemon
-  );
+  const selectedPokemon = pokemonData.find((p) => p.name === pokemon);
 
   // ランキング表示用のポケモン（決定ボタン押下時のスナップショット or 初期表示データ）
   const rankingPokemon = initialDisplayData
-    ? pokemonData.find(
-        (p) =>
-          p.name === initialDisplayData.pokemonInternalName
-      )
+    ? pokemonData.find((p) => p.name === initialDisplayData.pokemonInternalName)
     : displaySnapshot
-    ? pokemonData.find(
-        (p) => p.displayName === displaySnapshot.pokemonName
-      )
-    : null;
+      ? pokemonData.find((p) => p.displayName === displaySnapshot.pokemonName)
+      : null;
 
   // ランキング表示用の性格とサブスキル（決定ボタン押下時のスナップショット or 初期表示データ）
   const rankingNature = initialDisplayData
     ? initialDisplayData.natureName
     : displaySnapshot
-    ? nature?.name
-    : undefined;
+      ? nature?.name
+      : undefined;
   const rankingSubSkills = initialDisplayData
     ? initialDisplayData.subSkills
     : displaySnapshot
-    ? displaySnapshot.subSkills
-    : [];
+      ? displaySnapshot.subSkills
+      : [];
 
   // きのみの日本語名を取得
   const kinomiName = selectedPokemon
-    ? kinomiData.find(
-        (k) => k.type === selectedPokemon.kinomiType
-      )?.name
+    ? kinomiData.find((k) => k.type === selectedPokemon.kinomiType)?.name
     : undefined;
 
   // とくいのタイプに応じた背景色を取得
@@ -129,7 +116,7 @@ function Search() {
       selectedPokemon,
       60,
       nature?.name,
-      selectedSubSkills
+      selectedSubSkills,
     );
 
     setCalculationResult(result);
@@ -141,9 +128,7 @@ function Search() {
       pokemonType: selectedPokemon.type,
       nature: nature
         ? `${nature.name}${
-            nature.up
-              ? ` (▲${nature.up} ▼${nature.down})`
-              : " (補正なし)"
+            nature.up ? ` (▲${nature.up} ▼${nature.down})` : " (補正なし)"
           }`
         : undefined,
       subSkills: selectedSubSkills,
@@ -189,7 +174,7 @@ function Search() {
       let foundNature: SelectedNature | null = null;
       for (const group of NATURE_GROUPS) {
         const nature = group.natures.find(
-          (n) => n.name === historyItem.natureName
+          (n) => n.name === historyItem.natureName,
         );
         if (nature) {
           foundNature = {
@@ -224,9 +209,7 @@ function Search() {
 
       // 履歴から状態を一括復元（バッチ更新を使用）
       queueMicrotask(() => {
-        setCalculationResult(
-          latestHistory.calculationResult
-        );
+        setCalculationResult(latestHistory.calculationResult);
         setDisplaySnapshot({
           pokemonName: latestHistory.pokemonName,
           pokemonNumber: latestHistory.pokemonNumber,
@@ -235,8 +218,7 @@ function Search() {
           subSkills: latestHistory.subSkills,
         });
         setInitialDisplayData({
-          pokemonInternalName:
-            latestHistory.pokemonInternalName,
+          pokemonInternalName: latestHistory.pokemonInternalName,
           natureName: latestHistory.natureName,
           subSkills: latestHistory.subSkills,
         });
@@ -255,17 +237,14 @@ function Search() {
                 ポケモン
               </h2>
             </div>
-            <Combobox
-              value={pokemon}
-              onChange={setPokemon}
-            />
+            <Combobox value={pokemon} onChange={setPokemon} />
             {/* とくいときのみ表示 */}
             {selectedPokemon && (
               <div className="flex flex-wrap gap-2 mt-3 items-center justify-center">
                 {selectedPokemon?.type && (
                   <span
                     className={`text-xs px-3 py-1 rounded-full font-bold ${getTokuiStyle(
-                      selectedPokemon.type
+                      selectedPokemon.type,
                     )}`}
                   >
                     {selectedPokemon.type}
@@ -287,10 +266,7 @@ function Search() {
             />
           </div>
           <div className="mt-5">
-            <NatureSelector
-              value={nature}
-              onChange={setNature}
-            />
+            <NatureSelector value={nature} onChange={setNature} />
           </div>
           <div className="text-xs mt-5 text-center text-muted-foreground">
             ※同レベルでの比較を行うため、Lv.60固定で計算します。
@@ -330,9 +306,7 @@ function Search() {
                 />
               ) : (
                 <div className="text-center py-12 text-muted-foreground">
-                  <p className="text-sm">
-                    ポケモンを選択してください
-                  </p>
+                  <p className="text-sm">ポケモンを選択してください</p>
                 </div>
               )
             }

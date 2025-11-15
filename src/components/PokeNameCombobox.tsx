@@ -35,13 +35,10 @@ export function Combobox({ value, onChange }: Props) {
   const [open, setOpen] = React.useState(false);
 
   // カスタムフィルター関数: カタカナ・ひらがなを区別せずに検索
-  const filterFunction = React.useCallback(
-    (value: string, search: string) => {
-      if (search === "") return 1;
-      return kanaInsensitiveIncludes(value, search) ? 1 : 0;
-    },
-    []
-  );
+  const filterFunction = React.useCallback((value: string, search: string) => {
+    if (search === "") return 1;
+    return kanaInsensitiveIncludes(value, search) ? 1 : 0;
+  }, []);
 
   return (
     <Popover open={open} onOpenChange={setOpen}>
@@ -53,37 +50,29 @@ export function Combobox({ value, onChange }: Props) {
           className="w-full justify-between"
         >
           {value
-            ? pokemonList.find(
-                (framework) => framework.value === value
-              )?.label
+            ? pokemonList.find((framework) => framework.value === value)?.label
             : "ポケモン名を選択"}
           <ChevronsUpDown className="opacity-50" />
         </Button>
       </PopoverTrigger>
       <PopoverContent className="w-full p-0">
         <Command filter={filterFunction}>
-          <CommandInput
-            placeholder="ポケモン名を検索"
-            className="h-9"
-          />
+          <CommandInput placeholder="ポケモン名を検索" className="h-9" />
           <CommandList>
-            <CommandEmpty>
-              一致するポケモンがありません。
-            </CommandEmpty>
+            <CommandEmpty>一致するポケモンがありません。</CommandEmpty>
             <CommandGroup>
               {pokemonList.map((framework) => (
                 <CommandItem
                   key={framework.value}
                   value={framework.label}
                   onSelect={(currentValue) => {
-                    const selectedFramework =
-                      pokemonList.find(
-                        (f) => f.label === currentValue
-                      );
+                    const selectedFramework = pokemonList.find(
+                      (f) => f.label === currentValue,
+                    );
                     onChange(
                       selectedFramework?.value === value
                         ? ""
-                        : selectedFramework?.value || ""
+                        : selectedFramework?.value || "",
                     );
                     setOpen(false);
                   }}
@@ -92,9 +81,7 @@ export function Combobox({ value, onChange }: Props) {
                   <Check
                     className={cn(
                       "ml-auto",
-                      value === framework.value
-                        ? "opacity-100"
-                        : "opacity-0"
+                      value === framework.value ? "opacity-100" : "opacity-0",
                     )}
                   />
                 </CommandItem>

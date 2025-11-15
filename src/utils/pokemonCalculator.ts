@@ -16,9 +16,7 @@ interface NatureMultipliers {
  * 性格名から補正値を取得
  * natureData.tsのNATURE_GROUPSから性格を検索
  */
-export const getNatureMultipliers = (
-  natureName: string
-): NatureMultipliers => {
+export const getNatureMultipliers = (natureName: string): NatureMultipliers => {
   // NATURE_GROUPSから性格を検索
   for (const group of NATURE_GROUPS) {
     const nature = group.natures.find((n) => n.name === natureName);
@@ -98,9 +96,7 @@ const SLEEP_RIBBON_MULTIPLIER = 1.0; // おやすみリボン補正(固定)
  * レベルによる補正を計算
  * 1 - (Lv - 1) * 0.002
  */
-const calculateLevelMultiplier = (
-  level: number
-): number => {
+const calculateLevelMultiplier = (level: number): number => {
   return 1 - (level - 1) * 0.002;
 };
 
@@ -112,7 +108,7 @@ const calculateLevelMultiplier = (
 const calculateSubSkillReduction = (
   helpingSpeedMCount: number,
   helpingSpeedSCount: number,
-  helpingBonusCount: number
+  helpingBonusCount: number,
 ): number => {
   const reduction =
     0.14 * helpingSpeedMCount +
@@ -128,12 +124,12 @@ const calculateSubSkillReduction = (
 const calculateSubSkillMultiplier = (
   helpingSpeedMCount: number,
   helpingSpeedSCount: number,
-  helpingBonusCount: number
+  helpingBonusCount: number,
 ): number => {
   const reduction = calculateSubSkillReduction(
     helpingSpeedMCount,
     helpingSpeedSCount,
-    helpingBonusCount
+    helpingBonusCount,
   );
   return 1 - reduction;
 };
@@ -142,9 +138,7 @@ const calculateSubSkillMultiplier = (
  * おてつだい時間を計算
  * Floor[ 基準おてつだい時間 × レベルによる補正 × おてつだいスピード性格補正 × サブスキル補正 × おやすみリボン補正 ]
  */
-export const calculateSupportTime = (
-  params: CalculationParams
-): number => {
+export const calculateSupportTime = (params: CalculationParams): number => {
   const {
     pokemon,
     level = 60,
@@ -158,7 +152,7 @@ export const calculateSupportTime = (
   const subSkillMultiplier = calculateSubSkillMultiplier(
     helpingSpeedMCount,
     helpingSpeedSCount,
-    helpingBonusCount
+    helpingBonusCount,
   );
 
   const calculatedTime =
@@ -175,9 +169,7 @@ export const calculateSupportTime = (
  * おてつだい回数(/日)を計算
  * = 132888 / (CalculatedSupportTime)
  */
-export const calculateHelpsPerDay = (
-  calculatedSupportTime: number
-): number => {
+export const calculateHelpsPerDay = (calculatedSupportTime: number): number => {
   return SECONDS_PER_DAY / calculatedSupportTime;
 };
 
@@ -185,9 +177,7 @@ export const calculateHelpsPerDay = (
  * 食材確率を計算
  * (calculatedFoodDropRate) = (pokemonData.foodDropRate) × (1 + (食材確率アップMの数) × 0.36 + (食材確率アップSの数) × 0.18 ) × 食材確率性格補正
  */
-export const calculateFoodDropRate = (
-  params: CalculationParams
-): number => {
+export const calculateFoodDropRate = (params: CalculationParams): number => {
   const {
     pokemon,
     ingredientNatureMultiplier = 1.0,
@@ -196,15 +186,9 @@ export const calculateFoodDropRate = (
   } = params;
 
   const subSkillBonus =
-    1 +
-    ingredientFinderMCount * 0.36 +
-    ingredientFinderSCount * 0.18;
+    1 + ingredientFinderMCount * 0.36 + ingredientFinderSCount * 0.18;
 
-  return (
-    pokemon.foodDropRate *
-    subSkillBonus *
-    ingredientNatureMultiplier
-  );
+  return pokemon.foodDropRate * subSkillBonus * ingredientNatureMultiplier;
 };
 
 /**
@@ -213,7 +197,7 @@ export const calculateFoodDropRate = (
  */
 export const calculateFoodHelpsPerDay = (
   helpsPerDay: number,
-  calculatedFoodDropRate: number
+  calculatedFoodDropRate: number,
 ): number => {
   return helpsPerDay * calculatedFoodDropRate;
 };
@@ -222,9 +206,7 @@ export const calculateFoodHelpsPerDay = (
  * スキル確率を計算
  * (calculatedSkillRate) = (pokemonData.skillRate) × (1 + (スキル確率アップMの数) × 0.36 + (スキル確率アップSの数) × 0.18 ) × スキル確率性格補正
  */
-export const calculateSkillRate = (
-  params: CalculationParams
-): number => {
+export const calculateSkillRate = (params: CalculationParams): number => {
   const {
     pokemon,
     skillNatureMultiplier = 1.0,
@@ -233,15 +215,9 @@ export const calculateSkillRate = (
   } = params;
 
   const subSkillBonus =
-    1 +
-    skillTriggerMCount * 0.36 +
-    skillTriggerSCount * 0.18;
+    1 + skillTriggerMCount * 0.36 + skillTriggerSCount * 0.18;
 
-  return (
-    pokemon.skillRate *
-    subSkillBonus *
-    skillNatureMultiplier
-  );
+  return pokemon.skillRate * subSkillBonus * skillNatureMultiplier;
 };
 
 /**
@@ -250,7 +226,7 @@ export const calculateSkillRate = (
  */
 export const calculateSkillTriggersPerDay = (
   helpsPerDay: number,
-  calculatedSkillRate: number
+  calculatedSkillRate: number,
 ): number => {
   return helpsPerDay * calculatedSkillRate;
 };
@@ -261,7 +237,7 @@ export const calculateSkillTriggersPerDay = (
  */
 export const calculateBerryHelpsPerDay = (
   helpsPerDay: number,
-  calculatedFoodDropRate: number
+  calculatedFoodDropRate: number,
 ): number => {
   return helpsPerDay * (1 - calculatedFoodDropRate);
 };
@@ -275,7 +251,7 @@ export const calculateBerryHelpsPerDay = (
  */
 export const calculateBerryCount = (
   pokemon: Pokemon,
-  berryFindingSCount: number = 0
+  berryFindingSCount: number = 0,
 ): number => {
   let count = 1; // 基本1個
 
@@ -298,21 +274,16 @@ export const calculateBerryCount = (
 export const calculateBerryEnergyPerHelp = (
   pokemon: Pokemon,
   level: number = 60,
-  berryCount: number = 1
+  berryCount: number = 1,
 ): number => {
-  const kinomiInfo = kinomiData.find(
-    (k) => k.type === pokemon.kinomiType
-  );
+  const kinomiInfo = kinomiData.find((k) => k.type === pokemon.kinomiType);
   if (!kinomiInfo) {
-    throw new Error(
-      `きのみタイプ "${pokemon.kinomiType}" が見つかりません`
-    );
+    throw new Error(`きのみタイプ "${pokemon.kinomiType}" が見つかりません`);
   }
 
   const baseEnergy = kinomiInfo.energy;
   const linearGrowth = baseEnergy + (level - 1);
-  const exponentialGrowth =
-    baseEnergy * Math.pow(1.025, level - 1);
+  const exponentialGrowth = baseEnergy * Math.pow(1.025, level - 1);
 
   // きのみ1個あたりのエナジーにきのみの数を掛ける
   const energyPerBerry = Math.max(linearGrowth, exponentialGrowth);
@@ -325,7 +296,7 @@ export const calculateBerryEnergyPerHelp = (
  */
 export const calculateBerryEnergyPerDay = (
   berryHelpsPerDay: number,
-  berryEnergyPerHelp: number
+  berryEnergyPerHelp: number,
 ): number => {
   return Math.floor(berryHelpsPerDay * berryEnergyPerHelp);
 };
@@ -334,27 +305,23 @@ export const calculateBerryEnergyPerDay = (
  * すべての計算を行い、結果を返す
  */
 export const calculatePokemonStats = (
-  params: CalculationParams
+  params: CalculationParams,
 ): CalculationResult => {
   const level = params.level ?? 60;
 
   // おてつだい時間
-  const calculatedSupportTime =
-    calculateSupportTime(params);
+  const calculatedSupportTime = calculateSupportTime(params);
 
   // おてつだい回数/日
-  const helpsPerDay = calculateHelpsPerDay(
-    calculatedSupportTime
-  );
+  const helpsPerDay = calculateHelpsPerDay(calculatedSupportTime);
 
   // 食材確率
-  const calculatedFoodDropRate =
-    calculateFoodDropRate(params);
+  const calculatedFoodDropRate = calculateFoodDropRate(params);
 
   // 食材回数/日
   const foodHelpsPerDay = calculateFoodHelpsPerDay(
     helpsPerDay,
-    calculatedFoodDropRate
+    calculatedFoodDropRate,
   );
 
   // スキル確率
@@ -363,32 +330,32 @@ export const calculatePokemonStats = (
   // スキル回数/日
   const skillTriggersPerDay = calculateSkillTriggersPerDay(
     helpsPerDay,
-    calculatedSkillRate
+    calculatedSkillRate,
   );
 
   // きのみ回数/日
   const berryHelpsPerDay = calculateBerryHelpsPerDay(
     helpsPerDay,
-    calculatedFoodDropRate
+    calculatedFoodDropRate,
   );
 
   // きのみの数を計算
   const berryCount = calculateBerryCount(
     params.pokemon,
-    params.berryFindingSCount ?? 0
+    params.berryFindingSCount ?? 0,
   );
 
   // きのみエナジー/回
   const berryEnergyPerHelp = calculateBerryEnergyPerHelp(
     params.pokemon,
     level,
-    berryCount
+    berryCount,
   );
 
   // きのみエナジー/日
   const berryEnergyPerDay = calculateBerryEnergyPerDay(
     berryHelpsPerDay,
-    berryEnergyPerHelp
+    berryEnergyPerHelp,
   );
 
   return {
@@ -417,7 +384,7 @@ interface SubSkillCounts {
 }
 
 export const countSubSkills = (
-  subSkills: SelectedSubSkill[]
+  subSkills: SelectedSubSkill[],
 ): SubSkillCounts => {
   const counts: SubSkillCounts = {
     helpingSpeedM: 0,
@@ -483,7 +450,7 @@ export const calculatePokemonStatsSimple = (
   pokemon: Pokemon,
   level: number = 60,
   natureName?: string,
-  subSkills: SelectedSubSkill[] = []
+  subSkills: SelectedSubSkill[] = [],
 ): CalculationResult => {
   // 性格補正を取得
   const natureMultipliers = natureName
@@ -498,16 +465,13 @@ export const calculatePokemonStatsSimple = (
     pokemon,
     level,
     speedNatureMultiplier: natureMultipliers.speed,
-    ingredientNatureMultiplier:
-      natureMultipliers.ingredient,
+    ingredientNatureMultiplier: natureMultipliers.ingredient,
     skillNatureMultiplier: natureMultipliers.skill,
     helpingSpeedMCount: subSkillCounts.helpingSpeedM,
     helpingSpeedSCount: subSkillCounts.helpingSpeedS,
     helpingBonusCount: subSkillCounts.helpingBonus,
-    ingredientFinderMCount:
-      subSkillCounts.ingredientFinderM,
-    ingredientFinderSCount:
-      subSkillCounts.ingredientFinderS,
+    ingredientFinderMCount: subSkillCounts.ingredientFinderM,
+    ingredientFinderSCount: subSkillCounts.ingredientFinderS,
     skillTriggerMCount: subSkillCounts.skillTriggerM,
     skillTriggerSCount: subSkillCounts.skillTriggerS,
     berryFindingSCount: subSkillCounts.berryFindingS,

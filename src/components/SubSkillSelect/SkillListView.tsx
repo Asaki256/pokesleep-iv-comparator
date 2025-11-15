@@ -1,8 +1,5 @@
 import { SubSkill } from "@/types/subSkill";
-import {
-  SelectedSubSkill,
-  Variant,
-} from "@/types/selectedSubSkill";
+import { SelectedSubSkill, Variant } from "@/types/selectedSubSkill";
 import { subSkillData } from "@/data/subSkillData";
 import {
   hasVariants,
@@ -14,10 +11,7 @@ import {
 
 interface SkillListViewProps {
   onSkillSelect: (skill: SubSkill) => void;
-  onVariantSelect: (
-    skill: SubSkill,
-    variant: Variant
-  ) => void;
+  onVariantSelect: (skill: SubSkill, variant: Variant) => void;
   selectedSkills: SelectedSubSkill[];
   onRemoveSkill: (skillId: string) => void;
 }
@@ -29,19 +23,15 @@ export const SkillListView = ({
   onRemoveSkill,
 }: SkillListViewProps) => {
   // バリアントなしスキルが選択済みかチェック
-  const isSkillSelected = (
-    skill: SubSkill
-  ): string | null => {
-    const selected = selectedSkills.find(
-      (s) => s.baseId === skill.name
-    );
+  const isSkillSelected = (skill: SubSkill): string | null => {
+    const selected = selectedSkills.find((s) => s.baseId === skill.name);
     return selected ? selected.id : null;
   };
 
   // 特定のバリアントが選択済みかチェック
   const isSpecificVariantSelected = (
     skillGroup: string,
-    variant: Variant
+    variant: Variant,
   ): boolean => {
     const baseId = `${skillGroup}${variant}`;
     return selectedSkills.some((s) => s.baseId === baseId);
@@ -63,7 +53,7 @@ export const SkillListView = ({
     {
       withVariants: {} as Record<string, SubSkill[]>,
       withoutVariants: [] as SubSkill[],
-    }
+    },
   );
 
   // バリアントなしスキルの表示用カード
@@ -101,10 +91,7 @@ export const SkillListView = ({
   };
 
   // バリアントありスキルの表示用カード（グループごと）
-  const renderVariantSkillCard = (
-    skillGroup: string,
-    skills: SubSkill[]
-  ) => {
+  const renderVariantSkillCard = (skillGroup: string, skills: SubSkill[]) => {
     const config = VARIANT_CONFIG[skillGroup];
     const variants = getAvailableVariants(skillGroup);
 
@@ -123,21 +110,15 @@ export const SkillListView = ({
         {/* バリアントタグ（クリック可能） */}
         <div className="flex gap-1 justify-center">
           {variants.map((variant) => {
-            const variantRarity = getRarityByVariant(
+            const variantRarity = getRarityByVariant(skillGroup, variant);
+            const variantStyles = getRarityStyles(variantRarity);
+            const isVariantSelected = isSpecificVariantSelected(
               skillGroup,
-              variant
+              variant,
             );
-            const variantStyles =
-              getRarityStyles(variantRarity);
-            const isVariantSelected =
-              isSpecificVariantSelected(
-                skillGroup,
-                variant
-              );
             const selectedId = isVariantSelected
               ? selectedSkills.find(
-                  (s) =>
-                    s.baseId === `${skillGroup}${variant}`
+                  (s) => s.baseId === `${skillGroup}${variant}`,
                 )?.id
               : null;
 
@@ -177,20 +158,15 @@ export const SkillListView = ({
 
   return (
     <div className="space-y-2">
-      <h3 className="text-base font-bold text-foreground">
-        スキルを選択
-      </h3>
+      <h3 className="text-base font-bold text-foreground">スキルを選択</h3>
 
       <div className="grid grid-cols-3 gap-2">
         {/* バリアントなしスキル */}
-        {groupedSkills.withoutVariants.map((skill) =>
-          renderSkillCard(skill)
-        )}
+        {groupedSkills.withoutVariants.map((skill) => renderSkillCard(skill))}
 
         {/* バリアントありスキル */}
         {Object.entries(groupedSkills.withVariants).map(
-          ([skillGroup, skills]) =>
-            renderVariantSkillCard(skillGroup, skills)
+          ([skillGroup, skills]) => renderVariantSkillCard(skillGroup, skills),
         )}
       </div>
     </div>

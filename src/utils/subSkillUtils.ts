@@ -30,16 +30,11 @@ export const VARIANT_CONFIG: Record<
 
 // スキルがバリアントを持つかどうか
 export const hasVariants = (skill: SubSkill): boolean => {
-  return (
-    skill.skillGroup !== "" &&
-    skill.skillGroup in VARIANT_CONFIG
-  );
+  return skill.skillGroup !== "" && skill.skillGroup in VARIANT_CONFIG;
 };
 
 // スキルグループの利用可能なバリアント取得
-export const getAvailableVariants = (
-  skillGroup: string
-): Variant[] => {
+export const getAvailableVariants = (skillGroup: string): Variant[] => {
   return VARIANT_CONFIG[skillGroup]?.variants || [];
 };
 
@@ -53,7 +48,7 @@ export const getAutoLevel = (index: number): number => {
 // バリアント付きスキル名の生成
 export const getSkillNameWithVariant = (
   displayName: string,
-  variant: Variant | null
+  variant: Variant | null,
 ): string => {
   if (!variant) return displayName;
   // 既にバリアントが含まれている場合は除去
@@ -64,15 +59,11 @@ export const getSkillNameWithVariant = (
 // バリアントに基づくレアリティ取得（特定のスキル名から）
 export const getRarityByVariant = (
   skillGroup: string,
-  variant: Variant
+  variant: Variant,
 ): Rarity => {
   // skillGroupとvariantの組み合わせでレアリティを決定
   if (skillGroup === "inventoryCapacity") {
-    return variant === "L"
-      ? "blue"
-      : variant === "M"
-      ? "blue"
-      : "gray";
+    return variant === "L" ? "blue" : variant === "M" ? "blue" : "gray";
   }
   if (
     skillGroup === "skillTrigger" ||

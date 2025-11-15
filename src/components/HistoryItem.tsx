@@ -39,11 +39,11 @@ const formatDate = (timestamp: number) => {
   const targetDate = new Date(
     date.getFullYear(),
     date.getMonth(),
-    date.getDate()
+    date.getDate(),
   );
 
   const diffDays = Math.floor(
-    (today.getTime() - targetDate.getTime()) / (1000 * 60 * 60 * 24)
+    (today.getTime() - targetDate.getTime()) / (1000 * 60 * 60 * 24),
   );
 
   if (diffDays === 0) return "今日";
@@ -63,7 +63,9 @@ export default function HistoryItem({
   onDelete,
   onRestore,
 }: HistoryItemProps) {
-  const displaySubSkills: (typeof item.subSkills[number] | null)[] = [...item.subSkills.slice(0, 3)];
+  const displaySubSkills: ((typeof item.subSkills)[number] | null)[] = [
+    ...item.subSkills.slice(0, 3),
+  ];
   while (displaySubSkills.length < 3) {
     displaySubSkills.push(null);
   }
@@ -80,11 +82,13 @@ export default function HistoryItem({
           <PokemonImage pokemonNumber={item.pokemonNumber} size={48} />
           <div className="flex-1 min-w-0">
             <div className="flex items-center gap-2 mb-1 flex-wrap">
-              <h4 className="font-bold text-sm text-foreground">{item.pokemonName}</h4>
+              <h4 className="font-bold text-sm text-foreground">
+                {item.pokemonName}
+              </h4>
               {item.pokemonType && (
                 <span
                   className={`text-[9px] px-2 py-0.5 rounded-full font-bold ${getTokuiStyle(
-                    item.pokemonType
+                    item.pokemonType,
                   )}`}
                 >
                   {item.pokemonType}
@@ -123,7 +127,12 @@ export default function HistoryItem({
                   })}
                 </div>
                 {item.natureDisplay && (
-                  <div className="truncate">性格: <span className="font-semibold text-secondary">{item.natureDisplay}</span></div>
+                  <div className="truncate">
+                    性格:{" "}
+                    <span className="font-semibold text-secondary">
+                      {item.natureDisplay}
+                    </span>
+                  </div>
                 )}
               </div>
             )}
@@ -195,7 +204,9 @@ export default function HistoryItem({
             {item.natureDisplay && (
               <div className="text-xs text-foreground">
                 <span className="font-semibold">性格:</span>{" "}
-                <span className="font-semibold text-secondary">{item.natureDisplay}</span>
+                <span className="font-semibold text-secondary">
+                  {item.natureDisplay}
+                </span>
               </div>
             )}
           </div>
@@ -222,10 +233,10 @@ export default function HistoryItem({
               <tbody>
                 <tr>
                   <td className="px-2 py-1.5 font-bold text-foreground whitespace-nowrap">
-                    {Math.floor(item.calculationResult.calculatedSupportTime / 60)}
-                    分
-                    {item.calculationResult.calculatedSupportTime % 60}
-                    秒
+                    {Math.floor(
+                      item.calculationResult.calculatedSupportTime / 60,
+                    )}
+                    分{item.calculationResult.calculatedSupportTime % 60}秒
                   </td>
                   <td className="px-2 py-1.5 whitespace-nowrap">
                     <div className="font-bold text-orange-600 dark:text-orange-400">
@@ -234,8 +245,7 @@ export default function HistoryItem({
                       <span className="text-foreground">
                         (
                         {(
-                          item.calculationResult.calculatedFoodDropRate *
-                          100
+                          item.calculationResult.calculatedFoodDropRate * 100
                         ).toFixed(1)}
                         %)
                       </span>
@@ -248,8 +258,7 @@ export default function HistoryItem({
                       <span className="text-foreground">
                         (
                         {(
-                          item.calculationResult.calculatedSkillRate *
-                          100
+                          item.calculationResult.calculatedSkillRate * 100
                         ).toFixed(1)}
                         %)
                       </span>
@@ -263,7 +272,8 @@ export default function HistoryItem({
                         <span className="text-foreground">
                           (
                           {(
-                            (1 - item.calculationResult.calculatedFoodDropRate) *
+                            (1 -
+                              item.calculationResult.calculatedFoodDropRate) *
                             100
                           ).toFixed(1)}
                           %)

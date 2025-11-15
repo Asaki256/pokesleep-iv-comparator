@@ -1,9 +1,4 @@
-import {
-  useState,
-  useEffect,
-  useRef,
-  useCallback,
-} from "react";
+import { useState, useEffect, useRef, useCallback } from "react";
 
 export interface VirtualScrollOptions {
   /** Total number of items */
@@ -55,14 +50,10 @@ export function useVirtualScroll({
   const totalHeight = totalItems * itemHeight;
 
   // Calculate visible range
-  const startIndex = Math.max(
-    0,
-    Math.floor(scrollTop / itemHeight) - overscan
-  );
+  const startIndex = Math.max(0, Math.floor(scrollTop / itemHeight) - overscan);
   const endIndex = Math.min(
     totalItems - 1,
-    Math.ceil((scrollTop + containerHeight) / itemHeight) +
-      overscan
+    Math.ceil((scrollTop + containerHeight) / itemHeight) + overscan,
   );
 
   // Generate array of visible item indices
@@ -82,7 +73,9 @@ export function useVirtualScroll({
   }, []);
 
   // Store handleScroll in ref to access in callback ref
-  handleScrollRef.current = handleScroll;
+  useEffect(() => {
+    handleScrollRef.current = handleScroll;
+  }, [handleScroll]);
 
   // Scroll to specific index
   const scrollToIndex = useCallback(
@@ -90,41 +83,35 @@ export function useVirtualScroll({
       if (containerRef.current) {
         const targetScrollTop = Math.max(
           0,
-          Math.min(
-            index * itemHeight,
-            totalHeight - containerHeight
-          )
+          Math.min(index * itemHeight, totalHeight - containerHeight),
         );
         containerRef.current.scrollTop = targetScrollTop;
         setScrollTop(targetScrollTop);
       }
     },
-    [itemHeight, totalHeight, containerHeight]
+    [itemHeight, totalHeight, containerHeight],
   );
 
   // Callback ref to attach event listener when element is mounted
-  const setContainerRef = useCallback(
-    (element: HTMLDivElement | null) => {
-      // Clean up previous listener if exists
-      if (containerRef.current && handleScrollRef.current) {
-        containerRef.current.removeEventListener(
-          "scroll",
-          handleScrollRef.current
-        );
-      }
+  const setContainerRef = useCallback((element: HTMLDivElement | null) => {
+    // Clean up previous listener if exists
+    if (containerRef.current && handleScrollRef.current) {
+      containerRef.current.removeEventListener(
+        "scroll",
+        handleScrollRef.current,
+      );
+    }
 
-      // Update ref
-      containerRef.current = element;
+    // Update ref
+    containerRef.current = element;
 
-      // Attach new listener if element exists
-      if (element && handleScrollRef.current) {
-        element.addEventListener("scroll", handleScrollRef.current, {
-          passive: true,
-        });
-      }
-    },
-    []
-  );
+    // Attach new listener if element exists
+    if (element && handleScrollRef.current) {
+      element.addEventListener("scroll", handleScrollRef.current, {
+        passive: true,
+      });
+    }
+  }, []);
 
   return {
     startIndex,

@@ -1,8 +1,5 @@
 import { SubSkill } from "@/types/subSkill";
-import {
-  SelectedSubSkill,
-  Variant,
-} from "@/types/selectedSubSkill";
+import { SelectedSubSkill, Variant } from "@/types/selectedSubSkill";
 import { SkillListView } from "./SkillListView";
 import { X } from "lucide-react";
 import { getRarityStyles } from "@/utils/subSkillUtils";
@@ -71,9 +68,7 @@ export const SkillPickerModal = ({
           <div className="px-4 pb-2 border-b border-border">
             <div className="flex items-center justify-between">
               <h2 className="text-lg font-bold text-foreground">
-                {isEditing
-                  ? "スキルを変更"
-                  : "スキルを選択"}
+                {isEditing ? "スキルを変更" : "スキルを選択"}
               </h2>
               <button
                 onClick={onClose}
@@ -98,9 +93,7 @@ export const SkillPickerModal = ({
                     bg-secondary/10 border border-secondary/30
                   `}
                 >
-                  <span className="text-xs text-secondary">
-                    編集中
-                  </span>
+                  <span className="text-xs text-secondary">編集中</span>
                   <span className="text-xs font-semibold text-secondary">
                     {editingSkill.name}
                   </span>
@@ -115,9 +108,7 @@ export const SkillPickerModal = ({
                 {selectedSkills.length > 0 && (
                   <div className="flex flex-wrap gap-1.5">
                     {selectedSkills.map((skill) => {
-                      const styles = getRarityStyles(
-                        skill.rarity
-                      );
+                      const styles = getRarityStyles(skill.rarity);
                       return (
                         <div
                           key={skill.id}

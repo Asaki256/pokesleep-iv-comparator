@@ -2,23 +2,23 @@
  * ステータスの種類
  */
 export type StatType =
-  | 'speed'      // おてつだいスピード
-  | 'stamina'    // げんき回復量
-  | 'ingredient' // 食材確率
-  | 'skill'      // スキル確率
-  | 'exp'        // EXP獲得量
-  | 'neutral';   // 補正なし
+  | "speed" // おてつだいスピード
+  | "stamina" // げんき回復量
+  | "ingredient" // 食材確率
+  | "skill" // スキル確率
+  | "exp" // EXP獲得量
+  | "neutral"; // 補正なし
 
 /**
  * カラーテーマの種類
  */
 export type ColorTheme =
-  | 'amber'  // おてつだいスピード
-  | 'green'  // げんき回復量
-  | 'red'    // 食材確率
-  | 'purple' // スキル確率
-  | 'blue'   // EXP獲得量
-  | 'gray';  // 補正なし
+  | "amber" // おてつだいスピード
+  | "green" // げんき回復量
+  | "red" // 食材確率
+  | "purple" // スキル確率
+  | "blue" // EXP獲得量
+  | "gray"; // 補正なし
 
 /**
  * 性格データの型
@@ -79,4 +79,3 @@ export interface ColorConfig {
   /** アイコン背景 */
   icon: string;
 }
-

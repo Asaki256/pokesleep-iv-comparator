@@ -8,11 +8,7 @@ interface SkillCardProps {
   onRemove: (e: React.MouseEvent) => void;
 }
 
-export const SkillCard = ({
-  skill,
-  onEdit,
-  onRemove,
-}: SkillCardProps) => {
+export const SkillCard = ({ skill, onEdit, onRemove }: SkillCardProps) => {
   const styles = getRarityStyles(skill.rarity);
 
   return (

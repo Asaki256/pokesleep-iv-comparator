@@ -1,7 +1,4 @@
-import {
-  NatureGroup as NatureGroupType,
-  SelectedNature,
-} from "@/types/nature";
+import { NatureGroup as NatureGroupType, SelectedNature } from "@/types/nature";
 import { COLOR_CONFIG } from "@/data/natureData";
 import NatureButton from "./NatureButton";
 
@@ -35,9 +32,7 @@ export default function NatureGroup({
             key={nature.name}
             nature={nature}
             groupColor={group.color}
-            isSelected={
-              selectedNature?.name === nature.name
-            }
+            isSelected={selectedNature?.name === nature.name}
             config={config}
             onSelect={() =>
               onSelect({

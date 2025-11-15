@@ -42,7 +42,7 @@ export function kanaInsensitiveMatch(str1: string, str2: string): boolean {
  */
 export function kanaInsensitiveIncludes(
   target: string,
-  search: string
+  search: string,
 ): boolean {
   const normalizedTarget = katakanaToHiragana(target.toLowerCase());
   const normalizedSearch = katakanaToHiragana(search.toLowerCase());

@@ -253,12 +253,12 @@ export const NATURE_GROUPS: NatureGroup[] = [
  * デフォルトの性格（補正なし：てれや）を取得
  */
 export function getDefaultNature(): SelectedNature {
-  const neutralGroup = NATURE_GROUPS.find(group => group.id === "neutral");
+  const neutralGroup = NATURE_GROUPS.find((group) => group.id === "neutral");
   if (!neutralGroup) {
     throw new Error("Neutral nature group not found");
   }
 
-  const bashfulNature = neutralGroup.natures.find(n => n.name === "てれや");
+  const bashfulNature = neutralGroup.natures.find((n) => n.name === "てれや");
   if (!bashfulNature) {
     throw new Error("Default nature 'てれや' not found");
   }
