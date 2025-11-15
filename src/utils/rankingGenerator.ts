@@ -258,6 +258,7 @@ export function generateRankingData(
       if (!aIsSelected && bIsSelected) return 1;
       return 0;
     })
+    .filter((entry) => !isSelectedCombination(entry, selectedNature, selectedSubSkills))
     .map((entry, index) => ({
       ...entry,
       rank: index + 1,
@@ -277,6 +278,7 @@ export function generateRankingData(
       if (!aIsSelected && bIsSelected) return 1;
       return 0;
     })
+    .filter((entry) => !isSelectedCombination(entry, selectedNature, selectedSubSkills))
     .map((entry, index) => ({
       ...entry,
       rank: index + 1,
@@ -296,6 +298,7 @@ export function generateRankingData(
       if (!aIsSelected && bIsSelected) return 1;
       return 0;
     })
+    .filter((entry) => !isSelectedCombination(entry, selectedNature, selectedSubSkills))
     .map((entry, index) => ({
       ...entry,
       rank: index + 1,
@@ -309,7 +312,79 @@ export function generateRankingData(
 }
 
 /**
+ * Calculate the virtual rank of the selected combination based on all combinations
+ * Since the selected combination is excluded from the ranking, we need to calculate
+ * where it would rank if it were included
+ */
+export function calculateSelectedRank(
+  pokemon: Pokemon,
+  natureName: string | undefined,
+  subSkills: SelectedSubSkill[],
+  rankingType: "skill" | "ingredient" | "berry"
+): { rank: number; score: number; totalCombinations: number } {
+  // Default to "すなお" (neutral nature) if no nature is selected
+  const effectiveNature = natureName || "すなお";
+
+  // Calculate the score for the selected combination
+  const result = calculatePokemonStatsSimple(
+    pokemon,
+    60,
+    effectiveNature,
+    subSkills
+  );
+
+  const selectedScore =
+    rankingType === "skill"
+      ? result.skillTriggersPerDay
+      : rankingType === "ingredient"
+      ? result.foodHelpsPerDay
+      : result.berryEnergyPerDay;
+
+  // Get all natures
+  const allNatures = NATURE_GROUPS.flatMap((group) => group.natures);
+
+  // Generate all combinations for the specified ranking type
+  const subSkillCombos = generateSubSkillCombinations(rankingType);
+
+  let betterCount = 0;
+  let totalCount = 0;
+
+  for (const nature of allNatures) {
+    for (const combo of subSkillCombos) {
+      totalCount++;
+
+      const comboResult = calculatePokemonStatsSimple(
+        pokemon,
+        60,
+        nature.name,
+        combo
+      );
+
+      const comboScore =
+        rankingType === "skill"
+          ? comboResult.skillTriggersPerDay
+          : rankingType === "ingredient"
+          ? comboResult.foodHelpsPerDay
+          : comboResult.berryEnergyPerDay;
+
+      // Count combinations with strictly better scores
+      if (comboScore > selectedScore) {
+        betterCount++;
+      }
+    }
+  }
+
+  // Rank is the number of better combinations + 1
+  return {
+    rank: betterCount + 1,
+    score: selectedScore,
+    totalCombinations: totalCount,
+  };
+}
+
+/**
  * Find the rank of a specific combination in the ranking
+ * @deprecated This function is no longer used since selected combinations are excluded from rankings
  */
 export function findMyRank(
   ranking: RankingEntry[],
