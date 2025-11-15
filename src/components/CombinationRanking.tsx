@@ -244,32 +244,32 @@ export default function CombinationRanking({
 
         {/* Selected combination card */}
         <div
-          className="mb-4 p-3 bg-accent/20 border-2 border-accent rounded-lg cursor-pointer transition-all hover:bg-accent/30 hover:shadow-md"
+          className="mb-3 md:mb-4 p-2 md:p-3 bg-accent/20 border-2 border-accent rounded-lg cursor-pointer transition-all hover:bg-accent/30 hover:shadow-md"
           onClick={handleScrollToSelectedRank}
         >
-          <div className="flex items-center gap-2 md:gap-3">
+          <div className="flex items-center gap-1.5 md:gap-3">
             {/* Rank badge */}
-            <div className="flex-shrink-0 w-10 h-10 md:w-12 md:h-12 rounded-full flex items-center justify-center font-bold text-sm md:text-base bg-accent text-accent-foreground">
+            <div className="flex-shrink-0 w-8 h-8 md:w-12 md:h-12 rounded-full flex items-center justify-center font-bold text-xs md:text-base bg-accent text-accent-foreground">
               {currentSelectedRank.rank}
             </div>
 
             {/* Details */}
             <div className="flex-1 min-w-0">
-              <div className="flex items-center gap-2 mb-1">
-                <span className="text-xs font-semibold text-foreground">
+              <div className="flex items-center gap-1 md:gap-2 mb-0.5 md:mb-1">
+                <span className="text-[10px] md:text-xs font-semibold text-foreground">
                   あなたの{pokemon.displayName}の組み合わせ
                 </span>
-                <span className="text-xs text-muted-foreground">
+                <span className="text-[9px] md:text-xs text-muted-foreground">
                   (上位{((currentSelectedRank.rank / currentSelectedRank.totalCombinations) * 100).toFixed(1)}%)
                 </span>
               </div>
-              <div className="flex items-center gap-2">
-                <span className="text-xs md:text-sm font-medium text-foreground">
+              <div className="flex items-center gap-1 md:gap-2">
+                <span className="text-[10px] md:text-sm font-medium text-foreground">
                   {currentNature || "すなお"}
                 </span>
-                <div className="flex flex-wrap gap-1">
+                <div className="flex flex-wrap gap-0.5 md:gap-1">
                   {currentSubSkills.length === 0 ? (
-                    <span className="text-xs text-muted-foreground italic">
+                    <span className="text-[10px] md:text-xs text-muted-foreground italic">
                       サブスキルなし
                     </span>
                   ) : (
@@ -278,7 +278,7 @@ export default function CombinationRanking({
                       return (
                         <span
                           key={idx}
-                          className={`inline-block text-xs px-1.5 md:px-2 py-0.5 rounded-md font-medium ${rarityStyle.chip}`}
+                          className={`inline-block text-[9px] md:text-xs px-1 md:px-2 py-0.5 rounded-md font-medium ${rarityStyle.chip}`}
                           title={skill.name}
                         >
                           {skill.name}
@@ -292,10 +292,10 @@ export default function CombinationRanking({
 
             {/* Score */}
             <div className="flex-shrink-0 text-right">
-              <div className="text-sm md:text-base font-bold text-foreground">
+              <div className="text-xs md:text-base font-bold text-foreground">
                 {currentSelectedRank.score.toFixed(1)}
               </div>
-              <div className="text-xs text-muted-foreground">
+              <div className="text-[9px] md:text-xs text-muted-foreground">
                 {activeRankingType === "berry" ? "エナジー/日" : "回/日"}
               </div>
             </div>
