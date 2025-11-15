@@ -11,9 +11,9 @@ function Header() {
           <Image
             src="/icon-512.png"
             alt="Master Ball"
-            width={32}
-            height={32}
-            className="w-8 h-8"
+            width={28}
+            height={28}
+            className="w-7 h-7"
           />
           <p className="text-2xl font-semibold text-primary-foreground">
             ポケスリ個体値比較
