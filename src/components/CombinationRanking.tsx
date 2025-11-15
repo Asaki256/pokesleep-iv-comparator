@@ -111,9 +111,12 @@ export default function CombinationRanking({
   // Handle click on selected combination card to scroll to approximate rank position
   const handleScrollToSelectedRank = () => {
     // Since the selected combination is excluded from the ranking,
-    // we scroll to the position where it would be if it were included
-    // The rank is 1-based, so we need to subtract 1 to get the 0-based index
-    const targetIndex = Math.max(0, currentSelectedRank.rank - 1);
+    // we need to adjust the scroll position:
+    // - If rank is 1, scroll to index 0 (top)
+    // - If rank is N, the list shows: 1,2,...,N-1,N+1,N+2,...
+    // - To see the position around rank N, scroll to index N-1 (which shows rank N+1)
+    // - But to center better, we scroll to index N-2 when rank > 1
+    const targetIndex = currentSelectedRank.rank === 1 ? 0 : Math.max(0, currentSelectedRank.rank - 2);
     scrollToIndex(targetIndex);
   };
 
@@ -190,7 +193,8 @@ export default function CombinationRanking({
         type === "ingredient" ? selectedIngredientRank :
         selectedBerryRank;
 
-      const targetIndex = Math.max(0, rankData.rank - 1);
+      // Adjust index since selected combination is excluded from ranking
+      const targetIndex = rankData.rank === 1 ? 0 : Math.max(0, rankData.rank - 2);
       scrollToIndex(targetIndex);
     }, 100);
   };
