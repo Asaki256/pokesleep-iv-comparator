@@ -44,8 +44,8 @@ export default function NatureSelector({
   return (
     <div className={`w-full max-w-md mx-auto ${className}`}>
       {/* ヘッダー */}
-      <div className="flex items-center justify-between mb-2">
-        <h2 className="text-base">性格</h2>
+      <div className="flex items-center justify-between mb-3">
+        <h2 className="text-base font-semibold text-foreground">性格</h2>
       </div>
 
       {/* 選択済み性格表示 / 選択ボタン */}
