@@ -276,13 +276,13 @@ function Search() {
             )}
           </div>
           <div className="mt-5">
+            <LevelSelector value={level} onChange={setLevel} />
+          </div>
+          <div className="mt-5">
             <SubSkillSelect
               value={selectedSubSkills}
               onChange={setSelectedSubSkills}
             />
-          </div>
-          <div className="mt-5">
-            <LevelSelector value={level} onChange={setLevel} />
           </div>
           <div className="mt-5">
             <NatureSelector value={nature} onChange={setNature} />
@@ -303,6 +303,7 @@ function Search() {
               pokemonName={displaySnapshot.pokemonName}
               pokemonNumber={displaySnapshot.pokemonNumber}
               pokemonType={displaySnapshot.pokemonType}
+              level={displaySnapshot.level}
               nature={displaySnapshot.nature}
               subSkills={displaySnapshot.subSkills}
               calculationResult={calculationResult}
