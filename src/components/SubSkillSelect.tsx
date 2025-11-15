@@ -2,10 +2,7 @@
 
 import { useState, useEffect, useRef } from "react";
 import { SubSkill } from "@/types/subSkill";
-import {
-  SelectedSubSkill,
-  Variant,
-} from "@/types/selectedSubSkill";
+import { SelectedSubSkill, Variant } from "@/types/selectedSubSkill";
 import { SkillCard } from "./SubSkillSelect/SkillCard";
 import { SkillPickerModal } from "./SubSkillSelect/SkillPickerModal";
 import {
@@ -20,17 +17,12 @@ interface SubSkillSelectProps {
   onChange?: (skills: SelectedSubSkill[]) => void;
 }
 
-const SubSkillSelect = ({
-  value,
-  onChange,
-}: SubSkillSelectProps = {}) => {
-  const [selectedSkills, setSelectedSkills] = useState<
-    SelectedSubSkill[]
-  >(value || []);
+const SubSkillSelect = ({ value, onChange }: SubSkillSelectProps = {}) => {
+  const [selectedSkills, setSelectedSkills] = useState<SelectedSubSkill[]>(
+    value || [],
+  );
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [editingSkillId, setEditingSkillId] = useState<
-    string | null
-  >(null);
+  const [editingSkillId, setEditingSkillId] = useState<string | null>(null);
 
   // 前回のvalue参照を保持
   const prevValueRef = useRef<SelectedSubSkill[] | undefined>(value);
@@ -76,10 +68,7 @@ const SubSkillSelect = ({
   };
 
   // スキルを追加または置き換え
-  const addOrReplaceSkill = (
-    skill: SubSkill,
-    variant: Variant | null
-  ) => {
+  const addOrReplaceSkill = (skill: SubSkill, variant: Variant | null) => {
     const isEditing = editingSkillId !== null;
 
     // baseIdを生成（バリアントありの場合は skillGroup + variant）
@@ -91,7 +80,7 @@ const SubSkillSelect = ({
     if (isEditing) {
       // 編集モード: 既存のスキルを置き換え
       const editingIndex = selectedSkills.findIndex(
-        (s) => s.id === editingSkillId
+        (s) => s.id === editingSkillId,
       );
 
       // 編集対象が見つからない場合（削除された場合など）
@@ -109,10 +98,7 @@ const SubSkillSelect = ({
       updatedSkills[editingIndex] = {
         id: currentSkill.id, // IDは保持
         baseId,
-        name: getSkillNameWithVariant(
-          skill.displayName,
-          variant
-        ),
+        name: getSkillNameWithVariant(skill.displayName, variant),
         variant,
         level: currentSkill.level, // レベルも保持
         rarity,
@@ -123,9 +109,7 @@ const SubSkillSelect = ({
       closeModal(); // 編集モードは即座に閉じる
     } else {
       // 追加モード: 重複チェック
-      const existingSkill = selectedSkills.find(
-        (s) => s.baseId === baseId
-      );
+      const existingSkill = selectedSkills.find((s) => s.baseId === baseId);
       if (existingSkill) {
         // すでに選択済みの場合は何もしない
         return;
@@ -134,10 +118,7 @@ const SubSkillSelect = ({
       const newSkill: SelectedSubSkill = {
         id: `${baseId}-${Date.now()}`,
         baseId,
-        name: getSkillNameWithVariant(
-          skill.displayName,
-          variant
-        ),
+        name: getSkillNameWithVariant(skill.displayName, variant),
         variant,
         level: getAutoLevel(selectedSkills.length),
         rarity: variant
@@ -157,10 +138,7 @@ const SubSkillSelect = ({
   };
 
   // スキル削除（イベントありバージョン）
-  const removeSkill = (
-    skillId: string,
-    event: React.MouseEvent
-  ) => {
+  const removeSkill = (skillId: string, event: React.MouseEvent) => {
     event.stopPropagation(); // カード編集を防止
     removeSkillById(skillId);
   };

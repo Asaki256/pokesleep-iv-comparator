@@ -8,7 +8,7 @@ interface UseCalculationHistoryReturn {
 
   /** 履歴を追加 */
   addHistory: (
-    item: Omit<CalculationHistoryItem, "id" | "timestamp">
+    item: Omit<CalculationHistoryItem, "id" | "timestamp">,
   ) => CalculationHistoryItem;
 
   /** 指定IDの履歴を削除 */
@@ -52,7 +52,7 @@ export function useCalculationHistory(): UseCalculationHistoryReturn {
         throw error;
       }
     },
-    []
+    [],
   );
 
   // 履歴を削除

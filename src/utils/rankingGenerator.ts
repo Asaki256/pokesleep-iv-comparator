@@ -55,17 +55,17 @@ const BERRY_RANKING_SKILLS = [
  * Only includes skills that affect the specified ranking type
  */
 function generateSubSkillCombinations(
-  rankingType: "skill" | "ingredient" | "berry"
+  rankingType: "skill" | "ingredient" | "berry",
 ): SelectedSubSkill[][] {
   const skillList =
     rankingType === "skill"
       ? SKILL_RANKING_SKILLS
       : rankingType === "ingredient"
-      ? INGREDIENT_RANKING_SKILLS
-      : BERRY_RANKING_SKILLS;
+        ? INGREDIENT_RANKING_SKILLS
+        : BERRY_RANKING_SKILLS;
 
   const relevantSkills = subSkillData.filter((skill) =>
-    skillList.includes(skill.name)
+    skillList.includes(skill.name),
   );
 
   const combinations: SelectedSubSkill[][] = [];
@@ -87,7 +87,7 @@ function generateSubSkillCombinations(
  */
 function generateCombinations(
   skills: typeof subSkillData,
-  size: number
+  size: number,
 ): SelectedSubSkill[][] {
   const results: SelectedSubSkill[][] = [];
 
@@ -126,7 +126,7 @@ function generateCombinations(
 function isSelectedCombination(
   entry: RankingEntry,
   selectedNature?: string,
-  selectedSubSkills?: SelectedSubSkill[]
+  selectedSubSkills?: SelectedSubSkill[],
 ): boolean {
   if (!selectedNature || !selectedSubSkills) return false;
 
@@ -140,7 +140,10 @@ function isSelectedCombination(
     .sort()
     .join(",");
 
-  return entry.natureName === effectiveNature && normalizedEntry === normalizedSelected;
+  return (
+    entry.natureName === effectiveNature &&
+    normalizedEntry === normalizedSelected
+  );
 }
 
 /**
@@ -149,7 +152,7 @@ function isSelectedCombination(
 export function generateRankingData(
   pokemon: Pokemon,
   selectedNature?: string,
-  selectedSubSkills?: SelectedSubSkill[]
+  selectedSubSkills?: SelectedSubSkill[],
 ): {
   skillRanking: RankingEntry[];
   ingredientRanking: RankingEntry[];
@@ -171,7 +174,7 @@ export function generateRankingData(
         pokemon,
         60,
         nature.name,
-        subSkills
+        subSkills,
       );
 
       const natureDisplay = nature.up
@@ -198,7 +201,7 @@ export function generateRankingData(
         pokemon,
         60,
         nature.name,
-        subSkills
+        subSkills,
       );
 
       const natureDisplay = nature.up
@@ -225,7 +228,7 @@ export function generateRankingData(
         pokemon,
         60,
         nature.name,
-        subSkills
+        subSkills,
       );
 
       const natureDisplay = nature.up
@@ -252,13 +255,24 @@ export function generateRankingData(
       if (scoreDiff !== 0) return scoreDiff;
 
       // If scores are equal, prioritize selected combination
-      const aIsSelected = isSelectedCombination(a, selectedNature, selectedSubSkills);
-      const bIsSelected = isSelectedCombination(b, selectedNature, selectedSubSkills);
+      const aIsSelected = isSelectedCombination(
+        a,
+        selectedNature,
+        selectedSubSkills,
+      );
+      const bIsSelected = isSelectedCombination(
+        b,
+        selectedNature,
+        selectedSubSkills,
+      );
       if (aIsSelected && !bIsSelected) return -1;
       if (!aIsSelected && bIsSelected) return 1;
       return 0;
     })
-    .filter((entry) => !isSelectedCombination(entry, selectedNature, selectedSubSkills))
+    .filter(
+      (entry) =>
+        !isSelectedCombination(entry, selectedNature, selectedSubSkills),
+    )
     .map((entry, index) => ({
       ...entry,
       rank: index + 1,
@@ -272,13 +286,24 @@ export function generateRankingData(
       if (scoreDiff !== 0) return scoreDiff;
 
       // If scores are equal, prioritize selected combination
-      const aIsSelected = isSelectedCombination(a, selectedNature, selectedSubSkills);
-      const bIsSelected = isSelectedCombination(b, selectedNature, selectedSubSkills);
+      const aIsSelected = isSelectedCombination(
+        a,
+        selectedNature,
+        selectedSubSkills,
+      );
+      const bIsSelected = isSelectedCombination(
+        b,
+        selectedNature,
+        selectedSubSkills,
+      );
       if (aIsSelected && !bIsSelected) return -1;
       if (!aIsSelected && bIsSelected) return 1;
       return 0;
     })
-    .filter((entry) => !isSelectedCombination(entry, selectedNature, selectedSubSkills))
+    .filter(
+      (entry) =>
+        !isSelectedCombination(entry, selectedNature, selectedSubSkills),
+    )
     .map((entry, index) => ({
       ...entry,
       rank: index + 1,
@@ -292,13 +317,24 @@ export function generateRankingData(
       if (scoreDiff !== 0) return scoreDiff;
 
       // If scores are equal, prioritize selected combination
-      const aIsSelected = isSelectedCombination(a, selectedNature, selectedSubSkills);
-      const bIsSelected = isSelectedCombination(b, selectedNature, selectedSubSkills);
+      const aIsSelected = isSelectedCombination(
+        a,
+        selectedNature,
+        selectedSubSkills,
+      );
+      const bIsSelected = isSelectedCombination(
+        b,
+        selectedNature,
+        selectedSubSkills,
+      );
       if (aIsSelected && !bIsSelected) return -1;
       if (!aIsSelected && bIsSelected) return 1;
       return 0;
     })
-    .filter((entry) => !isSelectedCombination(entry, selectedNature, selectedSubSkills))
+    .filter(
+      (entry) =>
+        !isSelectedCombination(entry, selectedNature, selectedSubSkills),
+    )
     .map((entry, index) => ({
       ...entry,
       rank: index + 1,
@@ -320,7 +356,7 @@ export function calculateSelectedRank(
   pokemon: Pokemon,
   natureName: string | undefined,
   subSkills: SelectedSubSkill[],
-  rankingType: "skill" | "ingredient" | "berry"
+  rankingType: "skill" | "ingredient" | "berry",
 ): { rank: number; score: number; totalCombinations: number } {
   // Default to "すなお" (neutral nature) if no nature is selected
   const effectiveNature = natureName || "すなお";
@@ -330,15 +366,15 @@ export function calculateSelectedRank(
     pokemon,
     60,
     effectiveNature,
-    subSkills
+    subSkills,
   );
 
   const selectedScore =
     rankingType === "skill"
       ? result.skillTriggersPerDay
       : rankingType === "ingredient"
-      ? result.foodHelpsPerDay
-      : result.berryEnergyPerDay;
+        ? result.foodHelpsPerDay
+        : result.berryEnergyPerDay;
 
   // Get all natures
   const allNatures = NATURE_GROUPS.flatMap((group) => group.natures);
@@ -357,15 +393,15 @@ export function calculateSelectedRank(
         pokemon,
         60,
         nature.name,
-        combo
+        combo,
       );
 
       const comboScore =
         rankingType === "skill"
           ? comboResult.skillTriggersPerDay
           : rankingType === "ingredient"
-          ? comboResult.foodHelpsPerDay
-          : comboResult.berryEnergyPerDay;
+            ? comboResult.foodHelpsPerDay
+            : comboResult.berryEnergyPerDay;
 
       // Count combinations with strictly better scores
       if (comboScore > selectedScore) {
@@ -389,7 +425,7 @@ export function calculateSelectedRank(
 export function findMyRank(
   ranking: RankingEntry[],
   natureName: string | undefined,
-  subSkills: SelectedSubSkill[]
+  subSkills: SelectedSubSkill[],
 ): number | null {
   // Default to "すなお" (neutral nature) if no nature is selected
   const effectiveNature = natureName || "すなお";
@@ -405,7 +441,10 @@ export function findMyRank(
       .map((s) => s.baseId)
       .sort()
       .join(",");
-    return entry.natureName === effectiveNature && entrySubSkills === normalizedSubSkills;
+    return (
+      entry.natureName === effectiveNature &&
+      entrySubSkills === normalizedSubSkills
+    );
   });
 
   return index >= 0 ? index : null;
@@ -420,7 +459,7 @@ export function ensureUserRankInRanking(
   pokemon: Pokemon,
   natureName: string | undefined,
   subSkills: SelectedSubSkill[],
-  rankingType: "skill" | "ingredient" | "berry"
+  rankingType: "skill" | "ingredient" | "berry",
 ): RankingEntry[] {
   // Default to "すなお" (neutral nature) if no nature is selected
   const effectiveNature = natureName || "すなお";
@@ -436,7 +475,7 @@ export function ensureUserRankInRanking(
     pokemon,
     60,
     effectiveNature,
-    subSkills
+    subSkills,
   );
 
   // Get nature display from nature data

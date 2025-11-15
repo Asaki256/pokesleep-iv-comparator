@@ -20,7 +20,7 @@ interface PokeAPIResponse {
  * @returns 画像URL。取得できない場合はnull
  */
 export async function fetchPokemonImage(
-  pokemonNumber: number
+  pokemonNumber: number,
 ): Promise<string | null> {
   // キャッシュをチェック
   if (imageCache.has(pokemonNumber)) {
@@ -29,13 +29,11 @@ export async function fetchPokemonImage(
 
   try {
     const response = await fetch(
-      `https://pokeapi.co/api/v2/pokemon/${pokemonNumber}`
+      `https://pokeapi.co/api/v2/pokemon/${pokemonNumber}`,
     );
 
     if (!response.ok) {
-      console.error(
-        `PokeAPI error: ${response.status} ${response.statusText}`
-      );
+      console.error(`PokeAPI error: ${response.status} ${response.statusText}`);
       imageCache.set(pokemonNumber, null);
       return null;
     }
@@ -50,7 +48,7 @@ export async function fetchPokemonImage(
   } catch (error) {
     console.error(
       `Failed to fetch Pokemon image for #${pokemonNumber}:`,
-      error
+      error,
     );
     // エラーの場合もキャッシュして、再試行を防ぐ
     imageCache.set(pokemonNumber, null);

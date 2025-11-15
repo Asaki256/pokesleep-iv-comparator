@@ -27,7 +27,10 @@ export default function IVAnalysisComponent({
 }: IVAnalysisComponentProps) {
   // ランキングとパーセンテージを計算
   const getRankDisplay = (rankData: SelectedRankData) => {
-    const percentage = ((rankData.rank / rankData.totalCombinations) * 100).toFixed(1);
+    const percentage = (
+      (rankData.rank / rankData.totalCombinations) *
+      100
+    ).toFixed(1);
     return {
       rankText: `${rankData.rank}位`,
       percentText: `上位${percentage}%`,

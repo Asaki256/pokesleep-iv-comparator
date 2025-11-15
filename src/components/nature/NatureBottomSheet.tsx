@@ -1,10 +1,10 @@
-'use client';
+"use client";
 
-import React, { useEffect, useState, useMemo } from 'react';
-import { SelectedNature } from '@/types/nature';
-import { NATURE_GROUPS } from '@/data/natureData';
-import NatureGroup from './NatureGroup';
-import { X, Search } from 'lucide-react';
+import React, { useEffect, useState, useMemo } from "react";
+import { SelectedNature } from "@/types/nature";
+import { NATURE_GROUPS } from "@/data/natureData";
+import NatureGroup from "./NatureGroup";
+import { X, Search } from "lucide-react";
 
 interface NatureBottomSheetProps {
   isOpen: boolean;
@@ -20,24 +20,24 @@ export default function NatureBottomSheet({
   onClose,
 }: NatureBottomSheetProps) {
   // 入力中の検索クエリ（ユーザーが入力している値）
-  const [inputValue, setInputValue] = useState('');
+  const [inputValue, setInputValue] = useState("");
   // 実際に検索に使用するクエリ（デバウンス後の値）
-  const [debouncedQuery, setDebouncedQuery] = useState('');
+  const [debouncedQuery, setDebouncedQuery] = useState("");
 
   // モーダルが開いたときにbodyのスクロールを無効化
   useEffect(() => {
     if (isOpen) {
-      document.body.style.overflow = 'hidden';
+      document.body.style.overflow = "hidden";
       // queueMicrotaskを使用して状態更新を次のイベントループに遅延
       queueMicrotask(() => {
-        setInputValue(''); // モーダルを開く際に入力値をリセット
-        setDebouncedQuery(''); // 検索クエリもリセット
+        setInputValue(""); // モーダルを開く際に入力値をリセット
+        setDebouncedQuery(""); // 検索クエリもリセット
       });
     } else {
-      document.body.style.overflow = 'unset';
+      document.body.style.overflow = "unset";
     }
     return () => {
-      document.body.style.overflow = 'unset';
+      document.body.style.overflow = "unset";
     };
   }, [isOpen]);
 
@@ -62,7 +62,7 @@ export default function NatureBottomSheet({
 
     return NATURE_GROUPS.map((group) => {
       const filteredNatures = group.natures.filter((nature) =>
-        nature.name.toLowerCase().includes(query)
+        nature.name.toLowerCase().includes(query),
       );
 
       return {
@@ -73,7 +73,8 @@ export default function NatureBottomSheet({
   }, [debouncedQuery]);
 
   // 検索結果が空かどうか
-  const hasNoResults = filteredGroups.length === 0 && debouncedQuery.trim() !== '';
+  const hasNoResults =
+    filteredGroups.length === 0 && debouncedQuery.trim() !== "";
 
   if (!isOpen) return null;
 
@@ -136,7 +137,7 @@ export default function NatureBottomSheet({
                 />
                 {inputValue && (
                   <button
-                    onClick={() => setInputValue('')}
+                    onClick={() => setInputValue("")}
                     className="absolute right-3 top-1/2 transform -translate-y-1/2 text-muted-foreground hover:text-foreground transition-colors cursor-pointer"
                     aria-label="検索をクリア"
                   >

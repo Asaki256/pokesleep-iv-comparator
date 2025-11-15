@@ -1,7 +1,7 @@
-'use client';
+"use client";
 
-import { useState, useCallback } from 'react';
-import { SelectedNature } from '@/types/nature';
+import { useState, useCallback } from "react";
+import { SelectedNature } from "@/types/nature";
 
 interface UseNatureSelectorProps {
   /** 親コンポーネントから渡される選択済み性格 */
@@ -36,7 +36,9 @@ export function useNatureSelector({
   onChange,
 }: UseNatureSelectorProps = {}): UseNatureSelectorReturn {
   // 内部状態（非制御時のみ使用）
-  const [internalNature, setInternalNature] = useState<SelectedNature | null>(null);
+  const [internalNature, setInternalNature] = useState<SelectedNature | null>(
+    null,
+  );
   const [showPicker, setShowPicker] = useState(false);
 
   // 制御 or 非制御の判定
@@ -69,7 +71,7 @@ export function useNatureSelector({
       }
       closePicker();
     },
-    [isControlled, onChange, closePicker]
+    [isControlled, onChange, closePicker],
   );
 
   /**

@@ -19,15 +19,11 @@ interface CalculatedPokemonInfoProps {
 // 日付フォーマット関数
 const formatDate = (date: Date) => {
   const now = new Date();
-  const today = new Date(
-    now.getFullYear(),
-    now.getMonth(),
-    now.getDate()
-  );
+  const today = new Date(now.getFullYear(), now.getMonth(), now.getDate());
   const targetDate = new Date(
     date.getFullYear(),
     date.getMonth(),
-    date.getDate()
+    date.getDate(),
   );
 
   if (today.getTime() === targetDate.getTime()) {
@@ -55,9 +51,7 @@ const getTokuiStyle = (type: string) => {
   }
 };
 
-const CalculatedPokemonInfo: React.FC<
-  CalculatedPokemonInfoProps
-> = ({
+const CalculatedPokemonInfo: React.FC<CalculatedPokemonInfoProps> = ({
   pokemonName,
   pokemonNumber,
   pokemonType,
@@ -66,7 +60,9 @@ const CalculatedPokemonInfo: React.FC<
   calculationResult,
 }) => {
   // サブスキルを最大3つまで表示用に整形
-  const displaySubSkills: (SelectedSubSkill | null)[] = [...subSkills.slice(0, 3)];
+  const displaySubSkills: (SelectedSubSkill | null)[] = [
+    ...subSkills.slice(0, 3),
+  ];
   while (displaySubSkills.length < 3) {
     displaySubSkills.push(null);
   }
@@ -87,7 +83,7 @@ const CalculatedPokemonInfo: React.FC<
           {pokemonType && (
             <span
               className={`text-[9px] md:text-[10px] px-3 py-1 rounded-full font-bold ${getTokuiStyle(
-                pokemonType
+                pokemonType,
               )}`}
             >
               {pokemonType}
@@ -102,9 +98,7 @@ const CalculatedPokemonInfo: React.FC<
         {/* 2-3行目グループ: サブスキルと性格 */}
         <div className="ml-8 md:ml-12 space-y-1">
           <div className="text-[10px] md:text-xs text-foreground">
-            <span className="font-semibold">
-              サブスキル:
-            </span>{" "}
+            <span className="font-semibold">サブスキル:</span>{" "}
             {displaySubSkills.map((skill, index) => {
               if (!skill) {
                 return (
@@ -159,10 +153,8 @@ const CalculatedPokemonInfo: React.FC<
             <tbody>
               <tr>
                 <td className="px-2 md:px-3 py-1.5 font-bold text-foreground whitespace-nowrap">
-                  {Math.floor(calculationResult.calculatedSupportTime / 60)}
-                  分
-                  {calculationResult.calculatedSupportTime % 60}
-                  秒
+                  {Math.floor(calculationResult.calculatedSupportTime / 60)}分
+                  {calculationResult.calculatedSupportTime % 60}秒
                 </td>
                 <td className="px-2 md:px-3 py-1.5 whitespace-nowrap">
                   <div className="font-bold text-orange-600 dark:text-orange-400">
@@ -170,10 +162,9 @@ const CalculatedPokemonInfo: React.FC<
                     回/日{" "}
                     <span className="text-foreground">
                       (
-                      {(
-                        calculationResult.calculatedFoodDropRate *
-                        100
-                      ).toFixed(1)}
+                      {(calculationResult.calculatedFoodDropRate * 100).toFixed(
+                        1,
+                      )}
                       %)
                     </span>
                   </div>
@@ -184,10 +175,7 @@ const CalculatedPokemonInfo: React.FC<
                     回/日{" "}
                     <span className="text-foreground">
                       (
-                      {(
-                        calculationResult.calculatedSkillRate *
-                        100
-                      ).toFixed(1)}
+                      {(calculationResult.calculatedSkillRate * 100).toFixed(1)}
                       %)
                     </span>
                   </div>

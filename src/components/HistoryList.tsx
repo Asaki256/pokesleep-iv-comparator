@@ -63,9 +63,7 @@ export default function HistoryList({
 
   // すべてクリア確認
   const handleClearAll = () => {
-    if (
-      confirm("すべての履歴を削除しますか？この操作は取り消せません。")
-    ) {
+    if (confirm("すべての履歴を削除しますか？この操作は取り消せません。")) {
       clearHistory();
       setExpandedIds(new Set());
       setIsAllExpanded(false);
@@ -73,7 +71,11 @@ export default function HistoryList({
   };
 
   if (isLoading) {
-    return <div className="text-center py-8 text-muted-foreground">読み込み中...</div>;
+    return (
+      <div className="text-center py-8 text-muted-foreground">
+        読み込み中...
+      </div>
+    );
   }
 
   if (!history || history.length === 0) {
@@ -92,7 +94,9 @@ export default function HistoryList({
         <div className="text-sm text-muted-foreground">
           {history.length}件の履歴
           {history.length >= 50 && (
-            <span className="ml-2 text-orange-600 dark:text-orange-400">(上限に達しています)</span>
+            <span className="ml-2 text-orange-600 dark:text-orange-400">
+              (上限に達しています)
+            </span>
           )}
         </div>
         <div className="flex gap-2">
