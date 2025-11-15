@@ -73,7 +73,9 @@ export function useVirtualScroll({
   }, []);
 
   // Store handleScroll in ref to access in callback ref
-  handleScrollRef.current = handleScroll;
+  useEffect(() => {
+    handleScrollRef.current = handleScroll;
+  }, [handleScroll]);
 
   // Scroll to specific index
   const scrollToIndex = useCallback(
