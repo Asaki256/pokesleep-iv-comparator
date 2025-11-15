@@ -181,6 +181,18 @@ export default function CombinationRanking({
   // Handle ranking type change
   const handleRankingTypeChange = (type: RankingType) => {
     setActiveRankingType(type);
+
+    // Scroll to the selected rank position after tab change
+    // Use setTimeout to ensure state update completes first
+    setTimeout(() => {
+      const rankData =
+        type === "skill" ? selectedSkillRank :
+        type === "ingredient" ? selectedIngredientRank :
+        selectedBerryRank;
+
+      const targetIndex = Math.max(0, rankData.rank - 1);
+      scrollToIndex(targetIndex);
+    }, 100);
   };
 
   if (isGenerating) {
@@ -240,7 +252,7 @@ export default function CombinationRanking({
             {/* Details */}
             <div className="flex-1 min-w-0">
               <div className="flex items-center gap-2 mb-1">
-                <span className="text-xs font-semibold text-accent-foreground">
+                <span className="text-xs font-semibold text-foreground">
                   あなたの{pokemon.displayName}の組み合わせ
                 </span>
                 <span className="text-xs text-muted-foreground">
