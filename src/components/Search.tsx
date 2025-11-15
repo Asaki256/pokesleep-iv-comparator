@@ -248,7 +248,7 @@ function Search() {
         <div className="bg-card rounded-xl border border-border shadow-sm p-4 md:p-6 mb-6">
           {/* ポケモン選択 */}
           <div className="w-full max-w-md mx-auto">
-            <div className="flex items-center justify-between mb-3">
+            <div className="flex items-center justify-between mb-2">
               <h2 className="text-base font-semibold text-foreground">
                 ポケモン
               </h2>

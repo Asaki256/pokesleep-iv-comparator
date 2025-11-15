@@ -187,7 +187,7 @@ const SubSkillSelect = ({ value, onChange }: SubSkillSelectProps = {}) => {
   return (
     <div className="w-full max-w-md mx-auto">
       {/* ヘッダー */}
-      <div className="flex items-center justify-between mb-3">
+      <div className="flex items-center justify-between mb-2">
         <div className="flex items-center gap-2">
           <h2 className="text-base font-semibold text-foreground">サブスキル</h2>
           <span className="bg-secondary text-white text-xs px-1.5 py-0.5 rounded-full">
