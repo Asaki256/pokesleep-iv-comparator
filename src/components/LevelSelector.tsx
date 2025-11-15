@@ -58,8 +58,31 @@ export default function LevelSelector({ value, onChange }: LevelSelectorProps) {
         <h2 className="text-base font-semibold text-foreground">レベル</h2>
       </div>
 
+      {/* 手動入力と説明テキスト */}
+      <div className="flex flex-col gap-2 mb-3">
+        <div className="flex items-center gap-2">
+          <label htmlFor="level-input" className="text-sm text-foreground whitespace-nowrap">
+            Lv.
+          </label>
+          <input
+            id="level-input"
+            type="number"
+            min="1"
+            max="100"
+            value={inputValue}
+            onChange={handleInputChange}
+            onBlur={handleInputBlur}
+            className="w-20 h-9 px-2 text-sm border border-input rounded-md bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-ring"
+          />
+          <div className="text-xs text-muted-foreground">
+            Lv.{value}までのサブスキルが適用されます
+            {applicableSubSkillCount > 0 && ` (${applicableSubSkillCount}個)`}
+          </div>
+        </div>
+      </div>
+
       {/* プリセットボタン */}
-      <div className="flex gap-2 mb-3">
+      <div className="flex gap-2">
         {LEVEL_PRESETS.map((level) => (
           <Button
             key={level}
@@ -71,29 +94,6 @@ export default function LevelSelector({ value, onChange }: LevelSelectorProps) {
             {level}
           </Button>
         ))}
-      </div>
-
-      {/* 説明テキストと手動入力 */}
-      <div className="flex items-center justify-between gap-4">
-        <div className="text-xs text-muted-foreground">
-          Lv.{value}までのサブスキルが適用されます
-          {applicableSubSkillCount > 0 && ` (${applicableSubSkillCount}個)`}
-        </div>
-        <div className="flex items-center gap-2">
-          <label htmlFor="level-input" className="text-xs text-muted-foreground whitespace-nowrap">
-            Lv.
-          </label>
-          <input
-            id="level-input"
-            type="number"
-            min="1"
-            max="100"
-            value={inputValue}
-            onChange={handleInputChange}
-            onBlur={handleInputBlur}
-            className="w-16 h-9 px-2 text-sm border border-input rounded-md bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-ring"
-          />
-        </div>
       </div>
     </div>
   );
