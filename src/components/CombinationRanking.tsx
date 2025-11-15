@@ -108,6 +108,15 @@ export default function CombinationRanking({
     }
   }, [activeRankingType, selectedSkillRank, selectedIngredientRank, selectedBerryRank]);
 
+  // Handle click on selected combination card to scroll to approximate rank position
+  const handleScrollToSelectedRank = () => {
+    // Since the selected combination is excluded from the ranking,
+    // we scroll to the position where it would be if it were included
+    // The rank is 1-based, so we need to subtract 1 to get the 0-based index
+    const targetIndex = Math.max(0, currentSelectedRank.rank - 1);
+    scrollToIndex(targetIndex);
+  };
+
   // Virtual scroll settings
   const ITEM_HEIGHT = 70; // Height of each ranking entry in pixels (more compact)
   const CONTAINER_HEIGHT = 500; // Height of the scrollable container
@@ -218,7 +227,10 @@ export default function CombinationRanking({
         </div>
 
         {/* Selected combination card */}
-        <div className="mb-4 p-3 bg-accent/20 border-2 border-accent rounded-lg">
+        <div
+          className="mb-4 p-3 bg-accent/20 border-2 border-accent rounded-lg cursor-pointer transition-all hover:bg-accent/30 hover:shadow-md"
+          onClick={handleScrollToSelectedRank}
+        >
           <div className="flex items-center gap-2 md:gap-3">
             {/* Rank badge */}
             <div className="flex-shrink-0 w-10 h-10 md:w-12 md:h-12 rounded-full flex items-center justify-center font-bold text-sm md:text-base bg-accent text-accent-foreground">
@@ -229,7 +241,7 @@ export default function CombinationRanking({
             <div className="flex-1 min-w-0">
               <div className="flex items-center gap-2 mb-1">
                 <span className="text-xs font-semibold text-accent-foreground">
-                  あなたの組み合わせ
+                  あなたの{pokemon.displayName}の組み合わせ
                 </span>
                 <span className="text-xs text-muted-foreground">
                   (上位{((currentSelectedRank.rank / currentSelectedRank.totalCombinations) * 100).toFixed(1)}%)
