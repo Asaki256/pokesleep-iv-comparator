@@ -1,18 +1,13 @@
-import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import type { Metadata, Viewport } from "next";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 import { StructuredData } from "./structured-data";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 5,
+};
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://pokesleep-iv-comparator.vercel.app"),
@@ -78,11 +73,6 @@ export const metadata: Metadata = {
     images: ["https://pokesleep-iv-comparator.vercel.app/og-image.png"],
     creator: "@Asaki256",
   },
-  viewport: {
-    width: "device-width",
-    initialScale: 1,
-    maximumScale: 5,
-  },
   manifest: "/manifest.json",
   icons: {
     icon: [
@@ -111,11 +101,12 @@ export default function RootLayout({
     <html lang="ja" suppressHydrationWarning>
       <head>
         <meta name="google-site-verification" content="DVy7jur6OcUHxGHsiFBOh-eDqXQfSPK3odti0T0pR7w" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=Geist+Mono:wght@100..900&display=swap" rel="stylesheet" />
         <StructuredData />
       </head>
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+      <body className="antialiased">
         <ThemeProvider
           attribute="class"
           defaultTheme="system"

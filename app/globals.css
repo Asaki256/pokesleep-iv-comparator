@@ -120,7 +120,7 @@
   }
   body {
     @apply bg-background text-foreground;
-    font-family: var(--font-geist-sans), "Hiragino Kaku Gothic ProN", "Hiragino Sans", "BIZ UDPGothic", Meiryo, sans-serif;
+    font-family: "Geist", "Hiragino Kaku Gothic ProN", "Hiragino Sans", "BIZ UDPGothic", Meiryo, system-ui, -apple-system, sans-serif;
     transition: background-color 0.3s ease, color 0.3s ease;
   }
 
